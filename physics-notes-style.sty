@@ -1,0 +1,84 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{physics-notes-style}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% physics-notes-style 调用的宏包
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% 基础宏包
+\RequirePackage{xcolor}
+\RequirePackage{amsmath,amsthm,bm}
+\RequirePackage{amssymb,latexsym,textcomp,mathrsfs,euscript,yhmath}
+
+% 物理专用宏包
+\RequirePackage{siunitx}
+\RequirePackage{physics2}
+
+% 图形和布局
+\RequirePackage{graphicx,float,caption,subcaption}
+\RequirePackage{tikz}
+\RequirePackage[inner=1in,outer=1.5in,vmargin=1in,marginparwidth=1in]{geometry}
+
+% tcolorbox 及其库
+\RequirePackage{tcolorbox}
+\tcbuselibrary{skins,breakable,theorems}
+
+% 中文支持
+\RequirePackage[UTF8,scheme=chinese, heading=true]{ctex}
+
+% 索引工具
+\RequirePackage{makeidx}
+
+% ==========================================
+% 物理笔记专用环境定义
+% ==========================================
+
+% 1. 定义环境
+\newtcbtheorem[number within=section]{definition}{定义}
+{
+    colback=blue!5!white,
+    colframe=blue!75!black,
+    fonttitle=\bfseries,
+    breakable,
+    enhanced,
+    attach boxed title to top left={xshift=5mm, yshift=-2mm},
+    boxed title style={colback=blue!75!black},
+}{def}
+
+% 2. 定理/定律环境
+\newtcbtheorem[number within=section]{law}{定律}
+{
+    colback=green!5!white,
+    colframe=green!75!black,
+    fonttitle=\bfseries,
+    breakable,
+    enhanced,
+    attach boxed title to top left={xshift=5mm, yshift=-2mm},
+    boxed title style={colback=green!75!black},
+}{law}
+
+
+
+% 超链接支持
+
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=teal,
+    bookmarksnumbered=true,
+    pdfstartview=FitH
+}
+
+% 令 \cleardoublepage 的偶数页页眉页脚为空
+\renewcommand{\cleardoublepage}
+    {\clearpage\if@twoside \ifodd\c@page\else
+    \hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+% 每章最前的介绍内容环境 intro（优化版）
+\newenvironment{intro}
+  {\begin{quote}\kaishu\color{gray}}%
+  {\end{quote}\par\vspace*{2ex minus 1.5ex}}
+
+\endinput
