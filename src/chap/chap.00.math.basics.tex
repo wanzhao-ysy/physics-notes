@@ -16,40 +16,336 @@
 \subsection{微分}\label{subsec:differential}
 
 一元函数可记为
-\begin{equation}
+\begin{equation*}
     y = y(x)\ \text{或}\ y = f(x),
-\end{equation}
+\end{equation*}
 
 在它的连续区间内，如图 \ref{fig:function-increment}
 
 \input{figure/chap.00/fig.function-increment.tex}
 
 所示，自变量由 $x$ 变到 $x + \Delta x$，相应的，$y$ 由 $y(x)$ 变到 $y(x + \Delta x)$，则函数的增量定义为
-\begin{equation}
+\begin{equation*}
     \Delta y = y(x + \Delta x) - y(x).
-\end{equation}
+\end{equation*}
 
 自变量 $ \Delta x \to 0$ 时，称为自变量微分，记为 $ \d x$，$ \d x$ 是无穷小量，不是零。
 但因为它是无穷小量，它在与有限量的运算中，在一些情况下可以视为 0 （但不是在所有情况下都可以视为 0）。
 在连续区间内，自变量增量 $\Delta x$ 趋近于微分 $\d x$，函数增量 $\Delta y \to \d y$，称为函数微分，记为 $\d y$，它也是无穷小量。
 $ \d y $ 与 $ \d x $ 之间的关系为
-\begin{equation}
+\begin{equation*}
     \d y = y (x + \d x) - y (x).
-\end{equation}
+\end{equation*}
 
-\begin{note}{符号说明}{note:symbol-explanation}
+\begin{note}{符号说明}{symbol-explanation}
     显然，因为 $ y(x) $ 不一定是单调函数，所以 $ \Delta y $ 和 $ \d y $ 可以是正的、负的或零。
+    所以只要你严格遵守定义与符号计算的基本规则，就不会出错。
+    这句话在一些微元分析的场景下尤其适用。
 \end{note}
 
-\begin{example}{重要近似}{example:important-approximation}
+\begin{example}{重要近似}{important-approximation}
     \begin{equation}
-        \sin x = \tan x = x, (x \to 0).
+        \sin x \sim \tan x \sim x, (x \to 0).
     \end{equation}
+    证明：
+
     \input{figure/chap.00/fig.important-approximation.tex}
+
     以 $ O $ 为原点建立直角坐标系，绘出以 $ R $ 为半径的圆弧如图 \ref{fig:important-approximation} 所示，
     其中圆心角 $ \theta $ 对应的直线段 $ AA' $ ,$ BB' $ ,圆弧 $ \wideparen{AB} $ 的长度分别为
+    \begin{equation*}
+        \overline{AA'} = R \sin \theta, \quad \overline{BB'} = R \tan \theta, \quad \wideparen{AB} = R \theta.
+    \end{equation*}
+
+    $\theta \to 0$ 时，有
+    \begin{equation*}
+        \overline{AA'} \sim \overline{BB'} \sim \wideparen{AB} .
+    \end{equation*}
+
+    化简得
+    \begin{equation*}
+        \sin \theta \sim \tan \theta \sim \theta, (\theta \to 0).
+    \end{equation*}
+
 \end{example}
 
+\subsection{导数}\label{subsec:derivative}
 
+\begin{definition}{导数}{derivative}
+    函数 $ y = f(x) $ 在点 $ x $ 处的导数定义为
+    \begin{equation}
+        f'(x) = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x},
+    \end{equation}
 
+    如果极限存在，则称函数在点 $ x $ 处可导。
+    
+\end{definition}
 
+显然，导数的几何意义是函数图像在点 $ (x, f(x)) $ 处的切线的斜率。
+\bigskip
+
+在数学上可以证明导数与微分有如下关系：
+\begin{definition}{微分与导数的关系}{differential-derivative-relation}
+    函数 $ y = f(x) $ 在点 $ x $ 处可导，则函数在该点的微分与导数的关系为
+    \begin{equation}
+        \d y = f'(x) \d x.
+    \end{equation}
+
+\end{definition}
+
+\begin{note}{导数与微分的区别}{derivative-differential-difference}
+    导数是一个极限值，是一个确定的数值，而微分是函数增量的线性主部，不是一个确定的数值。
+    导数表示函数在某点处的变化率，而微分表示函数在该点处变化量的线性近似。
+    \medskip
+
+    并且导数不能视为 $ \d y $ 与 $ \d x $的比值，这只是 Leibniz 记号下的一个形式上的表示方法。
+    当然，在非严格的物理推导中，我们经常会把导数视为 $ \d y $ 与 $ \d x $ 的比值来进行计算。
+    并且可以用类似的方法处理常微分中的微元计算，这种做法（形式计算）在物理学中是被广泛接受的。
+    \medskip
+
+    当然，如果从更高级的数学角度来看，我们的操作是有严格依据的，这也保证了我们不会出错，这里便不再深入了。
+
+\end{note}
+
+导数有一些重要性质，举例如下：
+\begin{illustration}{导数的性质}{derivative-properties}
+    \begin{align}
+        &(1)\quad (A_1 y_1 + A_2 y_2)' = A_1 y_1' + A_2 y_2' ;\\
+        &(2)\quad (y_1 y_2)' = y_1' y_2 + y_1 y_2' ;\\
+        &(3)\quad \left( \frac{y_1}{y_2} \right)' = \frac{y_1' y_2 - y_1 y_2'}{y_2^2} ;\\
+        &(4)\quad (y_1 \circ y_2)' = (y_1' \circ y_2) \cdot y_2' .\label{eq:derivative-composition}
+    \end{align}
+
+\end{illustration}
+
+证明略去。
+
+其中，式 \ref{eq:derivative-composition} 被称为复合函数的求导法则。
+在微分的形式下，式 \ref{eq:derivative-composition} 可写为
+\begin{equation}
+    \frac{\d y_2}{\d x} = \frac{\d y_2}{\d y_1} \cdot \frac{\d y_1}{\d x}.
+\end{equation}
+
+这也在一定程度上为我们对导数执行的“消去”操作的正确性提供了依据。
+\bigskip
+
+常用的导数公式列举如下：
+\begin{illustration}{常用导数公式}{common-derivative-formulas}
+    \begin{align}
+        &(1)\quad (x^n)' = n x^{n-1} ;\\
+        &(2)\quad (a^x)' = a^x \ln a ;\\
+        &(3)\quad (\log _a x)' = \frac{1}{x \ln a} ;\\
+        &(4)\quad (\sin x)' = \cos x ;\\
+        &(5)\quad (\cos x)' = -\sin x ;\\
+    \end{align}
+
+\end{illustration}
+
+此外，还有几个常用的 $ n $ 阶导数公式：
+\begin{illustration}{常用 $ n $ 阶导数公式}{common-nth-derivative-formulas}
+    \begin{align}
+        &(1)\quad (e^{a x})^{(n)} = a^n e^{a x} ;\\
+        &(2)\quad (\sin a x)^{(n)} = a^n \sin \left( a x + \frac{n \pi}{2} \right) ;\\
+        &(3)\quad (\cos a x)^{(n)} = a^n \cos \left( a x + \frac{n \pi}{2} \right) .
+    \end{align}
+
+\end{illustration}
+
+在数学上，导数还可以用来讨论函数曲线的极值位置与凹凸性，这在物理中经常用到，而且有如下结论：
+\begin{definition}{极值与凹凸性的判定}{extreme-concavity-determination}
+    设函数 $ y = f(x) $ 在点 $ x_0 $ 处可导，且 $ f'(x_0) = 0 $。
+    \begin{itemize}
+        \item 若 $ f''(x_0) > 0 $，则 $ f(x) $ 在点 $ x_0 $ 处取得极小值，且曲线在该点处向下凸，称为“凸”；
+        \item 若 $ f''(x_0) < 0 $，则 $ f(x) $ 在点 $ x_0 $ 处取得极大值，且曲线在该点处向上凸，称为“凹”；
+        \item 若 $ f''(x_0) = 0 $，则不能确定 $ f(x) $ 在点 $ x_0 $ 处是否取得极值，需考察更高阶导数。
+    \end{itemize}
+
+    注意到，函数的凹凸与“凹”“凸”这两个字的字型是相反的，这是因为函数的凸性与凸集有关，而凸集的定义是明确的，因此相反。
+
+\end{definition}
+
+接下来，我们介绍与导数有关的另一个重要工具——泰勒公式。
+\begin{theorem}{泰勒公式}{taylor-formula}
+    设函数 $ y = f(x) $ 在点 $ x_0 $ 处具有 $ n + 1 $ 阶导数，则在点 $ x_0 $ 附近，函数 $ f(x) $ 可展开为
+    \begin{equation}
+        f(x) = f(x_0) + \frac{f'(x_0)}{1!} (x - x_0) + \frac{f''(x_0)}{2!} (x - x_0)^2 + \cdots + \frac{f^{(n)}(x_0)}{n!} (x - x_0)^n + R_n,
+    \end{equation}
+
+    其中，余项 $ R_n $ 有如下两种形式：
+    \begin{itemize}
+        \item 拉格朗日（Lagrange）余项形式：
+        \begin{equation}
+            R_n = \frac{f^{(n+1)}(\xi)}{(n+1)!} (x - x_0)^{n+1},\quad \xi\text{ 在 } x \text{ 与 } x_0 \text{ 之间} ;
+        \end{equation}
+        \item 皮亚诺（Peano）余项形式：
+        \begin{equation}
+            R_n = o \left( (x - x_0)^n \right),\quad x \to x_0 .
+        \end{equation}
+    \end{itemize}
+    
+\end{theorem}
+
+显然，函数如果想展成泰勒级数，至少要求通项趋于零，即
+\begin{equation*}
+    \lim_{n \to \infty} \frac{f^{(n)}(x_0)}{n!} (x - x_0)^n = 0.
+\end{equation*}
+
+但事实上，函数能否展成泰勒级数，还需要满足更强的条件，这里不再赘述。
+\bigskip
+
+函数 $ f(x) $ 若能在点 $ x_0 $ 两侧某范围内展开成泰勒级数，且级数在该范围内收敛于函数值，便称这一范围为 $ f(x) $ 的收敛区间。
+例如，在数学上可以证明：
+\begin{illustration}{常见函数的泰勒展开}{common-function-taylor-expansion}
+    \begin{align}
+        &(1)\quad e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!},\quad x \in (-\infty, +\infty) ;\\
+        &(2)\quad \sin x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!},\quad x \in (-\infty, +\infty) ;\\
+        &(3)\quad \cos x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n}}{(2n)!},\quad x \in (-\infty, +\infty) ;\\
+        &(4)\quad \ln (1 + x) = \sum_{n=1}^{\infty} (-1)^{n-1} \frac{x^n}{n},\quad x \in (-1, 1] ;\\
+        &(5)\quad (1 + x)^m = \sum_{n=0}^{\infty} \binom{m}{n} x^n,\quad x \in (-1, 1) .\label{eq:taylor-binomial}
+    \end{align}
+    
+\end{illustration}
+
+其中，式 \ref{eq:taylor-binomial} 中的二项式系数定义为
+\begin{equation}
+    \binom{m}{n} = \frac{m (m - 1) (m - 2) \cdots [m - (n - 1)]}{n!}.
+\end{equation}
+
+$ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数。
+
+\subsection{积分}\label{subsec:integral}
+
+有许多数学书上把积分分为了不定积分与定积分两类，还有“积分是导数的逆运算”这样的说法。
+
+但实际上，积分的本质是求和，而我更愿意把求不定积分看作是求原函数的问题，而把定积分视为真正意义上的“积分”，即求和。
+
+\begin{definition}{不定积分}{indefinite-integral}
+    设函数 $ F(x) $ 的导数为 $ f(x) $，即 $ F'(x) = f(x) $，则称函数 $ F(x) $ 为函数 $ f(x) $ 的一个原函数。
+    函数 $ f(x) $ 的所有原函数的集合称为函数 $ f(x) $ 的不定积分，记为
+    \begin{equation*}
+        \int f(x) \d x = F(x) + C,
+    \end{equation*}
+
+    其中，$ C $ 为任意常数。
+\end{definition}
+
+根据 \cref{illustration:derivative-properties} 中导数的性质，可以得到不定积分的一些性质，举例如下：
+\begin{illustration}{不定积分的性质}{indefinite-integral-properties}
+    \begin{align}
+        &(1)\quad \int [A_1 f_1(x) + A_2 f_2(x)] \d x = A_1 \int f_1(x) \d x + A_2 \int f_2(x) \d x ;\\
+        &(2)\quad \int f'(x) g(x) \d x = f(x) g(x) - \int f(x) g'(x) \d x ;\\
+        &(3)\quad \int f(g(x)) g'(x) \d x = \int f(u) \d u,\quad u = g(x) .
+    \end{align}
+
+\end{illustration}
+
+同时，根据 \cref{illustration:common-derivative-formulas} 中常用的导数公式，可以得到一些常见函数的不定积分，举例如下：
+\begin{illustration}{常见函数的不定积分}{common-indefinite-integral}
+    \begin{align}
+        &(1)\quad \int x^n \d x = \frac{x^{n+1}}{n+1} + C,\quad (n \neq -1) ;\\
+        &(2)\quad \int \frac{1}{x} \d x = \ln |x| + C ;\\
+        &(3)\quad \int a^x \d x = \frac{a^x}{\ln a} + C ;\\
+        &(4)\quad \int \log_a x \d x = x (\log_a x - \log_e a) + C ;\\
+        &(5)\quad \int \sin x \d x = -\cos x + C ;\\
+        &(6)\quad \int \cos x \d x = \sin x + C .
+    \end{align}
+
+\end{illustration}
+
+有了这些，我们就可以计算几乎所有可解的不定积分了。
+\bigskip
+
+\begin{definition}{定积分}{definite-integral}
+    设函数 $ f(x) $ 在区间 $ [a, b] $ 上有定义，且在该区间上可积，则称
+    \begin{equation}
+        \int_a^b f(x) \d x = \lim_{n \to \infty} \sum_{i=1}^n f(\xi_i) \Delta x_i,
+    \end{equation}
+
+    其中，区间 $ [a, b] $ 被分成 $ n $ 个子区间 $ [x_{i-1}, x_i] $，$ \Delta x_i = x_i - x_{i-1} $，$ \xi_i \in [x_{i-1}, x_i] $。
+    若极限存在，则称该极限为函数 $ f(x) $ 在区间 $ [a, b] $ 上的定积分。
+    
+\end{definition}
+
+这是定积分的黎曼（Riemann）定义，它的几何意义是曲线 $ y = f(x) $ 与 $ x $ 轴及直线 $ x = a $ 和 $ x = b $ 所围成的面积（注意符号）。
+但是这个定义在实际计算中并不实用，我们需要借助不定积分来计算定积分（这也正是不定积分这个概念被提出的原因）。
+
+这就需要用到著名的微积分基本定理。
+
+\begin{theorem}{微积分基本定理}{fundamental-theorem-of-calculus}
+    设函数 $ f(x) $ 在区间 $ [a, b] $ 上连续，且 $ F(x) $ 是 $ f(x) $ 的一个原函数，则
+    \begin{equation}
+        \int_a^b f(x) \d x = F(b) - F(a).
+    \end{equation}
+
+    证明：
+
+    设区间 $ [a, b] $ 被分成 $ n $ 个子区间 $ [x_{i-1}, x_i] $，$ \Delta x_i = x_i - x_{i-1} $，$ \xi_i \in [x_{i-1}, x_i] $。
+    则有
+    \begin{equation*}
+        \sum_{i=1}^n f(\xi_i) \Delta x_i = \sum_{i=1}^n [F(x_i) - F(x_{i-1})] = F(b) - F(a).
+    \end{equation*}
+    当 $ n \to \infty $ 时，右端不变，因此
+    \begin{equation*}
+        \int_a^b f(x) \d x = F(b) - F(a).
+    \end{equation*}
+
+    上述证明中运用了微分中值定理，亦即拉格朗日（Lagrange）中值定理，此处不再赘述。
+\end{theorem}
+
+由此，我们可以通过求不定积分来计算定积分了。
+
+类似于不定积分，定积分也有一些性质，举例如下：
+\begin{illustration}{定积分的性质}{definite-integral-properties}
+    \begin{align}
+        &(1)\quad \int_a^b [A_1 f_1(x) + A_2 f_2(x)] \d x = A_1 \int_a^b f_1(x) \d x + A_2 \int_a^b f_2(x) \d x ;\\
+        &(2)\quad \int_a^b f(x) \d x = -\int_b^a f(x) \d x ;\\
+        &(3)\quad \int_a^b f(x) \d x = \int_a^c f(x) \d x + \int_c^b f(x) \d x .
+    \end{align}
+\end{illustration}
+
+\begin{note}{积分变量的选择}{integration-variable-choice}
+    在积分运算中，积分变量是一个“虚拟变量”，它可以是任何符号，只要在积分式中前后一致即可。
+    例如，下面两个积分式是等价的：
+    \begin{equation*}
+        \int_a^b f(x) \d x = \int_a^b f(t) \d t .
+    \end{equation*}
+    这是因为积分变量只是一个占位符号，并不影响积分的结果。
+\end{note}
+
+下面给出一个定积分计算的例子，即曲线段长度的计算。
+\begin{example}{曲线段长度}{curve-length}
+    设函数 $ y = f(x) $ 在区间 $ [a, b] $ 上连续且可导，求曲线 $ y = f(x) $ 在区间 $ [a, b] $ 上的弧长。
+
+    证明：
+
+    设区间 $ [a, b] $ 被分成 $ n $ 个子区间 $ [x_{i-1}, x_i] $，$ \Delta x_i = x_i - x_{i-1} $，$ \xi_i \in [x_{i-1}, x_i] $。
+    则曲线段在子区间 $ [x_{i-1}, x_i] $ 上的弧长近似为
+    \begin{equation*}
+        \Delta s_i = \sqrt{(\Delta x_i)^2 + (\Delta y_i)^2} = \sqrt{1 + \left( \frac{\Delta y_i}{\Delta x_i} \right)^2} \Delta x_i.
+    \end{equation*}
+
+    当子区间足够小时，有
+    \begin{equation*}
+        \frac{\Delta y_i}{\Delta x_i} \approx f'(\xi_i).
+    \end{equation*}
+
+    因此，曲线段在区间 $ [a, b] $ 上的弧长近似为
+    \begin{equation*}
+        S \approx \sum_{i=1}^n \sqrt{1 + [f'(\xi_i)]^2} \Delta x_i.
+    \end{equation*}
+
+    当子区间无限细分时，近似变为等于，即
+    \begin{equation*}
+        S = \int_a^b \sqrt{1 + [f'(x)]^2} \d x.
+    \end{equation*}
+\end{example}
+
+\begin{note}{微分形式下的曲线段长度}{differential-form-curve-length}
+    在一些书上也有类似于下面的表达式：
+    \begin{equation*}
+        \d s = \sqrt {(\d x)^2 + (\d y)^2} = \sqrt {1 + \left( \frac{\d y}{\d x} \right)^2} \d x
+    \end{equation*}
+
+    这种表达式其实是对微分形式的曲线段长度公式的非严格表达，但也是形式计算奏效的一个例子。
+\end{note}
+    

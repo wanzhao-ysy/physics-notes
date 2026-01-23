@@ -19,7 +19,16 @@
 \RequirePackage{graphicx,float,caption,subcaption}
 \RequirePackage{tikz}
 \usetikzlibrary{arrows.meta,angles,quotes,calc}
-\RequirePackage[inner=0.8in,outer=1in,vmargin=0.8in,marginparwidth=0.8in]{geometry}
+\RequirePackage[
+  inner=2cm,
+  outer=1.5cm,
+  top=2cm,
+  bottom=2cm,
+  marginparwidth=2cm,
+  marginparsep=0.4cm,
+  %includefoot,
+  heightrounded
+  ]{geometry}
 \RequirePackage{multicol}
 % 
 % 中文支持
@@ -60,95 +69,8 @@
 \numberwithin{table}{chapter}
 \numberwithin{equation}{chapter}
 %
-% ==========================================
-% 物理笔记专用环境定义
-% ==========================================
-%
-% 1. 定义环境
-\newtcbtheorem[number within=section]{definition}{定义}
-{
-    colback=blue!5!white,
-    colframe=blue!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=blue!75!black},
-}{def}
-%
-% 2. 定律环境
-\newtcbtheorem[number within=section]{law}{定律}
-{
-    colback=green!5!white,
-    colframe=green!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=green!75!black},
-}{law}
-%
-% 3. 定理环境
-\newtcbtheorem[number within=section]{theorem}{定理}
-{
-    colback=orange!5!white,
-    colframe=orange!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=orange!75!black},
-}{theorem}
-%
-% 4. 注释环境
-\newtcbtheorem[number within=section]{note}{注}
-{
-    colback=yellow!5!white,
-    colframe=yellow!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=yellow!75!black},
-}{note}
-%
-% 5. 例题环境
-\newtcbtheorem[number within=section]{example}{例}
-{
-    colback=red!5!white,
-    colframe=red!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=red!75!black},
-}{example}
-%
-% 6. 示例环境
-\newtcbtheorem[number within=section]{illustration}{示}
-{
-    colback=purple!5!white,
-    colframe=purple!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=purple!75!black},
-}{illustration}
-%
-% 7.定理证明环境
-\newtcbtheorem[number within=section]{proofthm}{证明}
-{
-    colback=gray!5!white,
-    colframe=gray!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=gray!75!black},
-}{proofthm}
-%
-%==========================================
+% 页面设置
+%\raggedbottom
 %
 % 超链接支持
 \RequirePackage{hyperref}
@@ -160,6 +82,114 @@
     bookmarksnumbered=true,
     pdfstartview=FitH
 }
+%
+% 智能引用支持
+\RequirePackage{cleveref}
+%
+% 书签支持
+\RequirePackage{bookmark}
+%
+% ==========================================
+% 物理笔记专用环境定义
+% ==========================================
+%
+% 1. 定义环境
+\newtcbtheorem[
+  number within=section,
+  Crefname={定理}{定理},
+  crefname={定理}{定理}
+  ]{definition}{定义}
+{
+    colback=blue!5!white,
+    colframe=blue!75!black,
+    fonttitle=\bfseries,
+    breakable,
+    enhanced,
+    attach boxed title to top left={xshift=5mm, yshift=-2mm},
+    boxed title style={colback=blue!75!black},
+}{def}
+%
+% 2. 定律环境
+\newtcbtheorem[
+  number within=section,
+  Crefname={定律}{定律},
+  crefname={定律}{定律}
+  ]{law}{定律}
+{
+    colback=green!5!white,
+    colframe=green!75!black,
+    fonttitle=\bfseries,
+    breakable,
+    enhanced,
+    attach boxed title to top left={xshift=5mm, yshift=-2mm},
+    boxed title style={colback=green!75!black},
+}{law}
+%
+% 3. 定理环境
+\newtcbtheorem[
+  number within=section,
+  Crefname={定理}{定理},
+  crefname={定理}{定理}
+  ]{theorem}{定理}
+{
+    colback=orange!5!white,
+    colframe=orange!75!black,
+    fonttitle=\bfseries,
+    breakable,
+    enhanced,
+    attach boxed title to top left={xshift=5mm, yshift=-2mm},
+    boxed title style={colback=orange!75!black},
+}{theorem}
+%
+% 4. 注释环境
+\newtcbtheorem[
+  number within=section,
+  Crefname={注释}{注释},
+  crefname={注释}{注释}
+  ]{note}{注释}
+{
+    colback=yellow!5!white,
+    colframe=yellow!75!black,
+    fonttitle=\bfseries,
+    breakable,
+    enhanced,
+    attach boxed title to top left={xshift=5mm, yshift=-2mm},
+    boxed title style={colback=yellow!75!black},
+}{note}
+%
+% 5. 例环境
+\newtcbtheorem[
+  number within=section,
+  Crefname={例}{例},
+  crefname={例}{例}
+  ]{example}{例}
+{
+    colback=red!5!white,
+    colframe=red!75!black,
+    fonttitle=\bfseries,
+    breakable,
+    enhanced,
+    attach boxed title to top left={xshift=5mm, yshift=-2mm},
+    boxed title style={colback=red!75!black},
+}{example}
+%
+% 6. 示例环境
+\newtcbtheorem[
+  number within=section,
+  Crefname={示例}{示例},
+  crefname={示例}{示例}
+  ]{illustration}{示例}
+{
+    colback=purple!5!white,
+    colframe=purple!75!black,
+    fonttitle=\bfseries,
+    breakable,
+    enhanced,
+    attach boxed title to top left={xshift=5mm, yshift=-2mm},
+    boxed title style={colback=purple!75!black},
+}{illustration}
+%
+%==========================================
 %
 % 令 \cleardoublepage 的偶数页页眉页脚为空
 \renewcommand{\cleardoublepage}
