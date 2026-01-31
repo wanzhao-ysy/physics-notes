@@ -4,7 +4,11 @@
 \documentclass[a4paper]{book}
 
 \usepackage{physics-notes-style}
+\addbibresource{references.bib}
 \setcounter{chapter}{-1}
+% \includeonly{
+%     chap/chap.01.particle.kinematics
+% }
 
 \begin{document}
 
@@ -12,15 +16,16 @@
 \input{chap/titlepage.tex}
 
 \frontmatter
-\include{chap/preface.contrib}
-\include{chap/preface.overview}
+\include{chap/preface_contrib}
+\include{chap/preface_overview}
 \tableofcontents
 
 \mainmatter
-\include{chap/chap.00.math.basics}
+\include{chap/chap_00_math-basics}
+\include{chap/chap_01_particle-kinematics}
+\include{chap/chap_special-relativity}
 
 \backmatter
 \printbibliography[heading=bibintoc, title={参考文献}]
 
 \end{document}
-

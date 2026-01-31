@@ -1,13 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{physics-notes-style}
-%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % physics-notes-style 调用的宏包
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % 参考文献支持
 \RequirePackage[backend=biber,style=gb7714-2015, sorting=none,backref=true]{biblatex}
-\addbibresource{references.bib}
 %
 % 基础宏包（数学）
 \RequirePackage{xcolor}
@@ -20,13 +19,14 @@
 %
 % 物理专用宏包
 \RequirePackage{siunitx}
+\DeclareSIUnit\angstrom{\text{\AA}}
 \RequirePackage{physics2}
 %
 % 图形和布局
 \PassOptionsToPackage{no-math}{fontspec}
 \RequirePackage{graphicx,float,caption,subcaption}
 \RequirePackage{tikz}
-\usetikzlibrary{arrows.meta,angles,quotes,calc}
+\usetikzlibrary{arrows.meta,angles,quotes,calc,patterns}
 \RequirePackage[
   inner=2cm,
   outer=1.5cm,
@@ -42,9 +42,10 @@
 \RequirePackage{tabularray}
 \RequirePackage{scalerel}
 \RequirePackage{booktabs}
+\RequirePackage{multirow}
 %
 % 中文支持
-\RequirePackage[UTF8,scheme=chinese, heading=true,fontset=lxgw]{ctex}
+\RequirePackage[UTF8, scheme=chinese, heading=true, fontset=lxgw]{ctex}
 %
 % tcolorbox 及其库
 \RequirePackage{tcolorbox}
@@ -54,7 +55,7 @@
 \RequirePackage{makeidx}
 %
 % 字体问题处理
-% 等待处理
+\RequirePackage{lmodern}
 %
 % 图、表、公式编号
 \numberwithin{figure}{chapter}
@@ -77,6 +78,18 @@
 %
 % 智能引用支持
 \RequirePackage{cleveref}
+\crefname{equation}{公式}{公式}
+\Crefname{equation}{公式}{公式}
+\crefname{table}{表}{表}
+\Crefname{table}{表}{表}
+\crefname{figure}{图}{图}
+\Crefname{figure}{图}{图}
+\crefformat{section}{#2#1#3节}
+\Crefformat{section}{#2#1#3节}
+\crefformat{chapter}{第#2#1#3章}
+\Crefformat{chapter}{第#2#1#3章}
+\crefformat{page}{第#2#1#3页}
+\Crefformat{page}{第#2#1#3页}
 %
 % 书签支持
 \RequirePackage{bookmark}
@@ -181,6 +194,22 @@
     boxed title style={colback=purple!75!black},
 }{illustration}
 %
+% 7. 引用环境
+\newtcbtheorem[
+  number within=section,
+  Crefname={引用}{引用},
+  crefname={引用}{引用}
+  ]{Citation}{引用}
+{
+    colback=teal!5!white,
+    colframe=teal!75!black,
+    fonttitle=\bfseries,
+    breakable,
+    enhanced,
+    attach boxed title to top left={xshift=5mm, yshift=-2mm},
+    boxed title style={colback=teal!75!black},
+}{Citation}
+%
 %==========================================
 %
 % 页眉页脚设定 (利用 fancyhdr 实现)
@@ -225,10 +254,9 @@
   {\end{quote}\par\vspace*{2ex minus 1.5ex}}
 %
 % 取消过多的 underfull/overfull 警告
-%\hfuzz=10000pt
-%\vfuzz=10000pt
-%\hbadness=10000
-%\vbadness=10000
+\hfuzz=10000pt
+\vfuzz=10000pt
+\hbadness=10000
+\vbadness=10000
 %
 \endinput
-%

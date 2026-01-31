@@ -1,0 +1,145 @@
+% !TeX root = ../main.tex
+\chapter{质点运动学}\label{chap:particle-kinematics}
+
+\begin{intro}
+    质点动力学是大多数普通物理学教材的第一章内容。
+    同时这一章也是大多数人（包括笔者）将诸如微积分和矢量代数等较为困难的数学工具应用于物理学这种二级学科的第一次尝试，
+    在学习这一章的过程中，你可能会感觉到一种“阵痛”。
+    但请你相信，在翻过这座山峰之后，你会发现前方的道路变得平坦而宽广，
+    你会更加自信地面对后续的物理学内容。
+\end{intro}
+
+\section{时间与空间}\label{sec:time-and-space}
+
+时间与空间是最基本的物理概念，没有严格的理论可以定义它们。
+在经典力学中，我们通常假设时间和空间是绝对的、均匀的，并且相互独立的。
+也就是说，时间的流逝不受空间位置的影响，空间的性质不受时间的影响。
+
+\begin{note}{时间与空间的绝对性}{note:absolute-time-and-space}
+    需要注意的是，时间与空间的绝对性假设在相对论中被推翻。
+    在相对论框架下，时间和空间是相互关联的，并且它们的性质会受到观察者运动状态的影响。
+    这些内容将会在最后的相对论章节，即\cref{chap:special-relativity}中进行介绍。
+\end{note}
+
+\subsection{时间的计量}\label{subsec:time-measurement}
+
+时间表征物质运动变化的顺序和持续时间。  
+时间的计量主要是计数的过程，凡是已知其运动规律的物理过程都可以用来计量时间，例如：
+地球自转、公转，摆钟的摆动，石英晶体的振动，铯原子的跃迁等。
+国际单位制中时间的基本单位是秒（second，符号为 s），
+其最新定义是在1967年由第13届国际计量大会通过的，即：
+\begin{definition}{秒的定义}{definition-of-second}
+    秒是铯-133原子基态的两个超精细能级之间跃迁所对应的辐射的9,192,631,770个周期的持续时间。
+\end{definition}
+这一新的定义极大地提高了时间计量的精度，使得现代物理实验和技术应用能够达到前所未有的精确度。
+
+\begin{note}{一些非SI时间单位}{note:non-si-time-units}
+    下面列出了一些常用的时间单位（非SI）及其换算关系：
+\begin{itemize}
+    \item 分钟（minute，符号为 min），\qty{1}{\minute} = \qty{60}{\second}；
+    \item 小时（hour，符号为 h），\qty{1}{\hour} = \qty{60}{\minute} = \qty{3600}{\second}；
+    \item 天（day，符号为 d）, \qty{1}{d} = \qty{24}{\hour} = \qty{86400}{\second}；
+    \item 年（year，符号为 a，也有使用 yr 或 y 的），\qty{1}{a} = \qty{365.25}{d} = \qty{31557600}{\second}。
+\end{itemize}
+\end{note}
+
+
+\subsection{空间的度量}\label{subsec:space-measurement}
+
+空间反应物质运动的广延性。
+在三维空间中的位置通常用三个相互独立的坐标来表示，例如笛卡尔坐标系中的 $(x, y, z)$。
+空间中两点之间的距离为长度。
+国际单位制中长度的基本单位是米（meter，符号为 m），
+其最新定义是在1983年由第17届国际计量大会通过的，即：
+\begin{definition}{米的定义}{definition-of-meter}
+    米是光在真空中在1/299,792,458秒内传播的距离。
+\end{definition}
+这一新的定义将长度单位与时间单位联系起来，利用了光速在真空中的恒定性，从而提高了长度测量的精度。
+
+\begin{note}{一些非SI长度单位}{note:non-si-length-units}
+    下面列出了一些常用的长度单位（非SI）及其换算关系：
+\begin{itemize}
+    \item 埃（angstrom，符号为 \AA），\qty{1}{\angstrom} = \qty{1e-10}{m}；
+    \item 光年（light year，符号为 ly），\qty{1}{ly} = \qty{9.4607e15}{m}；
+    \item 天文单位（astronomical unit，符号为 au），\qty{1}{au} = \qty{1.495978707e11}{m}；
+    \item 秒差距（parsec，符号为 pc，被定义为周年视差等于 1 角秒时的距离），\qty{1}{pc} = \qty{3.085677581e16}{m}。
+\end{itemize}
+\end{note}
+
+\section{物质世界的层次与数量级}\label{sec:scales-of-matter}
+
+物质世界的层次结构极其丰富，从宇宙的宏观尺度到微观的基本粒子尺度，跨度达数十个数量级。
+这里主要是为了介绍一下国际单位制所用的词头，以便更好地理解物理量的数量级。
+\cref{tab:si-prefixes}列出了国际单位制中常用的词头及其对应的因数。
+\begin{table}[htbp]
+    \centering
+    \caption{国际单位制词头表}
+    \begin{tabular}{cccc|cccc}
+        \toprule
+        \multirow{2}{*}{因数} & \multicolumn{2}{c}{词头名称} & 符号 & \multirow{2}{*}{因数} & \multicolumn{2}{c}{词头名称} & 符号 \\
+        \cmidrule(lr){2-3} \cmidrule(lr){6-7}
+         & 英文 & 中文 &  &  & 英文 & 中文 &  \\
+        \midrule
+        $10^{-1}$ & deci & 分 & d & $10^{1}$ & deca & 十 & da \\
+        $10^{-2}$ & centi & 厘 & c & $10^{2}$ & hecto & 百 & h \\
+        $10^{-3}$ & milli & 毫 & m & $10^{3}$ & kilo & 千 & k \\
+        $10^{-6}$ & micro & 微 & $\mu$ & $10^{6}$ & mega & 兆 & M \\
+        $10^{-9}$ & nano & 纳 & n & $10^{9}$ & giga & 吉 & G \\
+        $10^{-12}$ & pico & 皮 & p & $10^{12}$ & tera & 太 & T \\
+        $10^{-15}$ & femto & 飞 & f & $10^{15}$ & peta & 拍 & P \\
+        $10^{-18}$ & atto & 阿 & a & $10^{18}$ & exa & 艾 & E \\
+        $10^{-21}$ & zepto & 仄 & z & $10^{21}$ & zetta & 泽 & Z \\
+        $10^{-24}$ & yocto & 尤 & y & $10^{24}$ & yotta & 尧 & Y \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:si-prefixes}
+\end{table}
+
+它们与基本单位结合后，可以表示非常大或非常小的物理量。
+例如，\qty{1}{\kilo\meter} = \qty{1e3}{\meter}，\qty{1}{\milli\second} = \qty{1e-3}{\second}。
+通过使用这些词头，我们可以更方便地表达和理解物理量的数量级，从而更好地描述物质世界的层次结构。
+
+下面这一段摘自赵凯华老师的《新概念物理教程-力学》\cite{zhaokaihua2004}：
+\begin{Citation}{}{order-of-magnitude-estimation}
+    物理学是一门定量程度很高的学科，它推理性强、逻辑严密，实验测量和理论计算都达到了很高的精度，
+    如时间的计量就有12至13位有效数字。
+    然而，理论物理学家在进行详细计算之前，为了选择和建立恰当的物理模型和数学模型，
+    需要首先粗略的估计各参量的大小和各种可能效应的相对重要性，以判断什么是决定现象的主要机制；
+    同样，实验物理学家在着手准备精密的测量之前，为了选择合适的仪器和测量方法，
+    也需要对各个有关物理量的数量级先做一番估计。
+    总之，掌握特征量的数量级，往往是研究一个物理问题时登堂入室的关键。
+    学习物理学，就需要经常训练对各种事物作粗略的数量级估计，留心查看尺度大小的变化所产生的物理效应。
+\end{Citation}
+
+\section{质点与运动}\label{sec:particle-and-motion}
+
+\subsection{质点与参考系}\label{subsec:particle-and-reference-frame}
+
+在物理学中，为了突出研究对象的某些主要性质，暂不考虑一些次要因素，经常引入一些理想化的模型。
+质点模型就是这样一种理想化的模型，其定义如下：
+\begin{definition}{质点}{definition-of-particle}
+    质点是指在研究物体的运动时，将物体视为一个没有大小和形状的点质量。
+    质点突出了“物体具有质量”和“物体占有位置”这两个基本属性，
+    而忽略了物体的空间扩展性和内部结构。
+\end{definition}
+
+质点的位置及其运动与否，只有相对于实现选定的视为不动的物体（或彼此不做相对运动的物体群）才有明确的意义。
+这种视为不动的物体（或物体群） $ K $ 称为参考物，与参考物固连的空间称为参考空间。
+为了描述运动，还必须有计时装置——钟。
+参考空间和与之固连的钟的组合称为参考系。
+习惯上，我们把参考系简记为 $ K $，即把参考物简称为参考系。
+
+在参考系选定之后，为了定量地描述质点相对于参考系的位置，还必须在参考系上建立适当的坐标系。
+坐标系的选取是完全任意的，可以根据具体问题的需要来选择。
+
+% \input{figure/chap.01/fig_particle-kinematics-reference-frame.tex}
+
+% \begin{example}{质点运动的描述}{description-of-particle-motion}
+
+
+
+
+
+
+
+

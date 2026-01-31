@@ -1,6 +1,5 @@
 % !TeX root = ../main.tex
 \chapter{数学基础}\label{chap:math-basics}
-\addtocontents{los}{\protect\addvspace{10pt}}
 
 \begin{intro}
 物理的学习离不开数学，但学习时间的有限使得很多同学纠结，不知道数学应该学多深。在普通物理的范畴内，作者在这里提出一些小小的建议。
@@ -24,9 +23,9 @@
     y = y(x)\ \text{或}\ y = f(x),
 \end{equation*}
 
-在它的连续区间内，如图 \ref{fig:function-increment}
+在它的连续区间内，如 \cref{fig:function-increment}
 
-\input{figure/chap.00/fig.function-increment.tex}
+\input{figure/chap.00/fig_function-increment.tex}
 
 所示，自变量由 $x$ 变到 $x + \Delta x$，相应的，$y$ 由 $y(x)$ 变到 $y(x + \Delta x)$，则函数的增量定义为
 \begin{equation*}
@@ -53,9 +52,9 @@ $ \d y $ 与 $ \d x $ 之间的关系为
     \end{equation}
     \textbf{证明}：
 
-    \input{figure/chap.00/fig.important-approximation.tex}
+    \input{figure/chap.00/fig_important-approximation.tex}
 
-    以 $ O $ 为原点建立直角坐标系，绘出以 $ R $ 为半径的圆弧如图 \ref{fig:important-approximation} 所示，
+    以 $ O $ 为原点建立直角坐标系，绘出以 $ R $ 为半径的圆弧如 \cref{fig:important-approximation} 所示，
     其中圆心角 $ \theta $ 对应的直线段 $ AA' $ ,$ BB' $ ,圆弧 $ \wideparen{AB} $ 的长度分别为
     \begin{equation*}
         \overline{AA'} = R \sin \theta, \quad \overline{BB'} = R \tan \theta, \quad \wideparen{AB} = R \theta.
@@ -126,12 +125,12 @@ $ \d y $ 与 $ \d x $ 之间的关系为
 证明略去
 
 \begin{note}{复合函数记号的说明}{composition-function-notation}
-    式 \ref{eq:derivative-composition} 中的 $ y_1 \circ y_2 $ 表示复合函数，即 $ y_1 (y_2 (x)) $。
+    \cref{eq:derivative-composition} 中的 $ y_1 \circ y_2 $ 表示复合函数，即 $ y_1 (y_2 (x)) $。
 \end{note}
 
 
-其中，式 \ref{eq:derivative-composition} 被称为复合函数的求导法则。
-在微分的形式下，式 \ref{eq:derivative-composition} 可写为
+其中，式 \cref{eq:derivative-composition} 被称为复合函数的求导法则。
+在微分的形式下，式 \cref{eq:derivative-composition} 可写为
 \begin{equation}
     \frac{\d y_1}{\d x} = \frac{\d y_1}{\d y_2} \cdot \frac{\d y_2}{\d x} .
 \end{equation}
@@ -146,7 +145,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
         &(2)\quad (a^x)' = a^x \ln a ;\\
         &(3)\quad (\log _a x)' = \frac{1}{x \ln a} ;\\
         &(4)\quad (\sin x)' = \cos x ;\\
-        &(5)\quad (\cos x)' = -\sin x ;\\
+        &(5)\quad (\cos x)' = -\sin x ;
     \end{align}
 
 \end{illustration}
@@ -207,7 +206,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
 
 \bigskip
 
-函数 $ f(x) $ 若能在点 $ x_0 $ 两侧某范围内展开成泰勒级数，且级数在该范围内收敛于函数值，便称这一范围为 $ f(x) $ 的收敛区间。
+函数 $ f(x) $ 若能在点 $ x = x_0 $ 两侧某范围内展开成泰勒级数，且级数在该范围内收敛于函数值，便称这一范围为 $ f(x) $ 的收敛区间。
 例如，在数学上可以证明：
 \begin{illustration}{常见函数的泰勒展开}{common-function-taylor-expansion}
     \begin{align}
@@ -221,7 +220,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
 \end{illustration}
 
 \begin{note}{二项式系数的说明}{binomial-coefficient-explanation}
-    式 \ref{eq:taylor-binomial} 中的二项式系数定义为
+    \cref{eq:taylor-binomial} 中的二项式系数定义为
     \begin{equation*}
         \binom{m}{n} = \frac{m (m - 1) (m - 2) \cdots [m - (n - 1)]}{n!} .
     \end{equation*}
@@ -626,11 +625,11 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \end{equation} 
 \end{enumerate}
 
-比较，式 \ref{eq:first-order-linear-ordinary-differential-equation-general-solution} 与式 \ref{eq:particular-solution-ansatz} 可以发现，
-解非齐次方程 \ref{eq:first-order-linear-ordinary-differential-equation} 所做的代换，
+比较，\cref{eq:first-order-linear-ordinary-differential-equation-general-solution} 与 \cref{eq:particular-solution-ansatz} 可以发现，
+解非齐次方程 \cref{eq:first-order-linear-ordinary-differential-equation} 所做的代换，
 可视为对齐次方程通解中的积分常数 $ C $ 进行函数化处理，即将 $ C $ 替换为待定函数 $ u(x) $ ，因此，这种方法称为“常数变易法”。
 
-此外，从通解公式 \ref{eq:first-order-linear-ordinary-differential-equation-general-solution-nonhomogeneous} 可以看出：
+此外，从通解 \cref{eq:first-order-linear-ordinary-differential-equation-general-solution-nonhomogeneous} 可以看出：
 非齐次微分方程的通解等于对应齐次微分方程的通解 $ C e^{-\int P(x) \d x} $ 与非齐次方程的一个特解 $ e^{-\int P(x) \d x} \int Q(x) e^{\int P(x) \d x} \d x $ 之和。
 这件事情在更高阶的线性微分方程中也成立，这一性质称为“叠加原理”，我们之后会再提到它。
 
@@ -735,7 +734,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 \bigskip
 
-对于齐次方程 \ref{eq:homogeneous-second-order-linear-ordinary-differential-equation} 很容易验证下面的结论：
+对于齐次方程 \cref{eq:homogeneous-second-order-linear-ordinary-differential-equation} 很容易验证下面的结论：
 \begin{theorem}{齐次二阶线性微分方程解的叠加原理}{superposition-principle-of-homogeneous-second-order-linear-ordinary-differential-equation}
     设 $ y_1 (x) $ 与 $ y_2 (x) $ 是齐次二阶线性微分方程的两个解，则对于任意常数 $ C_1 , C_2 $，函数
     \begin{equation*}
@@ -745,7 +744,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \end{theorem}
 
 因此，齐次线性方程的解集具有线性结构。
-对于非齐次方程 \ref{eq:second-order-linear-ordinary-differential-equation}，容易验证如下定理：
+对于非齐次方程 \cref{eq:second-order-linear-ordinary-differential-equation}，容易验证如下定理：
 \begin{theorem}{非齐次二阶线性微分方程解的结构}{structure-of-solution-of-nonhomogeneous-second-order-linear-ordinary-differential-equation}
     设 $ y_p (x) $ 是非齐次二阶线性微分方程的一个特解，$ y_h (x) $ 是对应齐次方程的通解，则非齐次方程的通解为
     \begin{equation*}
@@ -763,7 +762,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \end{definition}
 
 \begin{definition}{基本解组}{fundamental-solution-set}
-    若函数 $ y_1 (x) $ 与 $ y_2 (x) $ 是齐次方程 \ref{eq:homogeneous-second-order-linear-ordinary-differential-equation} 的一对线性无关的解，则该方程的任何解均可表示为
+    若函数 $ y_1 (x) $ 与 $ y_2 (x) $ 是齐次方程 \cref{eq:homogeneous-second-order-linear-ordinary-differential-equation} 的一对线性无关的解，则该方程的任何解均可表示为
     \begin{equation*}
         y(x) = C_1 y_1 (x) + C_2 y_2 (x)
     \end{equation*}
@@ -786,7 +785,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 基于 Wronskian 行列式，我们可以给出如下判别线性相关的定理：
 \begin{theorem}{判别线性无关的定理}{theorem-of-determining-linear-independence}
-    设函数 $ y_1 (x) , y_2 (x) $ 是齐次方程 \ref{eq:homogeneous-second-order-linear-ordinary-differential-equation} 的两个解，
+    设函数 $ y_1 (x) , y_2 (x) $ 是齐次方程 \cref{eq:homogeneous-second-order-linear-ordinary-differential-equation} 的两个解，
     则它们在区间 $ I $ 上线性相关的充分必要条件是它们的 Wronskian 行列式在区间 $ I $ 上恒为零。
 \end{theorem}
 
@@ -797,7 +796,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     况且在笔者学学习普通物理学的实践中，这些内容也极少被用到。
     这里只是为了让读者对二阶线性微分方程的解的结构有一个大致的了解，以便在后续的物理学学习中遇到相关内容时不会感到陌生。
 
-    另外，对于形如 \ref{eq:homogeneous-second-order-linear-ordinary-differential-equation} 的齐次二阶线性微分方程，
+    另外，对于形如 \cref{eq:homogeneous-second-order-linear-ordinary-differential-equation} 的齐次二阶线性微分方程，
     实际上，我们只要知道了它的一个解，就可以通过 Liouville 公式求出另一个线性无关的解，
     从而得到该方程的基本解组，进而得到该方程的通解。
     具体的操作方法可参考相关数学分析教材，此处不再赘述。
@@ -821,7 +820,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 求解该类微分方程的方法如下：
 \begin{enumerate}
-    \item 求解对应的齐次方程 \ref{eq:homogeneous-second-order-constant-coefficient-linear-ordinary-differential-equation}。
+    \item 求解对应的齐次方程 \cref{eq:homogeneous-second-order-constant-coefficient-linear-ordinary-differential-equation}。
     设齐次方程的解为 $ y = e^{\lambda x} $ 的形式，将其代入齐次方程，得特征方程
     \begin{equation*}
         \lambda^2 + a \lambda + b = 0 .
@@ -908,7 +907,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \begin{equation*}
         \{ e^{\alpha x} \cos (\beta x) , x e^{\alpha x} \cos (\beta x) , \ldots , x^{m - 1} e^{\alpha x} \cos (\beta x) , e^{\alpha x} \sin (\beta x) , x e^{\alpha x} \sin (\beta x) , \ldots , x^{m - 1} e^{\alpha x} \sin (\beta x) \} .
     \end{equation*}
-    则方程 \ref{eq:nth-order-constant-coefficient-homogeneous-linear-ordinary-differential-equation} 的通解为
+    则方程 \cref{eq:nth-order-constant-coefficient-homogeneous-linear-ordinary-differential-equation} 的通解为
     \begin{equation*}
         y = C_1 e^{\lambda_1 x} + C_2 x e^{\lambda_1 x} + \ldots + C_{m_1} x^{m_1 - 1} e^{\lambda_1 x} + C_{m_1 + 1} e^{\lambda_2 x} + C_{m_1 + 2} x e^{\lambda_2 x} + \ldots + C_{m_1 + m_2} x^{m_2 - 1} e^{\lambda_2 x} + \ldots
     \end{equation*}
@@ -1000,7 +999,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 所以我们讨论的 $ e^{ax} $ 中的 $ a $ 可以是任意复数，即 $ a \in \mathbb{C} $。
 
 到现在其实已经得到了一个挺不错的结果了，但这其实还不够。
-注意到指数输入定理 \ref{theorem:exponential-input-theorem} 中有一个限制条件 $ P(a) \neq 0 $，因为分母显然不能为零。
+注意到指数输入 \cref{theorem:exponential-input-theorem} 中有一个限制条件 $ P(a) \neq 0 $，因为分母显然不能为零。
 但是在实际中，$ P(a) = 0 $ 的情况比比皆是。所以有如下定理：
 \begin{theorem}{指数位移法则}{exponential-shift-rule}
     设 $ P(D) $ 为 $ n $ 阶常系数线性微分算子，$ a $ 为常数，$ u(x) $ 为可微函数，则
@@ -1334,11 +1333,11 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \end{equation}
 仅由自变量 $ x_1 $ 的无穷小变化引起的函数增量
 \begin{equation*}
-    y(x_1 + \d x_1 , x_2 , \ldots , x_k) - y(x_1 , x_2 , \ldots , x_k)
+    y(x_1 + \Delta x_1 , x_2 , \ldots , x_k) - y(x_1 , x_2 , \ldots , x_k)
 \end{equation*}
 称为函数对 $ x_1 $ 的偏微分，将
 \begin{equation}
-    y'_{x_1} = \lim_{\d x_1 \to 0} \frac{y(x_1 + \d x_1 , x_2 , \ldots , x_k) - y(x_1 , x_2 , \ldots , x_k)}{\d x_1}
+    y'_{x_1} = \lim_{\Delta x_1 \to 0} \frac{y(x_1 + \Delta x_1 , x_2 , \ldots , x_k) - y(x_1 , x_2 , \ldots , x_k)}{\Delta x_1}
 \end{equation}
 称为函数对 $ x_1 $ 的偏微商或偏导数。为了在形式上与一元函数导数 $ \frac{\d y}{\d x} $ 区分开来，偏导数通常记为
 \begin{equation}
@@ -1348,7 +1347,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \begin{definition}{偏导数的定义}{definition-of-partial-derivative}
     设 $ y = y(x_1 , x_2 , \ldots , x_k) $，则函数对自变量 $ x_i $ 的偏导数定义为
     \begin{equation}
-        \frac{\partial y}{\partial x_i} = \lim_{\d x_i \to 0} \frac{y(x_1 , \ldots , x_i + \d x_i , \ldots , x_k) - y(x_1 , x_2 , \ldots , x_k)}{\d x_i} (i = 1, 2, \ldots , k) .
+        \frac{\partial y}{\partial x_i} = \lim_{\Delta x_i \to 0} \frac{y(x_1 , \ldots , x_i + \d x_i , \ldots , x_k) - y(x_1 , x_2 , \ldots , x_k)}{\Delta x_i} (i = 1, 2, \ldots , k) .
     \end{equation}
 \end{definition}
 
@@ -1435,9 +1434,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     但是笔者偏爱使用 $ \bm{e}_x , \bm{e}_y , \bm{e}_z $，特在此说明。
 \end{note}
 
-\input{figure/chap.00/fig.curve-element.tex}
+\input{figure/chap.00/fig_curve-element.tex}
 
-将图 \ref{fig:curve-element} 中 $ a $ 到 $ b $ 的曲线段 $ L $ 上的任意一段曲线元记为 $ \d l $ ，并忽略曲线元上各点的位置变化，
+将 \cref{fig:curve-element} 中 $ a $ 到 $ b $ 的曲线段 $ L $ 上的任意一段曲线元记为 $ \d l $ ，并忽略曲线元上各点的位置变化，
 则曲线元上各点的函数值可视为常数，记为 $ \phi (\bm{r}) $ 或 $ \phi (x, y, z) $。
 将该位置处的函数值与曲线元长度的乘积 $ \phi (x, y, z) \d l $，从曲线段 $ L $ 的起点 $ a $ 积分到终点 $ b $，即得到沿曲线段 $ L $ 的线积分：
 \begin{definition}{线积分的定义}{definition-of-line-integral}
@@ -1454,9 +1453,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 \bigskip
 
-\input{figure/chap.00/fig.curve-integral.tex}
+\input{figure/chap.00/fig_curve-integral.tex}
 
-图 \ref{fig:curve-integral} 中从线元始端到终端的矢量 $ \d \bm{l} $ 称为线元矢量。
+\cref{fig:curve-integral} 中从线元始端到终端的矢量 $ \d \bm{l} $ 称为线元矢量。
 各 $ \d \bm{l} $ 所在位置 $ (x, y, z) $ 均有函数值 $ \bm{A} (x, y, z) $，将该位置处的矢量函数值与线元矢量的标量积 $ \bm{A} (x, y, z) \cdot \d \bm{l} $，从曲线段 $ L $ 的起点 $ a $ 积分到终点 $ b $，即得到沿曲线段 $ L $ 的矢量线积分：
 \begin{definition}{矢量线积分的定义}{definition-of-vector-line-integral}
     \begin{equation}
@@ -1472,9 +1471,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 \bigskip
 
-\input{figure/chap.00/fig.surface-element.tex}
+\input{figure/chap.00/fig_surface-element.tex}
 
-讲一个曲面（包括平面）$ S $，如图 \ref{fig:surface-element} 所示，分割成一系列无穷小的小片，称为面元，面积一般地记为 $ \d S $。
+讲一个曲面（包括平面）$ S $，如 \cref{fig:surface-element} 所示，分割成一系列无穷小的小片，称为面元，面积一般地记为 $ \d S $。
 在面元处引一个与面元法线方向相同的单位矢量 $ \bm{n} $，并规定曲面的一侧为内侧，另一侧为外侧，$ \bm{n} $ 指向外侧，称
 \begin{equation*}
     \d \bm{S} = \d S \bm{n}
@@ -1598,6 +1597,8 @@ $ 3 $ 阶行列式的计算可以使用“对角线法则”。
         \item 若行列式的某一行（或某一列）的各元素同时乘以一个常数 $ k $，则行列式的值也乘以 $ k $；
         \item 若行列式的某一行（或某一列）的各元素同时加上另一行（或另一列）的各元素乘以一个常数 $ k $，则行列式的值不变；
         \item 行列式经过转置，也就是将行与列互换位置后，行列式的值不变。
+        \item 如果行列式的某一行（或某一列）的各元素均为零，则该行列式的值为零。
+        \item 如果行列式的两行（或两列）成比例关系，则该行列式的值为零。
     \end{enumerate}
 \end{theorem}
 
@@ -1605,7 +1606,7 @@ $ 3 $ 阶行列式的计算可以使用“对角线法则”。
 
 \subsection{行列式的应用}\label{subsec:applications-of-determinant}
 
-行列式在普物力学中的应用主要体现在解线性方程组与计算矢量的混合积等方面，有关矢量的内容见后续 \ref{sec:algebraic-operations-of-vectors} 节。
+行列式在普物力学中的应用主要体现在解线性方程组与计算矢量的混合积等方面，有关矢量的内容见后续 \cref{sec:algebraic-operations-of-vectors}。
 
 线性方程组的一般形式为
 \begin{equation}
@@ -1711,9 +1712,9 @@ $ \bm{B} $ 的模为
 
 \bigskip
 
-\input{figure/chap.00/fig.vector-addition.tex}
+\input{figure/chap.00/fig_vector-addition.tex}
 
-如图 \ref{fig:vector-addition} 所示，设有两个矢量 $ \bm{A} $ 与 $ \bm{B} $，它们的和称为矢量 $ \bm{A} $ 与矢量 $ \bm{B} $ 的叠加，记为
+如 \cref{fig:vector-addition} 所示，设有两个矢量 $ \bm{A} $ 与 $ \bm{B} $，它们的和称为矢量 $ \bm{A} $ 与矢量 $ \bm{B} $ 的叠加，记为
 \begin{equation}
     \bm{C} = \bm{A} + \bm{B} .
 \end{equation}
@@ -1736,9 +1737,9 @@ $ \bm{B} $ 的模为
 
 矢量的分解是将一个矢量表示为几个互相垂直的分量矢量之和。
 
-\input{figure/chap.00/fig.vector-decomposition.tex}
+\input{figure/chap.00/fig_vector-decomposition.tex}
 
-如图 \ref{fig:vector-decomposition} 所示，对于三维空间中正交的 $ Oxyz $ 坐标系，任何矢量 $ \bm{A} $ 都可以分解为沿 $ x $ 轴、$ y $ 轴与 $ z $ 轴方向的三个分量矢量之和，即
+如 \cref{fig:vector-decomposition} 所示，对于三维空间中正交的 $ Oxyz $ 坐标系，任何矢量 $ \bm{A} $ 都可以分解为沿 $ x $ 轴、$ y $ 轴与 $ z $ 轴方向的三个分量矢量之和，即
 \begin{equation}
     \bm{A} = \bm{A}_x + \bm{A}_y + \bm{A}_z ,
 \end{equation}
@@ -1782,7 +1783,7 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 
 \subsection{矢量的点积}\label{subsec:dot-product-of-vectors}
 
-\begin{note}{关于矢量标积的名称说明}{note-on-names-of-dot-product-of-vectors}
+\begin{note}{关于矢量点积的名称说明}{note-on-names-of-dot-product-of-vectors}
     矢量的点积在物理学中也称为矢量的标积或数量积。
     所谓标积、标量积、点积、数量积、内积等，实际上都是同一个概念，只是名称不同而已。
 \end{note}
@@ -1835,6 +1836,7 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
         0 , & i \neq j ,
     \end{cases}
 \end{equation}
+
 其中，$ \delta_{ij} $ 称为克罗内克（Kronecker）符号。
 借此可以将两个 $ k $ 维矢量 $ \bm{A} = (A_1 , A_2 , \ldots , A_k) $ 与 $ \bm{B} = (B_1 , B_2 , \ldots , B_k) $ 的点积表示为
 \begin{equation}
@@ -1893,7 +1895,7 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
         B_x & B_y & B_z
     \end{array} \right| = (A_y B_z - A_z B_y) \bm{e}_x + (A_z B_x - A_x B_z) \bm{e}_y + (A_x B_y - A_y B_x) \bm{e}_z .
 \end{equation}
-这里的行列式见前面 \ref{sec:determinant} 节。
+这里的行列式见前面 \cref{sec:determinant}。
 
 \begin{note}{关于叉积定义维数的说明}{note-on-dimensions-of-definition-of-cross-product-of-vectors}
     关于叉积的定义，肯定会有读者提出疑问：为什么叉积只能定义在三维空间中，而不能定义在二维空间或更高维空间中呢？
@@ -2170,3 +2172,69 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
     = \Re \left( \frac{e^{i \frac{(n+1) \theta}{2}} \left( e^{-i \frac{(n+1) \theta}{2}} - e^{i \frac{(n+1) \theta}{2}} \right)}{e^{i \frac{\theta}{2}} \left( e^{-i \frac{\theta}{2}} - e^{i \frac{\theta}{2}} \right)}\right)
     = \frac{\sin \frac{(n+1) \theta}{2} \cos \frac{n \theta}{2}}{\sin \frac{\theta}{2}} .
 \end{equation}
+
+\subsection{双曲函数}\label{subsec:hyperbolic-functions}
+双曲函数在物理中也有着一定的应用，比如狭义相对论中的洛伦兹变换就可以用双曲函数来表示。
+双曲函数的定义如下：
+\begin{definition}{双曲函数}{definition-of-hyperbolic-functions}
+    双曲正弦函数与双曲余弦函数分别定义为
+    \begin{equation}
+        \sinh x = \frac{e^x - e^{-x}}{2} ,
+    \end{equation}
+    \begin{equation}
+        \cosh x = \frac{e^x + e^{-x}}{2} .
+    \end{equation}
+
+    此外，还有双曲正切函数，定义为
+    \begin{equation}
+        \tanh x = \frac{\sinh x}{\cosh x} = \frac{e^x - e^{-x}}{e^x + e^{-x}} .
+    \end{equation}
+    
+\end{definition}
+
+双曲函数满足如下恒等式：
+\begin{equation}
+    \cosh^2 x - \sinh^2 x = 1 ,
+\end{equation}
+
+它的导数公式如下：
+\begin{illustration}{双曲函数的导数}{derivatives-of-hyperbolic-functions}
+    设 $ x $ 为自变量，则有
+    \begin{equation}
+        \frac{d}{dx} \sinh x = \cosh x ,
+    \end{equation}
+    \begin{equation}
+        \frac{d}{dx} \cosh x = \sinh x ,
+    \end{equation}
+    \begin{equation}
+        \frac{d}{dx} \tanh x = \frac{1}{\cosh^2 x} .
+    \end{equation}
+    
+\end{illustration}
+
+积分公式如下：
+\begin{illustration}{双曲函数的积分}{integrals-of-hyperbolic-functions}
+    设 $ x $ 为自变量，则有
+    \begin{equation}
+        \int \sinh x \, dx = \cosh x + C ,
+    \end{equation}
+    \begin{equation}
+        \int \cosh x \, dx = \sinh x + C ,
+    \end{equation}
+    \begin{equation}
+        \int \tanh x \, dx = \ln |\cosh x| + C .
+    \end{equation}
+
+\end{illustration}
+
+其性质与三角函数类似，比如和差公式、倍角公式等，可以自行尝试推导。
+
+\begin{note}{关于双曲函数名称的说明}{note-on-names-of-hyperbolic-functions}
+    双曲函数的名称来源于它们与双曲线的关系。
+    设有双曲线 $ \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 $，则可以将其参数化为
+    \begin{equation}
+        x = a \cosh t , \quad y = b \sinh t ,
+    \end{equation}
+    其中，$ t $ 为参数。
+    由此可见，双曲函数与双曲线有着密切的关系，因此得名。
+\end{note}
