@@ -2,16 +2,16 @@
 \chapter{数学基础}\label{chap:math-basics}
 
 \begin{intro}
-物理的学习离不开数学，但学习时间的有限使得很多同学纠结，不知道数学应该学多深。在普通物理的范畴内，作者在这里提出一些小小的建议。
+    物理的学习离不开数学，但学习时间的有限使得很多同学纠结，不知道数学应该学多深。在普通物理的范畴内，作者在这里提出一些小小的建议。
 
-数学知识分两类。
+    数学知识分两类。
 
-第一类是需要完全理解和掌握的，比如数列、导数和积分、微分方程……它们在题目中出现的概率很高，当我们遇到时要能从容应对。
+    第一类是需要完全理解和掌握的，比如数列、导数和积分、微分方程……它们在题目中出现的概率很高，当我们遇到时要能从容应对。
 
-第二类是有助于物理理解，但不要求完全掌握的，比如矢量分析与场论、张量代数……它们有助于加深你对物理情景的理解，但在普通物理的题目中出现的概率较低，这种知识需要学习，但学习的深度要视自身情况而定。
+    第二类是有助于物理理解，但不要求完全掌握的，比如矢量分析与场论、张量代数……它们有助于加深你对物理情景的理解，但在普通物理的题目中出现的概率较低，这种知识需要学习，但学习的深度要视自身情况而定。
 
-这一章虽然叫做数学基础，篇幅不长，但涵盖的内容并不少，因此并不需要通篇阅读。但是当你在学习物理的过程中遇到了数学上的困难时，可以回头查阅有关内容。
-倘若你能从我的注记中获得一些启发，那我的目的便达到了。
+    这一章虽然叫做数学基础，篇幅不长，但涵盖的内容并不少，因此并不需要通篇阅读。但是当你在学习物理的过程中遇到了数学上的困难时，可以回头查阅有关内容。
+    倘若你能从我的注记中获得一些启发，那我的目的便达到了。
 \end{intro}
 
 \section{一元函数微积分}\label{sec:single-variable-calculus}
@@ -25,7 +25,7 @@
 
 在它的连续区间内，如 \cref{fig:function-increment}
 
-\input{figure/chap.00/fig_function-increment.tex}
+\input{figure/chap_00/fig_function-increment.tex}
 
 所示，自变量由 $x$ 变到 $x + \Delta x$，相应的，$y$ 由 $y(x)$ 变到 $y(x + \Delta x)$，则函数的增量定义为
 \begin{equation*}
@@ -52,7 +52,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
     \end{equation}
     \textbf{证明}：
 
-    \input{figure/chap.00/fig_important-approximation.tex}
+    \input{figure/chap_00/fig_important-approximation.tex}
 
     以 $ O $ 为原点建立直角坐标系，绘出以 $ R $ 为半径的圆弧如 \cref{fig:important-approximation} 所示，
     其中圆心角 $ \theta $ 对应的直线段 $ AA' $ ,$ BB' $ ,圆弧 $ \wideparen{AB} $ 的长度分别为
@@ -135,7 +135,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
     \frac{\d y_1}{\d x} = \frac{\d y_1}{\d y_2} \cdot \frac{\d y_2}{\d x} .
 \end{equation}
 
-这也在一定程度上为我们对导数执行的“消去”操作的正确性提供了依据。
+这也在一定程度上为我们对导数执行的「消去」操作的正确性提供了依据。
 \bigskip
 
 常用的导数公式列举如下：
@@ -164,12 +164,12 @@ $ \d y $ 与 $ \d x $ 之间的关系为
 \begin{definition}{极值与凹凸性的判定}{extreme-concavity-determination}
     设函数 $ y = f(x) $ 在点 $ x_0 $ 处可导，且 $ f'(x_0) = 0 $。
     \begin{itemize}
-        \item 若 $ f''(x_0) > 0 $，则 $ f(x) $ 在点 $ x_0 $ 处取得极小值，且曲线在该点处向下凸，称为“凸”；
-        \item 若 $ f''(x_0) < 0 $，则 $ f(x) $ 在点 $ x_0 $ 处取得极大值，且曲线在该点处向上凸，称为“凹”；
+        \item 若 $ f''(x_0) > 0 $，则 $ f(x) $ 在点 $ x_0 $ 处取得极小值，且曲线在该点处向下凸，称为「凸」；
+        \item 若 $ f''(x_0) < 0 $，则 $ f(x) $ 在点 $ x_0 $ 处取得极大值，且曲线在该点处向上凸，称为「凹」；
         \item 若 $ f''(x_0) = 0 $，则不能确定 $ f(x) $ 在点 $ x_0 $ 处是否取得极值，需考察更高阶导数。
     \end{itemize}
 
-    注意到，函数的凹凸与“凹”“凸”这两个字的字型是相反的，这是因为函数的凸性与凸集有关，而凸集的定义是明确的，因此相反。
+    注意到，函数的凹凸与「凹」「凸」这两个字的字型是相反的，这是因为函数的凸性与凸集有关，而凸集的定义是明确的，因此相反。
 
 \end{definition}
 
@@ -292,9 +292,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 \subsection{积分}\label{subsec:integral}
 
-有许多数学书上把积分分为了不定积分与定积分两类，还有“积分是导数的逆运算”这样的说法。
+有许多数学书上把积分分为了不定积分与定积分两类，还有「积分是导数的逆运算」这样的说法。
 
-但实际上，积分的本质是求和，而我更愿意把求不定积分看作是求原函数的问题，而把定积分视为真正意义上的“积分”，即求和。
+但实际上，积分的本质是求和，而我更愿意把求不定积分看作是求原函数的问题，而把定积分视为真正意义上的「积分」，即求和。
 
 \begin{definition}{不定积分}{indefinite-integral}
     设函数 $ F(x) $ 的导数为 $ f(x) $，即 $ F'(x) = f(x) $，则称函数 $ F(x) $ 为函数 $ f(x) $ 的一个原函数。
@@ -385,7 +385,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \end{illustration}
 
 \begin{note}{积分变量的选择}{integration-variable-choice}
-    在积分运算中，积分变量是一个“虚拟变量”，它可以是任何符号，只要在积分式中前后一致即可。
+    在积分运算中，积分变量是一个「虚拟变量」，它可以是任何符号，只要在积分式中前后一致即可。
     例如，下面两个积分式是等价的：
     \begin{equation*}
         \int_a^b f(x) \d x = \int_a^b f(t) \d t .
@@ -438,7 +438,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
     因此笔者的建议是，数值积分依靠计算器或计算机软件即可，而符号积分则更多依赖于查表与经验积累。
 
-    另外还有一条经验，就是面对一个困难的积分，不妨把最复杂或者说“难看”的部分进行换元，往往会有意想不到的效果。
+    另外还有一条经验，就是面对一个困难的积分，不妨把最复杂或者说「难看」的部分进行换元，往往会有意想不到的效果。
 \end{note}
 
     
@@ -469,13 +469,13 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \end{equation}
 其中， $ F(x) $ 是 $ f(x) $ 的一个原函数，$ C $ 为任意常数。
 即对任意的常数 $ C $，函数 $ y = F(x) + C $ 都是该微分方程的一个解。
-故称这样形式的解为该微分方程的“通解”。
+故称这样形式的解为该微分方程的「通解」。
 
 如果事先要求解必须满足某些条件（初始条件或边界条件），比如未知函数在一个特定的 $ x_0 $ 处的值 $ y(x_0) = y_0 $，则符合要求的解
 \begin{equation}
     y = \int_{x_0}^{x} f(x) \d x + y_0
 \end{equation}
-是唯一的，称为该微分方程的“特解”。
+是唯一的，称为该微分方程的「特解」。
 
 对于一般形式的 $ n $ 阶微分方程
 \begin{equation}
@@ -588,7 +588,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         \frac{\d y}{\d x} + P(x) y = Q(x) \label{eq:first-order-linear-ordinary-differential-equation},
     \end{equation}
     其中，$ P(x) $ 与 $ Q(x) $ 为已知函数。若右端的 $ Q(x) = 0 $，则称该微分方程为（一阶）线性齐次微分方程，否则称为（一阶）线性非齐次微分方程。
-    注意到，这里的“齐次”与前面介绍的齐次微分方程的“齐次”是不同的概念。
+    注意到，这里的「齐次」与前面介绍的齐次微分方程的「齐次」是不同的概念。
 \end{definition}
 
 求解该类微分方程的方法如下：
@@ -627,11 +627,11 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 比较，\cref{eq:first-order-linear-ordinary-differential-equation-general-solution} 与 \cref{eq:particular-solution-ansatz} 可以发现，
 解非齐次方程 \cref{eq:first-order-linear-ordinary-differential-equation} 所做的代换，
-可视为对齐次方程通解中的积分常数 $ C $ 进行函数化处理，即将 $ C $ 替换为待定函数 $ u(x) $ ，因此，这种方法称为“常数变易法”。
+可视为对齐次方程通解中的积分常数 $ C $ 进行函数化处理，即将 $ C $ 替换为待定函数 $ u(x) $ ，因此，这种方法称为「常数变易法」。
 
 此外，从通解 \cref{eq:first-order-linear-ordinary-differential-equation-general-solution-nonhomogeneous} 可以看出：
 非齐次微分方程的通解等于对应齐次微分方程的通解 $ C e^{-\int P(x) \d x} $ 与非齐次方程的一个特解 $ e^{-\int P(x) \d x} \int Q(x) e^{\int P(x) \d x} \d x $ 之和。
-这件事情在更高阶的线性微分方程中也成立，这一性质称为“叠加原理”，我们之后会再提到它。
+这件事情在更高阶的线性微分方程中也成立，这一性质称为「叠加原理」，我们之后会再提到它。
 
 \bigskip
 
@@ -848,14 +848,14 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     其中，$ C_1 , C_2 $ 为任意常数。
     \item 求该非齐次方程的一个特解 $ y_p $，可用如下方法求解：
     \begin{enumerate}
-        \item 若 $ f(x) $ 为指数函数、多项式函数、三角函数或它们的有限和与积的形式，则可用“未定系数法”求解，即设
+        \item 若 $ f(x) $ 为指数函数、多项式函数、三角函数或它们的有限和与积的形式，则可用「待定系数法」求解，即设
         \begin{equation*}
             y_p = y_p^{(1)} + y_p^{(2)} + \ldots + y_p^{(n)} ,
         \end{equation*}
         其中，每一项 $ y_p^{(i)} $ 对应 $ f(x) $ 中的一项，且 $ y_p^{(i)} $ 的形式与该项相同，但含有待定系数。
         将 $ y_p $ 代入非齐次方程，解出待定系数，即可得到该非齐次方程的一个特解。
         需要注意的是，若 $ y_p^{(i)} $ 中的某一项与齐次方程的某一解形式相同，则需将该项乘以 $ x $ 的适当幂次，以确保 $ y_p^{(i)} $ 与齐次方程的解线性无关。
-        \item 否则，可用“常数变易法”求解，即设
+        \item 否则，可用「常数变易法」求解，即设
         \begin{equation*}
             y_p = u_1 (x) y_1 (x) + u_2 (x) y_2 (x) ,
         \end{equation*}
@@ -1237,7 +1237,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 但这不足为虑，因为位移法则其实在表明这样的一个事实：只要把 $ P(D + a) y = f(x) $ 的特解乘上 $ e^{ax} $ 就是原方程的特解。
 所以就回到了一开始讨论的问题，可以先把 $ D^k $ 提取出来，最后在一步步积分即可。
 
-为了让结论“更正确”，我们对 $ \frac{1}{P(D)} $ 做如下补充定义：
+为了让结论「更正确」，我们对 $ \frac{1}{P(D)} $ 做如下补充定义：
 \begin{definition}{微分算子多项式的广义逆}{generalized-inverse-of-differential-operator-polynomial}
     设 $ P(D) = D^k \tilde{P}(D) $，其中，$ \tilde{P}(D) $ 中的常数项不为零，则定义
     \begin{equation}
@@ -1395,7 +1395,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \end{definition}
 
 \begin{note}{关于重积分的说明}{note-on-multiple-integral}
-    这里的“体积”并非我们通常所说的三维空间中的体积，而是 $ k $ 维空间中的“超体积”。
+    这里的「体积」并非我们通常所说的三维空间中的体积，而是 $ k $ 维空间中的「超体积」。
     同时上述定义实际上非常模糊且并不严谨，关于 $ \Delta V_i $ 的划分方式，极限的存在性等问题都需要更为严谨的数学语言来描述，限于篇幅，此处便不做展开了。
 
     \bigskip
@@ -1434,7 +1434,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     但是笔者偏爱使用 $ \bm{e}_x , \bm{e}_y , \bm{e}_z $，特在此说明。
 \end{note}
 
-\input{figure/chap.00/fig_curve-element.tex}
+\input{figure/chap_00/fig_curve-element.tex}
 
 将 \cref{fig:curve-element} 中 $ a $ 到 $ b $ 的曲线段 $ L $ 上的任意一段曲线元记为 $ \d l $ ，并忽略曲线元上各点的位置变化，
 则曲线元上各点的函数值可视为常数，记为 $ \phi (\bm{r}) $ 或 $ \phi (x, y, z) $。
@@ -1453,7 +1453,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 \bigskip
 
-\input{figure/chap.00/fig_curve-integral.tex}
+\input{figure/chap_00/fig_curve-integral.tex}
 
 \cref{fig:curve-integral} 中从线元始端到终端的矢量 $ \d \bm{l} $ 称为线元矢量。
 各 $ \d \bm{l} $ 所在位置 $ (x, y, z) $ 均有函数值 $ \bm{A} (x, y, z) $，将该位置处的矢量函数值与线元矢量的标量积 $ \bm{A} (x, y, z) \cdot \d \bm{l} $，从曲线段 $ L $ 的起点 $ a $ 积分到终点 $ b $，即得到沿曲线段 $ L $ 的矢量线积分：
@@ -1471,7 +1471,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 \bigskip
 
-\input{figure/chap.00/fig_surface-element.tex}
+\input{figure/chap_00/fig_surface-element.tex}
 
 讲一个曲面（包括平面）$ S $，如 \cref{fig:surface-element} 所示，分割成一系列无穷小的小片，称为面元，面积一般地记为 $ \d S $。
 在面元处引一个与面元法线方向相同的单位矢量 $ \bm{n} $，并规定曲面的一侧为内侧，另一侧为外侧，$ \bm{n} $ 指向外侧，称
@@ -1553,7 +1553,7 @@ $ 2 $ 阶行列式的计算较为简单，设
     D = a_{11} a_{22} - a_{12} a_{21} .
 \end{equation}
 
-$ 3 $ 阶行列式的计算可以使用“对角线法则”。
+$ 3 $ 阶行列式的计算可以使用「对角线法则」。
 设
 \begin{equation}
     D = \left| \begin{array}{ccc}
@@ -1712,14 +1712,14 @@ $ \bm{B} $ 的模为
 
 \bigskip
 
-\input{figure/chap.00/fig_vector-addition.tex}
+\input{figure/chap_00/fig_vector-addition.tex}
 
 如 \cref{fig:vector-addition} 所示，设有两个矢量 $ \bm{A} $ 与 $ \bm{B} $，它们的和称为矢量 $ \bm{A} $ 与矢量 $ \bm{B} $ 的叠加，记为
 \begin{equation}
     \bm{C} = \bm{A} + \bm{B} .
 \end{equation}
-矢量叠加的几何意义可通过“平行四边形法则”来理解，即以矢量 $ \bm{A} $ 与矢量 $ \bm{B} $ 为邻边作平行四边形，则从平行四边形的一个顶点到对角顶点的矢量即为矢量 $ \bm{C} $；
-也可通过“首尾相接法则”来理解，即将矢量 $ \bm{B} $ 的起点与矢量 $ \bm{A} $ 的终点相接，则从矢量 $ \bm{A} $ 的起点到矢量 $ \bm{B} $ 的终点的矢量即为矢量 $ \bm{C} $。
+矢量叠加的几何意义可通过「平行四边形法则」来理解，即以矢量 $ \bm{A} $ 与矢量 $ \bm{B} $ 为邻边作平行四边形，则从平行四边形的一个顶点到对角顶点的矢量即为矢量 $ \bm{C} $；
+也可通过「首尾相接法则」来理解，即将矢量 $ \bm{B} $ 的起点与矢量 $ \bm{A} $ 的终点相接，则从矢量 $ \bm{A} $ 的起点到矢量 $ \bm{B} $ 的终点的矢量即为矢量 $ \bm{C} $。
 矢量叠加满足交换律与结合律，即
 \begin{equation}
     \bm{A} + \bm{B} = \bm{B} + \bm{A} ,
@@ -1737,7 +1737,7 @@ $ \bm{B} $ 的模为
 
 矢量的分解是将一个矢量表示为几个互相垂直的分量矢量之和。
 
-\input{figure/chap.00/fig_vector-decomposition.tex}
+\input{figure/chap_00/fig_vector-decomposition.tex}
 
 如 \cref{fig:vector-decomposition} 所示，对于三维空间中正交的 $ Oxyz $ 坐标系，任何矢量 $ \bm{A} $ 都可以分解为沿 $ x $ 轴、$ y $ 轴与 $ z $ 轴方向的三个分量矢量之和，即
 \begin{equation}
@@ -1747,7 +1747,7 @@ $ \bm{B} $ 的模为
 \begin{equation}
     \bm{A}_x = A_x \bm{e}_x , \quad \bm{A}_y = A_y \bm{e}_y , \quad \bm{A}_z = A_z \bm{e}_z .
 \end{equation}
-这里，$ A_x $，$ A_y $，$ A_z $ 分别为矢量 $ \bm{A} $ 在 $ x $ 轴、$ y $ 轴与 $ z $ 轴方向的投影“长度”（这里的“长度是有向长度”），称为矢量 $ \bm{A} $ 在各坐标轴方向的分量。
+这里，$ A_x $，$ A_y $，$ A_z $ 分别为矢量 $ \bm{A} $ 在 $ x $ 轴、$ y $ 轴与 $ z $ 轴方向的投影「长度」（这里的「长度是有向长度」），称为矢量 $ \bm{A} $ 在各坐标轴方向的分量。
 $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ z $ 轴的单位矢量。
 则矢量 $ \bm{A} $ 可表示为
 \begin{equation}
@@ -2028,7 +2028,7 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 
 \subsection{数列（序列）}\label{subsec:sequences}
 
-有关于数列（序列）的技巧，主要还是依靠高中的数学知识，比如凑等比、等差，裂项，线性递推，“不动点”等。
+有关于数列（序列）的技巧，主要还是依靠高中的数学知识，比如凑等比、等差，裂项，线性递推，「不动点」等。
 此处便不详述了。
 
 
@@ -2236,5 +2236,13 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
         x = a \cosh t , \quad y = b \sinh t ,
     \end{equation}
     其中，$ t $ 为参数。
-    由此可见，双曲函数与双曲线有着密切的关系，因此得名。
+    由此可见，双曲函数与双曲线有着密切的关系。
+
+    再考虑由欧拉公式得到三角函数的表达式
+    \begin{equation}
+        \sin \theta = \frac{e^{i \theta} - e^{-i \theta}}{2i} , \quad \cos \theta = \frac{e^{i \theta} + e^{-i \theta}}{2} .
+    \end{equation}
+    将其中的虚数单位 $ i $ 替换为实数单位 $ 1 $，即可得到双曲函数的表达式。
+
+    双曲三角函数的名称也是由此而来。
 \end{note}
