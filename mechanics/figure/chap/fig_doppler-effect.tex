@@ -1,0 +1,36 @@
+% 光的多普勒效应的推导示意图
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=latex]
+        \draw[->, thick] (0,0) -- (3,0) node[below] {$x'$};
+        \draw[->, thick] (0,0) -- (4,0) node[below] {$x$};
+
+        \draw[->, thick] (0,0) -- (0,2) node[left] {$y'$};
+        \draw[->, thick] (0.8,0) -- (0.8,2) node[left] {$y$};
+
+        \node at (0,0) [above left=0.01pt] {$O$};
+        \node at (0.8,0) [above left=0.01pt] {$O'$};
+
+        \draw (0,0) -- (-0.5,-0.2);
+
+        \coordinate (O) at (0,0);
+        \coordinate (A) at (3,0);
+        \coordinate (S) at (2,1.6);
+
+        \node at (2,1.6) {*};
+
+        \draw[->, thick] (2,1.6) -- (1,0.8) node[above] {$\bm{p'}$};
+        \draw[thick] (1,0.8) -- (0,0);
+
+        \node at (2,1.6) [above,scale=0.8] {光源};
+        \node at (0,2.3) [scale=0.6, above] {观察者系（$K'$）};
+        \node at (0.8,2.3) [scale=0.6, above right] {光源系（$K$）};
+
+        \draw [->, thick] (-0.2,1) -- (-0.6,1) node[above] {$-\bm{v}$};
+
+        \pic [draw, angle radius=0.5em] {angle=A--O--S};
+        \node at (0.3,-0.5) [above] {$\theta'$};
+    \end{tikzpicture}
+    \caption{光的多普勒效应}
+    \label{fig:doppler-effect}
+\end{figure}
