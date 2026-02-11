@@ -11,12 +11,12 @@
     \coordinate (B) at (2.2,2.8);
 
     \draw[thick]
-        plot[smooth,tension=0.8] coordinates {
-          (0.5,1)
-          (A)
-          (B)
-          (3,3)
-        };
+    plot[smooth,tension=0.8] coordinates {
+        (0.5,1)
+        (A)
+        (B)
+        (3,3)
+      };
 
     \node[above right] at (B|-0,3) {$y = y(x)$};
 
@@ -28,12 +28,12 @@
 
     \draw[-,thick] (A) --(B|-A) node[midway,below] {$\Delta x$};
     \draw[-,thick] (B|-A) --(B) node[midway,right] {$\Delta y$};
-    
+
 
     \fill (A|-0,0)circle [radius=1.5pt]
-          (B|-0,0)circle [radius=1.5pt]
-          (0,0|-A)circle [radius=1.5pt]
-          (0,0|-B)circle [radius=1.5pt];
+    (B|-0,0)circle [radius=1.5pt]
+    (0,0|-A)circle [radius=1.5pt]
+    (0,0|-B)circle [radius=1.5pt];
   \end{tikzpicture}
   \caption{}
   \label{fig:function-increment}

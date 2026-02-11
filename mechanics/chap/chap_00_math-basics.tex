@@ -81,7 +81,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
     \end{equation}
 
     如果极限存在，则称函数在点 $ x $ 处可导。
-    
+
 \end{definition}
 
 显然，导数的几何意义是函数图像在点 $ (x, f(x)) $ 处的切线的斜率。
@@ -115,12 +115,12 @@ $ \d y $ 与 $ \d x $ 之间的关系为
 导数有一些重要性质，举例如下：
 \begin{illustration}{导数的性质}{derivative-properties}
     \begin{align}
-        &(1)\quad (A_1 y_1 + A_2 y_2)' = A_1 y_1' + A_2 y_2' ;\\
-        &(2)\quad (y_1 y_2)' = y_1' y_2 + y_1 y_2' ;\\
-        &(3)\quad \left( \frac{y_1}{y_2} \right)' = \frac{y_1' y_2 - y_1 y_2'}{y_2^2} ;\\
-        &(4)\quad (y_1 \circ y_2)' = (y_1' \circ y_2) \cdot y_2' .\label{eq:derivative-composition}
+         & (1)\quad (A_1 y_1 + A_2 y_2)' = A_1 y_1' + A_2 y_2' ;                                      \\
+         & (2)\quad (y_1 y_2)' = y_1' y_2 + y_1 y_2' ;                                                \\
+         & (3)\quad \left( \frac{y_1}{y_2} \right)' = \frac{y_1' y_2 - y_1 y_2'}{y_2^2} ;             \\
+         & (4)\quad (y_1 \circ y_2)' = (y_1' \circ y_2) \cdot y_2' .\label{eq:derivative-composition}
     \end{align}
-    
+
 \end{illustration}
 证明略去
 
@@ -141,11 +141,11 @@ $ \d y $ 与 $ \d x $ 之间的关系为
 常用的导数公式列举如下：
 \begin{illustration}{常用导数公式}{common-derivative-formulas}
     \begin{align}
-        &(1)\quad (x^n)' = n x^{n-1} ;\\
-        &(2)\quad (a^x)' = a^x \ln a ;\\
-        &(3)\quad (\log _a x)' = \frac{1}{x \ln a} ;\\
-        &(4)\quad (\sin x)' = \cos x ;\\
-        &(5)\quad (\cos x)' = -\sin x ;
+         & (1)\quad (x^n)' = n x^{n-1} ;               \\
+         & (2)\quad (a^x)' = a^x \ln a ;               \\
+         & (3)\quad (\log _a x)' = \frac{1}{x \ln a} ; \\
+         & (4)\quad (\sin x)' = \cos x ;               \\
+         & (5)\quad (\cos x)' = -\sin x ;
     \end{align}
 
 \end{illustration}
@@ -153,9 +153,9 @@ $ \d y $ 与 $ \d x $ 之间的关系为
 此外，还有几个常用的 $ n $ 阶导数公式：
 \begin{illustration}{常用 $ n $ 阶导数公式}{common-nth-derivative-formulas}
     \begin{align}
-        &(1)\quad (e^{a x})^{(n)} = a^n e^{a x} ;\\
-        &(2)\quad (\sin a x)^{(n)} = a^n \sin \left( a x + \frac{n \pi}{2} \right) ;\\
-        &(3)\quad (\cos a x)^{(n)} = a^n \cos \left( a x + \frac{n \pi}{2} \right) .
+         & (1)\quad (e^{a x})^{(n)} = a^n e^{a x} ;                                    \\
+         & (2)\quad (\sin a x)^{(n)} = a^n \sin \left( a x + \frac{n \pi}{2} \right) ; \\
+         & (3)\quad (\cos a x)^{(n)} = a^n \cos \left( a x + \frac{n \pi}{2} \right) .
     \end{align}
 
 \end{illustration}
@@ -183,15 +183,15 @@ $ \d y $ 与 $ \d x $ 之间的关系为
     其中，余项 $ R_n $ 有如下两种形式：
     \begin{itemize}
         \item 拉格朗日（Lagrange）余项形式：
-        \begin{equation}
-            R_n = \frac{f^{(n+1)}(\xi)}{(n+1)!} (x - x_0)^{n+1},\quad \xi\text{ 在 } x \text{ 与 } x_0 \text{ 之间} ;
-        \end{equation}
+              \begin{equation}
+                  R_n = \frac{f^{(n+1)}(\xi)}{(n+1)!} (x - x_0)^{n+1},\quad \xi\text{ 在 } x \text{ 与 } x_0 \text{ 之间} ;
+              \end{equation}
         \item 皮亚诺（Peano）余项形式：
-        \begin{equation}
-            R_n = o \left( (x - x_0)^n \right),\quad x \to x_0 .
-        \end{equation}
+              \begin{equation}
+                  R_n = o \left( (x - x_0)^n \right),\quad x \to x_0 .
+              \end{equation}
     \end{itemize}
-    
+
 \end{theorem}
 
 泰勒公式表明，函数在某点处的值可以用该点处的各阶导数来近似表示。
@@ -210,13 +210,13 @@ $ \d y $ 与 $ \d x $ 之间的关系为
 例如，在数学上可以证明：
 \begin{illustration}{常见函数的泰勒展开}{common-function-taylor-expansion}
     \begin{align}
-        &(1)\quad e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!},\quad x \in (-\infty, +\infty) ;\\
-        &(2)\quad \sin x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!},\quad x \in (-\infty, +\infty) ;\\
-        &(3)\quad \cos x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n}}{(2n)!},\quad x \in (-\infty, +\infty) ;\\
-        &(4)\quad \ln (1 + x) = \sum_{n=1}^{\infty} (-1)^{n-1} \frac{x^n}{n},\quad x \in (-1, 1] ;\\
-        &(5)\quad (1 + x)^m = \sum_{n=0}^{\infty} \binom{m}{n} x^n,\quad x \in (-1, 1) .\label{eq:taylor-binomial}
+         & (1)\quad e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!},\quad x \in (-\infty, +\infty) ;                        \\
+         & (2)\quad \sin x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!},\quad x \in (-\infty, +\infty) ;    \\
+         & (3)\quad \cos x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n}}{(2n)!},\quad x \in (-\infty, +\infty) ;        \\
+         & (4)\quad \ln (1 + x) = \sum_{n=1}^{\infty} (-1)^{n-1} \frac{x^n}{n},\quad x \in (-1, 1] ;                 \\
+         & (5)\quad (1 + x)^m = \sum_{n=0}^{\infty} \binom{m}{n} x^n,\quad x \in (-1, 1) .\label{eq:taylor-binomial}
     \end{align}
-    
+
 \end{illustration}
 
 \begin{note}{二项式系数的说明}{binomial-coefficient-explanation}
@@ -227,10 +227,10 @@ $ \d y $ 与 $ \d x $ 之间的关系为
 
     特别地，当 $ m $ 为非负整数时，二项式系数可简化为
     \begin{equation*}
-        \binom{m}{n} = 
+        \binom{m}{n} =
         \begin{cases}
-            \frac{m!}{n! (m - n)!}, & n \leq m ;\\
-            0, & n > m .
+            \frac{m!}{n! (m - n)!}, & n \leq m ; \\
+            0,                      & n > m .
         \end{cases}
     \end{equation*}
     这与我们在组合数学中学过的排列数和组合数有如下关系：
@@ -268,7 +268,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 在参数方程的形式下，设曲线由参数 $ t $ 给出，即
 \begin{equation*}
     \begin{cases}
-        x = \varphi (t) ;\\
+        x = \varphi (t) ; \\
         y = \psi (t) .
     \end{cases}
 \end{equation*}
@@ -309,9 +309,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 根据 \cref{illustration:derivative-properties} 中导数的性质，可以得到不定积分的一些性质，举例如下：
 \begin{illustration}{不定积分的性质}{indefinite-integral-properties}
     \begin{align}
-        &(1)\quad \int [A_1 f_1(x) + A_2 f_2(x)] \d x = A_1 \int f_1(x) \d x + A_2 \int f_2(x) \d x ;\\
-        &(2)\quad \int f'(x) g(x) \d x = f(x) g(x) - \int f(x) g'(x) \d x ;\\
-        &(3)\quad \int f(g(x)) g'(x) \d x = \int f(u) \d u,\quad u = g(x) .
+         & (1)\quad \int [A_1 f_1(x) + A_2 f_2(x)] \d x = A_1 \int f_1(x) \d x + A_2 \int f_2(x) \d x ; \\
+         & (2)\quad \int f'(x) g(x) \d x = f(x) g(x) - \int f(x) g'(x) \d x ;                           \\
+         & (3)\quad \int f(g(x)) g'(x) \d x = \int f(u) \d u,\quad u = g(x) .
     \end{align}
 
 \end{illustration}
@@ -319,14 +319,14 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 同时，根据 \cref{illustration:common-derivative-formulas} 中常用的导数公式，可以得到一些常见函数的不定积分，举例如下：
 \begin{illustration}{常见函数的不定积分}{common-indefinite-integral}
     \begin{align}
-        &(1)\quad \int x^n \d x = \frac{x^{n+1}}{n+1} + C,\quad (n \neq -1) ;\\
-        &(2)\quad \int \frac{1}{x} \d x = \ln |x| + C ;\\
-        &(3)\quad \int a^x \d x = \frac{a^x}{\ln a} + C ;\\
-        &(4)\quad \int e^x \d x = e^x + C ;\\
-        &(5)\quad \int \log_a x \d x = x (\log_a x - \log_e a) + C ;\\
-        &(6)\quad \int \ln x \d x = x (\ln x - 1) + C ;\\
-        &(7)\quad \int \sin x \d x = -\cos x + C ;\\
-        &(8)\quad \int \cos x \d x = \sin x + C .
+         & (1)\quad \int x^n \d x = \frac{x^{n+1}}{n+1} + C,\quad (n \neq -1) ; \\
+         & (2)\quad \int \frac{1}{x} \d x = \ln |x| + C ;                       \\
+         & (3)\quad \int a^x \d x = \frac{a^x}{\ln a} + C ;                     \\
+         & (4)\quad \int e^x \d x = e^x + C ;                                   \\
+         & (5)\quad \int \log_a x \d x = x (\log_a x - \log_e a) + C ;          \\
+         & (6)\quad \int \ln x \d x = x (\ln x - 1) + C ;                       \\
+         & (7)\quad \int \sin x \d x = -\cos x + C ;                            \\
+         & (8)\quad \int \cos x \d x = \sin x + C .
     \end{align}
 
 \end{illustration}
@@ -343,7 +343,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
     其中，区间 $ [a, b] $ 被分成 $ n $ 个子区间 $ [x_{i-1}, x_i] $，$ \Delta x_i = x_i - x_{i-1} $，$ \xi_i \in [x_{i-1}, x_i] $。
     若极限存在，则称该极限为函数 $ f(x) $ 在区间 $ [a, b] $ 上的定积分。
-    
+
 \end{definition}
 
 这是定积分的黎曼（Riemann）定义，它的几何意义是曲线 $ y = f(x) $ 与 $ x $ 轴及直线 $ x = a $ 和 $ x = b $ 所围成的面积（注意符号）。
@@ -378,9 +378,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 类似于不定积分，定积分也有一些性质，举例如下：
 \begin{illustration}{定积分的性质}{definite-integral-properties}
     \begin{align}
-        &(1)\quad \int_a^b [A_1 f_1(x) + A_2 f_2(x)] \d x = A_1 \int_a^b f_1(x) \d x + A_2 \int_a^b f_2(x) \d x ;\\
-        &(2)\quad \int_a^b f(x) \d x = -\int_b^a f(x) \d x ;\\
-        &(3)\quad \int_a^b f(x) \d x = \int_a^c f(x) \d x + \int_c^b f(x) \d x .
+         & (1)\quad \int_a^b [A_1 f_1(x) + A_2 f_2(x)] \d x = A_1 \int_a^b f_1(x) \d x + A_2 \int_a^b f_2(x) \d x ; \\
+         & (2)\quad \int_a^b f(x) \d x = -\int_b^a f(x) \d x ;                                                      \\
+         & (3)\quad \int_a^b f(x) \d x = \int_a^c f(x) \d x + \int_c^b f(x) \d x .
     \end{align}
 \end{illustration}
 
@@ -441,7 +441,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     另外还有一条经验，就是面对一个困难的积分，不妨把最复杂或者说「难看」的部分进行换元，往往会有意想不到的效果。
 \end{note}
 
-    
+
 \subsection{常微分方程}\label{subsec:ordinary-differential-equation}
 
 \begin{definition}{常微分方程}{ordinary-differential-equation}
@@ -513,15 +513,15 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \begin{enumerate}
     \item 若 $ h(y) = 0 $ 有解 $ y = y_0 $，则 $ y = y_0 $ 是该微分方程的一个解；
     \item 当 $ h(y) \neq 0 $ 时，可将方程变形为
-    \begin{equation}
-        \frac{1}{h(y)} \d y = g(x) \d x,
-    \end{equation}
-    然后对两边分别积分，得
-    \begin{equation}
-        \int \frac{1}{h(y)} \d y = \int g(x) \d x + C,
-    \end{equation}
-    其中，$ C $ 为任意常数。
-    由此可得该微分方程的通解。
+          \begin{equation}
+              \frac{1}{h(y)} \d y = g(x) \d x,
+          \end{equation}
+          然后对两边分别积分，得
+          \begin{equation}
+              \int \frac{1}{h(y)} \d y = \int g(x) \d x + C,
+          \end{equation}
+          其中，$ C $ 为任意常数。
+          由此可得该微分方程的通解。
 \end{enumerate}
 \bigskip
 
@@ -555,27 +555,27 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 求解该类微分方程的方法如下：
 \begin{enumerate}
     \item 作变量代换 $ u = \frac{y}{x} $，则 $ y = u x $，从而有
-    \begin{equation*}
-        \frac{\d y}{\d x} = u + x \frac{\d u}{\d x} .
-    \end{equation*}
+          \begin{equation*}
+              \frac{\d y}{\d x} = u + x \frac{\d u}{\d x} .
+          \end{equation*}
     \item 将上式代入微分方程，得
-    \begin{equation*}
-        u + x \frac{\d u}{\d x} = \varphi (u) ,
-    \end{equation*}
-    即
-    \begin{equation*}
-        x \frac{\d u}{\d x} = \varphi (u) - u .
-    \end{equation*}
+          \begin{equation*}
+              u + x \frac{\d u}{\d x} = \varphi (u) ,
+          \end{equation*}
+          即
+          \begin{equation*}
+              x \frac{\d u}{\d x} = \varphi (u) - u .
+          \end{equation*}
     \item 分离变量，得
-    \begin{equation*}
-        \frac{1}{\varphi (u) - u} \d u = \frac{1}{x} \d x .
-    \end{equation*}
-    然后对两边分别积分，得
-    \begin{equation*}
-        \int \frac{1}{\varphi (u) - u} \d u = \int \frac{1}{x} \d x + C ,
-    \end{equation*}
-    其中，$ C $ 为任意常数。
-    由此可得该微分方程的通解。
+          \begin{equation*}
+              \frac{1}{\varphi (u) - u} \d u = \frac{1}{x} \d x .
+          \end{equation*}
+          然后对两边分别积分，得
+          \begin{equation*}
+              \int \frac{1}{\varphi (u) - u} \d u = \int \frac{1}{x} \d x + C ,
+          \end{equation*}
+          其中，$ C $ 为任意常数。
+          由此可得该微分方程的通解。
 \end{enumerate}
 \bigskip
 
@@ -594,35 +594,35 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 求解该类微分方程的方法如下：
 \begin{enumerate}
     \item 求解对应的齐次方程
-    \begin{equation*}
-        \frac{\d y}{\d x} + P(x) y = 0 ,
-    \end{equation*}
-    它的通解为
-    \begin{equation}
-        y_h = C e^{-\int P(x) \d x} \label{eq:first-order-linear-ordinary-differential-equation-general-solution},
-    \end{equation}
-    其中，$ C $ 为任意常数。
+          \begin{equation*}
+              \frac{\d y}{\d x} + P(x) y = 0 ,
+          \end{equation*}
+          它的通解为
+          \begin{equation}
+              y_h = C e^{-\int P(x) \d x} \label{eq:first-order-linear-ordinary-differential-equation-general-solution},
+          \end{equation}
+          其中，$ C $ 为任意常数。
     \item 求该非齐次方程的一个特解 $ y_p $，可用如下方法求解，即设
-    \begin{equation}
-        y_p = u(x) e^{-\int P(x) \d x} \label{eq:particular-solution-ansatz},
-    \end{equation}
-    其中，$ u(x) $ 为待定函数。
-    将 $ y_p $ 代入非齐次方程，得
-    \begin{equation*}
-        \frac{\d u}{\d x} = Q(x) e^{\int P(x) \d x} .
-    \end{equation*}
-    分离变量并积分，得
-    \begin{equation*}
-        u(x) = \int Q(x) e^{\int P(x) \d x} \d x .
-    \end{equation*}
-    因此，非齐次方程的一个特解为
-    \begin{equation}
-        y_p = e^{-\int P(x) \d x} \int Q(x) e^{\int P(x) \d x} \d x .
-    \end{equation}
+          \begin{equation}
+              y_p = u(x) e^{-\int P(x) \d x} \label{eq:particular-solution-ansatz},
+          \end{equation}
+          其中，$ u(x) $ 为待定函数。
+          将 $ y_p $ 代入非齐次方程，得
+          \begin{equation*}
+              \frac{\d u}{\d x} = Q(x) e^{\int P(x) \d x} .
+          \end{equation*}
+          分离变量并积分，得
+          \begin{equation*}
+              u(x) = \int Q(x) e^{\int P(x) \d x} \d x .
+          \end{equation*}
+          因此，非齐次方程的一个特解为
+          \begin{equation}
+              y_p = e^{-\int P(x) \d x} \int Q(x) e^{\int P(x) \d x} \d x .
+          \end{equation}
     \item 由此可得该非齐次微分方程的通解为
-    \begin{equation}
-        y = y_h + y_p = C e^{-\int P(x) \d x} + e^{-\int P(x) \d x} \int Q(x) e^{\int P(x) \d x} \d x \label{eq:first-order-linear-ordinary-differential-equation-general-solution-nonhomogeneous}.
-    \end{equation} 
+          \begin{equation}
+              y = y_h + y_p = C e^{-\int P(x) \d x} + e^{-\int P(x) \d x} \int Q(x) e^{\int P(x) \d x} \d x \label{eq:first-order-linear-ordinary-differential-equation-general-solution-nonhomogeneous}.
+          \end{equation}
 \end{enumerate}
 
 比较，\cref{eq:first-order-linear-ordinary-differential-equation-general-solution} 与 \cref{eq:particular-solution-ansatz} 可以发现，
@@ -645,25 +645,25 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 这里介绍两种特殊类型的二阶微分方程，它们都可以通过变量代换将方程降阶，化为一阶微分方程来求解。
 \begin{enumerate}
     \item 若方程中不显含未知函数 $ y $，即方程可表示为
-    \begin{equation}
-        F(x, y', y'') = 0,
-    \end{equation}
-    则可作变量代换 $ p = y' $，则 $ y'' = \frac{\d p}{\d x} $。
-    于是方程变为
-    \begin{equation}
-        F(x, p, \frac{\d p}{\d x}) = 0,
-    \end{equation}
-    它是关于 $ p $ 的一阶微分方程，求解出 $ p = p(x) $ 后，再积分即可得到 $ y = \int p(x) \d x + C $。
+          \begin{equation}
+              F(x, y', y'') = 0,
+          \end{equation}
+          则可作变量代换 $ p = y' $，则 $ y'' = \frac{\d p}{\d x} $。
+          于是方程变为
+          \begin{equation}
+              F(x, p, \frac{\d p}{\d x}) = 0,
+          \end{equation}
+          它是关于 $ p $ 的一阶微分方程，求解出 $ p = p(x) $ 后，再积分即可得到 $ y = \int p(x) \d x + C $。
     \item 若方程中不显含自变量 $ x $，即方程可表示为
-    \begin{equation}
-        F(y, y', y'') = 0,
-    \end{equation}
-    则可作变量代换 $ p = y' $，则 $ y'' = \frac{\d p}{\d x} = \frac{\d p}{\d y} \cdot \frac{\d y}{\d x} = p \frac{\d p}{\d y} $。
-    于是方程变为
-    \begin{equation}
-        F(y, p, p \frac{\d p}{\d y}) = 0,
-    \end{equation}
-    它是关于 $ p $ 的一阶微分方程，求解出 $ p = p(y) $ 后，再积分即可得到 $ x = \int \frac{1}{p(y)} \d y + C $。
+          \begin{equation}
+              F(y, y', y'') = 0,
+          \end{equation}
+          则可作变量代换 $ p = y' $，则 $ y'' = \frac{\d p}{\d x} = \frac{\d p}{\d y} \cdot \frac{\d y}{\d x} = p \frac{\d p}{\d y} $。
+          于是方程变为
+          \begin{equation}
+              F(y, p, p \frac{\d p}{\d y}) = 0,
+          \end{equation}
+          它是关于 $ p $ 的一阶微分方程，求解出 $ p = p(y) $ 后，再积分即可得到 $ x = \int \frac{1}{p(y)} \d y + C $。
 \end{enumerate}
 
 \bigskip
@@ -689,7 +689,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     设函数 $ P(x) , Q(x) , f(x) $ 在区间 $ I $ 上连续，则对于任意 $ x_0 \in I $ 及任意常数 $ \alpha , \beta $，二阶线性微分方程初值问题
     \begin{equation*}
         \begin{cases}
-            \frac{\d^2 y}{\d x^2} + P(x) \frac{\d y}{\d x} + Q(x) y = f(x),\\
+            \frac{\d^2 y}{\d x^2} + P(x) \frac{\d y}{\d x} + Q(x) y = f(x), \\
             y(x_0) = \alpha, y'(x_0) = \beta,
         \end{cases}
     \end{equation*}
@@ -704,29 +704,29 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
     这就涉及到定解问题的类型划分了，简单来说，如果这 $ n $ 个条件给的点（ $ x $ 的值）不完全相同，
     这就不再是一个初值问题了，而是一个边值问题。
-    
+
     关于边值问题，有简单的结论如下：
     \begin{enumerate}
         \item 存在唯一性不再像初值问题那样有普适保证
-        对于初值问题（所有条件都在同一点 $ x_0 $ 处给出），只要系数函数 $ P(x) , Q(x) , f(x) $ 在区间 $ I $ 上连续，
-        则在 $ x_0 $ 附近总是存在唯一解。
-        但对于边值问题（条件分布在 $ x_0 , x_1 , \ldots $ 处），情况就复杂得多了：
-        \begin{itemize}
-            \item 可能没有解：例如，方程 $ y'' + y = 0 $ 在区间 $ [0, \pi] $ 上满足边界条件 $ y(0) = 0 , y(\pi) = 1 $ 的解不存在；
-            \item 可能有唯一解。
-            \item 可能有无穷多个解：例如，方程 $ y'' + y = 0 $ 在区间 $ [0, \pi] $ 上满足边界条件 $ y(0) = 0 , y(\pi) = 0 $ 的解有无穷多个。
-        \end{itemize}
+              对于初值问题（所有条件都在同一点 $ x_0 $ 处给出），只要系数函数 $ P(x) , Q(x) , f(x) $ 在区间 $ I $ 上连续，
+              则在 $ x_0 $ 附近总是存在唯一解。
+              但对于边值问题（条件分布在 $ x_0 , x_1 , \ldots $ 处），情况就复杂得多了：
+              \begin{itemize}
+                  \item 可能没有解：例如，方程 $ y'' + y = 0 $ 在区间 $ [0, \pi] $ 上满足边界条件 $ y(0) = 0 , y(\pi) = 1 $ 的解不存在；
+                  \item 可能有唯一解。
+                  \item 可能有无穷多个解：例如，方程 $ y'' + y = 0 $ 在区间 $ [0, \pi] $ 上满足边界条件 $ y(0) = 0 , y(\pi) = 0 $ 的解有无穷多个。
+              \end{itemize}
         \item 物理意义不同
-        \begin{itemize}
-            \item 初值问题通常用于描述系统的时间演化过程，例如经典力学中的运动方程，给定初始位置和速度，可以确定物体的运动轨迹。
-            \item 边值问题通常用于描述空间分布问题，例如热传导方程和波动方程，给定边界条件，可以确定系统在空间中的状态分布。
-        \end{itemize}
+              \begin{itemize}
+                  \item 初值问题通常用于描述系统的时间演化过程，例如经典力学中的运动方程，给定初始位置和速度，可以确定物体的运动轨迹。
+                  \item 边值问题通常用于描述空间分布问题，例如热传导方程和波动方程，给定边界条件，可以确定系统在空间中的状态分布。
+              \end{itemize}
         \item 数学处理方法不同
-        \begin{itemize}
-            \item 初值问题通常使用常规的微分方程求解方法，如变量分离法、积分因子法等。
-            \item 边值问题通常需要使用特殊的方法，如特征值问题、傅里叶级数展开等。
-            \item 边值问题往往涉及到线性代数和函数空间的概念，例如希尔伯特空间和巴拿赫空间。
-        \end{itemize}
+              \begin{itemize}
+                  \item 初值问题通常使用常规的微分方程求解方法，如变量分离法、积分因子法等。
+                  \item 边值问题通常需要使用特殊的方法，如特征值问题、傅里叶级数展开等。
+                  \item 边值问题往往涉及到线性代数和函数空间的概念，例如希尔伯特空间和巴拿赫空间。
+              \end{itemize}
     \end{enumerate}
     所以，结论是：$ n $ 个条件依然可以用来确定 $ n $ 个常数，但前提是这组条件必须是相容的。
     并不是随便在纸上画 $ n $ 个点就能找到一个解同时经过它们，这取决于微分方程本身的性质（特征值等）。
@@ -777,7 +777,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     设函数 $ y_1 (x) , y_2 (x) $ 在区间 $ I $ 上具有二阶导数，则称如下行列式为函数 $ y_1 (x) , y_2 (x) $ 的 Wronskian 行列式：
     \begin{equation*}
         W(y_1 , y_2) = \begin{vmatrix}
-            y_1 (x) & y_2 (x) \\
+            y_1 (x)  & y_2 (x)  \\
             y_1' (x) & y_2' (x)
         \end{vmatrix} = y_1 (x) y_2' (x) - y_2 (x) y_1' (x) .
     \end{equation*}
@@ -821,70 +821,70 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 求解该类微分方程的方法如下：
 \begin{enumerate}
     \item 求解对应的齐次方程 \cref{eq:homogeneous-second-order-constant-coefficient-linear-ordinary-differential-equation}。
-    设齐次方程的解为 $ y = e^{\lambda x} $ 的形式，将其代入齐次方程，得特征方程
-    \begin{equation*}
-        \lambda^2 + a \lambda + b = 0 .
-    \end{equation*}
-    解该特征方程，得两个根 $ \lambda_1 , \lambda_2 $。
-    根据根的不同情况，可分三种情形讨论：
-    \begin{enumerate}
-        \item 若 $ \lambda_1 \neq \lambda_2 $，则齐次方程的基本解组为
-        \begin{equation*}
-            y_1 = e^{\lambda_1 x} , \quad y_2 = e^{\lambda_2 x} .
-        \end{equation*}
-        \item 若 $ \lambda_1 = \lambda_2 = \lambda $，则齐次方程的基本解组为
-        \begin{equation*}
-            y_1 = e^{\lambda x} , \quad y_2 = x e^{\lambda x} .\text{（这是容易验证的）}
-        \end{equation*}
-        \item 若 $ \lambda_{1,2} = \alpha \pm \beta i $（其中，$ i = \sqrt{-1} $），则齐次方程的基本解组为
-        \begin{equation*}
-            y_1 = e^{\alpha x} \cos (\beta x) , \quad y_2 = e^{\alpha x} \sin (\beta x) .
-        \end{equation*}
-    \end{enumerate}
-    由此可得齐次方程的通解为
-    \begin{equation*}
-        y_h = C_1 y_1 + C_2 y_2 ,
-    \end{equation*}
-    其中，$ C_1 , C_2 $ 为任意常数。
+          设齐次方程的解为 $ y = e^{\lambda x} $ 的形式，将其代入齐次方程，得特征方程
+          \begin{equation*}
+              \lambda^2 + a \lambda + b = 0 .
+          \end{equation*}
+          解该特征方程，得两个根 $ \lambda_1 , \lambda_2 $。
+          根据根的不同情况，可分三种情形讨论：
+          \begin{enumerate}
+              \item 若 $ \lambda_1 \neq \lambda_2 $，则齐次方程的基本解组为
+                    \begin{equation*}
+                        y_1 = e^{\lambda_1 x} , \quad y_2 = e^{\lambda_2 x} .
+                    \end{equation*}
+              \item 若 $ \lambda_1 = \lambda_2 = \lambda $，则齐次方程的基本解组为
+                    \begin{equation*}
+                        y_1 = e^{\lambda x} , \quad y_2 = x e^{\lambda x} .\text{（这是容易验证的）}
+                    \end{equation*}
+              \item 若 $ \lambda_{1,2} = \alpha \pm \beta i $（其中，$ i = \sqrt{-1} $），则齐次方程的基本解组为
+                    \begin{equation*}
+                        y_1 = e^{\alpha x} \cos (\beta x) , \quad y_2 = e^{\alpha x} \sin (\beta x) .
+                    \end{equation*}
+          \end{enumerate}
+          由此可得齐次方程的通解为
+          \begin{equation*}
+              y_h = C_1 y_1 + C_2 y_2 ,
+          \end{equation*}
+          其中，$ C_1 , C_2 $ 为任意常数。
     \item 求该非齐次方程的一个特解 $ y_p $，可用如下方法求解：
-    \begin{enumerate}
-        \item 若 $ f(x) $ 为指数函数、多项式函数、三角函数或它们的有限和与积的形式，则可用「待定系数法」求解，即设
-        \begin{equation*}
-            y_p = y_p^{(1)} + y_p^{(2)} + \ldots + y_p^{(n)} ,
-        \end{equation*}
-        其中，每一项 $ y_p^{(i)} $ 对应 $ f(x) $ 中的一项，且 $ y_p^{(i)} $ 的形式与该项相同，但含有待定系数。
-        将 $ y_p $ 代入非齐次方程，解出待定系数，即可得到该非齐次方程的一个特解。
-        需要注意的是，若 $ y_p^{(i)} $ 中的某一项与齐次方程的某一解形式相同，则需将该项乘以 $ x $ 的适当幂次，以确保 $ y_p^{(i)} $ 与齐次方程的解线性无关。
-        \item 否则，可用「常数变易法」求解，即设
-        \begin{equation*}
-            y_p = u_1 (x) y_1 (x) + u_2 (x) y_2 (x) ,
-        \end{equation*}
-        其中，$ u_1 (x) , u_2 (x) $ 为待定函数，$ y_1 (x) , y_2 (x) $ 为齐次方程的基本解组。
-        将 $ y_p $ 代入非齐次方程，得
-        \begin{equation*}
-            \begin{cases}
-                u_1' (x) y_1 (x) + u_2' (x) y_2 (x) = 0 ,\\
-                u_1' (x) y_1' (x) + u_2' (x) y_2' (x) = f(x) .
-            \end{cases}
-        \end{equation*}
-        解出 $ u_1' (x) , u_2' (x) $，即
-        \begin{equation*}
-            u_1' (x) = - \frac{y_2 (x) f(x)}{W(y_1 , y_2)} , \quad u_2' (x) = \frac{y_1 (x) f(x)}{W(y_1 , y_2)} ,
-        \end{equation*}
-        其中，$ W(y_1 , y_2) $ 为 $ y_1 (x) , y_2 (x) $ 的 Wronskian 行列式。
-        然后对 $ u_1' (x) , u_2' (x) $ 分别积分，得
-        \begin{equation*}
-            u_1 (x) = - \int \frac{y_2 (x) f(x)}{W(y_1 , y_2)} \d x , \quad u_2 (x) = \int \frac{y_1 (x) f(x)}{W(y_1 , y_2)} \d x .
-        \end{equation*}
-        因此，非齐次方程的一个特解为
-        \begin{equation*}
-            y_p = - y_1 (x) \int \frac{y_2 (x) f(x)}{W(y_1 , y_2)} \d x + y_2 (x) \int \frac{y_1 (x) f(x)}{W(y_1 , y_2)} \d x .
-        \end{equation*}
-    \end{enumerate}
+          \begin{enumerate}
+              \item 若 $ f(x) $ 为指数函数、多项式函数、三角函数或它们的有限和与积的形式，则可用「待定系数法」求解，即设
+                    \begin{equation*}
+                        y_p = y_p^{(1)} + y_p^{(2)} + \ldots + y_p^{(n)} ,
+                    \end{equation*}
+                    其中，每一项 $ y_p^{(i)} $ 对应 $ f(x) $ 中的一项，且 $ y_p^{(i)} $ 的形式与该项相同，但含有待定系数。
+                    将 $ y_p $ 代入非齐次方程，解出待定系数，即可得到该非齐次方程的一个特解。
+                    需要注意的是，若 $ y_p^{(i)} $ 中的某一项与齐次方程的某一解形式相同，则需将该项乘以 $ x $ 的适当幂次，以确保 $ y_p^{(i)} $ 与齐次方程的解线性无关。
+              \item 否则，可用「常数变易法」求解，即设
+                    \begin{equation*}
+                        y_p = u_1 (x) y_1 (x) + u_2 (x) y_2 (x) ,
+                    \end{equation*}
+                    其中，$ u_1 (x) , u_2 (x) $ 为待定函数，$ y_1 (x) , y_2 (x) $ 为齐次方程的基本解组。
+                    将 $ y_p $ 代入非齐次方程，得
+                    \begin{equation*}
+                        \begin{cases}
+                            u_1' (x) y_1 (x) + u_2' (x) y_2 (x) = 0 , \\
+                            u_1' (x) y_1' (x) + u_2' (x) y_2' (x) = f(x) .
+                        \end{cases}
+                    \end{equation*}
+                    解出 $ u_1' (x) , u_2' (x) $，即
+                    \begin{equation*}
+                        u_1' (x) = - \frac{y_2 (x) f(x)}{W(y_1 , y_2)} , \quad u_2' (x) = \frac{y_1 (x) f(x)}{W(y_1 , y_2)} ,
+                    \end{equation*}
+                    其中，$ W(y_1 , y_2) $ 为 $ y_1 (x) , y_2 (x) $ 的 Wronskian 行列式。
+                    然后对 $ u_1' (x) , u_2' (x) $ 分别积分，得
+                    \begin{equation*}
+                        u_1 (x) = - \int \frac{y_2 (x) f(x)}{W(y_1 , y_2)} \d x , \quad u_2 (x) = \int \frac{y_1 (x) f(x)}{W(y_1 , y_2)} \d x .
+                    \end{equation*}
+                    因此，非齐次方程的一个特解为
+                    \begin{equation*}
+                        y_p = - y_1 (x) \int \frac{y_2 (x) f(x)}{W(y_1 , y_2)} \d x + y_2 (x) \int \frac{y_1 (x) f(x)}{W(y_1 , y_2)} \d x .
+                    \end{equation*}
+          \end{enumerate}
     \item 由此可得该非齐次微分方程的通解为
-    \begin{equation*}
-        y = y_h + y_p = C_1 y_1 + C_2 y_2 + y_p .
-    \end{equation*}
+          \begin{equation*}
+              y = y_h + y_p = C_1 y_1 + C_2 y_2 + y_p .
+          \end{equation*}
 \end{enumerate}
 
 \bigskip
@@ -985,7 +985,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \end{equation}
 而这有什么用呢？由于复变函数的求导可以简单理解为分别对实部与虚部求导，于是就容易证明对于一个在复数域上的微分方程（但 $ P(x) \in R[x] $，就是 $ P (x) $ 为实系数多项式）
 \begin{equation}
-    P(D) y = f (x) 
+    P(D) y = f (x)
 \end{equation}
 的特解的实部恰好是
 \begin{equation}
@@ -1015,22 +1015,22 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     那么很明显可以运用数学归纳法
     \begin{enumerate}
         \item 当 $ n = 1 $ 时，显然成立：
-        \begin{equation*}
-            D \left( e^{ax} u(x) \right) = e^{ax} (D + a) u(x) .
-        \end{equation*}
+              \begin{equation*}
+                  D \left( e^{ax} u(x) \right) = e^{ax} (D + a) u(x) .
+              \end{equation*}
         \item 假设当 $ n = k $ 时成立，即
-        \begin{equation*}
-            D^k \left( e^{ax} u(x) \right) = e^{ax} (D + a)^k u(x) .
-        \end{equation*}
-        则当 $ n = k + 1 $ 时，有
-        \begin{equation*}
-            \begin{aligned}
-                D^{k+1} \left( e^{ax} u(x) \right) &= D \left( D^k \left( e^{ax} u(x) \right) \right) \\
-                &= D \left( e^{ax} (D + a)^k u(x) \right) \\
-                &= e^{ax} (D + a) (D + a)^k u(x) \\
-                &= e^{ax} (D + a)^{k+1} u(x) .
-            \end{aligned}
-        \end{equation*}
+              \begin{equation*}
+                  D^k \left( e^{ax} u(x) \right) = e^{ax} (D + a)^k u(x) .
+              \end{equation*}
+              则当 $ n = k + 1 $ 时，有
+              \begin{equation*}
+                  \begin{aligned}
+                      D^{k+1} \left( e^{ax} u(x) \right) & = D \left( D^k \left( e^{ax} u(x) \right) \right) \\
+                                                         & = D \left( e^{ax} (D + a)^k u(x) \right)          \\
+                                                         & = e^{ax} (D + a) (D + a)^k u(x)                   \\
+                                                         & = e^{ax} (D + a)^{k+1} u(x) .
+                  \end{aligned}
+              \end{equation*}
     \end{enumerate}
     由数学归纳法原理，定理得证。
     \qed
@@ -1050,20 +1050,20 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
     不妨设 $ a $，$ b $ （$ a \neq  b $）为 $ P(x) = 0 $ 的两个根，为方便起见，我们假设 $ P(x) $ 的最高次项系数为 $ 1 $。那么有：
     \begin{equation*}
-        P(D) = (D - a)(D - b) 
+        P(D) = (D - a)(D - b)
     \end{equation*}
     所以
     \begin{equation*}
-        P'(D) = 2D - (a + b) 
+        P'(D) = 2D - (a + b)
     \end{equation*}
     故有 $ P'(a) = a - b $ , 于是将 $ y_p $ 代入方程可得：
     \begin{equation*}
         \begin{aligned}
-            P(D) y_p &= \frac{e^{ax} P(D + a) x }{P'(a)} \quad \text{（由指数位移法则）} \\ 
-            &= \frac{e^{ax} (D + a - b)Dx }{a - b} \\
-            &= \frac{e^{ax} (a - b) }{a - b} \\
-            &= e^{ax} .
-        \end{aligned} 
+            P(D) y_p & = \frac{e^{ax} P(D + a) x }{P'(a)} \quad \text{（由指数位移法则）} \\
+                     & = \frac{e^{ax} (D + a - b)Dx }{a - b}                     \\
+                     & = \frac{e^{ax} (a - b) }{a - b}                           \\
+                     & = e^{ax} .
+        \end{aligned}
     \end{equation*}
     \qed
 \end{theorem}
@@ -1099,10 +1099,10 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     于是，将 $ y_p $ 代入方程可得：
     \begin{equation*}
         \begin{aligned}
-            P(D) y_p &= \frac{e^{ax} P(D + a) x^n }{P^{(n)}(a)} \quad \text{（由指数位移法则）} \\ 
-            &= \frac{e^{ax} \tilde{P}(D + a) (D)^n x^n }{P^{(n)}(a)} \\
-            &= \frac{e^{ax} \tilde{P}(a) n! }{n! \tilde{P}(a)} \\
-            &= e^{ax} .
+            P(D) y_p & = \frac{e^{ax} P(D + a) x^n }{P^{(n)}(a)} \quad \text{（由指数位移法则）} \\
+                     & = \frac{e^{ax} \tilde{P}(D + a) (D)^n x^n }{P^{(n)}(a)}          \\
+                     & = \frac{e^{ax} \tilde{P}(a) n! }{n! \tilde{P}(a)}                \\
+                     & = e^{ax} .
         \end{aligned}
     \end{equation*}
     \qed
@@ -1114,7 +1114,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \begin{example}{算子法求特解——多项式函数情形}{example-of-differential-operator-method-for-polynomial-function}
     求微分方程
     \begin{equation*}
-        - y' + y = x 
+        - y' + y = x
     \end{equation*}
     的一个特解。
 
@@ -1143,7 +1143,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 但是根据我们在前面讨论的内容，我们会知道
 \begin{equation}
-    \sum_{n=0}^{\infty} x^n = \frac{1}{1 - x} 
+    \sum_{n=0}^{\infty} x^n = \frac{1}{1 - x}
 \end{equation}
 是有条件的，即当且仅当 $ |x| < 1 $ 时才成立。
 但是 $ D $ 是一个算子，根本没有什么度量概念！
@@ -1162,10 +1162,10 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     那么将其带回原方程，并且注意到将算子 $ D $ 作为多项式不定元的多项式是满足结合律的：
     \begin{equation*}
         \begin{aligned}
-            P(D)(Q(D) f(x)) &= P(D) \left( \lim_{n \to \infty} Q_n (D) f(x) \right) \\
-            &= \lim_{n \to \infty} P(D) (Q_n (D) f(x)) \\
-            &= \lim_{n \to \infty} (1 - D^n) f(x) \\
-            &= f(x).
+            P(D)(Q(D) f(x)) & = P(D) \left( \lim_{n \to \infty} Q_n (D) f(x) \right) \\
+                            & = \lim_{n \to \infty} P(D) (Q_n (D) f(x))              \\
+                            & = \lim_{n \to \infty} (1 - D^n) f(x)                   \\
+                            & = f(x).
         \end{aligned}
     \end{equation*}
 
@@ -1196,10 +1196,10 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     那么将 $ H(D)f(x) $ 带回原方程：
     \begin{equation*}
         \begin{aligned}
-            P(D)(H(D) f(x)) &= P(D) \left( \lim_{k \to \infty} H_k (D) f(x) \right) \\
-            &= \lim_{k \to \infty} P(D) (H_k (D) f(x)) \\
-            &= \lim_{k \to \infty} (1 - R_k (D)) f(x) \\
-            &= f(x).
+            P(D)(H(D) f(x)) & = P(D) \left( \lim_{k \to \infty} H_k (D) f(x) \right) \\
+                            & = \lim_{k \to \infty} P(D) (H_k (D) f(x))              \\
+                            & = \lim_{k \to \infty} (1 - R_k (D)) f(x)               \\
+                            & = f(x).
         \end{aligned}
     \end{equation*}
     这就说明了算子法的正确性。
@@ -1260,7 +1260,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         y'' + 4 y = x \cos x
     \end{equation*}
     的一个特解。
-    
+
     \textbf{解}：
     复化：
     \begin{equation*}
@@ -1269,11 +1269,11 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     故：
     \begin{equation*}
         \begin{aligned}
-            \tilde{y} = & \frac{1}{D^2 + 4} x e^{ix} \\
-            = & e^{ix} \frac{1}{(D + i)^2 + 4} x \quad \text{（由指数-多项式输入定理）} \\
-            = & e^{ix} \frac{1}{D^2 + 2i D + 3} x \\
-            = & e^{ix} \left( \frac{1}{3} - \frac{2i}{9} D + \ldots \right) x \quad \text{（由多项式输入定理）} \\
-            = & (\cos x + i \sin x) \left( \frac{x}{3} - \frac{2i}{9} \right) .
+            \tilde{y} = & \frac{1}{D^2 + 4} x e^{ix}                                                            \\
+            =           & e^{ix} \frac{1}{(D + i)^2 + 4} x \quad \text{（由指数-多项式输入定理）}                           \\
+            =           & e^{ix} \frac{1}{D^2 + 2i D + 3} x                                                     \\
+            =           & e^{ix} \left( \frac{1}{3} - \frac{2i}{9} D + \ldots \right) x \quad \text{（由多项式输入定理）} \\
+            =           & (\cos x + i \sin x) \left( \frac{x}{3} - \frac{2i}{9} \right) .
         \end{aligned}
     \end{equation*}
     故：
@@ -1285,13 +1285,13 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
     如下为升幂长除法的计算示例：
     {
-        \newcommand{\longdiv}{
-            \smash{\mkern-0.43mu\vstretch{1.34}
+    \newcommand{\longdiv}{
+        \smash{\mkern-0.43mu\vstretch{1.34}
             {\hstretch{0.9}{)}}\mkern-5.95mu\vstretch{1.34}{\hstretch{0.85}{)}}}
-        }
-    
-        \begin{equation*}
-            \begin{tblr}{%
+    }
+
+    \begin{equation*}
+        \begin{tblr}{%
                 hline{2}={3-10}{black,0.4pt,solid},
                 hline{4}={3-8}{black,0.4pt,solid},
                 hline{6}={4-10}{black,0.4pt,solid},
@@ -1300,14 +1300,14 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
                 row{2} = {abovesep = 4pt},
                 columns = {colsep = 1pt},
             }
-                &  &  &  &  &  &  & \dfrac{1}{3} & - & \dfrac{2}{9}iD &  &  &  & \\
-                3 + 2iD + D^2 & \longdiv &  & 1 &  &  &  &  &  &  &  &  &  &  & \\
-                &  & - & 1 & - & \dfrac{2}{3} iD & - & \dfrac{1}{3} D^2 &  &  &  &  &  & \\
-                &  &  &  & - & \dfrac{2}{3} iD & - & \dfrac{1}{3} D^2 &  &  &  &  &  & \\
-                &  &  &  &  & \dfrac{2}{3} iD & - & \dfrac{4}{9} D^2 & + & \dfrac{2}{9} iD^3 &  &  & \\
-                &  &  &  &  &  & - & \dfrac{7}{9} D^2 & + & \dfrac{2}{9} iD^3 &  &  & \\
-            \end{tblr}
-        \end{equation*}
+                          &          &   &   &   &                 &   & \dfrac{1}{3}     & - & \dfrac{2}{9}iD    &  &  &   &     \\
+            3 + 2iD + D^2 & \longdiv &   & 1 &   &                 &   &                  &   &                   &  &  &   &   & \\
+                          &          & - & 1 & - & \dfrac{2}{3} iD & - & \dfrac{1}{3} D^2 &   &                   &  &  &   &     \\
+                          &          &   &   & - & \dfrac{2}{3} iD & - & \dfrac{1}{3} D^2 &   &                   &  &  &   &     \\
+                          &          &   &   &   & \dfrac{2}{3} iD & - & \dfrac{4}{9} D^2 & + & \dfrac{2}{9} iD^3 &  &  &         \\
+                          &          &   &   &   &                 & - & \dfrac{7}{9} D^2 & + & \dfrac{2}{9} iD^3 &  &  &         \\
+        \end{tblr}
+    \end{equation*}
     }
 \end{example}
 
@@ -1613,7 +1613,7 @@ $ 3 $ 阶行列式的计算可以使用「对角线法则」。
     \left\{ \begin{aligned}
         a_{11} x_1 + a_{12} x_2 + \ldots + a_{1n} x_n & = b_1 , \\
         a_{21} x_1 + a_{22} x_2 + \ldots + a_{2n} x_n & = b_2 , \\
-        \vdots & \vdots \\
+        \vdots                                        & \vdots  \\
         a_{m1} x_1 + a_{m2} x_2 + \ldots + a_{mn} x_n & = b_m .
     \end{aligned} \right.
 \end{equation}
@@ -1637,10 +1637,10 @@ $ 3 $ 阶行列式的计算可以使用「对角线法则」。
     其中，$ D_j $ 为将系数行列式 $ D $ 的第 $ j $ 列替换为常数列 $ (b_1 , b_2 , \ldots , b_n)^T $ 后所得到的行列式，即
     \begin{equation}
         D_j = \left| \begin{array}{ccccccc}
-            a_{11} & \cdots & a_{1,j-1} & b_1 & a_{1,j+1} & \cdots & a_{1n} \\
-            a_{21} & \cdots & a_{2,j-1} & b_2 & a_{2,j+1} & \cdots & a_{2n} \\
-            \vdots &  & \vdots & \vdots & \vdots &  & \vdots \\
-            a_{n1} & \cdots & a_{n,j-1} & b_n & a_{n,j+1} & \cdots & a_{nn}
+            a_{11} & \cdots & a_{1,j-1} & b_1    & a_{1,j+1} & \cdots & a_{1n} \\
+            a_{21} & \cdots & a_{2,j-1} & b_2    & a_{2,j+1} & \cdots & a_{2n} \\
+            \vdots &        & \vdots    & \vdots & \vdots    &        & \vdots \\
+            a_{n1} & \cdots & a_{n,j-1} & b_n    & a_{n,j+1} & \cdots & a_{nn}
         \end{array} \right| .
     \end{equation}
 \end{theorem}
@@ -1657,20 +1657,20 @@ $ 3 $ 阶行列式的计算可以使用「对角线法则」。
 \begin{equation*}
     \begin{aligned}
         x_1 & = \frac{1}{D} \left| \begin{array}{ccc}
-            b_1 & a_{12} & a_{13} \\
-            b_2 & a_{22} & a_{23} \\
-            b_3 & a_{32} & a_{33}
-        \end{array} \right| = \frac{b_1 (a_{22} a_{33} - a_{23} a_{32}) - b_2 (a_{12} a_{33} - a_{13} a_{32}) + b_3 (a_{12} a_{23} - a_{13} a_{22})}{a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{21} (a_{12} a_{33} - a_{13} a_{32}) + a_{31} (a_{12} a_{23} - a_{13} a_{22})} , \\
+                                       b_1 & a_{12} & a_{13} \\
+                                       b_2 & a_{22} & a_{23} \\
+                                       b_3 & a_{32} & a_{33}
+                                   \end{array} \right| = \frac{b_1 (a_{22} a_{33} - a_{23} a_{32}) - b_2 (a_{12} a_{33} - a_{13} a_{32}) + b_3 (a_{12} a_{23} - a_{13} a_{22})}{a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{21} (a_{12} a_{33} - a_{13} a_{32}) + a_{31} (a_{12} a_{23} - a_{13} a_{22})} ,  \\
         x_2 & = \frac{1}{D} \left| \begin{array}{ccc}
-            a_{11} & b_1 & a_{13} \\
-            a_{21} & b_2 & a_{23} \\
-            a_{31} & b_3 & a_{33}
-        \end{array} \right| = \frac{-b_1 (a_{21} a_{33} - a_{23} a_{31}) + b_2 (a_{11} a_{33} - a_{13} a_{31}) - b_3 (a_{11} a_{23} - a_{13} a_{21})}{a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{21} (a_{12} a_{33} - a_{13} a_{32}) + a_{31} (a_{12} a_{23} - a_{13} a_{22})} , \\
+                                       a_{11} & b_1 & a_{13} \\
+                                       a_{21} & b_2 & a_{23} \\
+                                       a_{31} & b_3 & a_{33}
+                                   \end{array} \right| = \frac{-b_1 (a_{21} a_{33} - a_{23} a_{31}) + b_2 (a_{11} a_{33} - a_{13} a_{31}) - b_3 (a_{11} a_{23} - a_{13} a_{21})}{a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{21} (a_{12} a_{33} - a_{13} a_{32}) + a_{31} (a_{12} a_{23} - a_{13} a_{22})} , \\
         x_3 & = \frac{1}{D} \left| \begin{array}{ccc}
-            a_{11} & a_{12} & b_1 \\
-            a_{21} & a_{22} & b_2 \\
-            a_{31} & a_{32} & b_3
-        \end{array} \right| = \frac{b_1 (a_{21} a_{32} - a_{22} a_{31}) - b_2 (a_{11} a_{32} - a_{12} a_{31}) + b_3 (a_{11} a_{22} - a_{12} a_{21})}{a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{21} (a_{12} a_{33} - a_{13} a_{32}) + a_{31} (a_{12} a_{23} - a_{13} a_{22})} .
+                                       a_{11} & a_{12} & b_1 \\
+                                       a_{21} & a_{22} & b_2 \\
+                                       a_{31} & a_{32} & b_3
+                                   \end{array} \right| = \frac{b_1 (a_{21} a_{32} - a_{22} a_{31}) - b_2 (a_{11} a_{32} - a_{12} a_{31}) + b_3 (a_{11} a_{22} - a_{12} a_{21})}{a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{21} (a_{12} a_{33} - a_{13} a_{32}) + a_{31} (a_{12} a_{23} - a_{13} a_{22})} .
     \end{aligned}
 \end{equation*}
 显然，克拉默法则可以极大的简化线性方程组的求解过程，尤其适用于 $ 2 $ 元与 $ 3 $ 元线性方程组的求解。
@@ -1832,7 +1832,7 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 类似地，在 $ k $ 维空间中有
 \begin{equation}
     \bm{e}_i \cdot \bm{e}_j = \delta_{ij} = \begin{cases}
-        1 , & i = j , \\
+        1 , & i = j ,    \\
         0 , & i \neq j ,
     \end{cases}
 \end{equation}
@@ -1891,8 +1891,8 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 \begin{equation}
     \bm{A} \times \bm{B} = \left| \begin{array}{ccc}
         \bm{e}_x & \bm{e}_y & \bm{e}_z \\
-        A_x & A_y & A_z \\
-        B_x & B_y & B_z
+        A_x      & A_y      & A_z      \\
+        B_x      & B_y      & B_z
     \end{array} \right| = (A_y B_z - A_z B_y) \bm{e}_x + (A_z B_x - A_x B_z) \bm{e}_y + (A_x B_y - A_y B_x) \bm{e}_z .
 \end{equation}
 这里的行列式见前面 \cref{sec:determinant}。
@@ -1956,10 +1956,10 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 \begin{equation}
     \begin{aligned}
         \bm{A} \times (\bm{B} \times \bm{C}) = & (A_y B_z C_x - A_z B_y C_x) \bm{e}_x + (A_z B_x C_y - A_x B_z C_y) \bm{e}_y + (A_x B_y C_z - A_y B_x C_z) \bm{e}_z \\
-        = & [B_x (A_x C_x + A_y C_y + A_z C_z) - C_x (A_x B_x + A_y B_y + A_z B_z)] \bm{e}_x \\
-        & + [B_y (A_x C_x + A_y C_y + A_z C_z) - C_y (A_x B_x + A_y B_y + A_z B_z)] \bm{e}_y \\
-        & + [B_z (A_x C_x + A_y C_y + A_z C_z) - C_z (A_x B_x + A_y B_y + A_z B_z)] \bm{e}_z \\
-        = & \bm{B} (\bm{A} \cdot \bm{C}) - \bm{C} (\bm{A} \cdot \bm{B}) .
+        =                                      & [B_x (A_x C_x + A_y C_y + A_z C_z) - C_x (A_x B_x + A_y B_y + A_z B_z)] \bm{e}_x                                   \\
+                                               & + [B_y (A_x C_x + A_y C_y + A_z C_z) - C_y (A_x B_x + A_y B_y + A_z B_z)] \bm{e}_y                                 \\
+                                               & + [B_z (A_x C_x + A_y C_y + A_z C_z) - C_z (A_x B_x + A_y B_y + A_z B_z)] \bm{e}_z                                 \\
+        =                                      & \bm{B} (\bm{A} \cdot \bm{C}) - \bm{C} (\bm{A} \cdot \bm{B}) .
     \end{aligned}
 \end{equation}
 
@@ -2111,27 +2111,27 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 它们可以用复数法轻易的证明
 \begin{equation}
     \begin{aligned}
-        \sin 3\theta + i \cos 3\theta & = (\cos \theta + i \sin \theta)^3 \\
-        & = \cos^3 \theta + 3 i \cos^2 \theta \sin \theta - 3 \cos \theta \sin^2 \theta - i \sin^3 \theta \\
-        & = (4 \cos^3 \theta - 3 \cos \theta) + i (3 \sin \theta - 4 \sin^3 \theta) .
+        \sin 3\theta + i \cos 3\theta & = (\cos \theta + i \sin \theta)^3                                                               \\
+                                      & = \cos^3 \theta + 3 i \cos^2 \theta \sin \theta - 3 \cos \theta \sin^2 \theta - i \sin^3 \theta \\
+                                      & = (4 \cos^3 \theta - 3 \cos \theta) + i (3 \sin \theta - 4 \sin^3 \theta) .
     \end{aligned}
 \end{equation}
 
 另外还有和差化积与积化和差公式：
 \begin{equation}
     \begin{aligned}
-        \sin \alpha + \sin \beta & = 2 \sin \frac{\alpha + \beta}{2} \cos \frac{\alpha - \beta}{2} , \\
-        \sin \alpha - \sin \beta & = 2 \cos \frac{\alpha + \beta}{2} \sin \frac{\alpha - \beta}{2} , \\
-        \cos \alpha + \cos \beta & = 2 \cos \frac{\alpha + \beta}{2} \cos \frac{\alpha - \beta}{2} , \\
+        \sin \alpha + \sin \beta & = 2 \sin \frac{\alpha + \beta}{2} \cos \frac{\alpha - \beta}{2} ,  \\
+        \sin \alpha - \sin \beta & = 2 \cos \frac{\alpha + \beta}{2} \sin \frac{\alpha - \beta}{2} ,  \\
+        \cos \alpha + \cos \beta & = 2 \cos \frac{\alpha + \beta}{2} \cos \frac{\alpha - \beta}{2} ,  \\
         \cos \alpha - \cos \beta & = -2 \sin \frac{\alpha + \beta}{2} \sin \frac{\alpha - \beta}{2} ,
     \end{aligned}
 \end{equation}
 
 \begin{equation}
     \begin{aligned}
-        \sin \alpha \cos \beta & = \frac{1}{2} [\sin (\alpha + \beta) + \sin (\alpha - \beta)] , \\
-        \cos \alpha \sin \beta & = \frac{1}{2} [\sin (\alpha + \beta) - \sin (\alpha - \beta)] , \\
-        \cos \alpha \cos \beta & = \frac{1}{2} [\cos (\alpha + \beta) + \cos (\alpha - \beta)] , \\
+        \sin \alpha \cos \beta & = \frac{1}{2} [\sin (\alpha + \beta) + \sin (\alpha - \beta)] ,  \\
+        \cos \alpha \sin \beta & = \frac{1}{2} [\sin (\alpha + \beta) - \sin (\alpha - \beta)] ,  \\
+        \cos \alpha \cos \beta & = \frac{1}{2} [\cos (\alpha + \beta) + \cos (\alpha - \beta)] ,  \\
         \sin \alpha \sin \beta & = -\frac{1}{2} [\cos (\alpha + \beta) - \cos (\alpha - \beta)] .
     \end{aligned}
 \end{equation}
@@ -2160,15 +2160,15 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 
 三角函数的求和公式可以用复数法证明：
 \begin{equation}
-    \sum_{k=0}^{n} \sin (k \theta) 
-    = \Im \left( \sum_{k=0}^{n} e^{i k \theta} \right) = \Im \left( \frac{1 - e^{i (n+1) \theta}}{1 - e^{i \theta}} \right) 
+    \sum_{k=0}^{n} \sin (k \theta)
+    = \Im \left( \sum_{k=0}^{n} e^{i k \theta} \right) = \Im \left( \frac{1 - e^{i (n+1) \theta}}{1 - e^{i \theta}} \right)
     = \Im \left( \frac{e^{i \frac{(n+1) \theta}{2}} \left( e^{-i \frac{(n+1) \theta}{2}} - e^{i \frac{(n+1) \theta}{2}} \right)}{e^{i \frac{\theta}{2}} \left( e^{-i \frac{\theta}{2}} - e^{i \frac{\theta}{2}} \right)}\right)
     = \frac{\sin \frac{(n+1) \theta}{2} \sin \frac{n \theta}{2}}{\sin \frac{\theta}{2}} ,
 \end{equation}
 
 \begin{equation}
-    \sum_{k=0}^{n} \cos (k \theta) 
-    = \Re \left( \sum_{k=0}^{n} e^{i k \theta} \right) = \Re \left( \frac{1 - e^{i (n+1) \theta}}{1 - e^{i \theta}} \right) 
+    \sum_{k=0}^{n} \cos (k \theta)
+    = \Re \left( \sum_{k=0}^{n} e^{i k \theta} \right) = \Re \left( \frac{1 - e^{i (n+1) \theta}}{1 - e^{i \theta}} \right)
     = \Re \left( \frac{e^{i \frac{(n+1) \theta}{2}} \left( e^{-i \frac{(n+1) \theta}{2}} - e^{i \frac{(n+1) \theta}{2}} \right)}{e^{i \frac{\theta}{2}} \left( e^{-i \frac{\theta}{2}} - e^{i \frac{\theta}{2}} \right)}\right)
     = \frac{\sin \frac{(n+1) \theta}{2} \cos \frac{n \theta}{2}}{\sin \frac{\theta}{2}} .
 \end{equation}
@@ -2189,7 +2189,7 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
     \begin{equation}
         \tanh x = \frac{\sinh x}{\cosh x} = \frac{e^x - e^{-x}}{e^x + e^{-x}} .
     \end{equation}
-    
+
 \end{definition}
 
 双曲函数满足如下恒等式：
@@ -2209,7 +2209,7 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
     \begin{equation}
         \frac{d}{dx} \tanh x = \frac{1}{\cosh^2 x} .
     \end{equation}
-    
+
 \end{illustration}
 
 积分公式如下：

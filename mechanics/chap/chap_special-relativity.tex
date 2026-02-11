@@ -95,18 +95,18 @@
 \begin{enumerate}
     \item 空间测量：在空间中建立一个坐标系 $Oxyz$，制作一把标准尺（如米尺），定义单位长度。用标准尺测量物体的位置，记录其坐标值。
     \item 时间测量：
-    \begin{itemize}
-        \item 考虑某个稳定的周期性现象（如摆钟、原子钟等），定义一个时间单位（如秒）。
-        \item 零点校准：在 $O$ 处设置一个时钟，定义 $t=0$ 时刻，在此时刻发出一个光信号。
-        光信号传播到空间中某个位置 $P$ 处的时刻 $t_P$，则定义该位置的时间为 $t_P = \frac{\overline{OP}}{c}$。
-        这样就能将此参考系中任意的时钟与 $O$ 处的时钟同步。
-        \item 走时率校准：在 $O$ 处的时钟与 $P$ 处的时钟同步后。
-        从 $O$ 处在 $t_0$ 时刻发出一束光信号，照射到 $P$ 处的时钟，记录 $P$ 处时钟显示的时间 $t_P$，然后立即反射光信号回到 $O$ 处，记录 $O$ 处时钟显示的时间 $t_O$。
-        如果 $P$ 处的时钟走时正确，则应满足
-        \begin{equation}
-            t_P - t_0 = \frac{1}{2} (t_O - t_0)
-        \end{equation}
-    \end{itemize}
+          \begin{itemize}
+              \item 考虑某个稳定的周期性现象（如摆钟、原子钟等），定义一个时间单位（如秒）。
+              \item 零点校准：在 $O$ 处设置一个时钟，定义 $t=0$ 时刻，在此时刻发出一个光信号。
+                    光信号传播到空间中某个位置 $P$ 处的时刻 $t_P$，则定义该位置的时间为 $t_P = \frac{\overline{OP}}{c}$。
+                    这样就能将此参考系中任意的时钟与 $O$ 处的时钟同步。
+              \item 走时率校准：在 $O$ 处的时钟与 $P$ 处的时钟同步后。
+                    从 $O$ 处在 $t_0$ 时刻发出一束光信号，照射到 $P$ 处的时钟，记录 $P$ 处时钟显示的时间 $t_P$，然后立即反射光信号回到 $O$ 处，记录 $O$ 处时钟显示的时间 $t_O$。
+                    如果 $P$ 处的时钟走时正确，则应满足
+                    \begin{equation}
+                        t_P - t_0 = \frac{1}{2} (t_O - t_0)
+                    \end{equation}
+          \end{itemize}
 \end{enumerate}
 
 \subsection{惯性系间时空测量的相对性}
@@ -170,8 +170,8 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        x' &= a_{11} x + a_{12} t \\
-        t' &= a_{21} x + a_{22} t
+        x' & = a_{11} x + a_{12} t \\
+        t' & = a_{21} x + a_{22} t
     \end{aligned}
     \right.
     \label{eq:linear-transformation}
@@ -181,8 +181,8 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        -x &= a_{11} (-x') + a_{12} t' \\
-        t  &= a_{21} (-x') + a_{22} t'
+        -x & = a_{11} (-x') + a_{12} t' \\
+        t  & = a_{21} (-x') + a_{22} t'
     \end{aligned}
     \right.
     \label{eq:inverse-transformation}
@@ -192,8 +192,8 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        x' &= a_{11}^2 x' + a_{11} a_{12} t + a_{12} a_{21} x + a_{12} a_{22} t \\
-        t' &= -a_{21} a_{11} x' - a_{21} a_{12} t + a_{22} a_{21} x + a_{22}^2 t
+        x' & = a_{11}^2 x' + a_{11} a_{12} t + a_{12} a_{21} x + a_{12} a_{22} t  \\
+        t' & = -a_{21} a_{11} x' - a_{21} a_{12} t + a_{22} a_{21} x + a_{22}^2 t
     \end{aligned}
     \right.
 \end{equation}
@@ -226,8 +226,8 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        c t' &= a_{11} (c t) + a_{12} t \\
-        t'   &= a_{21} (c t) + a_{22} t
+        c t' & = a_{11} (c t) + a_{12} t \\
+        t'   & = a_{21} (c t) + a_{22} t
     \end{aligned}
     \right.
 \end{equation}
@@ -240,10 +240,10 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        a_{11}^2 - a_{21}^2 c^2 &= 1 \\
-        a_{22} - a_{11} &= 0 \\
-        a_{11} v + a_{21} &= 0 \\
-        a_{12} - a_{21} c^2 &= 0
+        a_{11}^2 - a_{21}^2 c^2 & = 1 \\
+        a_{22} - a_{11}         & = 0 \\
+        a_{11} v + a_{21}       & = 0 \\
+        a_{12} - a_{21} c^2     & = 0
     \end{aligned}
     \right.
 \end{equation}
@@ -251,10 +251,10 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        a_{11} &= \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \\
-        a_{22} &= \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \\
-        a_{21} &= -\frac{v}{c^2} \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \\
-        a_{12} &= -v \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}
+        a_{11} & = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}                \\
+        a_{22} & = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}                \\
+        a_{21} & = -\frac{v}{c^2} \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \\
+        a_{12} & = -v \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}
     \end{aligned}
     \right.
 \end{equation}
@@ -266,10 +266,10 @@
     \begin{equation}
         \left\{
         \begin{aligned}
-            x' &= \frac{(x - v t)}{\sqrt{1 - \frac{v^2}{c^2}}} \\
-            t' &= \frac{\left(t - \frac{v x}{c^2}\right)}{\sqrt{1 - \frac{v^2}{c^2}}} \\
-            y' &= y \\
-            z' &= z
+            x' & = \frac{(x - v t)}{\sqrt{1 - \frac{v^2}{c^2}}}                        \\
+            t' & = \frac{\left(t - \frac{v x}{c^2}\right)}{\sqrt{1 - \frac{v^2}{c^2}}} \\
+            y' & = y                                                                   \\
+            z' & = z
         \end{aligned}
         \right.
         \label{eq:lorentz-transformation}
@@ -294,10 +294,10 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        x' &= \gamma (x - v t) \\
-        t' &= \gamma \left(t - \frac{v x}{c^2}\right) \\
-        y' &= y \\
-        z' &= z
+        x' & = \gamma (x - v t)                        \\
+        t' & = \gamma \left(t - \frac{v x}{c^2}\right) \\
+        y' & = y                                       \\
+        z' & = z
     \end{aligned}
     \right.
 \end{equation}
@@ -308,10 +308,10 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        x &= \gamma (x' + v t') \\
-        t &= \gamma \left(t' + \frac{v x'}{c^2}\right) \\
-        y &= y' \\
-        z &= z'
+        x & = \gamma (x' + v t')                        \\
+        t & = \gamma \left(t' + \frac{v x'}{c^2}\right) \\
+        y & = y'                                        \\
+        z & = z'
     \end{aligned}
     \right.
 \end{equation}
@@ -443,9 +443,9 @@
     \begin{equation}
         \left\{
         \begin{aligned}
-            u_x' &= \frac{u_x - v}{1 - \frac{v u_x}{c^2}} \\
-            u_y' &= \frac{u_y}{\gamma \left(1 - \frac{v u_x}{c^2}\right)} \\
-            u_z' &= \frac{u_z}{\gamma \left(1 - \frac{v u_x}{c^2}\right)}
+            u_x' & = \frac{u_x - v}{1 - \frac{v u_x}{c^2}}                 \\
+            u_y' & = \frac{u_y}{\gamma \left(1 - \frac{v u_x}{c^2}\right)} \\
+            u_z' & = \frac{u_z}{\gamma \left(1 - \frac{v u_x}{c^2}\right)}
         \end{aligned}
         \right.
     \end{equation}
@@ -456,9 +456,9 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        u_x &= \frac{u_x' + v}{1 + \frac{v u_x'}{c^2}} \\
-        u_y &= \frac{u_y'}{\gamma \left(1 + \frac{v u_x'}{c^2}\right)} \\
-        u_z &= \frac{u_z'}{\gamma \left(1 + \frac{v u_x'}{c^2}\right)}
+        u_x & = \frac{u_x' + v}{1 + \frac{v u_x'}{c^2}}                 \\
+        u_y & = \frac{u_y'}{\gamma \left(1 + \frac{v u_x'}{c^2}\right)} \\
+        u_z & = \frac{u_z'}{\gamma \left(1 + \frac{v u_x'}{c^2}\right)}
     \end{aligned}
     \right.
 \end{equation}
@@ -652,11 +652,11 @@
 再考虑动能的表达式
 \begin{equation}
     \begin{aligned}
-        E_k = \int_{0}^{l} \bm{F} \cdot \d \bm{s} = \int_{0}^{v} \bm{F} \cdot \frac{\d \bm{s}}{\d t} \d t \\
-        = \int_{0}^{v} \frac{\d \bm{p}}{\d t} \cdot \bm{v} \d t = \int_{0}^{v} \bm{v} \cdot \d \bm{p} \\
-        = \int_{0}^{v} v \d \left(\frac{m_0 v}{\sqrt{1 - \frac{v^2}{c^2}}}\right) \\
+        E_k = \int_{0}^{l} \bm{F} \cdot \d \bm{s} = \int_{0}^{v} \bm{F} \cdot \frac{\d \bm{s}}{\d t} \d t  \\
+        = \int_{0}^{v} \frac{\d \bm{p}}{\d t} \cdot \bm{v} \d t = \int_{0}^{v} \bm{v} \cdot \d \bm{p}      \\
+        = \int_{0}^{v} v \d \left(\frac{m_0 v}{\sqrt{1 - \frac{v^2}{c^2}}}\right)                          \\
         = \left. \frac{m_0 \bm{v} \cdot \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \right|_{0}^{v} -
-        m_0 \int_{0}^{v} \frac{\bm{v} \cdot \d \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \\
+        m_0 \int_{0}^{v} \frac{\bm{v} \cdot \d \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}}                         \\
         = \frac{m_0 v^2}{\sqrt{1 - \frac{v^2}{c^2}}} + m_0 c^2 \left(\sqrt{1 - \frac{v^2}{c^2}} - 1\right) \\
         = m_0 c^2 \left(\frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} - 1\right)
     \end{aligned}
@@ -743,10 +743,10 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & \frac{\partial B_x}{\partial x} + \frac{\partial B_y}{\partial y} + \frac{\partial B_z}{\partial z} = 0 \\
-        & \frac{\partial E_z}{\partial y} - \frac{\partial E_y}{\partial z} = - \frac{\partial B_x}{\partial t} \\
-        & \frac{\partial E_x}{\partial z} - \frac{\partial E_z}{\partial x} = - \frac{\partial B_y}{\partial t} \\
-        & \frac{\partial E_y}{\partial x} - \frac{\partial E_x}{\partial y} = - \frac{\partial B_z}{\partial t}
+         & \frac{\partial B_x}{\partial x} + \frac{\partial B_y}{\partial y} + \frac{\partial B_z}{\partial z} = 0 \\
+         & \frac{\partial E_z}{\partial y} - \frac{\partial E_y}{\partial z} = - \frac{\partial B_x}{\partial t}   \\
+         & \frac{\partial E_x}{\partial z} - \frac{\partial E_z}{\partial x} = - \frac{\partial B_y}{\partial t}   \\
+         & \frac{\partial E_y}{\partial x} - \frac{\partial E_x}{\partial y} = - \frac{\partial B_z}{\partial t}
     \end{aligned}
     \right.
     \label{eq:maxwell-equations-1}
@@ -756,10 +756,10 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & \frac{\partial }{\partial x} = \gamma \left(\frac{\partial }{\partial x'} - \frac{v}{c^2} \frac{\partial }{\partial t'}\right) \\
-        & \frac{\partial }{\partial y} = \frac{\partial }{\partial y'} \\
-        & \frac{\partial }{\partial z} = \frac{\partial }{\partial z'} \\
-        & \frac{\partial }{\partial t} = \gamma \left(\frac{\partial }{\partial t'} - v \frac{\partial }{\partial x'}\right)
+         & \frac{\partial }{\partial x} = \gamma \left(\frac{\partial }{\partial x'} - \frac{v}{c^2} \frac{\partial }{\partial t'}\right) \\
+         & \frac{\partial }{\partial y} = \frac{\partial }{\partial y'}                                                                   \\
+         & \frac{\partial }{\partial z} = \frac{\partial }{\partial z'}                                                                   \\
+         & \frac{\partial }{\partial t} = \gamma \left(\frac{\partial }{\partial t'} - v \frac{\partial }{\partial x'}\right)
     \end{aligned}
     \right.
 \end{equation}
@@ -768,10 +768,10 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_x}{\partial x'} - \frac{v}{c^2 \sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_x}{\partial t'} + \frac{\partial B_y}{\partial y'} + \frac{\partial B_z}{\partial z'} = 0 \\
-        & \frac{\partial E_z}{\partial y'} - \frac{\partial E_y}{\partial z'} = - \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_x}{\partial t'} + \frac{v}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_x}{\partial x'} \\
-        & \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial E_x}{\partial z'} - \frac{\partial E_z}{\partial x'} = - \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_y}{\partial t'} + \frac{v}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_y}{\partial x'} \\
-        & \frac{\partial E_y}{\partial x'} - \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial E_x}{\partial y'} + \frac{v}{c^2 \sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial E_x}{\partial t'} = - \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_z}{\partial t'} + \frac{v}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_z}{\partial x'}
+         & \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_x}{\partial x'} - \frac{v}{c^2 \sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_x}{\partial t'} + \frac{\partial B_y}{\partial y'} + \frac{\partial B_z}{\partial z'} = 0                                                                                                            \\
+         & \frac{\partial E_z}{\partial y'} - \frac{\partial E_y}{\partial z'} = - \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_x}{\partial t'} + \frac{v}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_x}{\partial x'}                                                                                                                  \\
+         & \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial E_x}{\partial z'} - \frac{\partial E_z}{\partial x'} = - \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_y}{\partial t'} + \frac{v}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_y}{\partial x'}                                                                             \\
+         & \frac{\partial E_y}{\partial x'} - \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial E_x}{\partial y'} + \frac{v}{c^2 \sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial E_x}{\partial t'} = - \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_z}{\partial t'} + \frac{v}{\sqrt{1 - \frac{v^2}{c^2}}} \frac{\partial B_z}{\partial x'}
     \end{aligned}
     \right.
 \end{equation}
@@ -780,11 +780,11 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & \frac{\partial B_x}{\partial x'} + \frac{\partial}{\partial y'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (B_y + \frac{v}{c^2} E_z) \right] + \frac{\partial}{\partial z'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (B_z - \frac{v}{c^2} E_y) \right] = 0 \\
-        & \frac{\partial}{\partial y'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (E_z + v B_y) \right] - \frac{\partial}{\partial z'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (E_y - v B_z) \right] = - \frac{\partial B_x}{\partial t'} \\
-        & - \frac{\partial}{\partial x'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (E_z + v B_y) \right] + \frac{\partial E_x}{\partial z'} = - \frac{\partial}{\partial t'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (B_y + \frac{v}{c^2} E_z) \right] \\
-        & \frac{\partial}{\partial x'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (E_y - v B_z) \right] - \frac{\partial E_x}{\partial y'} = - \frac{\partial}{\partial t'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (B_z - \frac{v}{c^2} E_y) \right]
-        \end{aligned}
+         & \frac{\partial B_x}{\partial x'} + \frac{\partial}{\partial y'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (B_y + \frac{v}{c^2} E_z) \right] + \frac{\partial}{\partial z'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (B_z - \frac{v}{c^2} E_y) \right] = 0 \\
+         & \frac{\partial}{\partial y'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (E_z + v B_y) \right] - \frac{\partial}{\partial z'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (E_y - v B_z) \right] = - \frac{\partial B_x}{\partial t'}                           \\
+         & - \frac{\partial}{\partial x'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (E_z + v B_y) \right] + \frac{\partial E_x}{\partial z'} = - \frac{\partial}{\partial t'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (B_y + \frac{v}{c^2} E_z) \right]             \\
+         & \frac{\partial}{\partial x'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (E_y - v B_z) \right] - \frac{\partial E_x}{\partial y'} = - \frac{\partial}{\partial t'} \left[ \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (B_z - \frac{v}{c^2} E_y) \right]
+    \end{aligned}
     \right.
 \end{equation}
 
@@ -792,12 +792,12 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & B_x' = B_x \\
-        & B_y' = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (B_y + \frac{v}{c^2} E_z) \\
-        & B_z' = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (B_z - \frac{v}{c^2} E_y) \\
-        & E_x' = E_x \\
-        & E_y' = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (E_y - v B_z) \\
-        & E_z' = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (E_z + v B_y)
+         & B_x' = B_x                                                            \\
+         & B_y' = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (B_y + \frac{v}{c^2} E_z) \\
+         & B_z' = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (B_z - \frac{v}{c^2} E_y) \\
+         & E_x' = E_x                                                            \\
+         & E_y' = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (E_y - v B_z)             \\
+         & E_z' = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} (E_z + v B_y)
     \end{aligned}
     \right.
 \end{equation}
@@ -821,8 +821,8 @@
 \begin{equation}
     \begin{aligned}
         F_x' & = q \left[ E_x + \frac{u_y \left( B_z - \frac{v}{c^2} E_y \right)}{1 - \frac{v}{c^2} u_x} - \frac{u_z \left( B_y + \frac{v}{c^2} E_z \right)}{1 - \frac{v}{c^2} u_x} \right] \\
-        & = \frac{q}{1 - \frac{v}{c^2} u_x} \left( E_x + u_y B_z - u_z B_y - \frac{v}{c^2} (u_x E_x + u_y E_y + u_z E_z) \right) \\
-        & = \frac{1}{1 - \frac{v}{c^2} u_x} \left( F_x - \frac{v}{c^2} q \bm{u} \cdot \bm{E} \right)
+             & = \frac{q}{1 - \frac{v}{c^2} u_x} \left( E_x + u_y B_z - u_z B_y - \frac{v}{c^2} (u_x E_x + u_y E_y + u_z E_z) \right)                                                       \\
+             & = \frac{1}{1 - \frac{v}{c^2} u_x} \left( F_x - \frac{v}{c^2} q \bm{u} \cdot \bm{E} \right)
     \end{aligned}
 \end{equation}
 即
@@ -842,9 +842,9 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & F_x' = \frac{F_x - \frac{v}{c^2} \bm{F} \cdot \bm{u}}{1 - \frac{v}{c^2} u_x} \\
-        & F_y' = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_y}{1 - \frac{v}{c^2} u_x} \\
-        & F_z' = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_z}{1 - \frac{v}{c^2} u_x}
+         & F_x' = \frac{F_x - \frac{v}{c^2} \bm{F} \cdot \bm{u}}{1 - \frac{v}{c^2} u_x} \\
+         & F_y' = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_y}{1 - \frac{v}{c^2} u_x}          \\
+         & F_z' = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_z}{1 - \frac{v}{c^2} u_x}
     \end{aligned}
     \right.
     \label{eq:relativistic-force-transformation}
@@ -854,9 +854,9 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & F_x = \frac{F_x' + \frac{v}{c^2} \bm{F'} \cdot \bm{u'}}{1 + \frac{v}{c^2} u_x'} \\
-        & F_y = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_y'}{1 + \frac{v}{c^2} u_x'} \\
-        & F_z = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_z'}{1 + \frac{v}{c^2} u_x'}
+         & F_x = \frac{F_x' + \frac{v}{c^2} \bm{F'} \cdot \bm{u'}}{1 + \frac{v}{c^2} u_x'} \\
+         & F_y = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_y'}{1 + \frac{v}{c^2} u_x'}            \\
+         & F_z = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_z'}{1 + \frac{v}{c^2} u_x'}
     \end{aligned}
     \right.
 \end{equation}
@@ -865,25 +865,25 @@
 
 \begin{itemize}
     \item 牛顿第一定律
-    牛顿第一定律在狭义相对论中仍然成立，即在没有外力作用下，质点保持匀速直线运动状态。
+          牛顿第一定律在狭义相对论中仍然成立，即在没有外力作用下，质点保持匀速直线运动状态。
     \item 牛顿第二定律
-    狭义相对论中，改取牛顿第二定律的原始形式，即
-    \begin{equation}
-        \bm{F} = \frac{\d \bm{p}}{\d t}
-        \label{eq:relativistic-newton-second-law}
-    \end{equation}
-    其中，$\bm{p}$ 是质点的动量。
-    $\d t'$ 和 $\bm{F}$ 的惯性系变换式已经给出，对于给定的 $S$ 系中的质点动量 $\bm{P}$，如果能够找到对应的 $S'$ 系中的质点动量 $\bm{p'}$，使得
-    \begin{equation}
-        \bm{F'} = \frac{\d \bm{p'}}{\d t'}
-    \end{equation}
-    成立，那么在 \cref{eq:relativistic-newton-second-law} 表述形式上便是惯性系不变的。
-    当然，这样修正的牛顿第二定律是否正确，还需经过实验验证。
+          狭义相对论中，改取牛顿第二定律的原始形式，即
+          \begin{equation}
+              \bm{F} = \frac{\d \bm{p}}{\d t}
+              \label{eq:relativistic-newton-second-law}
+          \end{equation}
+          其中，$\bm{p}$ 是质点的动量。
+          $\d t'$ 和 $\bm{F}$ 的惯性系变换式已经给出，对于给定的 $S$ 系中的质点动量 $\bm{P}$，如果能够找到对应的 $S'$ 系中的质点动量 $\bm{p'}$，使得
+          \begin{equation}
+              \bm{F'} = \frac{\d \bm{p'}}{\d t'}
+          \end{equation}
+          成立，那么在 \cref{eq:relativistic-newton-second-law} 表述形式上便是惯性系不变的。
+          当然，这样修正的牛顿第二定律是否正确，还需经过实验验证。
     \item 牛顿第三定律
-    狭义相对论中，如果牛顿第三定律仍然成立，便要求在 $S$ 系中的一对力若是 $\bm{F_1} + \bm{F_2} = \bm{0}$，
-    那么变换到 $S'$ 系也必有 $\bm{F_1} + \bm{F_2} = \bm{0}$，据力的变换式 \cref{eq:relativistic-force-transformation}很易举出反例。
+          狭义相对论中，如果牛顿第三定律仍然成立，便要求在 $S$ 系中的一对力若是 $\bm{F_1} + \bm{F_2} = \bm{0}$，
+          那么变换到 $S'$ 系也必有 $\bm{F_1} + \bm{F_2} = \bm{0}$，据力的变换式 \cref{eq:relativistic-force-transformation}很易举出反例。
 
-    狭义相对论中牛顿第三定律虽然不能成立，但在狭义相对论之前已经建立的普遍的动量守恒定律（即任何一个与外界无相互作用的系统其动量守恒）仍然成立。
+          狭义相对论中牛顿第三定律虽然不能成立，但在狭义相对论之前已经建立的普遍的动量守恒定律（即任何一个与外界无相互作用的系统其动量守恒）仍然成立。
 \end{itemize}
 
 \subsubsection{动量及能量变换}
@@ -938,7 +938,7 @@
 \begin{equation}
     \begin{aligned}
         \d E' & = \frac{F_x - \frac{v}{c^2} \bm{F} \cdot \bm{u}}{1 - \frac{v}{c^2} u_x} \cdot \frac{\d x - v \d t}{\sqrt{1 - \frac{v^2}{c^2}}} + F_y \d y + F_z \d z \\
-        & = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \left( F_x u_x + F_y u_y + F_z u_z - v F_x \right) \d t
+              & = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \left( F_x u_x + F_y u_y + F_z u_z - v F_x \right) \d t
     \end{aligned}
 \end{equation}
 积分后，得
@@ -951,10 +951,10 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & p_x' = \frac{p_x - \frac{v}{c^2} E}{\sqrt{1 - \frac{v^2}{c^2}}} \\
-        & p_y' = p_y \\
-        & p_z' = p_z \\
-        & E' = \frac{E - v p_x}{\sqrt{1 - \frac{v^2}{c^2}}}
+         & p_x' = \frac{p_x - \frac{v}{c^2} E}{\sqrt{1 - \frac{v^2}{c^2}}} \\
+         & p_y' = p_y                                                      \\
+         & p_z' = p_z                                                      \\
+         & E' = \frac{E - v p_x}{\sqrt{1 - \frac{v^2}{c^2}}}
     \end{aligned}
     \right.
 \end{equation}
@@ -963,10 +963,10 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & p_x = \frac{p_x' + \frac{v}{c^2} E'}{\sqrt{1 - \frac{v^2}{c^2}}} \\
-        & p_y = p_y' \\
-        & p_z = p_z' \\
-        & E = \frac{E' + v p_x'}{\sqrt{1 - \frac{v^2}{c^2}}}
+         & p_x = \frac{p_x' + \frac{v}{c^2} E'}{\sqrt{1 - \frac{v^2}{c^2}}} \\
+         & p_y = p_y'                                                       \\
+         & p_z = p_z'                                                       \\
+         & E = \frac{E' + v p_x'}{\sqrt{1 - \frac{v^2}{c^2}}}
     \end{aligned}
     \right.
 \end{equation}
@@ -1018,10 +1018,10 @@
 然后，我们对 $\Delta s^2$ 做洛伦兹变换，有
 \begin{equation}
     \begin{aligned}
-        \Delta s'^2 & = c^2 (t_B' - t_A')^2 - (x_B' - x_A')^2 - (y_B' - y_A')^2 - (z_B' - z_A')^2 \\
-        & = c^2 \left( \gamma (t_B - t_A) - \frac{\gamma v}{c^2} (x_B - x_A) \right)^2 - \left( \gamma (x_B - x_A) - \gamma v (t_B - t_A) \right)^2 - (y_B - y_A)^2 - (z_B - z_A)^2 \\
-        & = c^2 (t_B - t_A)^2 - (x_B - x_A)^2 - (y_B - y_A)^2 - (z_B - z_A)^2 \\
-        & = \Delta s^2
+        \Delta s'^2 & = c^2 (t_B' - t_A')^2 - (x_B' - x_A')^2 - (y_B' - y_A')^2 - (z_B' - z_A')^2                                                                                               \\
+                    & = c^2 \left( \gamma (t_B - t_A) - \frac{\gamma v}{c^2} (x_B - x_A) \right)^2 - \left( \gamma (x_B - x_A) - \gamma v (t_B - t_A) \right)^2 - (y_B - y_A)^2 - (z_B - z_A)^2 \\
+                    & = c^2 (t_B - t_A)^2 - (x_B - x_A)^2 - (y_B - y_A)^2 - (z_B - z_A)^2                                                                                                       \\
+                    & = \Delta s^2
     \end{aligned}
 \end{equation}
 我们惊喜地发现，时空间隔 $\Delta s^2$ 在洛伦兹变换下保持不变，即 $\Delta s'^2 = \Delta s^2$。
@@ -1046,10 +1046,10 @@
     其中矩阵 $\eta_{\mu \nu}$ 是闵可夫斯基（Minkowski）度量张量，定义为
     \begin{equation}
         \eta_{\mu \nu} = \begin{pmatrix}
-            1 & 0 & 0 & 0 \\
-            0 & -1 & 0 & 0 \\
-            0 & 0 & -1 & 0 \\
-            0 & 0 & 0 & -1
+            1 & 0  & 0  & 0  \\
+            0 & -1 & 0  & 0  \\
+            0 & 0  & -1 & 0  \\
+            0 & 0  & 0  & -1
         \end{pmatrix}
     \end{equation}
 
@@ -1100,18 +1100,18 @@
 \begin{equation}
     \begin{pmatrix}
         ct' \\
-        x' \\
-        y' \\
+        x'  \\
+        y'  \\
         z'
     \end{pmatrix} = \begin{pmatrix}
-        \gamma & -\gamma \beta & 0 & 0 \\
-        -\gamma \beta & \gamma & 0 & 0 \\
-        0 & 0 & 1 & 0 \\
-        0 & 0 & 0 & 1
+        \gamma        & -\gamma \beta & 0 & 0 \\
+        -\gamma \beta & \gamma        & 0 & 0 \\
+        0             & 0             & 1 & 0 \\
+        0             & 0             & 0 & 1
     \end{pmatrix} \begin{pmatrix}
         ct \\
-        x \\
-        y \\
+        x  \\
+        y  \\
         z
     \end{pmatrix}
 \end{equation}
@@ -1121,18 +1121,18 @@
 \begin{equation}
     \begin{pmatrix}
         ct' \\
-        x' \\
-        y' \\
+        x'  \\
+        y'  \\
         z'
     \end{pmatrix} = \begin{pmatrix}
-        \cosh \phi & -\sinh \phi & 0 & 0 \\
-        -\sinh \phi & \cosh \phi & 0 & 0 \\
-        0 & 0 & 1 & 0 \\
-        0 & 0 & 0 & 1
+        \cosh \phi  & -\sinh \phi & 0 & 0 \\
+        -\sinh \phi & \cosh \phi  & 0 & 0 \\
+        0           & 0           & 1 & 0 \\
+        0           & 0           & 0 & 1
     \end{pmatrix} \begin{pmatrix}
         ct \\
-        x \\
-        y \\
+        x  \\
+        y  \\
         z
     \end{pmatrix}
 \end{equation}
@@ -1154,9 +1154,9 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & u_x' = \frac{u_x - v}{1 - \frac{v}{c^2} u_x} \\
-        & u_y' = \frac{\sqrt{1 - \frac{v^2}{c^2}} u_y}{1 - \frac{v}{c^2} u_x} \\
-        & u_z' = \frac{\sqrt{1 - \frac{v^2}{c^2}} u_z}{1 - \frac{v}{c^2} u_x}
+         & u_x' = \frac{u_x - v}{1 - \frac{v}{c^2} u_x}                        \\
+         & u_y' = \frac{\sqrt{1 - \frac{v^2}{c^2}} u_y}{1 - \frac{v}{c^2} u_x} \\
+         & u_z' = \frac{\sqrt{1 - \frac{v^2}{c^2}} u_z}{1 - \frac{v}{c^2} u_x}
     \end{aligned}
     \right.
 \end{equation}
@@ -1188,10 +1188,10 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & u'^0 = \gamma (u^0 - \beta u^1) \\
-        & u'^1 = \gamma (u^1 - \beta u^0) \\
-        & u'^2 = u^2 \\
-        & u'^3 = u^3
+         & u'^0 = \gamma (u^0 - \beta u^1) \\
+         & u'^1 = \gamma (u^1 - \beta u^0) \\
+         & u'^2 = u^2                      \\
+         & u'^3 = u^3
     \end{aligned}
     \right.
 \end{equation}
@@ -1199,10 +1199,10 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & \gamma' c = \gamma_v (\gamma c - \beta_v \gamma u_x) \\
-        & \gamma' u_x' = \gamma_v (\gamma u_x - \beta_v \gamma c) \\
-        & \gamma' u_y' = \gamma_v \gamma u_y \\
-        & \gamma' u_z' = \gamma_v \gamma u_z
+         & \gamma' c = \gamma_v (\gamma c - \beta_v \gamma u_x)    \\
+         & \gamma' u_x' = \gamma_v (\gamma u_x - \beta_v \gamma c) \\
+         & \gamma' u_y' = \gamma_v \gamma u_y                      \\
+         & \gamma' u_z' = \gamma_v \gamma u_z
     \end{aligned}
     \right.
     \label{eq:four-velocity-transformation}
@@ -1217,9 +1217,9 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & u_x' = \frac{u_x - v}{1 - \frac{v}{c^2} u_x} \\
-        & u_y' = \frac{\sqrt{1 - \frac{v^2}{c^2}} u_y}{1 - \frac{v}{c^2} u_x} \\
-        & u_z' = \frac{\sqrt{1 - \frac{v^2}{c^2}} u_z}{1 - \frac{v}{c^2} u_x}
+         & u_x' = \frac{u_x - v}{1 - \frac{v}{c^2} u_x}                        \\
+         & u_y' = \frac{\sqrt{1 - \frac{v^2}{c^2}} u_y}{1 - \frac{v}{c^2} u_x} \\
+         & u_z' = \frac{\sqrt{1 - \frac{v^2}{c^2}} u_z}{1 - \frac{v}{c^2} u_x}
     \end{aligned}
     \right.
 \end{equation}
@@ -1247,10 +1247,10 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & p'^0 = \gamma (p^0 - \beta p^1) \\
-        & p'^1 = \gamma (p^1 - \beta p^0) \\
-        & p'^2 = p^2 \\
-        & p'^3 = p^3
+         & p'^0 = \gamma (p^0 - \beta p^1) \\
+         & p'^1 = \gamma (p^1 - \beta p^0) \\
+         & p'^2 = p^2                      \\
+         & p'^3 = p^3
     \end{aligned}
     \right.
 \end{equation}
@@ -1258,10 +1258,10 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        & \frac{E'}{c} = \gamma_v \left( \frac{E}{c} - \beta_v p_x \right) \\
-        & p_x' = \gamma_v (p_x - \beta_v \frac{E}{c}) \\
-        & p_y' = p_y \\
-        & p_z' = p_z
+         & \frac{E'}{c} = \gamma_v \left( \frac{E}{c} - \beta_v p_x \right) \\
+         & p_x' = \gamma_v (p_x - \beta_v \frac{E}{c})                      \\
+         & p_y' = p_y                                                       \\
+         & p_z' = p_z
     \end{aligned}
     \right.
 \end{equation}
@@ -1321,10 +1321,10 @@ $\theta' = \frac{\pi}{2}$ 时，得到光的横向多普勒效应的频率变换
 \begin{equation}
     \left\{
     \begin{aligned}
-        & f'^0 = \gamma (f^0 - \beta f^1) \\
-        & f'^1 = \gamma (f^1 - \beta f^0) \\
-        & f'^2 = f^2 \\
-        & f'^3 = f^3
+         & f'^0 = \gamma (f^0 - \beta f^1) \\
+         & f'^1 = \gamma (f^1 - \beta f^0) \\
+         & f'^2 = f^2                      \\
+         & f'^3 = f^3
     \end{aligned}
     \right.
 \end{equation}
@@ -1332,10 +1332,10 @@ $\theta' = \frac{\pi}{2}$ 时，得到光的横向多普勒效应的频率变换
 \begin{equation}
     \left\{
     \begin{aligned}
-        & \frac{1}{c} \frac{\d E'}{\d t} = \gamma_v \left( \frac{1}{c} \frac{\d E}{\d t} - \beta_v \frac{\d p_x}{\d t} \right) \\
-        & \frac{\d p_x'}{\d t} = \gamma_v \left( \frac{\d p_x}{\d t} - \beta_v \frac{1}{c} \frac{\d E}{\d t} \right) \\
-        & \frac{\d p_y'}{\d t} = \frac{\d p_y}{\d t} \\
-        & \frac{\d p_z'}{\d t} = \frac{\d p_z}{\d t}
+         & \frac{1}{c} \frac{\d E'}{\d t} = \gamma_v \left( \frac{1}{c} \frac{\d E}{\d t} - \beta_v \frac{\d p_x}{\d t} \right) \\
+         & \frac{\d p_x'}{\d t} = \gamma_v \left( \frac{\d p_x}{\d t} - \beta_v \frac{1}{c} \frac{\d E}{\d t} \right)           \\
+         & \frac{\d p_y'}{\d t} = \frac{\d p_y}{\d t}                                                                           \\
+         & \frac{\d p_z'}{\d t} = \frac{\d p_z}{\d t}
     \end{aligned}
     \right.
 \end{equation}
@@ -1383,8 +1383,8 @@ $\theta' = \frac{\pi}{2}$ 时，得到光的横向多普勒效应的频率变换
 如前所述，在刚达到阈能条件时，质心系里所有产物都是静止的。运用上式右端于质心系：
 \begin{equation}
     \begin{aligned}
-        (p'_1{}^\mu + p'_2{}^\mu + p'_3{}^\mu)^2 &= (m_{10} + m_{20} + M_0)^2 c^2 \\
-        &= (m_{10}^2 + m_{20}^2 + M_0^2 + 2 m_{10} m_{20} + 2(m_{10} + m_{20}) M_0) c^2
+        (p'_1{}^\mu + p'_2{}^\mu + p'_3{}^\mu)^2 & = (m_{10} + m_{20} + M_0)^2 c^2                                                \\
+                                                 & = (m_{10}^2 + m_{20}^2 + M_0^2 + 2 m_{10} m_{20} + 2(m_{10} + m_{20}) M_0) c^2
     \end{aligned}
 \end{equation}
 式中 $m_{10}$ 和 $m_{20}$ 分别是 $A_1$ 和 $A_2$ 的静质量，$M_0$ 是新粒子 $A_3$ 的静质量。
@@ -1393,7 +1393,7 @@ $\theta' = \frac{\pi}{2}$ 时，得到光的横向多普勒效应的频率变换
 \begin{equation}
     \begin{aligned}
         (p_1^\mu + p_2^\mu)^2 & = (p_1^\mu)^2 + (p_2^\mu)^2 + 2 p_1^\mu p_{2\mu} \\
-        & = m_{10}^2 c^2 + m_{20}^2 c^2 + 2 m_{20} E_1
+                              & = m_{10}^2 c^2 + m_{20}^2 c^2 + 2 m_{20} E_1
     \end{aligned}
 \end{equation}
 这里的 $E_1$ 就是在实验室系加速器所需提供的阈能 $E_{\text{阀}}^L$。
@@ -1407,10 +1407,10 @@ $\theta' = \frac{\pi}{2}$ 时，得到光的横向多普勒效应的频率变换
 在质心系中有
 \begin{equation}
     \begin{aligned}
-        (p_1^\mu + p_2^\mu)^2 & = (p_1^\mu)^2 + (p_2^\mu)^2 + 2 p_1^\mu p_{2\mu} \\
-        & = m_0^2 c^2 + m_0^2 c^2 + 2 (E^2 / c^2 - \bm{p}_1 \cdot \bm{p}_2) \\
-        & = 4 E^2 / c^2 \\
-        & = (E_{\text{阀}}^{CM})^2 / c^2
+        (p_1^\mu + p_2^\mu)^2 & = (p_1^\mu)^2 + (p_2^\mu)^2 + 2 p_1^\mu p_{2\mu}                  \\
+                              & = m_0^2 c^2 + m_0^2 c^2 + 2 (E^2 / c^2 - \bm{p}_1 \cdot \bm{p}_2) \\
+                              & = 4 E^2 / c^2                                                     \\
+                              & = (E_{\text{阀}}^{CM})^2 / c^2
     \end{aligned}
 \end{equation}
 在 $A_1$、$A_2$相同的情况下，原式右端简化为 $(2m_0 + M_0)^2 c^2$，于是有
@@ -1459,4 +1459,6 @@ $\theta' = \frac{\pi}{2}$ 时，得到光的横向多普勒效应的频率变换
 其中 $m_0$ 是衰变前粒子的静质量，$m_{10}$ 和 $m_{20}$ 分别是衰变后两个粒子的静质量。
 
 \section{相对论的几何表示——「时空图」}
+
+
 
