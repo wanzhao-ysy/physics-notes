@@ -4,6 +4,7 @@
 \documentclass[a4paper]{book}
 
 \usepackage{physics-notes-style}
+\usepackage{datetime2}
 \addbibresource{references.bib}
 \setcounter{chapter}{-1}
 
@@ -27,5 +28,15 @@
 
 \backmatter
 \printbibliography[heading=bibintoc, title={参考文献}]
+
+\ExplSyntaxOn
+\newcommand{\printelapsedtime}{ \fp_eval:n { round ( \sys_timer: / 65536, 2 ) } }
+\ExplSyntaxOff
+
+\vfill
+\begin{center}
+    \textcolor{gray}{\small 编译时间：\today~\DTMcurrenttime} \\
+    \textcolor{gray}{\small 编译耗时：\printelapsedtime\,s}
+\end{center}
 
 \end{document}
