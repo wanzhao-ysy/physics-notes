@@ -9,10 +9,10 @@
             \fill[pattern=north east lines] (0,4) rectangle (6,4.2);
             \fill[pattern=north east lines] (6,0) rectangle (6.2,4);
             \draw[thick] (1,0) -- (3,0);
-
+            
             % 画分束器
             \draw[thick, dashed] (1,1) -- (3,3);
-
+            
             % 画光路
             \draw[thick, ->] (0,2) -- (1.7,2);
             \draw[thick, ->] (1.7,2.4) -- (1.7,3.8);
@@ -21,14 +21,14 @@
             \draw[thick, ->] (5.8,1.8) -- (2.3,1.8);
             \draw[thick, ->] (2,1.8) -- (2,0.1);
             \draw[thick, ->] (2,1.8) -- (2,0.4);
-
-
+            
+            
             % 文字说明
             \node at (2,0) [below] {观察屏};
             \node at (2.6,3) [above right, scale=0.6] {分束器（半透明反射镜）};
             \node at (1.7,3.1) [left] {$l_2$};
             \node at (4,1.8) [below] {$l_1$};
-
+            
         \end{tikzpicture}
         \caption{地球系}
     \end{subfigure}
@@ -39,24 +39,24 @@
             % 画反射镜
             \draw[thick] (1,4) -- (7,4);
             \fill[pattern=north east lines] (1,4) rectangle (7,4.2);
-
+            
             % 画光路
             \draw[thick, ->]  (1,2) -- (2,2);
             \draw[thick, ->]  (2,2) -- (4.5,4);
             \draw[thick, ->]  (4.5,4) -- (7,2);
-
+            
             \draw[thick, dashed] (4.5,4) -- (4.5,2) node[midway, right] {$l_2$};
             \draw[thick, dashed] (2,2) -- (5,2);
-
+            
             \node at (2,2) [below] {G};
             \node at (7,2) [below] {G'};
-
+            
             \coordinate (O) at (2,2);
             \coordinate (A) at (4.5,4);
             \coordinate (B) at (3,2);
-
+            
             \pic [draw, "$\theta$", angle eccentricity=1.4] {angle = B--O--A};
-
+            
             \draw[thick, ->] (6,5) -- (7,5) node[midway, above] {$\bm{v}$};
         \end{tikzpicture}
         \caption{以太系}
