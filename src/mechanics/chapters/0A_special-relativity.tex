@@ -3,7 +3,7 @@
 
 \begin{intro}
     严格意义上，相对论并不属于普通物理学力学（Mechanics）的范畴，但多数高校的物理学力学课程都会包含狭义相对论的内容，并定性地介绍一下广义相对论，这份笔记自然也不例外。
-    
+
     狭义相对论这一章可以说是大多数人（包括笔者）重塑物理直觉的开始，也是真正接触现代物理学的开始。
     但不用担心，在严格的逻辑推导和时空图的指引下，你一定能理解狭义相对论的核心思想，并且能够熟练地运用它来分析物理问题。
 \end{intro}
@@ -84,7 +84,7 @@
         \item 相对性原理：所有惯性参考系中的物理定律形式相同。
         \item 光速不变原理：在所有惯性参考系中，真空中的光速 $ c $ 是一个常数，与光源和观察者的运动状态无关。
     \end{itemize}
-    
+
 \end{theorem}
 
 \section{狭义相对论时空度量相对性}
@@ -170,7 +170,7 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        x' & = a_{11} x + a_{12} t  \\
+        x' & = a_{11} x + a_{12} t \\
         t' & = a_{21} x + a_{22} t
     \end{aligned}
     \right.
@@ -181,7 +181,7 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        -x & = a_{11} (-x') + a_{12} t'  \\
+        -x & = a_{11} (-x') + a_{12} t' \\
         t  & = a_{21} (-x') + a_{22} t'
     \end{aligned}
     \right.
@@ -192,7 +192,7 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        x' & = a_{11}^2 x' + a_{11} a_{12} t + a_{12} a_{21} x + a_{12} a_{22} t   \\
+        x' & = a_{11}^2 x' + a_{11} a_{12} t + a_{12} a_{21} x + a_{12} a_{22} t  \\
         t' & = -a_{21} a_{11} x' - a_{21} a_{12} t + a_{22} a_{21} x + a_{22}^2 t
     \end{aligned}
     \right.
@@ -226,7 +226,7 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        c t' & = a_{11} (c t) + a_{12} t  \\
+        c t' & = a_{11} (c t) + a_{12} t \\
         t'   & = a_{21} (c t) + a_{22} t
     \end{aligned}
     \right.
@@ -240,9 +240,9 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-        a_{11}^2 - a_{21}^2 c^2 & = 1  \\
-        a_{22} - a_{11}         & = 0  \\
-        a_{11} v + a_{21}       & = 0  \\
+        a_{11}^2 - a_{21}^2 c^2 & = 1 \\
+        a_{22} - a_{11}         & = 0 \\
+        a_{11} v + a_{21}       & = 0 \\
         a_{12} - a_{21} c^2     & = 0
     \end{aligned}
     \right.
@@ -280,7 +280,7 @@
 \begin{definition}{固有时}{proper-time}
     固有时是指在与事件发生的物体共动的参考系中测量到的时间，常用符号 $\tau$ 表示。
     对应的时间间隔 $\Delta \tau$ 被称为固有时间间隔。
-    
+
     例如，在 $S'$ 系中测量到的时间间隔 $\Delta t'$ 就是事件发生的物体的固有时间间隔，即 $\Delta \tau = \Delta t'$。
 \end{definition}
 
@@ -471,12 +471,12 @@
 \begin{note}{速度变换公式与双曲函数的关系}{velocity-transformation-hyperbolic}
     在这里，你可能会发现这个速度变换公式与 $\tan x$ 的加法公式非常相似，这并非巧合。
     实际上，狭义相对论中的速度变换可以类比为双曲正切函数的加法公式，这揭示了狭义相对论中速度空间的几何结构。
-    
+
     具体来说，设 $u = c \cdot \tanh \phi$ 和 $v = c \cdot \tanh \psi$，则速度变换公式可以写成
     \begin{equation}
         \tanh(\phi + \psi) = \frac{\tanh \phi + \tanh \psi}{1 + \tanh \phi \tanh \psi}
     \end{equation}
-    
+
     这表明，狭义相对论中的速度变换实际上对应于双曲角的加法，这进一步强调了狭义相对论中时空的双曲几何性质。
     而此处的 $\phi$ 和 $\psi$ 被称为快度角（boost angle）或快度参数（rapidity）。
 \end{note}
@@ -490,9 +490,9 @@
     \begin{equation}
         \bm{a'} : a_x' = \frac{d u_x'}{d t'} , \quad a_y' = \frac{d u_y'}{d t'} , \quad a_z' = \frac{d u_z'}{d t'}
     \end{equation}
-    
+
     \textbf{解}：
-    
+
     根据速度变换公式，有
     \begin{equation}
         u_x' = \frac{u_x - v}{1 - \frac{v u_x}{c^2}}
@@ -520,7 +520,7 @@
     \begin{equation}
         a_z' = \frac{a_z}{\gamma^2 \left(1 - \frac{v u_x}{c^2}\right)^2} + \frac{v u_z a_x}{c^2 \gamma^2 \left(1 - \frac{v u_x}{c^2}\right)^3}
     \end{equation}
-    
+
     逆变换类似，有
     \begin{equation}
         a_x = \frac{(1 - \frac{v^2}{c^2})^{3/2} a_x'}{\left(1 + \frac{v u_x'}{c^2}\right)^3}
@@ -532,7 +532,7 @@
         a_z = \frac{a_z'}{\gamma^2 \left(1 + \frac{v u_x'}{c^2}\right)^2} - \frac{v u_z' a_x'}{c^2 \gamma^2 \left(1 + \frac{v u_x'}{c^2}\right)^3}
     \end{equation}
     $\hfill \blacksquare $
-    
+
     在相对论中，加速度的变换关系比经典力学中的更为复杂，反映了狭义相对论对时间和空间测量的影响。
     仅当 $\bm{a}' = 0$ 时，才有 $\bm{a} = 0$，即匀速直线运动在所有惯性参考系中保持不变。
     此外，它还有三个特征：
@@ -878,7 +878,7 @@
     \item 牛顿第三定律
           狭义相对论中，如果牛顿第三定律仍然成立，便要求在 $S$ 系中的一对力若是 $\bm{F_1} + \bm{F_2} = \bm{0}$，
           那么变换到 $S'$ 系也必有 $\bm{F_1} + \bm{F_2} = \bm{0}$，据力的变换式 \cref{eq:relativistic-force-transformation}很易举出反例。
-          
+
           狭义相对论中牛顿第三定律虽然不能成立，但在狭义相对论之前已经建立的普遍的动量守恒定律（即任何一个与外界无相互作用的系统其动量守恒）仍然成立。
 \end{itemize}
 
@@ -1042,13 +1042,13 @@
     其中矩阵 $\eta_{\mu \nu}$ 是闵可夫斯基（Minkowski）度量张量，定义为
     \begin{equation}
         \eta_{\mu \nu} = \begin{pmatrix}
-            1 & 0  & 0  & 0   \\
-            0 & -1 & 0  & 0   \\
-            0 & 0  & -1 & 0   \\
+            1 & 0  & 0  & 0  \\
+            0 & -1 & 0  & 0  \\
+            0 & 0  & -1 & 0  \\
             0 & 0  & 0  & -1
         \end{pmatrix}
     \end{equation}
-    
+
     令固有时空间隔为 $c^2 \d \tau^2 = \d s^2$，则：$\d \tau = \sqrt{1 - \frac{v^2}{c^2}} \d t$。
     一般的洛伦兹变换可以表示为
     \begin{equation}
@@ -1100,9 +1100,9 @@
         y'  \\
         z'
     \end{pmatrix} = \begin{pmatrix}
-        \gamma        & -\gamma \beta & 0 & 0  \\
-        -\gamma \beta & \gamma        & 0 & 0  \\
-        0             & 0             & 1 & 0  \\
+        \gamma        & -\gamma \beta & 0 & 0 \\
+        -\gamma \beta & \gamma        & 0 & 0 \\
+        0             & 0             & 1 & 0 \\
         0             & 0             & 0 & 1
     \end{pmatrix} \begin{pmatrix}
         ct \\
@@ -1121,9 +1121,9 @@
         y'  \\
         z'
     \end{pmatrix} = \begin{pmatrix}
-        \cosh \phi  & -\sinh \phi & 0 & 0  \\
-        -\sinh \phi & \cosh \phi  & 0 & 0  \\
-        0           & 0           & 1 & 0  \\
+        \cosh \phi  & -\sinh \phi & 0 & 0 \\
+        -\sinh \phi & \cosh \phi  & 0 & 0 \\
+        0           & 0           & 1 & 0 \\
         0           & 0           & 0 & 1
     \end{pmatrix} \begin{pmatrix}
         ct \\
@@ -1379,7 +1379,7 @@ $\theta' = \frac{\pi}{2}$ 时，得到光的横向多普勒效应的频率变换
 如前所述，在刚达到阈能条件时，质心系里所有产物都是静止的。运用上式右端于质心系：
 \begin{equation}
     \begin{aligned}
-        (p'_1{}^\mu + p'_2{}^\mu + p'_3{}^\mu)^2 & = (m_{10} + m_{20} + M_0)^2 c^2                                                 \\
+        (p'_1{}^\mu + p'_2{}^\mu + p'_3{}^\mu)^2 & = (m_{10} + m_{20} + M_0)^2 c^2                                                \\
                                                  & = (m_{10}^2 + m_{20}^2 + M_0^2 + 2 m_{10} m_{20} + 2(m_{10} + m_{20}) M_0) c^2
     \end{aligned}
 \end{equation}

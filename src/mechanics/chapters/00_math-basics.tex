@@ -3,13 +3,13 @@
 
 \begin{intro}
     物理的学习离不开数学，但学习时间的有限使得很多同学纠结，不知道数学应该学多深。在普通物理的范畴内，作者在这里提出一些小小的建议。
-    
+
     数学知识分两类。
-    
+
     第一类是需要完全理解和掌握的，比如数列、导数和积分、微分方程……它们在题目中出现的概率很高，当我们遇到时要能从容应对。
-    
+
     第二类是有助于物理理解，但不要求完全掌握的，比如矢量分析与场论、张量代数……它们有助于加深你对物理情景的理解，但在普通物理的题目中出现的概率较低，这种知识需要学习，但学习的深度要视自身情况而定。
-    
+
     这一章虽然叫做数学基础，篇幅不长，但涵盖的内容并不少，因此并不需要通篇阅读。但是当你在学习物理的过程中遇到了数学上的困难时，可以回头查阅有关内容。
     倘若你能从我的注记中获得一些启发，那我的目的便达到了。
 \end{intro}
@@ -51,20 +51,20 @@ $ \d y $ 与 $ \d x $ 之间的关系为
         \sin x \sim \tan x \sim x, (x \to 0).
     \end{equation}
     \textbf{证明}：
-    
+
     \subinputfrom{../figures/00_math-basics/}{fig_important-approximation.tex}
-    
+
     以 $ O $ 为原点建立直角坐标系，绘出以 $ R $ 为半径的圆弧如 \cref{fig:important-approximation} 所示，
     其中圆心角 $ \theta $ 对应的直线段 $ AA' $ ,$ BB' $ ,圆弧 $ \wideparen{AB} $ 的长度分别为
     \begin{equation*}
         \overline{AA'} = R \sin \theta, \quad \overline{BB'} = R \tan \theta, \quad \wideparen{AB} = R \theta.
     \end{equation*}
-    
+
     $\theta \to 0$ 时，有
     \begin{equation*}
         \overline{AA'} \sim \overline{BB'} \sim \wideparen{AB} .
     \end{equation*}
-    
+
     化简得
     \begin{equation*}
         \sin \theta \sim \tan \theta \sim \theta, (\theta \to 0).
@@ -79,9 +79,9 @@ $ \d y $ 与 $ \d x $ 之间的关系为
     \begin{equation}
         f'(x) = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x},
     \end{equation}
-    
+
     如果极限存在，则称函数在点 $ x $ 处可导。
-    
+
 \end{definition}
 
 显然，导数的几何意义是函数图像在点 $ (x, f(x)) $ 处的切线的斜率。
@@ -93,23 +93,23 @@ $ \d y $ 与 $ \d x $ 之间的关系为
     \begin{equation}
         \d y = f'(x) \d x.
     \end{equation}
-    
+
     因此，导数也称为函数的微商，而求导和求微分实际上是等价的。
-    
+
 \end{definition}
 
 \begin{note}{导数与微分的区别}{derivative-differential-difference}
     导数是一个极限值，是一个确定的数值，而微分是函数增量的线性主部，不是一个确定的数值。
     导数表示函数在某点处的变化率，而微分表示函数在该点处变化量的线性近似。
     \medskip
-    
+
     并且导数不能视为 $ \d y $ 与 $ \d x $的比值，这只是 Leibniz 记号下的一个形式上的表示方法。
     当然，在非严格的物理推导中，我们经常会把导数视为 $ \d y $ 与 $ \d x $ 的比值来进行计算。
     并且可以用类似的方法处理常微分中的微元计算，这种做法（形式计算）在物理学中是被广泛接受的。
     \medskip
-    
+
     当然，如果从更高级的数学角度来看，我们的操作是有严格依据的，这也保证了我们不会出错，这里便不再深入了。
-    
+
 \end{note}
 
 导数有一些重要性质，举例如下：
@@ -120,7 +120,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
          & (3)\quad \left( \frac{y_1}{y_2} \right)' = \frac{y_1' y_2 - y_1 y_2'}{y_2^2} ;             \\
          & (4)\quad (y_1 \circ y_2)' = (y_1' \circ y_2) \cdot y_2' .\label{eq:derivative-composition}
     \end{align}
-    
+
 \end{illustration}
 证明略去
 
@@ -147,17 +147,17 @@ $ \d y $ 与 $ \d x $ 之间的关系为
          & (4)\quad (\sin x)' = \cos x ;               \\
          & (5)\quad (\cos x)' = -\sin x ;
     \end{align}
-    
+
 \end{illustration}
 
 此外，还有几个常用的 $ n $ 阶导数公式：
 \begin{illustration}{常用 $ n $ 阶导数公式}{common-nth-derivative-formulas}
     \begin{align}
-         & (1)\quad (e^{a x})^{(n)} = a^n e^{a x} ;                                     \\
-         & (2)\quad (\sin a x)^{(n)} = a^n \sin \left( a x + \frac{n \pi}{2} \right) ;  \\
+         & (1)\quad (e^{a x})^{(n)} = a^n e^{a x} ;                                    \\
+         & (2)\quad (\sin a x)^{(n)} = a^n \sin \left( a x + \frac{n \pi}{2} \right) ; \\
          & (3)\quad (\cos a x)^{(n)} = a^n \cos \left( a x + \frac{n \pi}{2} \right) .
     \end{align}
-    
+
 \end{illustration}
 
 在数学上，导数还可以用来讨论函数曲线的极值位置与凹凸性，这在物理中经常用到，而且有如下结论：
@@ -168,9 +168,9 @@ $ \d y $ 与 $ \d x $ 之间的关系为
         \item 若 $ f''(x_0) < 0 $，则 $ f(x) $ 在点 $ x_0 $ 处取得极大值，且曲线在该点处向上凸，称为「凹」；
         \item 若 $ f''(x_0) = 0 $，则不能确定 $ f(x) $ 在点 $ x_0 $ 处是否取得极值，需考察更高阶导数。
     \end{itemize}
-    
+
     注意到，函数的凹凸与「凹」「凸」这两个字的字型是相反的，这是因为函数的凸性与凸集有关，而凸集的定义是明确的，因此相反。
-    
+
 \end{definition}
 
 接下来，我们介绍与导数有关的另一个重要工具——泰勒公式。
@@ -179,7 +179,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
     \begin{equation}
         f(x) = f(x_0) + \frac{f'(x_0)}{1!} (x - x_0) + \frac{f''(x_0)}{2!} (x - x_0)^2 + \cdots + \frac{f^{(n)}(x_0)}{n!} (x - x_0)^n + R_n,
     \end{equation}
-    
+
     其中，余项 $ R_n $ 有如下两种形式：
     \begin{itemize}
         \item 拉格朗日（Lagrange）余项形式：
@@ -191,7 +191,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
                   R_n = o \left( (x - x_0)^n \right),\quad x \to x_0 .
               \end{equation}
     \end{itemize}
-    
+
 \end{theorem}
 
 泰勒公式表明，函数在某点处的值可以用该点处的各阶导数来近似表示。
@@ -216,7 +216,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
          & (4)\quad \ln (1 + x) = \sum_{n=1}^{\infty} (-1)^{n-1} \frac{x^n}{n},\quad x \in (-1, 1] ;                 \\
          & (5)\quad (1 + x)^m = \sum_{n=0}^{\infty} \binom{m}{n} x^n,\quad x \in (-1, 1) .\label{eq:taylor-binomial}
     \end{align}
-    
+
 \end{illustration}
 
 \begin{note}{二项式系数的说明}{binomial-coefficient-explanation}
@@ -224,7 +224,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
     \begin{equation*}
         \binom{m}{n} = \frac{m (m - 1) (m - 2) \cdots [m - (n - 1)]}{n!} .
     \end{equation*}
-    
+
     特别地，当 $ m $ 为非负整数时，二项式系数可简化为
     \begin{equation*}
         \binom{m}{n} =
@@ -255,12 +255,12 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \begin{equation}
         \kappa = \frac{|f''(x)|}{[1 + (f'(x))^2]^{3/2}}.
     \end{equation}
-    
+
     曲率的倒数称为曲率半径，记为 $ \rho $，即
     \begin{equation}
         \rho = \frac{1}{\kappa} = \frac{[1 + (f'(x))^2]^{3/2}}{|f''(x)|}.
     \end{equation}
-    
+
 \end{definition}
 
 对于物理问题，曲率半径有时用来描述物体运动轨迹的弯曲程度。
@@ -302,7 +302,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \begin{equation*}
         \int f(x) \d x = F(x) + C,
     \end{equation*}
-    
+
     其中，$ C $ 为任意常数。
 \end{definition}
 
@@ -313,7 +313,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
          & (2)\quad \int f'(x) g(x) \d x = f(x) g(x) - \int f(x) g'(x) \d x ;                           \\
          & (3)\quad \int f(g(x)) g'(x) \d x = \int f(u) \d u,\quad u = g(x) .
     \end{align}
-    
+
 \end{illustration}
 
 同时，根据 \cref{illustration:common-derivative-formulas} 中常用的导数公式，可以得到一些常见函数的不定积分，举例如下：
@@ -328,7 +328,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
          & (7)\quad \int \sin x \d x = -\cos x + C ;                            \\
          & (8)\quad \int \cos x \d x = \sin x + C .
     \end{align}
-    
+
 \end{illustration}
 
 有了这些，我们就可以计算几乎所有可解（可用初等函数表示）的不定积分了。
@@ -340,10 +340,10 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \begin{equation}
         \int_a^b f(x) \d x = \lim_{n \to \infty} \sum_{i=1}^n f(\xi_i) \Delta x_i,
     \end{equation}
-    
+
     其中，区间 $ [a, b] $ 被分成 $ n $ 个子区间 $ [x_{i-1}, x_i] $，$ \Delta x_i = x_i - x_{i-1} $，$ \xi_i \in [x_{i-1}, x_i] $。
     若极限存在，则称该极限为函数 $ f(x) $ 在区间 $ [a, b] $ 上的定积分。
-    
+
 \end{definition}
 
 这是定积分的黎曼（Riemann）定义，它的几何意义是曲线 $ y = f(x) $ 与 $ x $ 轴及直线 $ x = a $ 和 $ x = b $ 所围成的面积（注意符号）。
@@ -356,9 +356,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \begin{equation}
         \int_a^b f(x) \d x = F(b) - F(a).
     \end{equation}
-    
+
     \textbf{证明}：
-    
+
     设区间 $ [a, b] $ 被分成 $ n $ 个子区间 $ [x_{i-1}, x_i] $，$ \Delta x_i = x_i - x_{i-1} $，$ \xi_i \in [x_{i-1}, x_i] $。
     则有
     \begin{equation*}
@@ -369,7 +369,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         \int_a^b f(x) \d x = F(b) - F(a).
     \end{equation*}
     \qed
-    
+
     上述证明中运用了微分中值定理，亦即拉格朗日（Lagrange）中值定理，可以自行查阅相关资料，此处不再赘述。
 \end{theorem}
 
@@ -396,25 +396,25 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 下面给出一个定积分计算的例子，即曲线段长度的计算。
 \begin{example}{曲线段长度}{curve-length}
     设函数 $ y = f(x) $ 在区间 $ [a, b] $ 上连续且可导，求曲线 $ y = f(x) $ 在区间 $ [a, b] $ 上的弧长。
-    
+
     \textbf{证明}：
-    
+
     设区间 $ [a, b] $ 被分成 $ n $ 个子区间 $ [x_{i-1}, x_i] $，$ \Delta x_i = x_i - x_{i-1} $，$ \xi_i \in [x_{i-1}, x_i] $。
     则曲线段在子区间 $ [x_{i-1}, x_i] $ 上的弧长近似为
     \begin{equation*}
         \Delta s_i = \sqrt{(\Delta x_i)^2 + (\Delta y_i)^2} = \sqrt{1 + \left( \frac{\Delta y_i}{\Delta x_i} \right)^2} \Delta x_i.
     \end{equation*}
-    
+
     当子区间足够小时，有
     \begin{equation*}
         \frac{\Delta y_i}{\Delta x_i} \approx f'(\xi_i).
     \end{equation*}
-    
+
     因此，曲线段在区间 $ [a, b] $ 上的弧长近似为
     \begin{equation*}
         S \approx \sum_{i=1}^n \sqrt{1 + [f'(\xi_i)]^2} \Delta x_i.
     \end{equation*}
-    
+
     当子区间无限细分时，近似变为等于，即
     \begin{equation*}
         S = \int_a^b \sqrt{1 + [f'(x)]^2} \d x.
@@ -427,7 +427,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \begin{equation*}
         \d s = \sqrt {(\d x)^2 + (\d y)^2} = \sqrt {1 + \left( \frac{\d y}{\d x} \right)^2} \d x
     \end{equation*}
-    
+
     这种表达式其实是对微分形式的曲线段长度公式的非严格表达，但也是形式计算奏效的一个例子。
 \end{note}
 
@@ -435,9 +435,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     关于积分的计算，笔者在写到这里时，一直在思考是否需要介绍一些积分技巧，比如双元法，但最后还是选择放弃。
     一方面，物理中的积分的计算往往并不复杂，更多的是经验的积累，而不是技巧的运用；
     另一方面，像双元法这样的技巧，不论是深度还是广度，都远远超出了普通物理的范畴，这也违背了这份笔记的初衷。
-    
+
     因此笔者的建议是，数值积分依靠计算器或计算机软件即可，而符号积分则更多依赖于查表与经验积累。
-    
+
     另外还有一条经验，就是面对一个困难的积分，不妨把最复杂或者说「难看」的部分进行换元，往往会有意想不到的效果。
 \end{note}
 
@@ -449,7 +449,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \begin{equation}
         F(x, y, y', y'', \ldots , y^{(n)}) = 0,
     \end{equation}
-    
+
     则称该方程为 $ n $ 阶常微分方程。
     方程中所含未知函数微商的最高阶数 $ n $ 称为微分方程的阶数。
     若方程关于 $ y , y', y'', \ldots , y^{(n)} $ 均是一次的，则称该微分方程为（ $ n $ 阶）线性微分方程。
@@ -505,7 +505,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \begin{equation}
         \frac{\d y}{\d x} = g(x) h(y),
     \end{equation}
-    
+
     则称该微分方程为可分离变量的微分方程。
 \end{definition}
 
@@ -532,7 +532,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \begin{equation}
         f(tx, ty) = t^n f(x, y),
     \end{equation}
-    
+
     其中，$ t $ 为任意常数，$ n $ 为非负整数，则称函数 $ f(x, y) $ 为 $ n $ 阶齐次函数。
 \end{definition}
 
@@ -694,17 +694,17 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         \end{cases}
     \end{equation*}
     在 $ x_0 $ 附近存在唯一解。特别地，对齐次方程（即 $ f(x) = 0 $）的初值问题，满足初值 $ y(x_0) = 0 , y'(x_0) = 0 $ 的唯一解为零解 $ y = 0 $。
-    
+
     这里略去定理的证明，它超出了普通物理学，乃至大多数高校物理专业数学分析课程的范围。
 \end{theorem}
 
 \begin{note}{初值问题与边值问题的区别}{difference-between-initial-value-problem-and-boundary-value-problem}
     看到这里，读者可能会觉得奇怪，为什么 $ y(x) $ 与 $ y'(x) $ 都要在相同的点 $ x_0 $ 处给出初值，
     而不能够分别在不同的点 $ x_0 , x_1 $ 处给出初值 $ y(x_0) = \alpha , y'(x_1) = \beta $ 。
-    
+
     这就涉及到定解问题的类型划分了，简单来说，如果这 $ n $ 个条件给的点（ $ x $ 的值）不完全相同，
     这就不再是一个初值问题了，而是一个边值问题。
-    
+
     关于边值问题，有简单的结论如下：
     \begin{enumerate}
         \item 存在唯一性不再像初值问题那样有普适保证
@@ -767,7 +767,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         y(x) = C_1 y_1 (x) + C_2 y_2 (x)
     \end{equation*}
     的形式，其中，$ C_1 , C_2 $ 为任意常数。
-    
+
     而且，这样的一对线性无关的解 $ y_1 (x) , y_2 (x) $ 称为该齐次方程的一个基本解组。
 \end{definition}
 
@@ -777,7 +777,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     设函数 $ y_1 (x) , y_2 (x) $ 在区间 $ I $ 上具有二阶导数，则称如下行列式为函数 $ y_1 (x) , y_2 (x) $ 的 Wronskian 行列式：
     \begin{equation*}
         W(y_1 , y_2) = \begin{vmatrix}
-            y_1 (x)  & y_2 (x)   \\
+            y_1 (x)  & y_2 (x)  \\
             y_1' (x) & y_2' (x)
         \end{vmatrix} = y_1 (x) y_2' (x) - y_2 (x) y_1' (x) .
     \end{equation*}
@@ -792,10 +792,10 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \begin{note}{关于二阶线性微分方程解的结构的说明}{note-on-structure-of-solution-of-second-order-linear-ordinary-differential-equation}
     关于以上给出的关于二阶线性微分方程解的结构的定义与定理，
     读者大可不必过于纠结这些定义与定理的细节，毕竟它们超出了大多数物理学课程的范围。
-    
+
     况且在笔者学学习普通物理学的实践中，这些内容也极少被用到。
     这里只是为了让读者对二阶线性微分方程的解的结构有一个大致的了解，以便在后续的物理学学习中遇到相关内容时不会感到陌生。
-    
+
     另外，对于形如 \cref{eq:homogeneous-second-order-linear-ordinary-differential-equation} 的齐次二阶线性微分方程，
     实际上，我们只要知道了它的一个解，就可以通过 Liouville 公式求出另一个线性无关的解，
     从而得到该方程的基本解组，进而得到该方程的通解。
@@ -951,7 +951,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         P(D) e^{ax} = P(a) e^{ax} .
     \end{equation}
     \textbf{证明}：
-    
+
     注意到 $ P(D) $ 是由 $ D $ 的多项式构成的，因此只需证明
     \begin{equation*}
         D^n e^{ax} = a^n e^{ax} .
@@ -971,7 +971,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         y_p = \frac{1}{P(a)} e^{ax} .
     \end{equation}
     \textbf{证明}：
-    
+
     由指数代换法则，有
     \begin{equation*}
         P(D) y_p = P(D) \left( \frac{1}{P(a)} e^{ax} \right) = \frac{1}{P(a)} P(D) e^{ax} = \frac{1}{P(a)} P(a) e^{ax} = e^{ax} .
@@ -1007,7 +1007,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         P(D) \left( e^{ax} u(x) \right) = e^{ax} P(D + a) u(x) .
     \end{equation}
     \textbf{证明}：
-    
+
     注意到 $ P(D) $ 是由 $ D $ 的多项式构成的，因此只需证明
     \begin{equation*}
         D^n \left( e^{ax} u(x) \right) = e^{ax} (D + a)^n u(x) .
@@ -1047,7 +1047,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         y_p = \frac{x e^{ax} }{P'(a)} .
     \end{equation}
     \textbf{证明}：
-    
+
     不妨设 $ a $，$ b $ （$ a \neq  b $）为 $ P(x) = 0 $ 的两个根，为方便起见，我们假设 $ P(x) $ 的最高次项系数为 $ 1 $。那么有：
     \begin{equation*}
         P(D) = (D - a)(D - b)
@@ -1083,9 +1083,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \begin{equation}
         y_p = \frac{x^n e^{ax} }{P^{(n)}(a)} .
     \end{equation}
-    
+
     \textbf{证明}：
-    
+
     由于 $ a $ 为 $ P(D) = 0 $ 的 $ n $ 重根，因此 $ P(D) $ 可表示为
     \begin{equation*}
         P(D) = (D - a)^n \tilde{P}(D)
@@ -1117,9 +1117,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         - y' + y = x
     \end{equation*}
     的一个特解。
-    
+
     \textbf{解}：
-    
+
     显然我们可以轻易的构造出一个特解 $ y_p = x + 1 $。
     这个方程用算子法可以写作：
     \begin{equation*}
@@ -1168,10 +1168,10 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
                             & = f(x).
         \end{aligned}
     \end{equation*}
-    
+
     所以现在问题转化成了求出 $ \frac{1}{P(D)} $ 的形式幂级数展开式，这可以利用泰勒展开或者利用多项式除法。
     个人觉得多项式除法更直观一些，多项式的除法一般是长除法，并且原则是从高位向低位以此消去高次项，而在此处则反过来，从低位向高位消。
-    
+
     \begin{equation*}
         \polylongdiv[stage=13]{x^4 + 2x^3 + 4x^2 + x + 1}{x + 1}
     \end{equation*}
@@ -1203,7 +1203,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         \end{aligned}
     \end{equation*}
     这就说明了算子法的正确性。
-    
+
 \end{note}
 
 所以很自然的，我们有如下定义：
@@ -1260,7 +1260,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         y'' + 4 y = x \cos x
     \end{equation*}
     的一个特解。
-    
+
     \textbf{解}：
     复化：
     \begin{equation*}
@@ -1282,14 +1282,14 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \end{equation*}
     $\hfill \blacksquare $
     \bigskip
-    
+
     如下为升幂长除法的计算示例：
     {
     \newcommand{\longdiv}{
         \smash{\mkern-0.43mu\vstretch{1.34}
             {\hstretch{0.9}{)}}\mkern-5.95mu\vstretch{1.34}{\hstretch{0.85}{)}}}
     }
-    
+
     \begin{equation*}
         \begin{tblr}{%
                 hline{2}={3-10}{black,0.4pt,solid},
@@ -1365,7 +1365,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 \begin{note}{关于偏导数的说明}{note-on-partial-derivative}
     偏导数的计算与一元函数的导数计算类似，只是在计算时将其他自变量视为常数。
-    
+
     而对于混合偏导数，我们有一个常用的性质：
     若 $ y = y(x_1 , x_2 , \ldots , x_k) $ 在点 $ (x_1^0 , x_2^0 , \ldots , x_k^0) $ 的某邻域内具有连续的二阶偏导数，则在该点处有
     \begin{equation*}
@@ -1397,9 +1397,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \begin{note}{关于重积分的说明}{note-on-multiple-integral}
     这里的「体积」并非我们通常所说的三维空间中的体积，而是 $ k $ 维空间中的「超体积」。
     同时上述定义实际上非常模糊且并不严谨，关于 $ \Delta V_i $ 的划分方式，极限的存在性等问题都需要更为严谨的数学语言来描述，限于篇幅，此处便不做展开了。
-    
+
     \bigskip
-    
+
     重积分的计算通常可以通过迭代积分来实现，即将多重积分转化为一系列一元积分。
     例如，对于二重积分，有：
     \begin{equation*}
@@ -1611,9 +1611,9 @@ $ 3 $ 阶行列式的计算可以使用「对角线法则」。
 线性方程组的一般形式为
 \begin{equation}
     \left\{ \begin{aligned}
-        a_{11} x_1 + a_{12} x_2 + \ldots + a_{1n} x_n & = b_1 ,  \\
-        a_{21} x_1 + a_{22} x_2 + \ldots + a_{2n} x_n & = b_2 ,  \\
-        \vdots                                        & \vdots   \\
+        a_{11} x_1 + a_{12} x_2 + \ldots + a_{1n} x_n & = b_1 , \\
+        a_{21} x_1 + a_{22} x_2 + \ldots + a_{2n} x_n & = b_2 , \\
+        \vdots                                        & \vdots  \\
         a_{m1} x_1 + a_{m2} x_2 + \ldots + a_{mn} x_n & = b_m .
     \end{aligned} \right.
 \end{equation}
@@ -1648,8 +1648,8 @@ $ 3 $ 阶行列式的计算可以使用「对角线法则」。
 例如对于三元线性方程组
 \begin{equation*}
     \left\{ \begin{aligned}
-        a_{11} x_1 + a_{12} x_2 + a_{13} x_3 & = b_1 ,  \\
-        a_{21} x_1 + a_{22} x_2 + a_{23} x_3 & = b_2 ,  \\
+        a_{11} x_1 + a_{12} x_2 + a_{13} x_3 & = b_1 , \\
+        a_{21} x_1 + a_{22} x_2 + a_{23} x_3 & = b_2 , \\
         a_{31} x_1 + a_{32} x_2 + a_{33} x_3 & = b_3 ,
     \end{aligned} \right.
 \end{equation*}
@@ -1667,8 +1667,8 @@ $ 3 $ 阶行列式的计算可以使用「对角线法则」。
                                        a_{31} & b_3 & a_{33}
                                    \end{array} \right| = \frac{-b_1 (a_{21} a_{33} - a_{23} a_{31}) + b_2 (a_{11} a_{33} - a_{13} a_{31}) - b_3 (a_{11} a_{23} - a_{13} a_{21})}{a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{21} (a_{12} a_{33} - a_{13} a_{32}) + a_{31} (a_{12} a_{23} - a_{13} a_{22})} , \\
         x_3 & = \frac{1}{D} \left| \begin{array}{ccc}
-                                       a_{11} & a_{12} & b_1  \\
-                                       a_{21} & a_{22} & b_2  \\
+                                       a_{11} & a_{12} & b_1 \\
+                                       a_{21} & a_{22} & b_2 \\
                                        a_{31} & a_{32} & b_3
                                    \end{array} \right| = \frac{b_1 (a_{21} a_{32} - a_{22} a_{31}) - b_2 (a_{11} a_{32} - a_{12} a_{31}) + b_3 (a_{11} a_{22} - a_{12} a_{21})}{a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{21} (a_{12} a_{33} - a_{13} a_{32}) + a_{31} (a_{12} a_{23} - a_{13} a_{22})} .
     \end{aligned}
@@ -1832,7 +1832,7 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 类似地，在 $ k $ 维空间中有
 \begin{equation}
     \bm{e}_i \cdot \bm{e}_j = \delta_{ij} = \begin{cases}
-        1 , & i = j ,     \\
+        1 , & i = j ,    \\
         0 , & i \neq j ,
     \end{cases}
 \end{equation}
@@ -1907,7 +1907,7 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
     矢量根据其在空间中的变换性质，可分为极矢量与轴矢量两种。
     极矢量（polar vector）也称为真矢量，是我们通常所说的矢量，例如位移、速度、力等，极矢量在空间反射变换下，与镜面垂直的分量会反向，而与镜面平行的分量不变；
     轴矢量（axial vector）也称为伪矢量，是由两个极矢量通过叉积运算得到的矢量，例如角动量、磁场强度等，轴矢量在空间反射变换下，与镜面垂直的分量不变，而与镜面平行的分量会反向。
-    
+
     矢量的加法与点积运算不改变矢量的性质，而矢量的叉积运算会改变矢量的性质，即两个极矢量的叉积是一个轴矢量，两个轴矢量的叉积是一个极矢量，一个极矢量与一个轴矢量的叉积是一个极矢量。
 \end{note}
 
@@ -1933,8 +1933,8 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 运用行列式可以将三个三维矢量 $ \bm{A} = (A_x , A_y , A_z) $，$ \bm{B} = (B_x , B_y , B_z) $ 与 $ \bm{C} = (C_x , C_y , C_z) $ 的混合积表示为
 \begin{equation}
     \bm{A} \cdot (\bm{B} \times \bm{C}) = \left| \begin{array}{ccc}
-        A_x & A_y & A_z  \\
-        B_x & B_y & B_z  \\
+        A_x & A_y & A_z \\
+        B_x & B_y & B_z \\
         C_x & C_y & C_z
     \end{array} \right| .
 \end{equation}
@@ -1968,9 +1968,9 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 下面给出几个例子，帮助理解矢量的代数运算。
 \begin{example}{点积的逆运算}{example-of-inverse-operation-of-dot-product}
     设有两个矢量 $ \bm{A} $ 与 $ \bm{B} $，已知 $ \bm{B} $，以及它们的点积 $ \alpha = \bm{A} \cdot \bm{B} $，求矢量 $ \bm{A} $。
-    
+
     \textbf{解}：
-    
+
     将 $ \bm{A} $ 分解为沿 $ \bm{B} $ 方向的分量 $ \bm{A}_{\parallel} $ 与垂直于 $ \bm{B} $ 方向的分量 $ \bm{A}_{\perp} $，即
     \begin{equation}
         \bm{A} = \bm{A}_{\parallel} + \bm{A}_{\perp} .
@@ -1997,9 +1997,9 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 
 \begin{example}{叉积的逆运算}{example-of-inverse-operation-of-cross-product}
     设有两个矢量 $ \bm{A} $ 与 $ \bm{B} $，已知 $ \bm{B} $，以及它们的叉积 $ \bm{D} = \bm{A} \times \bm{B} $，求矢量 $ \bm{A} $。
-    
+
     \textbf{解}：
-    
+
     将 $ \bm{A} $ 分解为沿 $ \bm{B} $ 方向的分量 $ \bm{A}_{\parallel} $ 与垂直于 $ \bm{B} $ 方向的分量 $ \bm{A}_{\perp} $，即
     \begin{equation}
         \bm{A} = \bm{A}_{\parallel} + \bm{A}_{\perp} .
@@ -2122,18 +2122,18 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 另外还有和差化积与积化和差公式：
 \begin{equation}
     \begin{aligned}
-        \sin \alpha + \sin \beta & = 2 \sin \frac{\alpha + \beta}{2} \cos \frac{\alpha - \beta}{2} ,   \\
-        \sin \alpha - \sin \beta & = 2 \cos \frac{\alpha + \beta}{2} \sin \frac{\alpha - \beta}{2} ,   \\
-        \cos \alpha + \cos \beta & = 2 \cos \frac{\alpha + \beta}{2} \cos \frac{\alpha - \beta}{2} ,   \\
+        \sin \alpha + \sin \beta & = 2 \sin \frac{\alpha + \beta}{2} \cos \frac{\alpha - \beta}{2} ,  \\
+        \sin \alpha - \sin \beta & = 2 \cos \frac{\alpha + \beta}{2} \sin \frac{\alpha - \beta}{2} ,  \\
+        \cos \alpha + \cos \beta & = 2 \cos \frac{\alpha + \beta}{2} \cos \frac{\alpha - \beta}{2} ,  \\
         \cos \alpha - \cos \beta & = -2 \sin \frac{\alpha + \beta}{2} \sin \frac{\alpha - \beta}{2} ,
     \end{aligned}
 \end{equation}
 
 \begin{equation}
     \begin{aligned}
-        \sin \alpha \cos \beta & = \frac{1}{2} [\sin (\alpha + \beta) + \sin (\alpha - \beta)] ,   \\
-        \cos \alpha \sin \beta & = \frac{1}{2} [\sin (\alpha + \beta) - \sin (\alpha - \beta)] ,   \\
-        \cos \alpha \cos \beta & = \frac{1}{2} [\cos (\alpha + \beta) + \cos (\alpha - \beta)] ,   \\
+        \sin \alpha \cos \beta & = \frac{1}{2} [\sin (\alpha + \beta) + \sin (\alpha - \beta)] ,  \\
+        \cos \alpha \sin \beta & = \frac{1}{2} [\sin (\alpha + \beta) - \sin (\alpha - \beta)] ,  \\
+        \cos \alpha \cos \beta & = \frac{1}{2} [\cos (\alpha + \beta) + \cos (\alpha - \beta)] ,  \\
         \sin \alpha \sin \beta & = -\frac{1}{2} [\cos (\alpha + \beta) - \cos (\alpha - \beta)] .
     \end{aligned}
 \end{equation}
@@ -2186,12 +2186,12 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
     \begin{equation}
         \cosh x = \frac{e^x + e^{-x}}{2} .
     \end{equation}
-    
+
     此外，还有双曲正切函数，定义为
     \begin{equation}
         \tanh x = \frac{\sinh x}{\cosh x} = \frac{e^x - e^{-x}}{e^x + e^{-x}} .
     \end{equation}
-    
+
 \end{definition}
 
 双曲函数满足如下恒等式：
@@ -2211,7 +2211,7 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
     \begin{equation}
         \frac{d}{dx} \tanh x = \frac{1}{\cosh^2 x} .
     \end{equation}
-    
+
 \end{illustration}
 
 积分公式如下：
@@ -2226,7 +2226,7 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
     \begin{equation}
         \int \tanh x \, dx = \ln |\cosh x| + C .
     \end{equation}
-    
+
 \end{illustration}
 
 其性质与三角函数类似，比如和差公式、倍角公式等，可以自行尝试推导。
@@ -2239,12 +2239,12 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
     \end{equation}
     其中，$ t $ 为参数。
     由此可见，双曲函数与双曲线有着密切的关系。
-    
+
     再考虑由欧拉公式得到三角函数的表达式
     \begin{equation}
         \sin \theta = \frac{e^{i \theta} - e^{-i \theta}}{2i} , \quad \cos \theta = \frac{e^{i \theta} + e^{-i \theta}}{2} .
     \end{equation}
     将其中的虚数单位 $ i $ 替换为实数单位 $ 1 $，即可得到双曲函数的表达式。
-    
+
     双曲三角函数的名称也是由此而来。
 \end{note}
