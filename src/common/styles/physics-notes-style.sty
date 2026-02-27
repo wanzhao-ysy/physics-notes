@@ -5,11 +5,20 @@
 % physics-notes-style 调用的宏包
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+\RequirePackage{import}
+%
+% 字体支持
+\RequirePackage{xcolor}
+%
+% 中文支持
+\RequirePackage[UTF8, scheme=chinese, heading=true, fontset=lxgw]{ctex}
+%
+%
 % 参考文献支持
 \RequirePackage[backend=biber,style=gb7714-2015, sorting=none,backref=true]{biblatex}
 %
 % 基础宏包（数学）
-\RequirePackage{xcolor}
+
 \RequirePackage{amsmath,amsthm,bm}
 \RequirePackage{amssymb,latexsym,textcomp,euscript,euscript,yhmath}
 \RequirePackage{fixdif}
@@ -43,11 +52,8 @@
 \RequirePackage{scalerel}
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
-\RequirePackage{import}
-%
-% 中文支持
-\RequirePackage[UTF8, scheme=chinese, heading=true, fontset=lxgw]{ctex}
-%
+
+
 % tcolorbox 及其库
 \RequirePackage{tcolorbox}
 \tcbuselibrary{skins,breakable,theorems}
