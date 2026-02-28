@@ -1,42 +1,26 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{physics-notes-style}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% physics-notes-style 调用的宏包
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-\RequirePackage{import}
-%
-% 字体支持
-\RequirePackage{xcolor}
-%
-% 中文支持
-\RequirePackage[UTF8, scheme=chinese, heading=true, fontset=lxgw]{ctex}
-%
-%
-% 参考文献支持
-\RequirePackage[backend=biber,style=gb7714-2015, sorting=none,backref=true]{biblatex}
-%
-% 基础宏包（数学）
-
-\RequirePackage{amsmath,amsthm,bm}
-\RequirePackage{amssymb,latexsym,textcomp,euscript,euscript,yhmath}
-\RequirePackage{fixdif}
-\RequirePackage{mathtools}
-\RequirePackage{polynom}
-\RequirePackage{esint}
-%
-% 物理专用宏包
-\RequirePackage{siunitx}
-\sisetup{inter-unit-product = \ensuremath{{}\cdot{}}}
-\DeclareSIUnit\angstrom{\text{\AA}}
-\RequirePackage{physics2}
-%
-% 图形和布局
+% ============================================================================
+% 1. 预配置选项
+% ============================================================================
+% 防止 fontspec 干扰数学字体（在使用 XeLaTeX 时建议启用）
 \PassOptionsToPackage{no-math}{fontspec}
-\RequirePackage{graphicx,float,caption,subcaption}
-\RequirePackage{tikz}
-\usetikzlibrary{arrows.meta,angles,quotes,calc,patterns}
+
+% ============================================================================
+% 2. 基础与工具宏包
+% ============================================================================
+\RequirePackage{import}              % 支持相对路径导入文件
+\RequirePackage[
+    dvipsnames,
+    svgnames
+]{xcolor}                            % 颜色支持
+\RequirePackage{lmodern}             % Latin Modern 字体
+\RequirePackage{emptypage}           % 自动清除偶数空白页的页眉页脚（优雅替代手工 hack）
+
+% ============================================================================
+% 3. 页面布局与几何设置
+% ============================================================================
 \RequirePackage[
     inner=2cm,
     outer=1.5cm,
@@ -47,29 +31,69 @@
     includefoot,
     heightrounded
 ]{geometry}
-\RequirePackage{multicol}
-\RequirePackage{tabularray}
-\RequirePackage{scalerel}
-\RequirePackage{booktabs}
-\RequirePackage{multirow}
+% \raggedbottom                      % 允许页面底部不对齐，避免过度拉伸垂直间距
 
+% ============================================================================
+% 4. 数学与物理核心宏包
+% ============================================================================
+\RequirePackage{amsmath}             % AMS 数学核心
+\RequirePackage{amsthm}              % AMS 定理环境
+\RequirePackage{amssymb}             % AMS 数学符号
+\RequirePackage{mathtools}           % AMS 数学工具
+\RequirePackage{bm}                  % 数学粗体符号
 
-% tcolorbox 及其库
-\RequirePackage{tcolorbox}
-\tcbuselibrary{skins,breakable,theorems}
-%
-% 字体问题处理
-\RequirePackage{lmodern}
-%
-% 图、表、公式编号
-\numberwithin{figure}{chapter}
-\numberwithin{table}{chapter}
-\numberwithin{equation}{chapter}
-%
-% 页面设置
-%\raggedbottom
-%
-% 超链接支持
+% 符号扩展
+\RequirePackage{textcomp}            % 文本模式符号补充
+\RequirePackage{euscript}            % Euler 花体字母
+\RequirePackage{yhmath}              % 更多数学符号（如宽重音符号）
+\RequirePackage{fixdif}              % 完美的微分算子格式修正
+\RequirePackage{polynom}             % 多项式长除法
+\RequirePackage{esint}               % 扩展积分符号（如曲面积分）
+
+% 物理学专用
+\RequirePackage{siunitx}             % 国际单位制支持
+\sisetup{inter-unit-product = \ensuremath{{}\cdot{}}}  % 单位间用点号连接
+\DeclareSIUnit\angstrom{\text{\AA}}  % 激活 Å 单位
+
+\RequirePackage{physics2}            % 现代物理符号包
+% 【优化说明】：physics2 本身不提供命令，必须加载模块才有效！
+
+% ============================================================================
+% 5. 图形与表格
+% ============================================================================
+\RequirePackage{graphicx}            % 图片插入
+\RequirePackage{float}               % 浮动体控制（H 选项）
+\RequirePackage{caption}             % 图表标题定制
+\RequirePackage{subcaption}          % 子图支持
+
+\RequirePackage{tikz}                % 绘图工具
+\usetikzlibrary{arrows.meta, angles, quotes, calc, patterns}
+
+\RequirePackage{tabularray}          % 现代表格宏包
+\RequirePackage{booktabs}            % 三线表
+\RequirePackage{multirow}            % 跨行单元格
+\RequirePackage{scalerel}            % 符号缩放
+
+% ============================================================================
+% 6. 多栏与彩色盒子
+% ============================================================================
+\RequirePackage{multicol}            % 多栏环境
+\RequirePackage{tcolorbox}           % 彩色文本框
+\tcbuselibrary{skins, breakable, theorems}
+
+% ============================================================================
+% 7. 参考文献管理
+% ============================================================================
+\RequirePackage[
+    backend=biber,
+    style=gb7714-2015,
+    sorting=none,
+    backref=true
+]{biblatex}
+
+% ============================================================================
+% 8. 交叉引用与超链接（严格加载顺序：hyperref -> bookmark -> cleveref）
+% ============================================================================
 \RequirePackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -79,188 +103,113 @@
     bookmarksnumbered=true,
     pdfstartview=FitH
 }
-%
-% 智能引用支持
-\RequirePackage{cleveref}
+\RequirePackage{bookmark}            % 书签增强
+
+\RequirePackage{cleveref}            % 智能交叉引用
 \crefname{equation}{公式}{公式}
 \Crefname{equation}{公式}{公式}
 \crefname{table}{表}{表}
 \Crefname{table}{表}{表}
 \crefname{figure}{图}{图}
 \Crefname{figure}{图}{图}
-\crefformat{section}{#2#1#3节}
-\Crefformat{section}{#2#1#3节}
-\crefformat{chapter}{第#2#1#3章}
-\Crefformat{chapter}{第#2#1#3章}
-\crefformat{page}{第#2#1#3页}
-\Crefformat{page}{第#2#1#3页}
-%
-% 书签支持
-\RequirePackage{bookmark}
-%
-% ==========================================
-% 物理笔记专用环境定义
-% ==========================================
-%
-% 1. 定义环境
-\newtcbtheorem[
-    number within=section,
-    Crefname={定义}{定义},
-    crefname={定义}{定义}
-]{definition}{定义}
-{
-    colback=blue!5!white,
-    colframe=blue!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=blue!75!black},
-}{def}
-%
-% 2. 定律环境
-\newtcbtheorem[
-    number within=section,
-    Crefname={定律}{定律},
-    crefname={定律}{定律}
-]{law}{定律}
-{
-    colback=green!5!white,
-    colframe=green!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=green!75!black},
-}{law}
-%
-% 3. 定理环境
-\newtcbtheorem[
-    number within=section,
-    Crefname={定理}{定理},
-    crefname={定理}{定理}
-]{theorem}{定理}
-{
-    colback=orange!5!white,
-    colframe=orange!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=orange!75!black},
-}{theorem}
-%
-% 4. 注释环境
-\newtcbtheorem[
-    number within=section,
-    Crefname={注释}{注释},
-    crefname={注释}{注释}
-]{note}{注释}
-{
-    colback=yellow!5!white,
-    colframe=yellow!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=yellow!75!black},
-}{note}
-%
-% 5. 例环境
-\newtcbtheorem[
-    number within=section,
-    Crefname={例}{例},
-    crefname={例}{例}
-]{example}{例}
-{
-    colback=red!5!white,
-    colframe=red!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=red!75!black},
-}{example}
-%
-% 6. 示例环境
-\newtcbtheorem[
-    number within=section,
-    Crefname={示例}{示例},
-    crefname={示例}{示例}
-]{illustration}{示例}
-{
-    colback=purple!5!white,
-    colframe=purple!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=purple!75!black},
-}{illustration}
-%
-% 7. 引用环境
-\newtcbtheorem[
-    number within=section,
-    Crefname={引用}{引用},
-    crefname={引用}{引用}
-]{Citation}{引用}
-{
-    colback=teal!5!white,
-    colframe=teal!75!black,
-    fonttitle=\bfseries,
-    breakable,
-    enhanced,
-    attach boxed title to top left={xshift=5mm, yshift=-2mm},
-    boxed title style={colback=teal!75!black},
-}{Citation}
-%
-%==========================================
-%
-% 页眉页脚设定 (利用 fancyhdr 实现)
+\crefformat{section}{#2第#1节#3}
+\Crefformat{section}{#2第#1节#3}
+\crefformat{chapter}{#2第#1章#3}
+\Crefformat{chapter}{#2第#1章#3}
+\crefformat{page}{#2第#1页#3}
+\Crefformat{page}{#2第#1页#3}
+
+% ============================================================================
+% 9. 编号格式设置
+% ============================================================================
+\numberwithin{figure}{chapter}
+\numberwithin{table}{chapter}
+\numberwithin{equation}{chapter}
+
+% ============================================================================
+% 10. 物理笔记专用环境定义（工厂模式重构）
+% ============================================================================
+% 定义 tcolorbox 的统一基础样式
+\tcbset{
+    physicsbox/.style={
+            fonttitle=\bfseries,
+            breakable,
+            enhanced,
+            attach boxed title to top left={xshift=5mm, yshift=-2mm},
+        }
+}
+
+% 定义创建定理环境的快捷宏
+% 用法: \NewPhysicsBox{英文环境名}{中文标题}{主题颜色}{引用前缀}
+\newcommand{\NewPhysicsBox}[4]{
+    \newtcbtheorem[
+        number within=section,
+        Crefname={#2}{#2},
+        crefname={#2}{#2}
+    ]{#1}{#2}{
+        physicsbox,
+        colback=#3!5!white,
+        colframe=#3!75!black,
+        boxed title style={colback=#3!75!black}
+    }{#4}
+}
+
+% 批量生成所需的定理环境
+\NewPhysicsBox{definition}{定义}{NavyBlue}{def}       % 深海蓝 - 沉稳，打地基
+\NewPhysicsBox{principle}{原理}{RoyalBlue}{princ}     % 宝蓝 - 核心的物理原理
+\NewPhysicsBox{law}{定律}{ForestGreen}{law}           % 森林绿 - 揭示自然法则
+\NewPhysicsBox{theorem}{定理}{Maroon}{thm}            % 栗红色 - 重要的数学结论（醒目）
+\NewPhysicsBox{example}{例}{TealBlue}{ex}             % 凫蓝（蓝绿）- 启发思考
+\NewPhysicsBox{note}{注释}{BurntOrange}{note}         % 焦橙色 - 提醒注意、易错点
+\NewPhysicsBox{physcite}{引用}{Plum}{physcite}        % 梅紫 - 经典文献或名言
+\NewPhysicsBox{physlist}{列举}{SlateGray}{physlist}   % 石板灰 - 结构清晰，不喧宾夺主
+
+% ============================================================================
+% 11. 页眉页脚设定 (fancyhdr)
+% ============================================================================
 \RequirePackage{fancyhdr}
 \addtolength{\headheight}{1.6pt}
 \pagestyle{fancy}
-\fancyhf{} % 清空默认的页眉页脚设置
-%
-% 设定页眉内容
-% 偶数页 (Even)：左页码 (LE)，右章名 (RE)
+\fancyhf{} % 清空默认的页眉页脚
+
 \fancyhead[LE]{\bfseries\thepage}
 \fancyhead[RE]{\bfseries\leftmark}
-% 奇数页 (Odd)：左节名 (LO)，右页码 (RO)
 \fancyhead[LO]{\bfseries\rightmark}
 \fancyhead[RO]{\bfseries\thepage}
-%
-% 设定页眉线宽
+
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
-%
-% 设定章节标记格式
+
 \renewcommand{\chaptermark}[1]{\markboth{\if@mainmatter\CTEXthechapter\fi\quad #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\S\thesection\quad #1}}
-%
-% 令 \cleardoublepage 的偶数页页眉页脚为空
-\renewcommand{\cleardoublepage}
-{\clearpage\if@twoside \ifodd\c@page\else
-            \hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
-%
-% 目录排版
-\renewcommand\tableofcontents%
-{\chapter{\contentsname}%
+
+% ============================================================================
+% 12. 目录排版优化
+% ============================================================================
+\renewcommand\tableofcontents{%
+    \chapter*{\contentsname}%
     \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
     \begin{multicols}{2}
         \@starttoc{toc}%
     \end{multicols}
 }
-%
+
+% ============================================================================
+% 13. 其他定制环境
+% ============================================================================
 % 每章最前的介绍内容环境 intro
 \newenvironment{intro}
 {\begin{quote}\kaishu\color{gray}}%
         {\end{quote}\par\vspace*{2ex minus 1.5ex}}
-%
-% 取消过多的 underfull/overfull 警告
-\hfuzz=10000pt
-\vfuzz=10000pt
-\hbadness=10000
-\vbadness=10000
-%
+
+% ============================================================================
+% 14. 警告控制规范化
+% ============================================================================
+% 【修复】：不建议设为 10000pt（这会完全掩盖公式截断等严重错误）
+% 改为 2pt 或 5pt 即可忽略微小的不完美换行，但依然暴露需要修补的地方。
+\hfuzz=2pt
+\vfuzz=2pt
+\hbadness=2000
+\vbadness=2000
+
 \endinput

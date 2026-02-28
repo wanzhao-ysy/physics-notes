@@ -112,7 +112,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
 \end{note}
 
 导数有一些重要性质，举例如下：
-\begin{illustration}{导数的性质}{derivative-properties}
+\begin{physlist}{导数的性质}{derivative-properties}
     \begin{align}
          & (1)\quad (A_1 y_1 + A_2 y_2)' = A_1 y_1' + A_2 y_2' ;                                      \\
          & (2)\quad (y_1 y_2)' = y_1' y_2 + y_1 y_2' ;                                                \\
@@ -120,7 +120,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
          & (4)\quad (y_1 \circ y_2)' = (y_1' \circ y_2) \cdot y_2' .\label{eq:derivative-composition}
     \end{align}
 
-\end{illustration}
+\end{physlist}
 证明略去
 
 \begin{note}{复合函数记号的说明}{composition-function-notation}
@@ -138,7 +138,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
 \bigskip
 
 常用的导数公式列举如下：
-\begin{illustration}{常用导数公式}{common-derivative-formulas}
+\begin{physlist}{常用导数公式}{common-derivative-formulas}
     \begin{align}
          & (1)\quad (x^n)' = n x^{n-1} ;               \\
          & (2)\quad (a^x)' = a^x \ln a ;               \\
@@ -147,17 +147,17 @@ $ \d y $ 与 $ \d x $ 之间的关系为
          & (5)\quad (\cos x)' = -\sin x ;
     \end{align}
 
-\end{illustration}
+\end{physlist}
 
 此外，还有几个常用的 $ n $ 阶导数公式：
-\begin{illustration}{常用 $ n $ 阶导数公式}{common-nth-derivative-formulas}
+\begin{physlist}{常用 $ n $ 阶导数公式}{common-nth-derivative-formulas}
     \begin{align}
          & (1)\quad (e^{a x})^{(n)} = a^n e^{a x} ;                                    \\
          & (2)\quad (\sin a x)^{(n)} = a^n \sin \left( a x + \frac{n \pi}{2} \right) ; \\
          & (3)\quad (\cos a x)^{(n)} = a^n \cos \left( a x + \frac{n \pi}{2} \right) .
     \end{align}
 
-\end{illustration}
+\end{physlist}
 
 在数学上，导数还可以用来讨论函数曲线的极值位置与凹凸性，这在物理中经常用到，而且有如下结论：
 \begin{definition}{极值与凹凸性的判定}{extreme-concavity-determination}
@@ -207,7 +207,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
 
 函数 $ f(x) $ 若能在点 $ x = x_0 $ 两侧某范围内展开成泰勒级数，且级数在该范围内收敛于函数值，便称这一范围为 $ f(x) $ 的收敛区间。
 例如，在数学上可以证明：
-\begin{illustration}{常见函数的泰勒展开}{common-function-taylor-expansion}
+\begin{physlist}{常见函数的泰勒展开}{common-function-taylor-expansion}
     \begin{align}
          & (1)\quad e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!},\quad x \in (-\infty, +\infty) ;                        \\
          & (2)\quad \sin x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!},\quad x \in (-\infty, +\infty) ;    \\
@@ -216,7 +216,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
          & (5)\quad (1 + x)^m = \sum_{n=0}^{\infty} \binom{m}{n} x^n,\quad x \in (-1, 1) .\label{eq:taylor-binomial}
     \end{align}
 
-\end{illustration}
+\end{physlist}
 
 \begin{note}{二项式系数的说明}{binomial-coefficient-explanation}
     \cref{eq:taylor-binomial} 中的二项式系数定义为
@@ -305,18 +305,18 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     其中，$ C $ 为任意常数。
 \end{definition}
 
-根据 \cref{illustration:derivative-properties} 中导数的性质，可以得到不定积分的一些性质，举例如下：
-\begin{illustration}{不定积分的性质}{indefinite-integral-properties}
+根据 \cref{physlist:derivative-properties} 中导数的性质，可以得到不定积分的一些性质，举例如下：
+\begin{physlist}{不定积分的性质}{indefinite-integral-properties}
     \begin{align}
          & (1)\quad \int [A_1 f_1(x) + A_2 f_2(x)] \d x = A_1 \int f_1(x) \d x + A_2 \int f_2(x) \d x ; \\
          & (2)\quad \int f'(x) g(x) \d x = f(x) g(x) - \int f(x) g'(x) \d x ;                           \\
          & (3)\quad \int f(g(x)) g'(x) \d x = \int f(u) \d u,\quad u = g(x) .
     \end{align}
 
-\end{illustration}
+\end{physlist}
 
-同时，根据 \cref{illustration:common-derivative-formulas} 中常用的导数公式，可以得到一些常见函数的不定积分，举例如下：
-\begin{illustration}{常见函数的不定积分}{common-indefinite-integral}
+同时，根据 \cref{physlist:common-derivative-formulas} 中常用的导数公式，可以得到一些常见函数的不定积分，举例如下：
+\begin{physlist}{常见函数的不定积分}{common-indefinite-integral}
     \begin{align}
          & (1)\quad \int x^n \d x = \frac{x^{n+1}}{n+1} + C,\quad (n \neq -1) ; \\
          & (2)\quad \int \frac{1}{x} \d x = \ln |x| + C ;                       \\
@@ -328,7 +328,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
          & (8)\quad \int \cos x \d x = \sin x + C .
     \end{align}
 
-\end{illustration}
+\end{physlist}
 
 有了这些，我们就可以计算几乎所有可解（可用初等函数表示）的不定积分了。
 
@@ -375,13 +375,13 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 由此，我们可以通过求不定积分来计算定积分了。
 
 类似于不定积分，定积分也有一些性质，举例如下：
-\begin{illustration}{定积分的性质}{definite-integral-properties}
+\begin{physlist}{定积分的性质}{definite-integral-properties}
     \begin{align}
          & (1)\quad \int_a^b [A_1 f_1(x) + A_2 f_2(x)] \d x = A_1 \int_a^b f_1(x) \d x + A_2 \int_a^b f_2(x) \d x ; \\
          & (2)\quad \int_a^b f(x) \d x = -\int_b^a f(x) \d x ;                                                      \\
          & (3)\quad \int_a^b f(x) \d x = \int_a^c f(x) \d x + \int_c^b f(x) \d x .
     \end{align}
-\end{illustration}
+\end{physlist}
 
 \begin{note}{积分变量的选择}{integration-variable-choice}
     在积分运算中，积分变量是一个「虚拟变量」，它可以是任何符号，只要在积分式中前后一致即可。
@@ -998,7 +998,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 所以我们讨论的 $ e^{ax} $ 中的 $ a $ 可以是任意复数，即 $ a \in \mathbb{C} $。
 
 到现在其实已经得到了一个挺不错的结果了，但这其实还不够。
-注意到指数输入 \cref{theorem:exponential-input-theorem} 中有一个限制条件 $ P(a) \neq 0 $，因为分母显然不能为零。
+注意到指数输入 \cref{thm:exponential-input-theorem} 中有一个限制条件 $ P(a) \neq 0 $，因为分母显然不能为零。
 但是在实际中，$ P(a) = 0 $ 的情况比比皆是。所以有如下定理：
 \begin{theorem}{指数位移法则}{exponential-shift-rule}
     设 $ P(D) $ 为 $ n $ 阶常系数线性微分算子，$ a $ 为常数，$ u(x) $ 为可微函数，则
@@ -2199,7 +2199,7 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 \end{equation}
 
 它的导数公式如下：
-\begin{illustration}{双曲函数的导数}{derivatives-of-hyperbolic-functions}
+\begin{physlist}{双曲函数的导数}{derivatives-of-hyperbolic-functions}
     设 $ x $ 为自变量，则有
     \begin{equation}
         \frac{d}{dx} \sinh x = \cosh x ,
@@ -2211,10 +2211,10 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
         \frac{d}{dx} \tanh x = \frac{1}{\cosh^2 x} .
     \end{equation}
 
-\end{illustration}
+\end{physlist}
 
 积分公式如下：
-\begin{illustration}{双曲函数的积分}{integrals-of-hyperbolic-functions}
+\begin{physlist}{双曲函数的积分}{integrals-of-hyperbolic-functions}
     设 $ x $ 为自变量，则有
     \begin{equation}
         \int \sinh x \, dx = \cosh x + C ,
@@ -2226,7 +2226,7 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
         \int \tanh x \, dx = \ln |\cosh x| + C .
     \end{equation}
 
-\end{illustration}
+\end{physlist}
 
 其性质与三角函数类似，比如和差公式、倍角公式等，可以自行尝试推导。
 

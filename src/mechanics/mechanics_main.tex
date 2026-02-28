@@ -1,24 +1,30 @@
-\documentclass[a4paper]{book}
+\documentclass[a4paper,UTF8,fontset=lxgw]{ctexbook}
 
 \usepackage{physics-notes-style}
-\addbibresource{references.bib}
 
-\setcounter{chapter}{-1}
+\addbibresource{references.bib}
 
 \begin{document}
 
 \pagenumbering{Alph}
-\subinputfrom{./chapters/}{titlepage.tex}
+\subinputfrom{chapters/}{titlepage.tex}
+
 \frontmatter
+\subincludefrom{chapters/}{99_preface-contrib.tex}
+\subincludefrom{chapters/}{99_preface-overview.tex}
 
 \tableofcontents
 
 \mainmatter
-\subincludefrom{./chapters/}{00_math-basics.tex}
-\subincludefrom{./chapters/}{01_particle-kinematics.tex}
-\subincludefrom{./chapters/}{0A_special-relativity.tex}
+
+\setcounter{chapter}{-1}
+
+\subincludefrom{chapters/}{00_math-basics.tex}
+\subincludefrom{chapters/}{01_particle-kinematics.tex}
+\subincludefrom{chapters/}{0A_special-relativity.tex}
 
 \backmatter
+
 \printbibliography[heading=bibintoc, title={参考文献}]
 
 \end{document}
