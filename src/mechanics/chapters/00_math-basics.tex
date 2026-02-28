@@ -54,14 +54,14 @@ $ \d y $ 与 $ \d x $ 之间的关系为
     \subinputfrom{../figures/00_math-basics/}{fig_important-approximation.tex}
 
     以 $ O $ 为原点建立直角坐标系，绘出以 $ R $ 为半径的圆弧如 \cref{fig:important-approximation} 所示，
-    其中圆心角 $ \theta $ 对应的直线段 $ AA' $ ,$ BB' $ ,圆弧 $ \wideparen{AB} $ 的长度分别为
+    其中圆心角 $ \theta $ 对应的直线段 $ AA' $ ,$ BB' $ ,圆弧 $ \overparen{AB} $ 的长度分别为
     \begin{equation*}
-        \overline{AA'} = R \sin \theta, \quad \overline{BB'} = R \tan \theta, \quad \wideparen{AB} = R \theta.
+        \overline{AA'} = R \sin \theta, \quad \overline{BB'} = R \tan \theta, \quad \overparen{AB} = R \theta.
     \end{equation*}
 
     $\theta \to 0$ 时，有
     \begin{equation*}
-        \overline{AA'} \sim \overline{BB'} \sim \wideparen{AB} .
+        \overline{AA'} \sim \overline{BB'} \sim \overparen{AB} .
     \end{equation*}
 
     化简得
@@ -1137,7 +1137,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         y = (1 + D + D^2 + D^3 + \ldots ) x = x + 1 .
     \end{equation*}
     这正是我们之前构造的特解。
-    $\hfill \blacksquare $
+    $\hfill \QED $
 \end{example}
 
 但是根据我们在前面讨论的内容，我们会知道
@@ -1209,7 +1209,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \begin{definition}{微分算子多项式的逆}{inverse-of-differential-operator-polynomial}
     若 $ P(D) $ 中的常数项不为零，我们定义：
     \begin{equation}
-        \frac{1}{P(D)} \coloneqq H(D)
+        \frac{1}{P(D)} := H(D)
     \end{equation}
 \end{definition}
 那么由上文的讨论，当 $ f(x) $ 为多项式函数时，其解特解形式已经得到了：
@@ -1240,7 +1240,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \begin{definition}{微分算子多项式的广义逆}{generalized-inverse-of-differential-operator-polynomial}
     设 $ P(D) = D^k \tilde{P}(D) $，其中，$ \tilde{P}(D) $ 中的常数项不为零，则定义
     \begin{equation}
-        \frac{1}{P(D)} \coloneqq D^{-k} \frac{1}{\tilde{P}(D)} ,
+        \frac{1}{P(D)} := D^{-k} \frac{1}{\tilde{P}(D)} ,
     \end{equation}
     其中，$ D^{-k} $ 表示对函数进行$ k $ 次不定积分，即
     \begin{equation}
@@ -1248,7 +1248,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \end{equation}
     而对于任意定义在 $ \mathbb{R} [D] $ 上的多项式 $ P(D) = D^k \tilde{P}(D) $，其中 $ D \nmid \tilde{P}(D) $，我们定义：
     \begin{equation}
-        \frac{1}{P(D)} \coloneqq \frac{1}{D^k} \frac{1}{\tilde{P}(D)} .
+        \frac{1}{P(D)} := \frac{1}{D^k} \frac{1}{\tilde{P}(D)} .
     \end{equation}
 \end{definition}
 
@@ -1279,7 +1279,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \begin{equation*}
         y_p = \Re (\tilde{y}) = \frac{x}{3} \cos x + \frac{2}{9} \sin x .
     \end{equation*}
-    $\hfill \blacksquare $
+    $\hfill \QED $
     \bigskip
 
     如下为升幂长除法的计算示例：
@@ -1410,33 +1410,33 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 \subsection{线积分、面积分与体积分}\label{subsec:line-surface-and-volume-integrals}
 
-物理学中有些标量是空间位置 $ \bm{r} $ 的函数，例如非均匀物质场中的密度分布 $ \rho (\bm{r}) $，电势分布 $ V (\bm{r}) $ 等。
+物理学中有些标量是空间位置 $ \symbf{r} $ 的函数，例如非均匀物质场中的密度分布 $ \rho (\symbf{r}) $，电势分布 $ V (\symbf{r}) $ 等。
 这类标量与位置之间的函数可一般地记作
 \begin{equation}
-    \phi (\bm{r}) \text{ 或 } \phi (x, y, z) .
+    \phi (\symbf{r}) \text{ 或 } \phi (x, y, z) .
 \end{equation}
 它是一个由空间中的三个独立坐标 $ x , y , z $ 决定的三元函数。
 
-类似地，物理学中有些矢量是空间位置 $ \bm{r} $ 的函数，例如速度场 $ \bm{v} (\bm{r}) $，电场强度分布 $ \bm{E} (\bm{r}) $ 等。
+类似地，物理学中有些矢量是空间位置 $ \symbf{r} $ 的函数，例如速度场 $ \symbf{v} (\symbf{r}) $，电场强度分布 $ \symbf{E} (\symbf{r}) $ 等。
 这类矢量与位置之间的函数可一般地记作
 \begin{equation}
-    \bm{A} (\bm{r}) \text{ 或 } \bm{A} (x, y, z) .
+    \symbf{A} (\symbf{r}) \text{ 或 } \symbf{A} (x, y, z) .
 \end{equation}
 他可分解成
 \begin{equation}
-    \bm{A} (\bm{r}) = A_x (\bm{r}) \bm{e}_x + A_y (\bm{r}) \bm{e}_y + A_z (\bm{r}) \bm{e}_z ,
+    \symbf{A} (\symbf{r}) = A_x (\symbf{r}) \symbf{e}_x + A_y (\symbf{r}) \symbf{e}_y + A_z (\symbf{r}) \symbf{e}_z ,
 \end{equation}
-其中，$ A_x (\bm{r}) $，$ A_y (\bm{r}) $，$ A_z (\bm{r}) $ 均为标量性三元函数。
+其中，$ A_x (\symbf{r}) $，$ A_y (\symbf{r}) $，$ A_z (\symbf{r}) $ 均为标量性三元函数。
 
 \begin{note}{关于单位矢量表示法的说明}{note-on-unit-vector-notation}
-    关于 $ Oxyz $ 中单位矢量的表达，有一部分教材使用的是 $ \bm{i} , \bm{j} , \bm{k} $，
-    但是笔者偏爱使用 $ \bm{e}_x , \bm{e}_y , \bm{e}_z $，特在此说明。
+    关于 $ Oxyz $ 中单位矢量的表达，有一部分教材使用的是 $ \symbf{i} , \symbf{j} , \symbf{k} $，
+    但是笔者偏爱使用 $ \symbf{e}_x , \symbf{e}_y , \symbf{e}_z $，特在此说明。
 \end{note}
 
 \subinputfrom{../figures/00_math-basics/}{fig_curve-element.tex}
 
 将 \cref{fig:curve-element} 中 $ a $ 到 $ b $ 的曲线段 $ L $ 上的任意一段曲线元记为 $ \d l $ ，并忽略曲线元上各点的位置变化，
-则曲线元上各点的函数值可视为常数，记为 $ \phi (\bm{r}) $ 或 $ \phi (x, y, z) $。
+则曲线元上各点的函数值可视为常数，记为 $ \phi (\symbf{r}) $ 或 $ \phi (x, y, z) $。
 将该位置处的函数值与曲线元长度的乘积 $ \phi (x, y, z) \d l $，从曲线段 $ L $ 的起点 $ a $ 积分到终点 $ b $，即得到沿曲线段 $ L $ 的线积分：
 \begin{definition}{线积分的定义}{definition-of-line-integral}
     \begin{equation}
@@ -1454,18 +1454,18 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 \subinputfrom{../figures/00_math-basics/}{fig_curve-integral.tex}
 
-\cref{fig:curve-integral} 中从线元始端到终端的矢量 $ \d \bm{l} $ 称为线元矢量。
-各 $ \d \bm{l} $ 所在位置 $ (x, y, z) $ 均有函数值 $ \bm{A} (x, y, z) $，将该位置处的矢量函数值与线元矢量的标量积 $ \bm{A} (x, y, z) \cdot \d \bm{l} $，从曲线段 $ L $ 的起点 $ a $ 积分到终点 $ b $，即得到沿曲线段 $ L $ 的矢量线积分：
+\cref{fig:curve-integral} 中从线元始端到终端的矢量 $ \d \symbf{l} $ 称为线元矢量。
+各 $ \d \symbf{l} $ 所在位置 $ (x, y, z) $ 均有函数值 $ \symbf{A} (x, y, z) $，将该位置处的矢量函数值与线元矢量的标量积 $ \symbf{A} (x, y, z) \cdot \d \symbf{l} $，从曲线段 $ L $ 的起点 $ a $ 积分到终点 $ b $，即得到沿曲线段 $ L $ 的矢量线积分：
 \begin{definition}{矢量线积分的定义}{definition-of-vector-line-integral}
     \begin{equation}
-        \int_L \bm{A} (x, y, z) \cdot \d \bm{l} = \lim_{\max \Delta l_i \to 0} \sum_{i} \bm{A} (\xi_i) \cdot \Delta \bm{l}_i ,
+        \int_L \symbf{A} (x, y, z) \cdot \d \symbf{l} = \lim_{\max \Delta l_i \to 0} \sum_{i} \symbf{A} (\xi_i) \cdot \Delta \symbf{l}_i ,
     \end{equation}
-    其中，曲线段 $ L $ 被划分为若干小曲线元矢量 $ \Delta \bm{l}_i $，$ \xi_i $ 为 $ \Delta \bm{l}_i $ 上的某点，$ \max \Delta l_i $ 表示所有小曲线元长度的最大值。
+    其中，曲线段 $ L $ 被划分为若干小曲线元矢量 $ \Delta \symbf{l}_i $，$ \xi_i $ 为 $ \Delta \symbf{l}_i $ 上的某点，$ \max \Delta l_i $ 表示所有小曲线元长度的最大值。
 \end{definition}
 
 如果 $ L $ 为闭合曲线，则称该矢量线积分为闭合矢量线积分，记为
 \begin{equation}
-    \oint_L \bm{A} (x, y, z) \cdot \d \bm{l} .
+    \oint_L \symbf{A} (x, y, z) \cdot \d \symbf{l} .
 \end{equation}
 
 \bigskip
@@ -1473,9 +1473,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \subinputfrom{../figures/00_math-basics/}{fig_surface-element.tex}
 
 讲一个曲面（包括平面）$ S $，如 \cref{fig:surface-element} 所示，分割成一系列无穷小的小片，称为面元，面积一般地记为 $ \d S $。
-在面元处引一个与面元法线方向相同的单位矢量 $ \bm{n} $，并规定曲面的一侧为内侧，另一侧为外侧，$ \bm{n} $ 指向外侧，称
+在面元处引一个与面元法线方向相同的单位矢量 $ \symbf{n} $，并规定曲面的一侧为内侧，另一侧为外侧，$ \symbf{n} $ 指向外侧，称
 \begin{equation*}
-    \d \bm{S} = \d S \bm{n}
+    \d \symbf{S} = \d S \symbf{n}
 \end{equation*}
 为面元矢量。
 若面元处有函数值 $ \phi (x, y, z) $，则将该位置处的函数值与面元面积的乘积 $ \phi (x, y, z) \d S $，从曲面 $ S $ 的各个面元上积分，即得到曲面 $ S $ 上的面积分：
@@ -1494,17 +1494,17 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 \bigskip
 
-类似地，若面元处有矢量函数值 $ \bm{A} (x, y, z) $，则将该位置处的矢量函数值与面元矢量的标量积 $ \bm{A} (x, y, z) \cdot \d \bm{S} $，从曲面 $ S $ 的各个面元上积分，即得到曲面 $ S $ 上的矢量面积分：
+类似地，若面元处有矢量函数值 $ \symbf{A} (x, y, z) $，则将该位置处的矢量函数值与面元矢量的标量积 $ \symbf{A} (x, y, z) \cdot \d \symbf{S} $，从曲面 $ S $ 的各个面元上积分，即得到曲面 $ S $ 上的矢量面积分：
 \begin{definition}{矢量面积分的定义}{definition-of-vector-surface-integral}
     \begin{equation}
-        \iint_S \bm{A} (x, y, z) \cdot \d \bm{S} = \lim_{\max \Delta S_i \to 0} \sum_{i} \bm{A} (\xi_i) \cdot \Delta \bm{S}_i ,
+        \iint_S \symbf{A} (x, y, z) \cdot \d \symbf{S} = \lim_{\max \Delta S_i \to 0} \sum_{i} \symbf{A} (\xi_i) \cdot \Delta \symbf{S}_i ,
     \end{equation}
-    其中，曲面 $ S $ 被划分为若干小面元矢量 $ \Delta \bm{S}_i $，$ \xi_i $ 为 $ \Delta \bm{S}_i $ 上的某点，$ \max \Delta S_i $ 表示所有小面元的最大面积。
+    其中，曲面 $ S $ 被划分为若干小面元矢量 $ \Delta \symbf{S}_i $，$ \xi_i $ 为 $ \Delta \symbf{S}_i $ 上的某点，$ \max \Delta S_i $ 表示所有小面元的最大面积。
 \end{definition}
 
 如果 $ S $ 为闭合曲面，则称该矢量面积分为闭合矢量面积分，记为
 \begin{equation}
-    \oiint_S \bm{A} (x, y, z) \cdot \d \bm{S} .
+    \oiint_S \symbf{A} (x, y, z) \cdot \d \symbf{S} .
 \end{equation}
 
 \bigskip
@@ -1683,53 +1683,53 @@ $ 3 $ 阶行列式的计算可以使用「对角线法则」。
 \subsection{矢量的叠加与分解}\label{subsec:addition-and-decomposition-of-vectors}
 
 直观地说，没有方向的量称为标量，标量带有正负号，有大小，但没有方向，例如温度、质量、时间等。
-而有方向的量称为矢量，矢量既有大小，又有方向，例如位移、速度、力等，此处我们将其记为粗体字母形式，如 $ \bm{A} $，$ \bm{B} $ 等。
+而有方向的量称为矢量，矢量既有大小，又有方向，例如位移、速度、力等，此处我们将其记为粗体字母形式，如 $ \symbf{A} $，$ \symbf{B} $ 等。
 
 \begin{note}{关于矢量表示法的说明}{note-on-vector-notation}
     关于矢量的表示法，印刷时常用粗体字母形式表示矢量，而手写时常用带箭头的字母形式表示矢量，例如 $ \vec{A} $，$ \vec{B} $ 等。
 \end{note}
 
-矢量 $ \bm{A} $ 的大小称为 $ \bm{A} $ 的模，记为 $ |\bm{A}| $ 或 $ A $，是一个非负的标量。
-标量 $ \alpha $ 与矢量 $ \bm{A} $ 的乘积仍是一个矢量，记为
+矢量 $ \symbf{A} $ 的大小称为 $ \symbf{A} $ 的模，记为 $ |\symbf{A}| $ 或 $ A $，是一个非负的标量。
+标量 $ \alpha $ 与矢量 $ \symbf{A} $ 的乘积仍是一个矢量，记为
 \begin{equation}
-    \alpha \bm{A} = \bm{B} .
+    \alpha \symbf{A} = \symbf{B} .
 \end{equation}
-$ \bm{B} $ 的模为
+$ \symbf{B} $ 的模为
 \begin{equation}
-    |\bm{B}| = |\alpha| |\bm{A}| = |\alpha| A .
+    |\symbf{B}| = |\alpha| |\symbf{A}| = |\alpha| A .
 \end{equation}
 此处 $ | \alpha| $ 表示标量 $ \alpha $ 的绝对值。
-若 $ \alpha > 0 $，则矢量 $ \bm{B} $ 与矢量 $ \bm{A} $ 方向相同；
-若 $ \alpha < 0 $，则矢量 $ \bm{B} $ 与矢量 $ \bm{A} $ 方向相反；
-若 $ \alpha = 0 $，则矢量 $ \bm{B} $ 为零矢量，记为 $ \bm{0} $，其模为零，且没有确定的方向。
+若 $ \alpha > 0 $，则矢量 $ \symbf{B} $ 与矢量 $ \symbf{A} $ 方向相同；
+若 $ \alpha < 0 $，则矢量 $ \symbf{B} $ 与矢量 $ \symbf{A} $ 方向相反；
+若 $ \alpha = 0 $，则矢量 $ \symbf{B} $ 为零矢量，记为 $ \symbf{0} $，其模为零，且没有确定的方向。
 
-沿着 $ \bm{A} $ 的方向取一单位矢量，记为 $ a $ 或 $ \bm{e}_A $，则有
+沿着 $ \symbf{A} $ 的方向取一单位矢量，记为 $ a $ 或 $ \symbf{e}_A $，则有
 \begin{equation}
-    \bm{A} = A \bm{e}_A .
+    \symbf{A} = A \symbf{e}_A .
 \end{equation}
-矢量 $ \bm{A} $ 的单位矢量 $ \bm{e}_A $ 的模为 $ 1 $。
+矢量 $ \symbf{A} $ 的单位矢量 $ \symbf{e}_A $ 的模为 $ 1 $。
 
 \bigskip
 
 \subinputfrom{../figures/00_math-basics/}{fig_vector-addition.tex}
 
-如 \cref{fig:vector-addition} 所示，设有两个矢量 $ \bm{A} $ 与 $ \bm{B} $，它们的和称为矢量 $ \bm{A} $ 与矢量 $ \bm{B} $ 的叠加，记为
+如 \cref{fig:vector-addition} 所示，设有两个矢量 $ \symbf{A} $ 与 $ \symbf{B} $，它们的和称为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 的叠加，记为
 \begin{equation}
-    \bm{C} = \bm{A} + \bm{B} .
+    \symbf{C} = \symbf{A} + \symbf{B} .
 \end{equation}
-矢量叠加的几何意义可通过「平行四边形法则」来理解，即以矢量 $ \bm{A} $ 与矢量 $ \bm{B} $ 为邻边作平行四边形，则从平行四边形的一个顶点到对角顶点的矢量即为矢量 $ \bm{C} $；
-也可通过「首尾相接法则」来理解，即将矢量 $ \bm{B} $ 的起点与矢量 $ \bm{A} $ 的终点相接，则从矢量 $ \bm{A} $ 的起点到矢量 $ \bm{B} $ 的终点的矢量即为矢量 $ \bm{C} $。
+矢量叠加的几何意义可通过「平行四边形法则」来理解，即以矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 为邻边作平行四边形，则从平行四边形的一个顶点到对角顶点的矢量即为矢量 $ \symbf{C} $；
+也可通过「首尾相接法则」来理解，即将矢量 $ \symbf{B} $ 的起点与矢量 $ \symbf{A} $ 的终点相接，则从矢量 $ \symbf{A} $ 的起点到矢量 $ \symbf{B} $ 的终点的矢量即为矢量 $ \symbf{C} $。
 矢量叠加满足交换律与结合律，即
 \begin{equation}
-    \bm{A} + \bm{B} = \bm{B} + \bm{A} ,
+    \symbf{A} + \symbf{B} = \symbf{B} + \symbf{A} ,
 \end{equation}
 \begin{equation}
-    (\bm{A} + \bm{B}) + \bm{C} = \bm{A} + (\bm{B} + \bm{C}) .
+    (\symbf{A} + \symbf{B}) + \symbf{C} = \symbf{A} + (\symbf{B} + \symbf{C}) .
 \end{equation}
 
 矢量的减法可视为加上一个方向相反的矢量，即
 \begin{equation}
-    \bm{A} - \bm{B} = \bm{A} + (-\bm{B}) .
+    \symbf{A} - \symbf{B} = \symbf{A} + (-\symbf{B}) .
 \end{equation}
 
 \bigskip
@@ -1738,46 +1738,46 @@ $ \bm{B} $ 的模为
 
 \subinputfrom{../figures/00_math-basics/}{fig_vector-decomposition.tex}
 
-如 \cref{fig:vector-decomposition} 所示，对于三维空间中正交的 $ Oxyz $ 坐标系，任何矢量 $ \bm{A} $ 都可以分解为沿 $ x $ 轴、$ y $ 轴与 $ z $ 轴方向的三个分量矢量之和，即
+如 \cref{fig:vector-decomposition} 所示，对于三维空间中正交的 $ Oxyz $ 坐标系，任何矢量 $ \symbf{A} $ 都可以分解为沿 $ x $ 轴、$ y $ 轴与 $ z $ 轴方向的三个分量矢量之和，即
 \begin{equation}
-    \bm{A} = \bm{A}_x + \bm{A}_y + \bm{A}_z ,
+    \symbf{A} = \symbf{A}_x + \symbf{A}_y + \symbf{A}_z ,
 \end{equation}
 其中，
 \begin{equation}
-    \bm{A}_x = A_x \bm{e}_x , \quad \bm{A}_y = A_y \bm{e}_y , \quad \bm{A}_z = A_z \bm{e}_z .
+    \symbf{A}_x = A_x \symbf{e}_x , \quad \symbf{A}_y = A_y \symbf{e}_y , \quad \symbf{A}_z = A_z \symbf{e}_z .
 \end{equation}
-这里，$ A_x $，$ A_y $，$ A_z $ 分别为矢量 $ \bm{A} $ 在 $ x $ 轴、$ y $ 轴与 $ z $ 轴方向的投影「长度」（这里的「长度是有向长度」），称为矢量 $ \bm{A} $ 在各坐标轴方向的分量。
-$ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ z $ 轴的单位矢量。
-则矢量 $ \bm{A} $ 可表示为
+这里，$ A_x $，$ A_y $，$ A_z $ 分别为矢量 $ \symbf{A} $ 在 $ x $ 轴、$ y $ 轴与 $ z $ 轴方向的投影「长度」（这里的「长度是有向长度」），称为矢量 $ \symbf{A} $ 在各坐标轴方向的分量。
+$ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ z $ 轴的单位矢量。
+则矢量 $ \symbf{A} $ 可表示为
 \begin{equation}
-    (A_x , A_y , A_z) = A_x \bm{e}_x + A_y \bm{e}_y + A_z \bm{e}_z .
+    (A_x , A_y , A_z) = A_x \symbf{e}_x + A_y \symbf{e}_y + A_z \symbf{e}_z .
 \end{equation}
 
-矢量 $ \bm{A} $ 的模与各分量之间的关系为
+矢量 $ \symbf{A} $ 的模与各分量之间的关系为
 \begin{equation}
     A = \sqrt{A_x^2 + A_y^2 + A_z^2} .
 \end{equation}
 
 两个三维矢量相加时，可将它们分别在各坐标轴方向的分量相加，得到新矢量在各坐标轴方向的分量。
-例如，设有两个三维矢量 $ \bm{A} = (A_x , A_y , A_z) $ 与 $ \bm{B} = (B_x , B_y , B_z) $，则它们的和为
+例如，设有两个三维矢量 $ \symbf{A} = (A_x , A_y , A_z) $ 与 $ \symbf{B} = (B_x , B_y , B_z) $，则它们的和为
 \begin{equation}
-    \bm{C} = \bm{A} + \bm{B} = (A_x + B_x , A_y + B_y , A_z + B_z) .
+    \symbf{C} = \symbf{A} + \symbf{B} = (A_x + B_x , A_y + B_y , A_z + B_z) .
 \end{equation}
 
 \bigskip
 
-类似地，对于 $ k $ 维空间中的正交坐标系，任何矢量 $ \bm{A} $ 都可以分解为沿各坐标轴方向的 $ k $ 个分量矢量之和，即
+类似地，对于 $ k $ 维空间中的正交坐标系，任何矢量 $ \symbf{A} $ 都可以分解为沿各坐标轴方向的 $ k $ 个分量矢量之和，即
 \begin{equation}
-    \bm{A} = \bm{A}_1 + \bm{A}_2 + \ldots + \bm{A}_k = A_1 \bm{e}_1 + A_2 \bm{e}_2 + \ldots + A_k \bm{e}_k = \sum_{i=1}^{k} A_i \bm{e}_i ,
+    \symbf{A} = \symbf{A}_1 + \symbf{A}_2 + \ldots + \symbf{A}_k = A_1 \symbf{e}_1 + A_2 \symbf{e}_2 + \ldots + A_k \symbf{e}_k = \sum_{i=1}^{k} A_i \symbf{e}_i ,
 \end{equation}
-且矢量 $ \bm{A} $ 的模与各分量之间的关系为
+且矢量 $ \symbf{A} $ 的模与各分量之间的关系为
 \begin{equation}
     A = \sqrt{A_1^2 + A_2^2 + \ldots + A_k^2} = \sqrt{\sum_{i=1}^{k} A_i^2} .
 \end{equation}
 两个维数相同的矢量相加时，可将它们分别在各坐标轴方向的分量相加，得到新矢量在各坐标轴方向的分量。
-例如，设有两个 $ k $ 维矢量 $ \bm{A} = (A_1 , A_2 , \ldots , A_k) $ 与 $ \bm{B} = (B_1 , B_2 , \ldots , B_k) $，则它们的和为
+例如，设有两个 $ k $ 维矢量 $ \symbf{A} = (A_1 , A_2 , \ldots , A_k) $ 与 $ \symbf{B} = (B_1 , B_2 , \ldots , B_k) $，则它们的和为
 \begin{equation}
-    \bm{C} = \bm{A} + \bm{B} = (A_1 + B_1 , A_2 + B_2 , \ldots , A_k + B_k) = \sum_{i=1}^{k} (A_i + B_i) \bm{e}_i .
+    \symbf{C} = \symbf{A} + \symbf{B} = (A_1 + B_1 , A_2 + B_2 , \ldots , A_k + B_k) = \sum_{i=1}^{k} (A_i + B_i) \symbf{e}_i .
 \end{equation}
 
 \subsection{矢量的点积}\label{subsec:dot-product-of-vectors}
@@ -1789,57 +1789,57 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 
 矢量的点积定义如下：
 \begin{definition}{矢量的点积}{definition-of-dot-product-of-vectors}
-    设有两个矢量 $ \bm{A} $ 与 $ \bm{B} $，它们的点积记为 $ \bm{A} \cdot \bm{B} $，定义为
+    设有两个矢量 $ \symbf{A} $ 与 $ \symbf{B} $，它们的点积记为 $ \symbf{A} \cdot \symbf{B} $，定义为
     \begin{equation}
-        \bm{A} \cdot \bm{B} = AB \cos \theta ,
+        \symbf{A} \cdot \symbf{B} = AB \cos \theta ,
     \end{equation}
-    其中，$ A $ 与 $ B $ 分别为矢量 $ \bm{A} $ 与矢量 $ \bm{B} $ 的模，$ \theta $ 为矢量 $ \bm{A} $ 与矢量 $ \bm{B} $ 之间的夹角。
+    其中，$ A $ 与 $ B $ 分别为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 的模，$ \theta $ 为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 之间的夹角。
 \end{definition}
 矢量的点积是一个标量。
 
-通过点积, 可将 $ \bm{A} $ 的模和分量各自表示成
+通过点积, 可将 $ \symbf{A} $ 的模和分量各自表示成
 \begin{equation}
-    A = \sqrt{\bm{A} \cdot \bm{A}} ,
+    A = \sqrt{\symbf{A} \cdot \symbf{A}} ,
 \end{equation}
 \begin{equation}
-    A_x = \bm{A} \cdot \bm{e}_x , \quad A_y = \bm{A} \cdot \bm{e}_y , \quad A_z = \bm{A} \cdot \bm{e}_z .
+    A_x = \symbf{A} \cdot \symbf{e}_x , \quad A_y = \symbf{A} \cdot \symbf{e}_y , \quad A_z = \symbf{A} \cdot \symbf{e}_z .
 \end{equation}
 
 由点积的定义，不难得到如下性质：
 \begin{theorem}{矢量点积的性质}{properties-of-dot-product-of-vectors}
-    设有三个矢量 $ \bm{A} $，$ \bm{B} $ 与 $ \bm{C} $，以及一个标量 $ k $，则有如下性质：
+    设有三个矢量 $ \symbf{A} $，$ \symbf{B} $ 与 $ \symbf{C} $，以及一个标量 $ k $，则有如下性质：
     \begin{enumerate}
-        \item 交换律：$ \bm{A} \cdot \bm{B} = \bm{B} \cdot \bm{A} $；
-        \item 分配律：$ \bm{A} \cdot (\bm{B} + \bm{C}) = \bm{A} \cdot \bm{B} + \bm{A} \cdot \bm{C} $；
-        \item 结合律：$ (k \bm{A}) \cdot \bm{B} = k (\bm{A} \cdot \bm{B}) $。
-        \item 正定性：$ \bm{A} \cdot \bm{A} \geq 0 $，且当且仅当 $ \bm{A} = \bm{0} $ 时取等号。
+        \item 交换律：$ \symbf{A} \cdot \symbf{B} = \symbf{B} \cdot \symbf{A} $；
+        \item 分配律：$ \symbf{A} \cdot (\symbf{B} + \symbf{C}) = \symbf{A} \cdot \symbf{B} + \symbf{A} \cdot \symbf{C} $；
+        \item 结合律：$ (k \symbf{A}) \cdot \symbf{B} = k (\symbf{A} \cdot \symbf{B}) $。
+        \item 正定性：$ \symbf{A} \cdot \symbf{A} \geq 0 $，且当且仅当 $ \symbf{A} = \symbf{0} $ 时取等号。
     \end{enumerate}
 \end{theorem}
 
 在三维空间中有
 \begin{equation}
-    \bm{e}_x \cdot \bm{e}_y = \bm{e}_y \cdot \bm{e}_z = \bm{e}_z \cdot \bm{e}_x = 0 ,
+    \symbf{e}_x \cdot \symbf{e}_y = \symbf{e}_y \cdot \symbf{e}_z = \symbf{e}_z \cdot \symbf{e}_x = 0 ,
 \end{equation}
 \begin{equation}
-    \bm{e}_x \cdot \bm{e}_x = \bm{e}_y \cdot \bm{e}_y = \bm{e}_z \cdot \bm{e}_z = 1 .
+    \symbf{e}_x \cdot \symbf{e}_x = \symbf{e}_y \cdot \symbf{e}_y = \symbf{e}_z \cdot \symbf{e}_z = 1 .
 \end{equation}
-借此可以将两个三维矢量 $ \bm{A} = (A_x , A_y , A_z) $ 与 $ \bm{B} = (B_x , B_y , B_z) $ 的点积表示为
+借此可以将两个三维矢量 $ \symbf{A} = (A_x , A_y , A_z) $ 与 $ \symbf{B} = (B_x , B_y , B_z) $ 的点积表示为
 \begin{equation}
-    \bm{A} \cdot \bm{B} = A_x B_x + A_y B_y + A_z B_z .
+    \symbf{A} \cdot \symbf{B} = A_x B_x + A_y B_y + A_z B_z .
 \end{equation}
 
 类似地，在 $ k $ 维空间中有
 \begin{equation}
-    \bm{e}_i \cdot \bm{e}_j = \delta_{ij} = \begin{cases}
+    \symbf{e}_i \cdot \symbf{e}_j = \delta_{ij} = \begin{cases}
         1 , & i = j ,    \\
         0 , & i \neq j ,
     \end{cases}
 \end{equation}
 
 其中，$ \delta_{ij} $ 称为克罗内克（Kronecker）符号。
-借此可以将两个 $ k $ 维矢量 $ \bm{A} = (A_1 , A_2 , \ldots , A_k) $ 与 $ \bm{B} = (B_1 , B_2 , \ldots , B_k) $ 的点积表示为
+借此可以将两个 $ k $ 维矢量 $ \symbf{A} = (A_1 , A_2 , \ldots , A_k) $ 与 $ \symbf{B} = (B_1 , B_2 , \ldots , B_k) $ 的点积表示为
 \begin{equation}
-    \bm{A} \cdot \bm{B} = \sum_{i=1}^{k} A_i B_i .
+    \symbf{A} \cdot \symbf{B} = \sum_{i=1}^{k} A_i B_i .
 \end{equation}
 
 \subsection{矢量的叉积}\label{subsec:cross-product-of-vectors}
@@ -1849,12 +1849,12 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 \end{note}
 矢量的叉积定义如下：
 \begin{definition}{矢量的叉积}{definition-of-cross-product-of-vectors}
-    设有两个三维矢量 $ \bm{A} $ 与 $ \bm{B} $，它们的叉积记为 $ \bm{A} \times \bm{B} $，定义为一个新矢量，其模为
+    设有两个三维矢量 $ \symbf{A} $ 与 $ \symbf{B} $，它们的叉积记为 $ \symbf{A} \times \symbf{B} $，定义为一个新矢量，其模为
     \begin{equation}
-        |\bm{A} \times \bm{B}| = AB \sin \theta ,
+        |\symbf{A} \times \symbf{B}| = AB \sin \theta ,
     \end{equation}
-    其中，$ A $ 与 $ B $ 分别为矢量 $ \bm{A} $ 与矢量 $ \bm{B} $ 的模，$ \theta $ 为矢量 $ \bm{A} $ 与矢量 $ \bm{B} $ 之间的夹角；
-    该新矢量的方向由右手定则确定，即将右手的四指从矢量 $ \bm{A} $ 的方向弯向矢量 $ \bm{B} $ 的方向，则大拇指所指的方向即为新矢量的方向。
+    其中，$ A $ 与 $ B $ 分别为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 的模，$ \theta $ 为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 之间的夹角；
+    该新矢量的方向由右手定则确定，即将右手的四指从矢量 $ \symbf{A} $ 的方向弯向矢量 $ \symbf{B} $ 的方向，则大拇指所指的方向即为新矢量的方向。
 \end{definition}
 矢量的叉积是一个矢量。
 
@@ -1866,33 +1866,33 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 
 叉积也有一些性质：
 \begin{theorem}{矢量叉积的性质}{properties-of-cross-product-of-vectors}
-    设有三个矢量 $ \bm{A} $，$ \bm{B} $ 与 $ \bm{C} $，以及一个标量 $ k $，则有如下性质：
+    设有三个矢量 $ \symbf{A} $，$ \symbf{B} $ 与 $ \symbf{C} $，以及一个标量 $ k $，则有如下性质：
     \begin{enumerate}
-        \item 反交换律：$ \bm{A} \times \bm{B} = - (\bm{B} \times \bm{A}) $；
-        \item 分配律：$ \bm{A} \times (\bm{B} + \bm{C}) = \bm{A} \times \bm{B} + \bm{A} \times \bm{C} $；
-        \item 结合律：$ (k \bm{A}) \times \bm{B} = k (\bm{A} \times \bm{B}) $；
-        \item 向量共线性：若矢量 $ \bm{A} $ 与矢量 $ \bm{B} $ 共线，则 $ \bm{A} \times \bm{B} = \bm{0} $。
+        \item 反交换律：$ \symbf{A} \times \symbf{B} = - (\symbf{B} \times \symbf{A}) $；
+        \item 分配律：$ \symbf{A} \times (\symbf{B} + \symbf{C}) = \symbf{A} \times \symbf{B} + \symbf{A} \times \symbf{C} $；
+        \item 结合律：$ (k \symbf{A}) \times \symbf{B} = k (\symbf{A} \times \symbf{B}) $；
+        \item 向量共线性：若矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 共线，则 $ \symbf{A} \times \symbf{B} = \symbf{0} $。
     \end{enumerate}
 \end{theorem}
 
 在三维空间中有
 \begin{equation}
-    \bm{e}_x \times \bm{e}_y = \bm{e}_z , \quad \bm{e}_y \times \bm{e}_z = \bm{e}_x , \quad \bm{e}_z \times \bm{e}_x = \bm{e}_y ,
+    \symbf{e}_x \times \symbf{e}_y = \symbf{e}_z , \quad \symbf{e}_y \times \symbf{e}_z = \symbf{e}_x , \quad \symbf{e}_z \times \symbf{e}_x = \symbf{e}_y ,
 \end{equation}
 \begin{equation}
-    \bm{e}_y \times \bm{e}_x = -\bm{e}_z , \quad \bm{e}_z \times \bm{e}_y = -\bm{e}_x , \quad \bm{e}_x \times \bm{e}_z = -\bm{e}_y ,
+    \symbf{e}_y \times \symbf{e}_x = -\symbf{e}_z , \quad \symbf{e}_z \times \symbf{e}_y = -\symbf{e}_x , \quad \symbf{e}_x \times \symbf{e}_z = -\symbf{e}_y ,
 \end{equation}
 \begin{equation}
-    \bm{e}_x \times \bm{e}_x = \bm{e}_y \times \bm{e}_y = \bm{e}_z \times \bm{e}_z = \bm{0} .
+    \symbf{e}_x \times \symbf{e}_x = \symbf{e}_y \times \symbf{e}_y = \symbf{e}_z \times \symbf{e}_z = \symbf{0} .
 \end{equation}
 
-借此可以将两个三维矢量 $ \bm{A} = (A_x , A_y , A_z) $ 与 $ \bm{B} = (B_x , B_y , B_z) $ 的叉积表示为
+借此可以将两个三维矢量 $ \symbf{A} = (A_x , A_y , A_z) $ 与 $ \symbf{B} = (B_x , B_y , B_z) $ 的叉积表示为
 \begin{equation}
-    \bm{A} \times \bm{B} = \left| \begin{array}{ccc}
-        \bm{e}_x & \bm{e}_y & \bm{e}_z \\
-        A_x      & A_y      & A_z      \\
-        B_x      & B_y      & B_z
-    \end{array} \right| = (A_y B_z - A_z B_y) \bm{e}_x + (A_z B_x - A_x B_z) \bm{e}_y + (A_x B_y - A_y B_x) \bm{e}_z .
+    \symbf{A} \times \symbf{B} = \left| \begin{array}{ccc}
+        \symbf{e}_x & \symbf{e}_y & \symbf{e}_z \\
+        A_x         & A_y         & A_z         \\
+        B_x         & B_y         & B_z
+    \end{array} \right| = (A_y B_z - A_z B_y) \symbf{e}_x + (A_z B_x - A_x B_z) \symbf{e}_y + (A_x B_y - A_y B_x) \symbf{e}_z .
 \end{equation}
 这里的行列式见前面 \cref{sec:determinant}。
 
@@ -1916,22 +1916,22 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 
 混合积定义如下：
 \begin{definition}{矢量的混合积}{definition-of-scalar-triple-product-of-vectors}
-    设有三个三维矢量 $ \bm{A} $，$ \bm{B} $ 与 $ \bm{C} $，它们的混合积记为 $ \bm{A} \cdot (\bm{B} \times \bm{C}) $，定义为
+    设有三个三维矢量 $ \symbf{A} $，$ \symbf{B} $ 与 $ \symbf{C} $，它们的混合积记为 $ \symbf{A} \cdot (\symbf{B} \times \symbf{C}) $，定义为
     \begin{equation}
-        \bm{A} \cdot (\bm{B} \times \bm{C}) = ABC \sin \theta \cos \phi ,
+        \symbf{A} \cdot (\symbf{B} \times \symbf{C}) = ABC \sin \theta \cos \phi ,
     \end{equation}
-    其中，$ A $，$ B $ 与 $ C $ 分别为矢量 $ \bm{A} $，$ \bm{B} $ 与 $ \bm{C} $ 的模，$ \theta $ 为矢量 $ \bm{B} $ 与矢量 $ \bm{C} $ 之间的夹角，$ \phi $ 为矢量 $ \bm{A} $ 与矢量 $ \bm{B} \times \bm{C} $ 之间的夹角。
+    其中，$ A $，$ B $ 与 $ C $ 分别为矢量 $ \symbf{A} $，$ \symbf{B} $ 与 $ \symbf{C} $ 的模，$ \theta $ 为矢量 $ \symbf{B} $ 与矢量 $ \symbf{C} $ 之间的夹角，$ \phi $ 为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} \times \symbf{C} $ 之间的夹角。
 \end{definition}
 混合积是一个标量，并且满足循环对称性与反对称性，即
 \begin{equation}
-    \bm{A} \cdot (\bm{B} \times \bm{C}) = \bm{B} \cdot (\bm{C} \times \bm{A}) = \bm{C} \cdot (\bm{A} \times \bm{B}) ,
+    \symbf{A} \cdot (\symbf{B} \times \symbf{C}) = \symbf{B} \cdot (\symbf{C} \times \symbf{A}) = \symbf{C} \cdot (\symbf{A} \times \symbf{B}) ,
 \end{equation}
 \begin{equation}
-    \bm{A} \cdot (\bm{B} \times \bm{C}) = - \bm{A} \cdot (\bm{C} \times \bm{B}) .
+    \symbf{A} \cdot (\symbf{B} \times \symbf{C}) = - \symbf{A} \cdot (\symbf{C} \times \symbf{B}) .
 \end{equation}
-运用行列式可以将三个三维矢量 $ \bm{A} = (A_x , A_y , A_z) $，$ \bm{B} = (B_x , B_y , B_z) $ 与 $ \bm{C} = (C_x , C_y , C_z) $ 的混合积表示为
+运用行列式可以将三个三维矢量 $ \symbf{A} = (A_x , A_y , A_z) $，$ \symbf{B} = (B_x , B_y , B_z) $ 与 $ \symbf{C} = (C_x , C_y , C_z) $ 的混合积表示为
 \begin{equation}
-    \bm{A} \cdot (\bm{B} \times \bm{C}) = \left| \begin{array}{ccc}
+    \symbf{A} \cdot (\symbf{B} \times \symbf{C}) = \left| \begin{array}{ccc}
         A_x & A_y & A_z \\
         B_x & B_y & B_z \\
         C_x & C_y & C_z
@@ -1940,25 +1940,25 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 
 三重叉积定义如下：
 \begin{definition}{矢量的三重叉积}{definition-of-vector-triple-product-of-vectors}
-    设有三个三维矢量 $ \bm{A} $，$ \bm{B} $ 与 $ \bm{C} $，它们的三重叉积记为 $ \bm{A} \times (\bm{B} \times \bm{C}) $，定义为一个新矢量，其方向与矢量 $ \bm{B} $ 与矢量 $ \bm{C} $ 所在平面内的某个方向相同，其模为
+    设有三个三维矢量 $ \symbf{A} $，$ \symbf{B} $ 与 $ \symbf{C} $，它们的三重叉积记为 $ \symbf{A} \times (\symbf{B} \times \symbf{C}) $，定义为一个新矢量，其方向与矢量 $ \symbf{B} $ 与矢量 $ \symbf{C} $ 所在平面内的某个方向相同，其模为
     \begin{equation}
-        |\bm{A} \times (\bm{B} \times \bm{C})| = AB C \sin \theta \sin \phi ,
+        |\symbf{A} \times (\symbf{B} \times \symbf{C})| = AB C \sin \theta \sin \phi ,
     \end{equation}
-    其中，$ A $，$ B $ 与 $ C $ 分别为矢量 $ \bm{A} $，$ \bm{B} $ 与 $ \bm{C} $ 的模，$ \theta $ 为矢量 $ \bm{B} $ 与矢量 $ \bm{C} $ 之间的夹角，$ \phi $ 为矢量 $ \bm{A} $ 与矢量 $ \bm{B} \times \bm{C} $ 之间的夹角。
+    其中，$ A $，$ B $ 与 $ C $ 分别为矢量 $ \symbf{A} $，$ \symbf{B} $ 与 $ \symbf{C} $ 的模，$ \theta $ 为矢量 $ \symbf{B} $ 与矢量 $ \symbf{C} $ 之间的夹角，$ \phi $ 为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} \times \symbf{C} $ 之间的夹角。
 \end{definition}
 三重叉积是一个矢量，并且满足如下恒等式：
 \begin{equation}
-    \bm{A} \times (\bm{B} \times \bm{C}) = \bm{B} (\bm{A} \cdot \bm{C}) - \bm{C} (\bm{A} \cdot \bm{B}) .
+    \symbf{A} \times (\symbf{B} \times \symbf{C}) = \symbf{B} (\symbf{A} \cdot \symbf{C}) - \symbf{C} (\symbf{A} \cdot \symbf{B}) .
 \end{equation}
 
 在 $ Oxyz $ 坐标系中可以轻易的证明这个恒等式，即
 \begin{equation}
     \begin{aligned}
-        \bm{A} \times (\bm{B} \times \bm{C}) = & (A_y B_z C_x - A_z B_y C_x) \bm{e}_x + (A_z B_x C_y - A_x B_z C_y) \bm{e}_y + (A_x B_y C_z - A_y B_x C_z) \bm{e}_z \\
-        =                                      & [B_x (A_x C_x + A_y C_y + A_z C_z) - C_x (A_x B_x + A_y B_y + A_z B_z)] \bm{e}_x                                   \\
-                                               & + [B_y (A_x C_x + A_y C_y + A_z C_z) - C_y (A_x B_x + A_y B_y + A_z B_z)] \bm{e}_y                                 \\
-                                               & + [B_z (A_x C_x + A_y C_y + A_z C_z) - C_z (A_x B_x + A_y B_y + A_z B_z)] \bm{e}_z                                 \\
-        =                                      & \bm{B} (\bm{A} \cdot \bm{C}) - \bm{C} (\bm{A} \cdot \bm{B}) .
+        \symbf{A} \times (\symbf{B} \times \symbf{C}) = & (A_y B_z C_x - A_z B_y C_x) \symbf{e}_x + (A_z B_x C_y - A_x B_z C_y) \symbf{e}_y + (A_x B_y C_z - A_y B_x C_z) \symbf{e}_z \\
+        =                                               & [B_x (A_x C_x + A_y C_y + A_z C_z) - C_x (A_x B_x + A_y B_y + A_z B_z)] \symbf{e}_x                                         \\
+                                                        & + [B_y (A_x C_x + A_y C_y + A_z C_z) - C_y (A_x B_x + A_y B_y + A_z B_z)] \symbf{e}_y                                       \\
+                                                        & + [B_z (A_x C_x + A_y C_y + A_z C_z) - C_z (A_x B_x + A_y B_y + A_z B_z)] \symbf{e}_z                                       \\
+        =                                               & \symbf{B} (\symbf{A} \cdot \symbf{C}) - \symbf{C} (\symbf{A} \cdot \symbf{B}) .
     \end{aligned}
 \end{equation}
 
@@ -1966,60 +1966,60 @@ $ \bm{e}_x $，$ \bm{e}_y $，$ \bm{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ 
 
 下面给出几个例子，帮助理解矢量的代数运算。
 \begin{example}{点积的逆运算}{example-of-inverse-operation-of-dot-product}
-    设有两个矢量 $ \bm{A} $ 与 $ \bm{B} $，已知 $ \bm{B} $，以及它们的点积 $ \alpha = \bm{A} \cdot \bm{B} $，求矢量 $ \bm{A} $。
+    设有两个矢量 $ \symbf{A} $ 与 $ \symbf{B} $，已知 $ \symbf{B} $，以及它们的点积 $ \alpha = \symbf{A} \cdot \symbf{B} $，求矢量 $ \symbf{A} $。
 
     \textbf{解}：
 
-    将 $ \bm{A} $ 分解为沿 $ \bm{B} $ 方向的分量 $ \bm{A}_{\parallel} $ 与垂直于 $ \bm{B} $ 方向的分量 $ \bm{A}_{\perp} $，即
+    将 $ \symbf{A} $ 分解为沿 $ \symbf{B} $ 方向的分量 $ \symbf{A}_{\parallel} $ 与垂直于 $ \symbf{B} $ 方向的分量 $ \symbf{A}_{\perp} $，即
     \begin{equation}
-        \bm{A} = \bm{A}_{\parallel} + \bm{A}_{\perp} .
+        \symbf{A} = \symbf{A}_{\parallel} + \symbf{A}_{\perp} .
     \end{equation}
     则有
     \begin{equation}
-        \alpha = \bm{A} \cdot \bm{B} = \bm{A}_{\parallel} \cdot \bm{B} + \bm{A}_{\perp} \cdot \bm{B} = \bm{A}_{\parallel} \cdot \bm{B} ,
+        \alpha = \symbf{A} \cdot \symbf{B} = \symbf{A}_{\parallel} \cdot \symbf{B} + \symbf{A}_{\perp} \cdot \symbf{B} = \symbf{A}_{\parallel} \cdot \symbf{B} ,
     \end{equation}
-    因为 $ \bm{A}_{\perp} $ 与 $ \bm{B} $ 垂直，所以 $ \bm{A}_{\perp} \cdot \bm{B} = 0 $。
-    设 $ |\bm{B}| = B $，则有
+    因为 $ \symbf{A}_{\perp} $ 与 $ \symbf{B} $ 垂直，所以 $ \symbf{A}_{\perp} \cdot \symbf{B} = 0 $。
+    设 $ |\symbf{B}| = B $，则有
     \begin{equation}
-        \bm{A}_{\parallel} = \frac{\alpha}{B^2} \bm{B} .
+        \symbf{A}_{\parallel} = \frac{\alpha}{B^2} \symbf{B} .
     \end{equation}
-    因为 $ \bm{A}_{\perp} $ 与 $ \bm{B} $ 垂直，但具有不确定性，可表达成
+    因为 $ \symbf{A}_{\perp} $ 与 $ \symbf{B} $ 垂直，但具有不确定性，可表达成
     \begin{equation}
-        \bm{A}_{\perp} = \bm{C} \times \bm{B} ,
+        \symbf{A}_{\perp} = \symbf{C} \times \symbf{B} ,
     \end{equation}
-    其中，$ \bm{C} $ 为任意矢量。
-    因此，矢量 $ \bm{A} $ 可表示为
+    其中，$ \symbf{C} $ 为任意矢量。
+    因此，矢量 $ \symbf{A} $ 可表示为
     \begin{equation}
-        \bm{A} = \frac{\alpha}{B^2} \bm{B} + \bm{C} \times \bm{B} .
+        \symbf{A} = \frac{\alpha}{B^2} \symbf{B} + \symbf{C} \times \symbf{B} .
     \end{equation}
 \end{example}
 
 \begin{example}{叉积的逆运算}{example-of-inverse-operation-of-cross-product}
-    设有两个矢量 $ \bm{A} $ 与 $ \bm{B} $，已知 $ \bm{B} $，以及它们的叉积 $ \bm{D} = \bm{A} \times \bm{B} $，求矢量 $ \bm{A} $。
+    设有两个矢量 $ \symbf{A} $ 与 $ \symbf{B} $，已知 $ \symbf{B} $，以及它们的叉积 $ \symbf{D} = \symbf{A} \times \symbf{B} $，求矢量 $ \symbf{A} $。
 
     \textbf{解}：
 
-    将 $ \bm{A} $ 分解为沿 $ \bm{B} $ 方向的分量 $ \bm{A}_{\parallel} $ 与垂直于 $ \bm{B} $ 方向的分量 $ \bm{A}_{\perp} $，即
+    将 $ \symbf{A} $ 分解为沿 $ \symbf{B} $ 方向的分量 $ \symbf{A}_{\parallel} $ 与垂直于 $ \symbf{B} $ 方向的分量 $ \symbf{A}_{\perp} $，即
     \begin{equation}
-        \bm{A} = \bm{A}_{\parallel} + \bm{A}_{\perp} .
+        \symbf{A} = \symbf{A}_{\parallel} + \symbf{A}_{\perp} .
     \end{equation}
     则有
     \begin{equation}
-        \bm{D} = \bm{A} \times \bm{B} = \bm{A}_{\parallel} \times \bm{B} + \bm{A}_{\perp} \times \bm{B} = \bm{A}_{\perp} \times \bm{B} ,
+        \symbf{D} = \symbf{A} \times \symbf{B} = \symbf{A}_{\parallel} \times \symbf{B} + \symbf{A}_{\perp} \times \symbf{B} = \symbf{A}_{\perp} \times \symbf{B} ,
     \end{equation}
-    因为 $ \bm{A}_{\parallel} $ 与 $ \bm{B} $ 共线，所以 $ \bm{A}_{\parallel} \times \bm{B} = \bm{0} $。
-    设 $ |\bm{B}| = B $，则有
+    因为 $ \symbf{A}_{\parallel} $ 与 $ \symbf{B} $ 共线，所以 $ \symbf{A}_{\parallel} \times \symbf{B} = \symbf{0} $。
+    设 $ |\symbf{B}| = B $，则有
     \begin{equation}
-        \bm{A}_{\perp} = \frac{1}{B^2} (\bm{B} \times \bm{D}) .
+        \symbf{A}_{\perp} = \frac{1}{B^2} (\symbf{B} \times \symbf{D}) .
     \end{equation}
-    因为 $ \bm{A}_{\parallel} $ 与 $ \bm{B} $ 共线，但具有不确定性，可表达成
+    因为 $ \symbf{A}_{\parallel} $ 与 $ \symbf{B} $ 共线，但具有不确定性，可表达成
     \begin{equation}
-        \bm{A}_{\parallel} = \lambda \bm{B} ,
+        \symbf{A}_{\parallel} = \lambda \symbf{B} ,
     \end{equation}
     其中，$ \lambda $ 为任意标量。
-    因此，矢量 $ \bm{A} $ 可表示为
+    因此，矢量 $ \symbf{A} $ 可表示为
     \begin{equation}
-        \bm{A} = \lambda \bm{B} + \frac{1}{B^2} (\bm{B} \times \bm{D}) .
+        \symbf{A} = \lambda \symbf{B} + \frac{1}{B^2} (\symbf{B} \times \symbf{D}) .
     \end{equation}
 \end{example}
 

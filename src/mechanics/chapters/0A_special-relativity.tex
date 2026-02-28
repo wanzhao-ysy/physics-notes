@@ -22,12 +22,12 @@
 库仑（Coulomb）在 1785 年提出了电荷之间的相互作用力遵循平方反比定律，半个世纪后，麦克斯韦（Maxwell）在 1865 年成功地将电学和磁学统一成了电磁学，建立了麦克斯韦方程组，预言了电磁波的存在。
 他发现空间电磁场可以以波的形式传播，当时假想的传播介质被称为「以太」，麦克斯韦方程组预言了电磁波在真空中的传播速度是一个常数，约为 \qty{3e8}{\metre\per\second}，这个速度被认为是以太中的光速。
 \begin{equation}
-    \left(\nabla^2 - \mu \epsilon \frac{\partial^2}{\partial t^2}\right) \bm{E} = 0
+    \left(\nabla^2 - \mu \epsilon \frac{\partial^2}{\partial t^2}\right) \symbf{E} = 0
 \end{equation}
 \begin{equation}
-    \left(\nabla^2 - \mu \epsilon \frac{\partial^2}{\partial t^2}\right) \bm{B} = 0
+    \left(\nabla^2 - \mu \epsilon \frac{\partial^2}{\partial t^2}\right) \symbf{B} = 0
 \end{equation}
-其中，$ \mu $ 和 $ \epsilon $ 分别是真空的磁导率和电容率，$ \bm{E} $ 和 $ \bm{B} $ 分别是电场和磁场。
+其中，$ \mu $ 和 $ \epsilon $ 分别是真空的磁导率和电容率，$ \symbf{E} $ 和 $ \symbf{B} $ 分别是电场和磁场。
 根据麦克斯韦方程组，电磁波的传播速度 $ c $ 满足
 \begin{equation}
     c = \frac{1}{\sqrt{\mu \epsilon}} \approx \qty{3e8}{\metre\per\second}
@@ -35,7 +35,7 @@
 与参考系无关（？）这个结果与经典力学的预期相矛盾（在经典力学中，速度是相对的）。
 
 于是，人们假想了一个「静止」的以太参考系（否则，地心说复活，太猎奇了\ldots），麦克斯韦方程组在这个参考系中成立。
-而在其他参考系中，电磁波的传播速度应该是 $ \bm{c} \pm \bm{v} $，其中 $ \bm{v} $ 是参考系相对于以太的速度。
+而在其他参考系中，电磁波的传播速度应该是 $ \symbf{c} \pm \symbf{v} $，其中 $ \symbf{v} $ 是参考系相对于以太的速度。
 
 为了验证这个假说，迈克耳孙（Michelson）和莫雷（Morley）设计了一个精密的干涉仪，试图测量地球相对于以太的运动速度。
 在这里，我简单介绍一下迈克耳孙-莫雷干涉仪的工作原理。
@@ -112,7 +112,7 @@
 
 \subsubsection{时间零点校准的差异（「同时」的相对性）}
 
-如 \cref{fig:simultaneity}，考虑两个惯性参考系 $S$ 和 $S'$，其中 $S'$ 以速度 $\bm{v}$ 相对于 $S$ 运动。
+如 \cref{fig:simultaneity}，考虑两个惯性参考系 $S$ 和 $S'$，其中 $S'$ 以速度 $\symbf{v}$ 相对于 $S$ 运动。
 当 $S$ 的坐标原点 $O$ 和 $S'$ 的坐标原点 $O'$ 重合时，两参考系对表，即 $t = t' = 0$。
 
 \subinputfrom{../figures/0A_special-relativity/}{fig_simultaneity.tex}
@@ -148,8 +148,8 @@
 
 \subsection{狭义相对论时空变换}
 
-考虑两个惯性参考系 $S$ 和 $S'$，其中 $S'$ 以速度 $\bm{v}$ 相对于 $S$ 运动。
-在不失一般性的情况下，不妨设 $\bm{v}$ 沿 $x$ 轴正方向。
+考虑两个惯性参考系 $S$ 和 $S'$，其中 $S'$ 以速度 $\symbf{v}$ 相对于 $S$ 运动。
+在不失一般性的情况下，不妨设 $\symbf{v}$ 沿 $x$ 轴正方向。
 
 在开始推导之前，我们要定义一下什么是事件（Event）。
 \begin{definition}{事件}{event}
@@ -162,7 +162,7 @@
 
 首先，$S$ 系中的匀速直线性运动在 $S'$ 系中仍然是匀速直线性运动，即
 \begin{equation}
-    \bm{a} = 0 \iff \bm{a'} = 0
+    \symbf{a} = 0 \iff \symbf{a'} = 0
 \end{equation}
 
 因此，时空变换应为线性变换（否则与实验相悖）：
@@ -260,7 +260,7 @@
 
 因此有如下定理：
 \begin{theorem}{狭义相对论时空变换（洛伦兹变换）}{lorentz-transformation}
-    设两个惯性参考系 $S$ 和 $S'$，其中 $S'$ 以速度 $\bm{v}$ 相对于 $S$ 运动，且 $\bm{v}$ 沿 $x$ 轴正方向。
+    设两个惯性参考系 $S$ 和 $S'$，其中 $S'$ 以速度 $\symbf{v}$ 相对于 $S$ 运动，且 $\symbf{v}$ 沿 $x$ 轴正方向。
     事件在 $S$ 系中的坐标为 $(t, x, y, z)$，在 $S'$ 系中的坐标为 $(t', x', y', z')$，则有如下时空变换关系：
     \begin{equation}
         \left\{
@@ -400,10 +400,10 @@
 
 考虑质点相对 $S$，$S'$ 系的速度分别为
 \begin{equation}
-    \bm{u} : u_x = \frac{d x}{d t} , \quad u_y = \frac{d y}{d t} , \quad u_z = \frac{d z}{d t}
+    \symbf{u} : u_x = \frac{d x}{d t} , \quad u_y = \frac{d y}{d t} , \quad u_z = \frac{d z}{d t}
 \end{equation}
 \begin{equation}
-    \bm{u'} : u_x' = \frac{d x'}{d t'} , \quad u_y' = \frac{d y'}{d t'} , \quad u_z' = \frac{d z'}{d t'}
+    \symbf{u'} : u_x' = \frac{d x'}{d t'} , \quad u_y' = \frac{d y'}{d t'} , \quad u_z' = \frac{d z'}{d t'}
 \end{equation}
 
 根据洛伦兹变换，有
@@ -438,7 +438,7 @@
 
 综上所述，有如下定理：
 \begin{theorem}{狭义相对论速度变换公式}{velocity-transformation}
-    设质点相对 $S$，$S'$ 系的速度分别为 $\bm{u}$ 和 $\bm{u'}$，则有如下速度变换关系：
+    设质点相对 $S$，$S'$ 系的速度分别为 $\symbf{u}$ 和 $\symbf{u'}$，则有如下速度变换关系：
     \begin{equation}
         \left\{
         \begin{aligned}
@@ -484,10 +484,10 @@
 \begin{example}{加速度变换公式的推导}{acceleration-transformation-derivation}
     设质点相对 $S$，$S'$ 系的加速度分别为
     \begin{equation}
-        \bm{a} : a_x = \frac{d u_x}{d t} , \quad a_y = \frac{d u_y}{d t} , \quad a_z = \frac{d u_z}{d t}
+        \symbf{a} : a_x = \frac{d u_x}{d t} , \quad a_y = \frac{d u_y}{d t} , \quad a_z = \frac{d u_z}{d t}
     \end{equation}
     \begin{equation}
-        \bm{a'} : a_x' = \frac{d u_x'}{d t'} , \quad a_y' = \frac{d u_y'}{d t'} , \quad a_z' = \frac{d u_z'}{d t'}
+        \symbf{a'} : a_x' = \frac{d u_x'}{d t'} , \quad a_y' = \frac{d u_y'}{d t'} , \quad a_z' = \frac{d u_z'}{d t'}
     \end{equation}
 
     \textbf{解}：
@@ -530,13 +530,13 @@
     \begin{equation}
         a_z = \frac{a_z'}{\gamma^2 \left(1 + \frac{v u_x'}{c^2}\right)^2} - \frac{v u_z' a_x'}{c^2 \gamma^2 \left(1 + \frac{v u_x'}{c^2}\right)^3}
     \end{equation}
-    $\hfill \blacksquare $
+    $\hfill \QED $
 
     在相对论中，加速度的变换关系比经典力学中的更为复杂，反映了狭义相对论对时间和空间测量的影响。
-    仅当 $\bm{a}' = 0$ 时，才有 $\bm{a} = 0$，即匀速直线运动在所有惯性参考系中保持不变。
+    仅当 $\symbf{a}' = 0$ 时，才有 $\symbf{a} = 0$，即匀速直线运动在所有惯性参考系中保持不变。
     此外，它还有三个特征：
     \begin{itemize}
-        \item 一般情况下，$\bm{a} \neq \bm{a}'$；
+        \item 一般情况下，$\symbf{a} \neq \symbf{a}'$；
         \item 加速度分量之间存在耦合；
         \item 质点加速度的变换与质点速度有关。
     \end{itemize}
@@ -546,20 +546,20 @@
 
 \subsection{引入}
 
-牛顿力学中物体的质量 $m$ 和物体所受力 $\bm{F}$ 一起由关系式 $ \bm{F} = m \bm{a} $ 定义，大量实验对定义的认可使得关系式 $ \bm{F} = m \bm{a}$ 成为定律。
+牛顿力学中物体的质量 $m$ 和物体所受力 $\symbf{F}$ 一起由关系式 $ \symbf{F} = m \symbf{a} $ 定义，大量实验对定义的认可使得关系式 $ \symbf{F} = m \symbf{a}$ 成为定律。
 定律中的 $m$ 不随物体的运动状态发生变化，是一个参考系不变量。
-经典理论中 $\bm{a}$ 是惯性系不变量，于是牛顿定律的惯性系不变性要求 $\bm{F}$ 也是惯性系不变量。
+经典理论中 $\symbf{a}$ 是惯性系不变量，于是牛顿定律的惯性系不变性要求 $\symbf{F}$ 也是惯性系不变量。
 经典力学涉及的诸多真实力如牛顿万有引力、重力、浮力、摩擦力、弹性力等在当时的实验精度范围内已被证实都是惯性系不变量。
 
 爱因斯坦获义相对论时空度量关系的建立，揭示出除非加速度为零，否则 $a$ 不是惯性系不变量。
-面对这一结论，显然不能不加论证地判定在狭义相对论中 $m$、$\bm{F}$ 仍然可以是惯性系不变量，而是需要一般地考察 $m$、$\bm{F}$ 的惯性系变换关系。
-另一方面，在狭义相对论中也不能不加论证地认可，以 $ \bm{F} = m \bm{a} $ 形式表述的牛顿第二定律仍然满足相对性原理的要求。
-总之，在狭义相对论的动力学内容中，一是要找出 $m$、$\bm{F}$ 的惯性系变换式，二是要建立符合相对性原理要求的牛顿第二定律。
+面对这一结论，显然不能不加论证地判定在狭义相对论中 $m$、$\symbf{F}$ 仍然可以是惯性系不变量，而是需要一般地考察 $m$、$\symbf{F}$ 的惯性系变换关系。
+另一方面，在狭义相对论中也不能不加论证地认可，以 $ \symbf{F} = m \symbf{a} $ 形式表述的牛顿第二定律仍然满足相对性原理的要求。
+总之，在狭义相对论的动力学内容中，一是要找出 $m$、$\symbf{F}$ 的惯性系变换式，二是要建立符合相对性原理要求的牛顿第二定律。
 
 完成上述工作的途径不是唯一的。例如可在改造牛顿第二定律之前，先设定与外界无相
 互作用的物质系统其总能量（包括机械能、热能\ldots）和动量分别守恒或者改为设定这样的系统其总质量和动量分别守恒。
 而后，通过两个全同质点的弹性碰撞或完全非弹性碰撞，简捷地得到质点质量 $m$ 随其运动速度 $v$ 的变化关系，实质上也就是得到了质量的惯性系变换式。
-牛顿第二定律表达式 $ \bm{F} = m \bm{a} $ 中 $m$ 的不变性既然已被否定，便改取表达式 $\bm{F} = \frac{\d \bm{p}}{\d t}$ 来考察它的惯性系不变性和 $\bm{F}$ 的惯性系变换式。
+牛顿第二定律表达式 $ \symbf{F} = m \symbf{a} $ 中 $m$ 的不变性既然已被否定，便改取表达式 $\symbf{F} = \frac{\d \symbf{p}}{\d t}$ 来考察它的惯性系不变性和 $\symbf{F}$ 的惯性系变换式。
 
 狭义相对论的创建源于电作用理论。
 如前所述，爱因斯坦第一篇相对论论文的标题定为《论动体的电动力学》，全篇宗旨就是以新建的狭义相对论时空变换为基础，
@@ -571,15 +571,15 @@
 
 \subsubsection{动量、质量与速度的关系}
 
-首先，我们仍然定义一个质点的动量 $\bm{p}$ 是一个与它的速度 $\bm{v}$ 成正比的矢量，即
+首先，我们仍然定义一个质点的动量 $\symbf{p}$ 是一个与它的速度 $\symbf{v}$ 成正比的矢量，即
 \begin{equation}
-    \bm{p} = m \bm{v}
+    \symbf{p} = m \symbf{v}
 \end{equation}
 其中，式中的比例系数仍定义为质点的质量 $m$。
 
-不过由于在数量上，质点的动量 $\bm{p}$ 不再与速度 $\bm{v}$ 成简单的正比关系，而是与速度 $\bm{v}$ 的大小有关。
-因此，质点的质量 $m$ 也不再是一个常量，而是与质点的速度 $\bm{v}$ 的大小有关。
-又由于空间的各向同性，我们认为质点的质量 $m$ 只能与速度 $\bm{v}$ 的大小 $v$ 有关，即 $m = m(v)$。
+不过由于在数量上，质点的动量 $\symbf{p}$ 不再与速度 $\symbf{v}$ 成简单的正比关系，而是与速度 $\symbf{v}$ 的大小有关。
+因此，质点的质量 $m$ 也不再是一个常量，而是与质点的速度 $\symbf{v}$ 的大小有关。
+又由于空间的各向同性，我们认为质点的质量 $m$ 只能与速度 $\symbf{v}$ 的大小 $v$ 有关，即 $m = m(v)$。
 接下来，我们要确定质点质量 $m$ 随速度 $v$ 的变化关系。
 
 我们考虑一个例子——全同粒子的完全非弹性碰撞。
@@ -637,9 +637,9 @@
 \end{theorem}
 在此之后，我们称式中的 $m$ 为质点的相对论质量或动质量，而 $m_0$ 则称为质点的静止质量或固有质量。
 
-相应的，质点的动量 $\bm{p}$ 为
+相应的，质点的动量 $\symbf{p}$ 为
 \begin{equation}
-    \bm{p} = \frac{m_0 \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} = \gamma m_0 \bm{v}
+    \symbf{p} = \frac{m_0 \symbf{v}}{\sqrt{1 - \frac{v^2}{c^2}}} = \gamma m_0 \symbf{v}
 \end{equation}
 
 \subsubsection{力、功与动能}
@@ -647,12 +647,12 @@
 再考虑动能的表达式
 \begin{equation}
     \begin{aligned}
-        E_k = \int_{0}^{l} \bm{F} \cdot \d \bm{s} = \int_{0}^{v} \bm{F} \cdot \frac{\d \bm{s}}{\d t} \d t  \\
-        = \int_{0}^{v} \frac{\d \bm{p}}{\d t} \cdot \bm{v} \d t = \int_{0}^{v} \bm{v} \cdot \d \bm{p}      \\
-        = \int_{0}^{v} v \d \left(\frac{m_0 v}{\sqrt{1 - \frac{v^2}{c^2}}}\right)                          \\
-        = \left. \frac{m_0 \bm{v} \cdot \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \right|_{0}^{v} -
-        m_0 \int_{0}^{v} \frac{\bm{v} \cdot \d \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}}                         \\
-        = \frac{m_0 v^2}{\sqrt{1 - \frac{v^2}{c^2}}} + m_0 c^2 \left(\sqrt{1 - \frac{v^2}{c^2}} - 1\right) \\
+        E_k = \int_{0}^{l} \symbf{F} \cdot \d \symbf{s} = \int_{0}^{v} \symbf{F} \cdot \frac{\d \symbf{s}}{\d t} \d t \\
+        = \int_{0}^{v} \frac{\d \symbf{p}}{\d t} \cdot \symbf{v} \d t = \int_{0}^{v} \symbf{v} \cdot \d \symbf{p}     \\
+        = \int_{0}^{v} v \d \left(\frac{m_0 v}{\sqrt{1 - \frac{v^2}{c^2}}}\right)                                     \\
+        = \left. \frac{m_0 \symbf{v} \cdot \symbf{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \right|_{0}^{v} -
+        m_0 \int_{0}^{v} \frac{\symbf{v} \cdot \d \symbf{v}}{\sqrt{1 - \frac{v^2}{c^2}}}                              \\
+        = \frac{m_0 v^2}{\sqrt{1 - \frac{v^2}{c^2}}} + m_0 c^2 \left(\sqrt{1 - \frac{v^2}{c^2}} - 1\right)            \\
         = m_0 c^2 \left(\frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} - 1\right)
     \end{aligned}
 \end{equation}
@@ -700,7 +700,7 @@
 
 最后我们介绍一下动质能关系
 \begin{theorem}{狭义相对论动质能关系}{relativistic-energy-momentum-relation}
-    设质点的静止质量为 $m_0$，当质点以速度 $v$ 运动时，其总能量 $E$ 和动量 $\bm{p}$ 满足如下关系：
+    设质点的静止质量为 $m_0$，当质点以速度 $v$ 运动时，其总能量 $E$ 和动量 $\symbf{p}$ 满足如下关系：
     \begin{equation}
         E^2 = p^2 c^2 + m_0^2 c^4
     \end{equation}
@@ -710,29 +710,29 @@
 
 \subsubsection{力的定义与变换}
 
-麦克斯韦场方程是以 $\bm{E}$ 和 $\bm{B}$ 已有度量定义为前提的，逻辑上可以将带电质点在电作用场中的受力公式
+麦克斯韦场方程是以 $\symbf{E}$ 和 $\symbf{B}$ 已有度量定义为前提的，逻辑上可以将带电质点在电作用场中的受力公式
 \begin{equation}
-    \bm{F} = q (\bm{E} + \bm{u} \times \bm{B})
+    \symbf{F} = q (\symbf{E} + \symbf{u} \times \symbf{B})
     \label{eq:relativistic-force-definition}
 \end{equation}
-处理为对 $\bm{E}$ 和 $\bm{B}$ 的定义式，式中 $q$ 是带电质点的电量，$\bm{u}$ 是带电质点的运动速度。
+处理为对 $\symbf{E}$ 和 $\symbf{B}$ 的定义式，式中 $q$ 是带电质点的电量，$\symbf{u}$ 是带电质点的运动速度。
 \cref{eq:relativistic-force-definition} 的含义是将电作用场分解成电场和磁场两部分。
-其中电场给电荷 $q$ 的作用力 $\bm{F}_e$ 与带电质点运动状态无关，力的结构式 $\bm{F}_e = q \bm{E}$ 中的 $\bm{E}$ 即为电场参与力构造的因素量。
-磁场仅对运动电荷施以附加的作用力 $\bm{F}_m$，力的结构式 $\bm{F}_m = q \bm{u} \times \bm{B}$ 中的 $\bm{B}$ 即为磁场参与力构造的因素量。
-经典理论中，$\bm{F}$ 已在质点动力学中给出度量定义。
+其中电场给电荷 $q$ 的作用力 $\symbf{F}_e$ 与带电质点运动状态无关，力的结构式 $\symbf{F}_e = q \symbf{E}$ 中的 $\symbf{E}$ 即为电场参与力构造的因素量。
+磁场仅对运动电荷施以附加的作用力 $\symbf{F}_m$，力的结构式 $\symbf{F}_m = q \symbf{u} \times \symbf{B}$ 中的 $\symbf{B}$ 即为磁场参与力构造的因素量。
+经典理论中，$\symbf{F}$ 已在质点动力学中给出度量定义。
 
-狭义相对论中，在尚未完成对牛顿三定律的检查和修正工作时逻辑上也可以在电作用理论框架内，将 \cref{eq:relativistic-force-definition} 处理成同时给出$\bm{F}$、$q$、$\bm{E}$、$\bm{B}$度量定义的基本公式。
+狭义相对论中，在尚未完成对牛顿三定律的检查和修正工作时逻辑上也可以在电作用理论框架内，将 \cref{eq:relativistic-force-definition} 处理成同时给出$\symbf{F}$、$q$、$\symbf{E}$、$\symbf{B}$度量定义的基本公式。
 电作用理论中认定 $q$ 是运动不变量这也是可以理解的。
 宏观物体均由原子构成原子中电子的电量若因电子绕核高速运动而发生变化原子便不再是电中性的原子间会相互排斥，宏观物体很难稳定，这与事实不符。
 
-\cref{eq:relativistic-force-definition} 是惯性系不变式，符号右边的 $q$ 是惯性系不变量，速度 $\bm{u}$ 的惯性系变换式已经给出，
-那么在获得 $\bm{E}$ 和 $\bm{B}$ 的惯性系变换式后，便可导得力 $\bm{F}$ 的变换式。
+\cref{eq:relativistic-force-definition} 是惯性系不变式，符号右边的 $q$ 是惯性系不变量，速度 $\symbf{u}$ 的惯性系变换式已经给出，
+那么在获得 $\symbf{E}$ 和 $\symbf{B}$ 的惯性系变换式后，便可导得力 $\symbf{F}$ 的变换式。
 
-我们首先推导 $\bm{E}$ 和 $\bm{B}$ 的惯性系变换式。
+我们首先推导 $\symbf{E}$ 和 $\symbf{B}$ 的惯性系变换式。
 
 先考虑麦克斯韦方程组中的
 \begin{equation}
-    \nabla \cdot \bm{B} = 0 , \quad \nabla \times \bm{E} = - \frac{\partial \bm{B}}{\partial t}
+    \nabla \cdot \symbf{B} = 0 , \quad \nabla \times \symbf{E} = - \frac{\partial \symbf{B}}{\partial t}
 \end{equation}
 即
 \begin{equation}
@@ -799,30 +799,30 @@
 
 \medskip
 
-为了导出力 $\bm{F}$ 的惯性系变换式，先用 $\bm{u}$ 点乘 \cref{eq:relativistic-force-definition}，得
+为了导出力 $\symbf{F}$ 的惯性系变换式，先用 $\symbf{u}$ 点乘 \cref{eq:relativistic-force-definition}，得
 \begin{equation}
-    \bm{F} \cdot \bm{u} = q \bm{E} \cdot \bm{u} + q (\bm{u} \times \bm{B}) \cdot \bm{u} = q \bm{E} \cdot \bm{u}
+    \symbf{F} \cdot \symbf{u} = q \symbf{E} \cdot \symbf{u} + q (\symbf{u} \times \symbf{B}) \cdot \symbf{u} = q \symbf{E} \cdot \symbf{u}
 \end{equation}
 同理，在 $S'$ 系中，有
 \begin{equation}
-    \bm{F'} \cdot \bm{u'} = q \bm{E'} \cdot \bm{u'}
+    \symbf{F'} \cdot \symbf{u'} = q \symbf{E'} \cdot \symbf{u'}
 \end{equation}
 
 考虑 $x'$ 方向的力分量 $F_x$：
 \begin{equation}
     F_x' = q \left( E_x' + u_y' B_z' - u_z' B_y' \right)
 \end{equation}
-代入 $\bm{E'}$、$\bm{B'}$ 和 $\bm{u'}$ 的惯性系变换式，得
+代入 $\symbf{E'}$、$\symbf{B'}$ 和 $\symbf{u'}$ 的惯性系变换式，得
 \begin{equation}
     \begin{aligned}
         F_x' & = q \left[ E_x + \frac{u_y \left( B_z - \frac{v}{c^2} E_y \right)}{1 - \frac{v}{c^2} u_x} - \frac{u_z \left( B_y + \frac{v}{c^2} E_z \right)}{1 - \frac{v}{c^2} u_x} \right] \\
              & = \frac{q}{1 - \frac{v}{c^2} u_x} \left( E_x + u_y B_z - u_z B_y - \frac{v}{c^2} (u_x E_x + u_y E_y + u_z E_z) \right)                                                       \\
-             & = \frac{1}{1 - \frac{v}{c^2} u_x} \left( F_x - \frac{v}{c^2} q \bm{u} \cdot \bm{E} \right)
+             & = \frac{1}{1 - \frac{v}{c^2} u_x} \left( F_x - \frac{v}{c^2} q \symbf{u} \cdot \symbf{E} \right)
     \end{aligned}
 \end{equation}
 即
 \begin{equation}
-    F_x' = \frac{F_x - \frac{v}{c^2} \bm{F} \cdot \bm{u}}{1 - \frac{v}{c^2} u_x}
+    F_x' = \frac{F_x - \frac{v}{c^2} \symbf{F} \cdot \symbf{u}}{1 - \frac{v}{c^2} u_x}
 \end{equation}
 
 类似地，有
@@ -833,12 +833,12 @@
     F_z' = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_z}{1 - \frac{v}{c^2} u_x}
 \end{equation}
 
-综上所述，力 $\bm{F}$ 的惯性系变换式为
+综上所述，力 $\symbf{F}$ 的惯性系变换式为
 \begin{equation}
     \left\{
     \begin{aligned}
-         & F_x' = \frac{F_x - \frac{v}{c^2} \bm{F} \cdot \bm{u}}{1 - \frac{v}{c^2} u_x} \\
-         & F_y' = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_y}{1 - \frac{v}{c^2} u_x}          \\
+         & F_x' = \frac{F_x - \frac{v}{c^2} \symbf{F} \cdot \symbf{u}}{1 - \frac{v}{c^2} u_x} \\
+         & F_y' = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_y}{1 - \frac{v}{c^2} u_x}                \\
          & F_z' = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_z}{1 - \frac{v}{c^2} u_x}
     \end{aligned}
     \right.
@@ -849,8 +849,8 @@
 \begin{equation}
     \left\{
     \begin{aligned}
-         & F_x = \frac{F_x' + \frac{v}{c^2} \bm{F'} \cdot \bm{u'}}{1 + \frac{v}{c^2} u_x'} \\
-         & F_y = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_y'}{1 + \frac{v}{c^2} u_x'}            \\
+         & F_x = \frac{F_x' + \frac{v}{c^2} \symbf{F'} \cdot \symbf{u'}}{1 + \frac{v}{c^2} u_x'} \\
+         & F_y = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_y'}{1 + \frac{v}{c^2} u_x'}                  \\
          & F_z = \frac{\sqrt{1 - \frac{v^2}{c^2}} F_z'}{1 + \frac{v}{c^2} u_x'}
     \end{aligned}
     \right.
@@ -864,19 +864,19 @@
     \item 牛顿第二定律
           狭义相对论中，改取牛顿第二定律的原始形式，即
           \begin{equation}
-              \bm{F} = \frac{\d \bm{p}}{\d t}
+              \symbf{F} = \frac{\d \symbf{p}}{\d t}
               \label{eq:relativistic-newton-second-law}
           \end{equation}
-          其中，$\bm{p}$ 是质点的动量。
-          $\d t'$ 和 $\bm{F}$ 的惯性系变换式已经给出，对于给定的 $S$ 系中的质点动量 $\bm{P}$，如果能够找到对应的 $S'$ 系中的质点动量 $\bm{p'}$，使得
+          其中，$\symbf{p}$ 是质点的动量。
+          $\d t'$ 和 $\symbf{F}$ 的惯性系变换式已经给出，对于给定的 $S$ 系中的质点动量 $\symbf{P}$，如果能够找到对应的 $S'$ 系中的质点动量 $\symbf{p'}$，使得
           \begin{equation}
-              \bm{F'} = \frac{\d \bm{p'}}{\d t'}
+              \symbf{F'} = \frac{\d \symbf{p'}}{\d t'}
           \end{equation}
           成立，那么在 \cref{eq:relativistic-newton-second-law} 表述形式上便是惯性系不变的。
           当然，这样修正的牛顿第二定律是否正确，还需经过实验验证。
     \item 牛顿第三定律
-          狭义相对论中，如果牛顿第三定律仍然成立，便要求在 $S$ 系中的一对力若是 $\bm{F_1} + \bm{F_2} = \bm{0}$，
-          那么变换到 $S'$ 系也必有 $\bm{F_1} + \bm{F_2} = \bm{0}$，据力的变换式 \cref{eq:relativistic-force-transformation}很易举出反例。
+          狭义相对论中，如果牛顿第三定律仍然成立，便要求在 $S$ 系中的一对力若是 $\symbf{F_1} + \symbf{F_2} = \symbf{0}$，
+          那么变换到 $S'$ 系也必有 $\symbf{F_1} + \symbf{F_2} = \symbf{0}$，据力的变换式 \cref{eq:relativistic-force-transformation}很易举出反例。
 
           狭义相对论中牛顿第三定律虽然不能成立，但在狭义相对论之前已经建立的普遍的动量守恒定律（即任何一个与外界无相互作用的系统其动量守恒）仍然成立。
 \end{itemize}
@@ -885,21 +885,21 @@
 
 根据牛顿第二定律的修正形式 \cref{eq:relativistic-newton-second-law}，可得质点动量定理
 \begin{equation}
-    \bm{F} \d t = \d \bm{p}
+    \symbf{F} \d t = \d \symbf{p}
     \label{eq:relativistic-momentum-theorem}
 \end{equation}
 
-同时补充定义，假设力 $\bm{F}$ 对质点所做的功仍然等于质点能量的增量，即
+同时补充定义，假设力 $\symbf{F}$ 对质点所做的功仍然等于质点能量的增量，即
 \begin{equation}
-    \bm{F} \cdot \d \bm{l} = \d E
+    \symbf{F} \cdot \d \symbf{l} = \d E
     \label{eq:relativistic-work-energy-theorem}
 \end{equation}
 
 假设 \cref{eq:relativistic-momentum-theorem} 和 \cref{eq:relativistic-work-energy-theorem} 都是惯性系不变的，则有
 \begin{equation}
-    \d p_x' = F_x' \d t' = \frac{F_x - \frac{v}{c^2} \bm{F} \cdot \bm{u}}{1 - \frac{v}{c^2} u_x} \cdot \frac{\d t - \frac{v}{c^2} \d x}{\sqrt{1 - \frac{v^2}{c^2}}}
+    \d p_x' = F_x' \d t' = \frac{F_x - \frac{v}{c^2} \symbf{F} \cdot \symbf{u}}{1 - \frac{v}{c^2} u_x} \cdot \frac{\d t - \frac{v}{c^2} \d x}{\sqrt{1 - \frac{v^2}{c^2}}}
 \end{equation}
-将 $\d x = u_x \d t$ 和 $\bm{u} \d t = \d \bm{l}$ 代入上式，得
+将 $\d x = u_x \d t$ 和 $\symbf{u} \d t = \d \symbf{l}$ 代入上式，得
 \begin{equation}
     \d p_x' = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \left( \d p_x - \frac{v}{c^2} \d E \right)
 \end{equation}
@@ -927,12 +927,12 @@
 
 同样地，对于能量的变换，有
 \begin{equation}
-    \d E' = \bm{F'} \cdot \d \bm{l'} = F_x' \d x' + F_y' \d y' + F_z' \d z'
+    \d E' = \symbf{F'} \cdot \d \symbf{l'} = F_x' \d x' + F_y' \d y' + F_z' \d z'
 \end{equation}
-代入 $\bm{F'}$ 的变换式和 $\d \bm{l'}$ 的变换式，得
+代入 $\symbf{F'}$ 的变换式和 $\d \symbf{l'}$ 的变换式，得
 \begin{equation}
     \begin{aligned}
-        \d E' & = \frac{F_x - \frac{v}{c^2} \bm{F} \cdot \bm{u}}{1 - \frac{v}{c^2} u_x} \cdot \frac{\d x - v \d t}{\sqrt{1 - \frac{v^2}{c^2}}} + F_y \d y + F_z \d z \\
+        \d E' & = \frac{F_x - \frac{v}{c^2} \symbf{F} \cdot \symbf{u}}{1 - \frac{v}{c^2} u_x} \cdot \frac{\d x - v \d t}{\sqrt{1 - \frac{v^2}{c^2}}} + F_y \d y + F_z \d z \\
               & = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \left( F_x u_x + F_y u_y + F_z u_z - v F_x \right) \d t
     \end{aligned}
 \end{equation}
@@ -968,9 +968,9 @@
 
 \subsubsection{质量变换、质能关系与能量分解}
 
-狭义相对论中，质点的动量 $\bm{p}$、质量 $m$ 和速度 $\bm{u}$ 之间的关系与经典一致，且应具有惯性系不变性，即
+狭义相对论中，质点的动量 $\symbf{p}$、质量 $m$ 和速度 $\symbf{u}$ 之间的关系与经典一致，且应具有惯性系不变性，即
 \begin{equation}
-    \bm{p} = m \bm{u}, \quad \bm{p'} = m' \bm{u'}
+    \symbf{p} = m \symbf{u}, \quad \symbf{p'} = m' \symbf{u'}
 \end{equation}
 
 考虑上式的 $y$ 分量，有
@@ -982,7 +982,7 @@
     m = \frac{p_y}{u_y} = \frac{p_y'}{u_y'} \frac{1 + \frac{v}{c^2} u_x'}{\sqrt{1 - \frac{v^2}{c^2}}} = m' \frac{1 + \frac{v}{c^2} u_x'}{\sqrt{1 - \frac{v^2}{c^2}}}
 \end{equation}
 
-考虑任一瞬时，$S$ 系中的质点速度 $\bm{u}$ 沿 $x$ 轴方向，再取相对质点瞬时静止的 $S'$ 系，此时 $u_x' = 0$，在 $S'$ 系中记 $m' = m_0$，上式变为
+考虑任一瞬时，$S$ 系中的质点速度 $\symbf{u}$ 沿 $x$ 轴方向，再取相对质点瞬时静止的 $S'$ 系，此时 $u_x' = 0$，在 $S'$ 系中记 $m' = m_0$，上式变为
 \begin{equation}
     m = \frac{m'}{\sqrt{1 - \frac{v^2}{c^2}}}
 \end{equation}
@@ -1149,7 +1149,7 @@
 
 \subsection{四维速度}
 
-先前面定义的质点速度 $\bm{u}$ 的惯性系变换式为
+先前面定义的质点速度 $\symbf{u}$ 的惯性系变换式为
 \begin{equation}
     \left\{
     \begin{aligned}
@@ -1159,7 +1159,7 @@
     \end{aligned}
     \right.
 \end{equation}
-可以看出，质点速度 $\bm{u}$ 的惯性系变换式与坐标 $x^\mu$ 的惯性系变换式非常相似，这启发我们引入四维速度的概念。
+可以看出，质点速度 $\symbf{u}$ 的惯性系变换式与坐标 $x^\mu$ 的惯性系变换式非常相似，这启发我们引入四维速度的概念。
 
 \begin{definition}{四维速度}{four-velocity}
     质点的四维速度定义为
@@ -1167,7 +1167,7 @@
         u^\mu = (u^0, u^1, u^2, u^3) = \left( \gamma c, \gamma u_x, \gamma u_y, \gamma u_z \right)
     \end{equation}
     其中，$u^0$ 是时间分量，$u^1$、$u^2$、$u^3$ 是空间分量。
-    注意此处的 $\gamma$ 不是两个惯性系之间的相对速度的洛伦兹因子，而是质点速度 $\bm{u}$ 的洛伦兹因子，即 $\gamma = \frac{1}{\sqrt{1 - \frac{u^2}{c^2}}}$。
+    注意此处的 $\gamma$ 不是两个惯性系之间的相对速度的洛伦兹因子，而是质点速度 $\symbf{u}$ 的洛伦兹因子，即 $\gamma = \frac{1}{\sqrt{1 - \frac{u^2}{c^2}}}$。
 \end{definition}
 
 它实际上可以由坐标 $x^\mu$ 的四维导数定义，即
@@ -1222,11 +1222,11 @@
     \end{aligned}
     \right.
 \end{equation}
-即四维速度的空间分量的惯性系变换式与质点速度 $\bm{u}$ 的惯性系变换式相同。
+即四维速度的空间分量的惯性系变换式与质点速度 $\symbf{u}$ 的惯性系变换式相同。
 
 \subsection{四维动量}
 
-根据质点动量 $\bm{p}$ 和四维速度 $u^\mu$ 的定义，我们可以定义质点的四维动量为
+根据质点动量 $\symbf{p}$ 和四维速度 $u^\mu$ 的定义，我们可以定义质点的四维动量为
 \begin{definition}{四维动量}{four-momentum}
     质点的四维动量定义为
     \begin{equation}
@@ -1300,7 +1300,7 @@ $\theta' = \frac{\pi}{2}$ 时，得到光的横向多普勒效应的频率变换
 从上式可以看出横向多普勒效应的频率变换式中没有一阶项，只有二阶项，经典情况下将其忽略了。
 
 \subsection{四维力}
-根据质点动量 $\bm{p}$ 和四维动量 $p^\mu$ 的定义，我们可以定义质点的四维力为
+根据质点动量 $\symbf{p}$ 和四维动量 $p^\mu$ 的定义，我们可以定义质点的四维力为
 \begin{definition}{四维力}{four-force}
     质点的四维力定义为
     \begin{equation}
@@ -1348,7 +1348,7 @@ $\theta' = \frac{\pi}{2}$ 时，得到光的横向多普勒效应的频率变换
 \end{equation}
 其中 $A_i$ 和 $A'_i$ 分别是反应前后参与反应的粒子或核，相应的动量、能量守恒定律为
 \begin{equation}
-    \bm{p}_1 + \bm{p}_2 + \ldots = \bm{p}'_1 + \bm{p}'_2 + \ldots
+    \symbf{p}_1 + \symbf{p}_2 + \ldots = \symbf{p}'_1 + \symbf{p}'_2 + \ldots
 \end{equation}
 \begin{equation}
     E_1 + E_2 + \ldots = E'_1 + E'_2 + \ldots
@@ -1402,13 +1402,13 @@ $\theta' = \frac{\pi}{2}$ 时，得到光的横向多普勒效应的频率变换
 \end{equation}
 
 而现代大加速器多采用对撞机的形式。
-假定 $A_1$、$A_2$ 是同种粒子，$m_{10} = m_{20} = m_0$，$\bm{p}_1 + \bm{p}_2 = \bm{0}$，$E_1 + E_2 = 2E$，对撞机所需提供的阈能 $E_{\text{阀}^{CM}} = 2E$。
+假定 $A_1$、$A_2$ 是同种粒子，$m_{10} = m_{20} = m_0$，$\symbf{p}_1 + \symbf{p}_2 = \symbf{0}$，$E_1 + E_2 = 2E$，对撞机所需提供的阈能 $E_{\text{阀}^{CM}} = 2E$。
 在质心系中有
 \begin{equation}
     \begin{aligned}
-        (p_1^\mu + p_2^\mu)^2 & = (p_1^\mu)^2 + (p_2^\mu)^2 + 2 p_1^\mu p_{2\mu}                  \\
-                              & = m_0^2 c^2 + m_0^2 c^2 + 2 (E^2 / c^2 - \bm{p}_1 \cdot \bm{p}_2) \\
-                              & = 4 E^2 / c^2                                                     \\
+        (p_1^\mu + p_2^\mu)^2 & = (p_1^\mu)^2 + (p_2^\mu)^2 + 2 p_1^\mu p_{2\mu}                        \\
+                              & = m_0^2 c^2 + m_0^2 c^2 + 2 (E^2 / c^2 - \symbf{p}_1 \cdot \symbf{p}_2) \\
+                              & = 4 E^2 / c^2                                                           \\
                               & = (E_{\text{阀}}^{CM})^2 / c^2
     \end{aligned}
 \end{equation}
@@ -1447,7 +1447,7 @@ $\theta' = \frac{\pi}{2}$ 时，得到光的横向多普勒效应的频率变换
 \begin{equation}
     p^2 + p_1^2 - 2 p^\mu p_{1\mu} = p_2^2
 \end{equation}
-在质心系中 $\bm{p} = \bm{0}$，$E = m_0 c^2$，$p^\mu p_{1\mu} = m_0 E_1$，于是
+在质心系中 $\symbf{p} = \symbf{0}$，$E = m_0 c^2$，$p^\mu p_{1\mu} = m_0 E_1$，于是
 \begin{equation}
     E_1 = \frac{m_0^2 + m_{10}^2 - m_{20}^2}{2 m_0} c^2
 \end{equation}

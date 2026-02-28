@@ -27,17 +27,17 @@
             \draw[fill=white, thin] (p1) -- (p2) -- (p3) -- (p4) -- cycle;
 
             % 面元标注 dS
-            \node[below right, font=\footnotesize] at (p2) {$\d \bm{S}$};
+            \node[below right, font=\footnotesize] at (p2) {$\d \symbf{S}$};
 
             % 4. 绘制法向量和面元矢量
             % 中心点
             \coordinate (center) at (0.35, 0.35);
 
             % 法向矢量 n (稍长)
-            \draw[->, thick, blue] (center) -- ++(70:1.5) node[above] {$\bm{n}$};
+            \draw[->, thick, blue] (center) -- ++(70:1.5) node[above] {$\symbf{n}$};
 
             % 面元矢量 dS vector (稍短，方向相同)
-            \draw[->, thick, red] (center) -- ++(70:0.8) node[right, font=\footnotesize, xshift=2pt] {$\d \bm{S} = \d S \bm{n}$};
+            \draw[->, thick, red] (center) -- ++(70:0.8) node[right, font=\footnotesize, xshift=2pt] {$\d \symbf{S} = \d S \symbf{n}$};
         \end{scope}
 
     \end{tikzpicture}
