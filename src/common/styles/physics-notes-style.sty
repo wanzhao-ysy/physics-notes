@@ -40,7 +40,24 @@
 \RequirePackage{amsthm}              % AMS 定理环境
 
 \RequirePackage{unicode-math}        % Unicode 数学字体支持
-\setmathfont{Latin Modern Math}   % 设置数学字体为 Latin Modern Math
+\setmathfont{Latin Modern Math}      % 设置数学字体为 Latin Modern Math
+
+% 常用正体符号定义
+\newcommand{\ee}{\symup{e}}          % 自然对数底
+\newcommand{\uppi}{\symup{\pi}}      % 圆周率
+\newcommand{\ii}{\symup{i}}          % 虚数单位
+\newcommand{\jj}{\symup{j}}          % 备用的虚数单位
+
+\newcommand{\DD}{\operatorname{\symup{D}}}              % 微分算子
+
+\AtBeginDocument{
+    \renewcommand{\Re}{\operatorname{\symup{Re}}}        % 实部
+    \renewcommand{\Im}{\operatorname{\symup{Im}}}        % 虚部
+}
+
+% \renewcommand{\Re}{\operatorname{\mathrm{Re}}}
+
+
 
 % 符号扩展
 \RequirePackage{fixdif}              % 完美的微分算子格式修正

@@ -152,9 +152,9 @@ $ \d y $ 与 $ \d x $ 之间的关系为
 此外，还有几个常用的 $ n $ 阶导数公式：
 \begin{physlist}{常用 $ n $ 阶导数公式}{common-nth-derivative-formulas}
     \begin{align}
-         & (1)\quad (e^{a x})^{(n)} = a^n e^{a x} ;                                    \\
-         & (2)\quad (\sin a x)^{(n)} = a^n \sin \left( a x + \frac{n \pi}{2} \right) ; \\
-         & (3)\quad (\cos a x)^{(n)} = a^n \cos \left( a x + \frac{n \pi}{2} \right) .
+         & (1)\quad (\ee^{a x})^{(n)} = a^n \ee^{a x} ;                                  \\
+         & (2)\quad (\sin a x)^{(n)} = a^n \sin \left( a x + \frac{n \uppi}{2} \right) ; \\
+         & (3)\quad (\cos a x)^{(n)} = a^n \cos \left( a x + \frac{n \uppi}{2} \right) .
     \end{align}
 
 \end{physlist}
@@ -183,7 +183,7 @@ $ \d y $ 与 $ \d x $ 之间的关系为
     \begin{itemize}
         \item 拉格朗日（Lagrange）余项形式：
               \begin{equation}
-                  R_n = \frac{f^{(n+1)}(\xi)}{(n+1)!} (x - x_0)^{n+1},\quad \xi\text{ 在 } x \text{ 与 } x_0 \text{ 之间} ;
+                  R_n = \frac{f^{(n+1)}(\xi)}{(n+1)!} (x - x_0)^{n+1},\text{$\xi$ 在 $x$ 与 $x_0$ 之间}
               \end{equation}
         \item 皮亚诺（Peano）余项形式：
               \begin{equation}
@@ -234,9 +234,9 @@ $ \d y $ 与 $ \d x $ 之间的关系为
     \end{equation*}
     这与我们在组合数学中学过的排列数和组合数有如下关系：
     \begin{equation*}
-        A_m^n = n! \binom{m}{n},\quad C_m^n = \binom{m}{n} .
+        \symup{A}_m^n = n! \binom{m}{n},\quad \symup{C}_m^n = \binom{m}{n} .
     \end{equation*}
-    其中 $ A_m^n $ 表示从 $ m $ 个不同元素中取出 $ n $ 个元素进行排列的总数，$ C_m^n $ 表示从 $ m $ 个不同元素中取出 $ n $ 个元素进行组合的总数。
+    其中 $ \symup{A}_m^n $ 表示从 $ m $ 个不同元素中取出 $ n $ 个元素进行排列的总数，$ \symup{C}_m^n $ 表示从 $ m $ 个不同元素中取出 $ n $ 个元素进行组合的总数。
     需要满足 $ m \geq n $。
 \end{note}
 
@@ -321,8 +321,8 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
          & (1)\quad \int x^n \d x = \frac{x^{n+1}}{n+1} + C,\quad (n \neq -1) ; \\
          & (2)\quad \int \frac{1}{x} \d x = \ln |x| + C ;                       \\
          & (3)\quad \int a^x \d x = \frac{a^x}{\ln a} + C ;                     \\
-         & (4)\quad \int e^x \d x = e^x + C ;                                   \\
-         & (5)\quad \int \log_a x \d x = x (\log_a x - \log_e a) + C ;          \\
+         & (4)\quad \int \ee^x \d x = \ee^x + C ;                               \\
+         & (5)\quad \int \log_a x \d x = x (\log_a x - \log_{\ee} a) + C ;      \\
          & (6)\quad \int \ln x \d x = x (\ln x - 1) + C ;                       \\
          & (7)\quad \int \sin x \d x = -\cos x + C ;                            \\
          & (8)\quad \int \cos x \d x = \sin x + C .
@@ -598,29 +598,29 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
           \end{equation*}
           它的通解为
           \begin{equation}
-              y_h = C e^{-\int P(x) \d x} \label{eq:first-order-linear-ordinary-differential-equation-general-solution},
+              y_h = C \ee^{-\int P(x) \d x} \label{eq:first-order-linear-ordinary-differential-equation-general-solution},
           \end{equation}
           其中，$ C $ 为任意常数。
     \item 求该非齐次方程的一个特解 $ y_p $，可用如下方法求解，即设
           \begin{equation}
-              y_p = u(x) e^{-\int P(x) \d x} \label{eq:particular-solution-ansatz},
+              y_p = u(x) \ee^{-\int P(x) \d x} \label{eq:particular-solution-ansatz},
           \end{equation}
           其中，$ u(x) $ 为待定函数。
           将 $ y_p $ 代入非齐次方程，得
           \begin{equation*}
-              \frac{\d u}{\d x} = Q(x) e^{\int P(x) \d x} .
+              \frac{\d u}{\d x} = Q(x) \ee^{\int P(x) \d x} .
           \end{equation*}
           分离变量并积分，得
           \begin{equation*}
-              u(x) = \int Q(x) e^{\int P(x) \d x} \d x .
+              u(x) = \int Q(x) \ee^{\int P(x) \d x} \d x .
           \end{equation*}
           因此，非齐次方程的一个特解为
           \begin{equation}
-              y_p = e^{-\int P(x) \d x} \int Q(x) e^{\int P(x) \d x} \d x .
+              y_p = \ee^{-\int P(x) \d x} \int Q(x) \ee^{\int P(x) \d x} \d x .
           \end{equation}
     \item 由此可得该非齐次微分方程的通解为
           \begin{equation}
-              y = y_h + y_p = C e^{-\int P(x) \d x} + e^{-\int P(x) \d x} \int Q(x) e^{\int P(x) \d x} \d x \label{eq:first-order-linear-ordinary-differential-equation-general-solution-nonhomogeneous}.
+              y = y_h + y_p = C \ee^{-\int P(x) \d x} + \ee^{-\int P(x) \d x} \int Q(x) \ee^{\int P(x) \d x} \d x \label{eq:first-order-linear-ordinary-differential-equation-general-solution-nonhomogeneous}.
           \end{equation}
 \end{enumerate}
 
@@ -629,9 +629,8 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 可视为对齐次方程通解中的积分常数 $ C $ 进行函数化处理，即将 $ C $ 替换为待定函数 $ u(x) $ ，因此，这种方法称为「常数变易法」。
 
 此外，从通解 \cref{eq:first-order-linear-ordinary-differential-equation-general-solution-nonhomogeneous} 可以看出：
-非齐次微分方程的通解等于对应齐次微分方程的通解 $ C e^{-\int P(x) \d x} $ 与非齐次方程的一个特解 $ e^{-\int P(x) \d x} \int Q(x) e^{\int P(x) \d x} \d x $ 之和。
+非齐次微分方程的通解等于对应齐次微分方程的通解 $ C \ee^{-\int P(x) \d x} $ 与非齐次方程的一个特解 $ \ee^{-\int P(x) \d x} \int Q(x) \ee^{\int P(x) \d x} \d x $ 之和。
 这件事情在更高阶的线性微分方程中也成立，这一性质称为「叠加原理」，我们之后会再提到它。
-
 \bigskip
 
 再此基础上，我们介绍二阶微分方程中的特例——可降阶微分方程。
@@ -711,9 +710,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
               则在 $ x_0 $ 附近总是存在唯一解。
               但对于边值问题（条件分布在 $ x_0 , x_1 , \ldots $ 处），情况就复杂得多了：
               \begin{itemize}
-                  \item 可能没有解：例如，方程 $ y'' + y = 0 $ 在区间 $ [0, \pi] $ 上满足边界条件 $ y(0) = 0 , y(\pi) = 1 $ 的解不存在；
+                  \item 可能没有解：例如，方程 $ y'' + y = 0 $ 在区间 $ [0, \uppi] $ 上满足边界条件 $ y(0) = 0 , y(\uppi) = 1 $ 的解不存在；
                   \item 可能有唯一解。
-                  \item 可能有无穷多个解：例如，方程 $ y'' + y = 0 $ 在区间 $ [0, \pi] $ 上满足边界条件 $ y(0) = 0 , y(\pi) = 0 $ 的解有无穷多个。
+                  \item 可能有无穷多个解：例如，方程 $ y'' + y = 0 $ 在区间 $ [0, \uppi] $ 上满足边界条件 $ y(0) = 0 , y(\uppi) = 0 $ 的解有无穷多个。
               \end{itemize}
         \item 物理意义不同
               \begin{itemize}
@@ -820,7 +819,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 求解该类微分方程的方法如下：
 \begin{enumerate}
     \item 求解对应的齐次方程 \cref{eq:homogeneous-second-order-constant-coefficient-linear-ordinary-differential-equation}。
-          设齐次方程的解为 $ y = e^{\lambda x} $ 的形式，将其代入齐次方程，得特征方程
+          设齐次方程的解为 $ y = \ee^{\lambda x} $ 的形式，将其代入齐次方程，得特征方程
           \begin{equation*}
               \lambda^2 + a \lambda + b = 0 .
           \end{equation*}
@@ -829,15 +828,15 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
           \begin{enumerate}
               \item 若 $ \lambda_1 \neq \lambda_2 $，则齐次方程的基本解组为
                     \begin{equation*}
-                        y_1 = e^{\lambda_1 x} , \quad y_2 = e^{\lambda_2 x} .
+                        y_1 = \ee^{\lambda_1 x} , \quad y_2 = \ee^{\lambda_2 x} .
                     \end{equation*}
               \item 若 $ \lambda_1 = \lambda_2 = \lambda $，则齐次方程的基本解组为
                     \begin{equation*}
-                        y_1 = e^{\lambda x} , \quad y_2 = x e^{\lambda x} .\text{（这是容易验证的）}
+                        y_1 = \ee^{\lambda x} , \quad y_2 = x \ee^{\lambda x} .\text{（这是容易验证的）}
                     \end{equation*}
-              \item 若 $ \lambda_{1,2} = \alpha \pm \beta i $（其中，$ i = \sqrt{-1} $），则齐次方程的基本解组为
+              \item 若 $ \lambda_{1,2} = \alpha \pm \beta \ii $（其中，$ \ii = \sqrt{-1} $），则齐次方程的基本解组为
                     \begin{equation*}
-                        y_1 = e^{\alpha x} \cos (\beta x) , \quad y_2 = e^{\alpha x} \sin (\beta x) .
+                        y_1 = \ee^{\alpha x} \cos (\beta x) , \quad y_2 = \ee^{\alpha x} \sin (\beta x) .
                     \end{equation*}
           \end{enumerate}
           由此可得齐次方程的通解为
@@ -900,15 +899,15 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \end{equation*}
     它有 $ k $ 个互不相同的实根 $ \lambda_1 , \lambda_2 , \ldots , \lambda_k $，其中，第 $ i $ 个实根 $ \lambda_i $ 的重数为 $ m_i $（$ i = 1, 2, \ldots , k $），则该微分方程的基本解组为
     \begin{equation*}
-        \{ e^{\lambda_1 x} , x e^{\lambda_1 x} , \ldots , x^{m_1 - 1} e^{\lambda_1 x} , e^{\lambda_2 x} , x e^{\lambda_2 x} , \ldots , x^{m_2 - 1} e^{\lambda_2 x} , \ldots , e^{\lambda_k x} , x e^{\lambda_k x} , \ldots , x^{m_k - 1} e^{\lambda_k x} \} .
+        \{ \ee^{\lambda_1 x} , x \ee^{\lambda_1 x} , \ldots , x^{m_1 - 1} \ee^{\lambda_1 x} , \ee^{\lambda_2 x} , x \ee^{\lambda_2 x} , \ldots , x^{m_2 - 1} \ee^{\lambda_2 x} , \ldots , \ee^{\lambda_k x} , x \ee^{\lambda_k x} , \ldots , x^{m_k - 1} \ee^{\lambda_k x} \} .
     \end{equation*}
-    若 $ \lambda_{k+1} = \alpha + \beta i $ 与 $ \lambda_{k+2} = \alpha - \beta i $（$ \beta > 0 $）为一对共轭复根，且它们的重数均为 $ m $，则该微分方程的基本解组还应包括
+    若 $ \lambda_{k+1} = \alpha + \beta \ii $ 与 $ \lambda_{k+2} = \alpha - \beta \ii $（$ \beta > 0 $）为一对共轭复根，且它们的重数均为 $ m $，则该微分方程的基本解组还应包括
     \begin{equation*}
-        \{ e^{\alpha x} \cos (\beta x) , x e^{\alpha x} \cos (\beta x) , \ldots , x^{m - 1} e^{\alpha x} \cos (\beta x) , e^{\alpha x} \sin (\beta x) , x e^{\alpha x} \sin (\beta x) , \ldots , x^{m - 1} e^{\alpha x} \sin (\beta x) \} .
+        \{ \ee^{\alpha x} \cos (\beta x) , x \ee^{\alpha x} \cos (\beta x) , \ldots , x^{m - 1} \ee^{\alpha x} \cos (\beta x) , \ee^{\alpha x} \sin (\beta x) , x \ee^{\alpha x} \sin (\beta x) , \ldots , x^{m - 1} \ee^{\alpha x} \sin (\beta x) \} .
     \end{equation*}
     则方程 \cref{eq:nth-order-constant-coefficient-homogeneous-linear-ordinary-differential-equation} 的通解为
     \begin{equation*}
-        y = C_1 e^{\lambda_1 x} + C_2 x e^{\lambda_1 x} + \ldots + C_{m_1} x^{m_1 - 1} e^{\lambda_1 x} + C_{m_1 + 1} e^{\lambda_2 x} + C_{m_1 + 2} x e^{\lambda_2 x} + \ldots + C_{m_1 + m_2} x^{m_2 - 1} e^{\lambda_2 x} + \ldots
+        y = C_1 \ee^{\lambda_1 x} + C_2 x \ee^{\lambda_1 x} + \ldots + C_{m_1} x^{m_1 - 1} \ee^{\lambda_1 x} + C_{m_1 + 1} \ee^{\lambda_2 x} + C_{m_1 + 2} x \ee^{\lambda_2 x} + \ldots + C_{m_1 + m_2} x^{m_2 - 1} \ee^{\lambda_2 x} + \ldots
     \end{equation*}
 \end{theorem}
 
@@ -921,8 +920,8 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 为此，我们引入一种计算方法——算子法。
 
 \begin{definition}{微分算子}{differential-operator}
-    设 $ D = \frac{\d}{\d x} $，则称 $ D $ 为微分算子。
-    由此可定义 $ D^n = \frac{\d^n}{\d x^n} $。
+    设 $ \DD = \frac{\d}{\d x} $，则称 $ \DD $ 为微分算子。
+    由此可定义 $ \DD^n = \frac{\d^n}{\d x^n} $。
 \end{definition}
 
 \begin{note}{关于微分算子的说明}{note-on-differential-operator}
@@ -933,27 +932,27 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 于是，$ n $ 阶常系数线性微分方程可表示为
 \begin{equation}
-    (D^n + a_{n-1} D^{n-1} + \ldots + a_1 D + a_0) y = f(x) .
+    (\DD^n + a_{n-1} \DD^{n-1} + \ldots + a_1 \DD + a_0) y = f(x) .
 \end{equation}
 
 设特征多项式 $ P(\lambda) = \lambda^n + a_{n-1} \lambda^{n-1} + \ldots + a_1 \lambda + a_0 $，则可将上式写为
 \begin{equation}
-    P(D) y = f(x) .
+    P(\DD) y = f(x) .
 \end{equation}
 
-首先，我们研究 $ f(x) = e^{ax} $ 的情形，其中，$ a $ 为常数。
+首先，我们研究 $ f(x) = \ee^{ax} $ 的情形，其中，$ a $ 为常数。
 
 若 $ P(a) \neq 0 $，则有如下定理：
 \begin{theorem}{指数代换法则}{exponential-substitution-rule}
-    设 $ P(D) $ 为 $ n $ 阶常系数线性微分算子，$ a $ 为常数，且 $ P(a) \neq 0 $，则
+    设 $ P(\DD) $ 为 $ n $ 阶常系数线性微分算子，$ a $ 为常数，且 $ P(a) \neq 0 $，则
     \begin{equation}
-        P(D) e^{ax} = P(a) e^{ax} .
+        P(\DD) \ee^{ax} = P(a) \ee^{ax} .
     \end{equation}
     \textbf{证明}：
 
-    注意到 $ P(D) $ 是由 $ D $ 的多项式构成的，因此只需证明
+    注意到 $ P(\DD) $ 是由 $ \DD $ 的多项式构成的，因此只需证明
     \begin{equation*}
-        D^n e^{ax} = a^n e^{ax} .
+        \DD^n \ee^{ax} = a^n \ee^{ax} .
     \end{equation*}
     这是显然的。
     \qed
@@ -961,73 +960,73 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 由此可得如下结论：
 \begin{theorem}{指数输入定理}{exponential-input-theorem}
-    设 $ P(D) $ 为 $ n $ 阶常系数线性微分算子，$ a $ 为常数，且 $ P(a) \neq 0 $，则方程
+    设 $ P(\DD) $ 为 $ n $ 阶常系数线性微分算子，$ a $ 为常数，且 $ P(a) \neq 0 $，则方程
     \begin{equation*}
-        P(D) y = e^{ax}
+        P(\DD) y = \ee^{ax}
     \end{equation*}
     的一个特解为
     \begin{equation}
-        y_p = \frac{1}{P(a)} e^{ax} .
+        y_p = \frac{1}{P(a)} \ee^{ax} .
     \end{equation}
     \textbf{证明}：
 
     由指数代换法则，有
     \begin{equation*}
-        P(D) y_p = P(D) \left( \frac{1}{P(a)} e^{ax} \right) = \frac{1}{P(a)} P(D) e^{ax} = \frac{1}{P(a)} P(a) e^{ax} = e^{ax} .
+        P(\DD) y_p = P(\DD) \left( \frac{1}{P(a)} \ee^{ax} \right) = \frac{1}{P(a)} P(\DD) \ee^{ax} = \frac{1}{P(a)} P(a) \ee^{ax} = \ee^{ax} .
     \end{equation*}
     \qed
 \end{theorem}
 
 注意到三角函数是可以用指数函数表示的，即欧拉（Euler）公式
 \begin{equation}
-    e^{ix} = \cos x + i \sin x ,
+    \ee^{\ii x} = \cos x + \ii \sin x ,
 \end{equation}
-而这有什么用呢？由于复变函数的求导可以简单理解为分别对实部与虚部求导，于是就容易证明对于一个在复数域上的微分方程（但 $ P(x) \in R[x] $，就是 $ P (x) $ 为实系数多项式）
+而这有什么用呢？由于复变函数的求导可以简单理解为分别对实部与虚部求导，于是就容易证明对于一个在复数域上的微分方程（但 $ P(x) \in \symbb{R}[x] $，就是 $ P (x) $ 为实系数多项式）
 \begin{equation}
-    P(D) y = f (x)
+    P(\DD) y = f (x)
 \end{equation}
 的特解的实部恰好是
 \begin{equation}
-    P(D) y = \Re (f (x))
+    P(\DD) y = \Re (f (x))
 \end{equation}
 的特解，同样虚部恰好是
 \begin{equation}
-    P(D) y = \Im (f (x))
+    P(\DD) y = \Im (f (x))
 \end{equation}
 的特解。所以对于 $ f (x) $ 为三角函数的情形完全可以转化为指数函数的情形来处理，最后根据要求保留实部或虚部即可。
-所以我们讨论的 $ e^{ax} $ 中的 $ a $ 可以是任意复数，即 $ a \in \mathbb{C} $。
+所以我们讨论的 $ \ee^{ax} $ 中的 $ a $ 可以是任意复数，即 $ a \in \symbb{C} $。
 
 到现在其实已经得到了一个挺不错的结果了，但这其实还不够。
 注意到指数输入 \cref{thm:exponential-input-theorem} 中有一个限制条件 $ P(a) \neq 0 $，因为分母显然不能为零。
 但是在实际中，$ P(a) = 0 $ 的情况比比皆是。所以有如下定理：
 \begin{theorem}{指数位移法则}{exponential-shift-rule}
-    设 $ P(D) $ 为 $ n $ 阶常系数线性微分算子，$ a $ 为常数，$ u(x) $ 为可微函数，则
+    设 $ P(\DD) $ 为 $ n $ 阶常系数线性微分算子，$ a $ 为常数，$ u(x) $ 为可微函数，则
     \begin{equation}
-        P(D) \left( e^{ax} u(x) \right) = e^{ax} P(D + a) u(x) .
+        P(\DD) \left( \ee^{ax} u(x) \right) = \ee^{ax} P(\DD + a) u(x) .
     \end{equation}
     \textbf{证明}：
 
-    注意到 $ P(D) $ 是由 $ D $ 的多项式构成的，因此只需证明
+    注意到 $ P(\DD) $ 是由 $ \DD $ 的多项式构成的，因此只需证明
     \begin{equation*}
-        D^n \left( e^{ax} u(x) \right) = e^{ax} (D + a)^n u(x) .
+        \DD^n \left( \ee^{ax} u(x) \right) = \ee^{ax} (\DD + a)^n u(x) .
     \end{equation*}
     那么很明显可以运用数学归纳法
     \begin{enumerate}
         \item 当 $ n = 1 $ 时，显然成立：
               \begin{equation*}
-                  D \left( e^{ax} u(x) \right) = e^{ax} (D + a) u(x) .
+                  \DD \left( \ee^{ax} u(x) \right) = \ee^{ax} (\DD + a) u(x) .
               \end{equation*}
         \item 假设当 $ n = k $ 时成立，即
               \begin{equation*}
-                  D^k \left( e^{ax} u(x) \right) = e^{ax} (D + a)^k u(x) .
+                  \DD^k \left( \ee^{ax} u(x) \right) = \ee^{ax} (\DD + a)^k u(x) .
               \end{equation*}
               则当 $ n = k + 1 $ 时，有
               \begin{equation*}
                   \begin{aligned}
-                      D^{k+1} \left( e^{ax} u(x) \right) & = D \left( D^k \left( e^{ax} u(x) \right) \right) \\
-                                                         & = D \left( e^{ax} (D + a)^k u(x) \right)          \\
-                                                         & = e^{ax} (D + a) (D + a)^k u(x)                   \\
-                                                         & = e^{ax} (D + a)^{k+1} u(x) .
+                      \DD^{k+1} \left( \ee^{ax} u(x) \right) & = \DD \left( \DD^k \left( \ee^{ax} u(x) \right) \right) \\
+                                                             & = \DD \left( \ee^{ax} (\DD + a)^k u(x) \right)          \\
+                                                             & = \ee^{ax} (\DD + a) (\DD + a)^k u(x)                   \\
+                                                             & = \ee^{ax} (\DD + a)^{k+1} u(x) .
                   \end{aligned}
               \end{equation*}
     \end{enumerate}
@@ -1043,25 +1042,25 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \begin{theorem}{单根指数输入定理}{simple-root-exponential-input-theorem}
     若 $ a $ 为 $ P(x) = 0 $ 的单根，则有：
     \begin{equation}
-        y_p = \frac{x e^{ax} }{P'(a)} .
+        y_p = \frac{x \ee^{ax} }{P'(a)} .
     \end{equation}
     \textbf{证明}：
 
     不妨设 $ a $，$ b $ （$ a \neq  b $）为 $ P(x) = 0 $ 的两个根，为方便起见，我们假设 $ P(x) $ 的最高次项系数为 $ 1 $。那么有：
     \begin{equation*}
-        P(D) = (D - a)(D - b)
+        P(\DD) = (\DD - a)(\DD - b)
     \end{equation*}
     所以
     \begin{equation*}
-        P'(D) = 2D - (a + b)
+        P'(\DD) = 2\DD - (a + b)
     \end{equation*}
     故有 $ P'(a) = a - b $ , 于是将 $ y_p $ 代入方程可得：
     \begin{equation*}
         \begin{aligned}
-            P(D) y_p & = \frac{e^{ax} P(D + a) x }{P'(a)} \quad \text{（由指数位移法则）} \\
-                     & = \frac{e^{ax} (D + a - b)Dx }{a - b}                     \\
-                     & = \frac{e^{ax} (a - b) }{a - b}                           \\
-                     & = e^{ax} .
+            P(\DD) y_p & = \frac{\ee^{ax} P(\DD + a) x }{P'(a)} \quad \text{（由指数位移法则）} \\
+                       & = \frac{\ee^{ax} (\DD + a - b)\DD x }{a - b}                  \\
+                       & = \frac{\ee^{ax} (a - b) }{a - b}                             \\
+                       & = \ee^{ax} .
         \end{aligned}
     \end{equation*}
     \qed
@@ -1071,37 +1070,37 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \begin{theorem}{二重根指数输入定理}{double-root-exponential-input-theorem}
     若 $ a $ 为 $ P(x) = 0 $ 的二重根，则有：
     \begin{equation}
-        y_p = \frac{x^2 e^{ax} }{P''(a)} .
+        y_p = \frac{x^2 \ee^{ax} }{P''(a)} .
     \end{equation}
     证明类似单根情形，此处略去。
 \end{theorem}
 
 由此，我们可以推出如下结论：
 \begin{theorem}{$ n $ 重根指数输入定理}{n-th-root-exponential-input-theorem}
-    若 $ a \in \mathbb{C} $ 为 $ P(x) = 0 $ 的 $ n $ 重根，则有：
+    若 $ a \in \symbb{C} $ 为 $ P(x) = 0 $ 的 $ n $ 重根，则有：
     \begin{equation}
-        y_p = \frac{x^n e^{ax} }{P^{(n)}(a)} .
+        y_p = \frac{x^n \ee^{ax} }{P^{(n)}(a)} .
     \end{equation}
 
     \textbf{证明}：
 
-    由于 $ a $ 为 $ P(D) = 0 $ 的 $ n $ 重根，因此 $ P(D) $ 可表示为
+    由于 $ a $ 为 $ P(\DD) = 0 $ 的 $ n $ 重根，因此 $ P(\DD) $ 可表示为
     \begin{equation*}
-        P(D) = (D - a)^n \tilde{P}(D)
+        P(\DD) = (\DD - a)^n \tilde{P}(\DD)
     \end{equation*}
     则：
     \begin{equation*}
-        P ^{(n)} (D) = n! \tilde{P}(D) + (D - a) Q(D)
+        P ^{(n)} (\DD) = n! \tilde{P}(\DD) + (\DD - a) Q(\DD)
     \end{equation*}
-    其中，$ Q(D) $ 为某个微分算子。
+    其中，$ Q(\DD) $ 为某个微分算子。
     因此，$ P^{(n)} (a) = n! \tilde{P}(a) $。
     于是，将 $ y_p $ 代入方程可得：
     \begin{equation*}
         \begin{aligned}
-            P(D) y_p & = \frac{e^{ax} P(D + a) x^n }{P^{(n)}(a)} \quad \text{（由指数位移法则）} \\
-                     & = \frac{e^{ax} \tilde{P}(D + a) (D)^n x^n }{P^{(n)}(a)}          \\
-                     & = \frac{e^{ax} \tilde{P}(a) n! }{n! \tilde{P}(a)}                \\
-                     & = e^{ax} .
+            P(\DD) y_p & = \frac{\ee^{ax} P(\DD + a) x^n }{P^{(n)}(a)} \quad \text{（由指数位移法则）} \\
+                       & = \frac{\ee^{ax} \tilde{P}(\DD + a) (\DD)^n x^n }{P^{(n)}(a)}        \\
+                       & = \frac{\ee^{ax} \tilde{P}(a) n! }{n! \tilde{P}(a)}                  \\
+                       & = \ee^{ax} .
         \end{aligned}
     \end{equation*}
     \qed
@@ -1122,19 +1121,19 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     显然我们可以轻易的构造出一个特解 $ y_p = x + 1 $。
     这个方程用算子法可以写作：
     \begin{equation*}
-        (-D + 1) y = x .
+        (-\DD + 1) y = x .
     \end{equation*}
     如果大胆地把算子除到右边，会得到
     \begin{equation*}
-        y = \frac{x}{-D + 1} .
+        y = \frac{x}{-\DD + 1} .
     \end{equation*}
-    如果联想到 $ \frac{1}{1 - D} $ 的泰勒级数：
+    如果联想到 $ \frac{1}{1 - \DD} $ 的泰勒级数：
     \begin{equation*}
-        \frac{1}{1 - D} = 1 + D + D^2 + D^3 + \ldots ,
+        \frac{1}{1 - \DD} = 1 + \DD + \DD^2 + \DD^3 + \ldots ,
     \end{equation*}
     并更大胆地将其代入：
     \begin{equation*}
-        y = (1 + D + D^2 + D^3 + \ldots ) x = x + 1 .
+        y = (1 + \DD + \DD^2 + \DD^3 + \ldots ) x = x + 1 .
     \end{equation*}
     这正是我们之前构造的特解。
     $\hfill \QED $
@@ -1145,30 +1144,30 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \sum_{n=0}^{\infty} x^n = \frac{1}{1 - x}
 \end{equation}
 是有条件的，即当且仅当 $ |x| < 1 $ 时才成立。
-但是 $ D $ 是一个算子，根本没有什么度量概念！
-所以其实我们是在考虑 $ \frac{1}{P (D)} $ 的形式幂级数，也就是不考虑其收敛性，只关注它的形式。
+但是 $ \DD $ 是一个算子，根本没有什么度量概念！
+所以其实我们是在考虑 $ \frac{1}{P (\DD)} $ 的形式幂级数，也就是不考虑其收敛性，只关注它的形式。
 
 关于这么做是否正确，我可以得出一个简单的说明（并非严格证明）：
 \begin{note}{关于算子法中形式幂级数的说明}{note-on-formal-power-series-in-differential-operator-method}
-    如果考虑 $ 1 + D + D^2 + \ldots + D^{n - 1} $ 这 $ n $ 项，那么就有：
+    如果考虑 $ 1 + \DD + \DD^2 + \ldots + \DD^{n - 1} $ 这 $ n $ 项，那么就有：
     \begin{equation*}
-        (1 - D)(1 + D + D^2 + \ldots + D^{n - 1}) = (1 - D) \frac{1 - D^n}{1 - D} = 1 - D^n .
+        (1 - \DD)(1 + \DD + \DD^2 + \ldots + \DD^{n - 1}) = (1 - \DD) \frac{1 - \DD^n}{1 - \DD} = 1 - \DD^n .
     \end{equation*}
-    如果记 $ Q_n (D) = 1 + D + D^2 + \ldots + D^{n - 1} $，那么我们期望的答案是
+    如果记 $ Q_n (\DD) = 1 + \DD + \DD^2 + \ldots + \DD^{n - 1} $，那么我们期望的答案是
     \begin{equation*}
-        Q (D) f(x) = \lim_{n \to \infty} Q_n (D) f(x) .
+        Q (\DD) f(x) = \lim_{n \to \infty} Q_n (\DD) f(x) .
     \end{equation*}
-    那么将其带回原方程，并且注意到将算子 $ D $ 作为多项式不定元的多项式是满足结合律的：
+    那么将其带回原方程，并且注意到将算子 $ \DD $ 作为多项式不定元的多项式是满足结合律的：
     \begin{equation*}
         \begin{aligned}
-            P(D)(Q(D) f(x)) & = P(D) \left( \lim_{n \to \infty} Q_n (D) f(x) \right) \\
-                            & = \lim_{n \to \infty} P(D) (Q_n (D) f(x))              \\
-                            & = \lim_{n \to \infty} (1 - D^n) f(x)                   \\
-                            & = f(x).
+            P(\DD)(Q(\DD) f(x)) & = P(\DD) \left( \lim_{n \to \infty} Q_n (\DD) f(x) \right) \\
+                                & = \lim_{n \to \infty} P(\DD) (Q_n (\DD) f(x))              \\
+                                & = \lim_{n \to \infty} (1 - \DD^n) f(x)                     \\
+                                & = f(x).
         \end{aligned}
     \end{equation*}
 
-    所以现在问题转化成了求出 $ \frac{1}{P(D)} $ 的形式幂级数展开式，这可以利用泰勒展开或者利用多项式除法。
+    所以现在问题转化成了求出 $ \frac{1}{P(\DD)} $ 的形式幂级数展开式，这可以利用泰勒展开或者利用多项式除法。
     个人觉得多项式除法更直观一些，多项式的除法一般是长除法，并且原则是从高位向低位以此消去高次项，而在此处则反过来，从低位向高位消。
 
     \begin{equation*}
@@ -1179,26 +1178,26 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
         f(x) = g(x) h(x) + r(x) ,
     \end{equation*}
     其中 $ r(x) $ 的次数小于 $ g(x) $ 的次数。
-    而对于一般的 $ P(D) $，我们利用相反的方法，找到一个 $ H(D) $，使得
+    而对于一般的 $ P(\DD) $，我们利用相反的方法，找到一个 $ H(\DD) $，使得
     \begin{equation*}
-        1 = P(D) H(D) + R(D) ,
+        1 = P(\DD) H(\DD) + R(\DD) ,
     \end{equation*}
-    而 $ R(D) $ 的最低次数是可以无限增大的，于是我们记长除法（反过来的）第 $ k $ 次的余式为 $ R_k (D) $，商式为 $ H_k (D) $，于是有
+    而 $ R(\DD) $ 的最低次数是可以无限增大的，于是我们记长除法（反过来的）第 $ k $ 次的余式为 $ R_k (\DD) $，商式为 $ H_k (\DD) $，于是有
     \begin{equation*}
-        1 = P(D) H_k (D) + R_k (D) .
+        1 = P(\DD) H_k (\DD) + R_k (\DD) .
     \end{equation*}
     在极限存在的情况下，记
     \begin{equation*}
-        \lim_{k \to \infty} H_k (D) = H(D) ,
-        \lim_{k \to \infty} R_k (D) = R(D) .
+        \lim_{k \to \infty} H_k (\DD) = H(\DD) ,
+        \lim_{k \to \infty} R_k (\DD) = R(\DD) .
     \end{equation*}
-    那么将 $ H(D)f(x) $ 带回原方程：
+    那么将 $ H(\DD)f(x) $ 带回原方程：
     \begin{equation*}
         \begin{aligned}
-            P(D)(H(D) f(x)) & = P(D) \left( \lim_{k \to \infty} H_k (D) f(x) \right) \\
-                            & = \lim_{k \to \infty} P(D) (H_k (D) f(x))              \\
-                            & = \lim_{k \to \infty} (1 - R_k (D)) f(x)               \\
-                            & = f(x).
+            P(\DD)(H(\DD) f(x)) & = P(\DD) \left( \lim_{k \to \infty} H_k (\DD) f(x) \right) \\
+                                & = \lim_{k \to \infty} P(\DD) (H_k (\DD) f(x))              \\
+                                & = \lim_{k \to \infty} (1 - R_k (\DD)) f(x)                 \\
+                                & = f(x).
         \end{aligned}
     \end{equation*}
     这就说明了算子法的正确性。
@@ -1207,48 +1206,48 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 所以很自然的，我们有如下定义：
 \begin{definition}{微分算子多项式的逆}{inverse-of-differential-operator-polynomial}
-    若 $ P(D) $ 中的常数项不为零，我们定义：
+    若 $ P(\DD) $ 中的常数项不为零，我们定义：
     \begin{equation}
-        \frac{1}{P(D)} := H(D)
+        \frac{1}{P(\DD)} := H(\DD)
     \end{equation}
 \end{definition}
 那么由上文的讨论，当 $ f(x) $ 为多项式函数时，其解特解形式已经得到了：
 \begin{theorem}{多项式输入定理}{polynomial-input-theorem}
-    若 $ f(x) $ 为有限次多项式函数，且 $ P(D) $ 中的常数项不为零，则方程 $ P(D) y = f(x) $ 的一个特解为：
+    若 $ f(x) $ 为有限次多项式函数，且 $ P(\DD) $ 中的常数项不为零，则方程 $ P(\DD) y = f(x) $ 的一个特解为：
     \begin{equation}
-        y_p = \frac{1}{P(D)} f(x) .
+        y_p = \frac{1}{P(\DD)} f(x) .
     \end{equation}
 \end{theorem}
 
 类似地，我们可以推广到 $ f(x) $ 为指数函数与多项式函数乘积的情形：
 \begin{theorem}{指数-多项式输入定理}{exponential-polynomial-input-theorem}
-    设 $ a \in \mathbb{C} $，$ f(x) $ 为有限次多项式函数，则方程
+    设 $ a \in \symbb{C} $，$ f(x) $ 为有限次多项式函数，则方程
     \begin{equation*}
-        P(D) y = e^{ax} f(x)
+        P(\DD) y = \ee^{ax} f(x)
     \end{equation*}
     的一个特解为：
     \begin{equation}
-        y_p = e^{ax} \frac{1}{P(D + a)} f(x) .
+        y_p = \ee^{ax} \frac{1}{P(\DD + a)} f(x) .
     \end{equation}
 \end{theorem}
 
-当然到了这一步，这个公式已经趋近于完美了，只有一个小问题，就是 $ \frac{1}{P(D + a)} $ 的常数项可能为零。
-但这不足为虑，因为位移法则其实在表明这样的一个事实：只要把 $ P(D + a) y = f(x) $ 的特解乘上 $ e^{ax} $ 就是原方程的特解。
-所以就回到了一开始讨论的问题，可以先把 $ D^k $ 提取出来，最后在一步步积分即可。
+当然到了这一步，这个公式已经趋近于完美了，只有一个小问题，就是 $ \frac{1}{P(\DD + a)} $ 的常数项可能为零。
+但这不足为虑，因为位移法则其实在表明这样的一个事实：只要把 $ P(\DD + a) y = f(x) $ 的特解乘上 $ \ee^{ax} $ 就是原方程的特解。
+所以就回到了一开始讨论的问题，可以先把 $ \DD^k $ 提取出来，最后在一步步积分即可。
 
-为了让结论「更正确」，我们对 $ \frac{1}{P(D)} $ 做如下补充定义：
+为了让结论「更正确」，我们对 $ \frac{1}{P(\DD)} $ 做如下补充定义：
 \begin{definition}{微分算子多项式的广义逆}{generalized-inverse-of-differential-operator-polynomial}
-    设 $ P(D) = D^k \tilde{P}(D) $，其中，$ \tilde{P}(D) $ 中的常数项不为零，则定义
+    设 $ P(\DD) = \DD^k \tilde{P}(\DD) $，其中，$ \tilde{P}(\DD) $ 中的常数项不为零，则定义
     \begin{equation}
-        \frac{1}{P(D)} := D^{-k} \frac{1}{\tilde{P}(D)} ,
+        \frac{1}{P(\DD)} := \DD^{-k} \frac{1}{\tilde{P}(\DD)} ,
     \end{equation}
-    其中，$ D^{-k} $ 表示对函数进行$ k $ 次不定积分，即
+    其中，$ \DD^{-k} $ 表示对函数进行$ k $ 次不定积分，即
     \begin{equation}
-        \frac{1}{D^{k}} f(x) = \underbrace{\int \int \ldots \int}_{k \text{ 次}} f(x) \d x .
+        \frac{1}{\DD^{k}} f(x) = \underbrace{\int \int \ldots \int}_{k \text{ 次}} f(x) \d x .
     \end{equation}
-    而对于任意定义在 $ \mathbb{R} [D] $ 上的多项式 $ P(D) = D^k \tilde{P}(D) $，其中 $ D \nmid \tilde{P}(D) $，我们定义：
+    而对于任意定义在 $ \symbb{R} [\DD] $ 上的多项式 $ P(\DD) = \DD^k \tilde{P}(\DD) $，其中 $ \DD \nmid \tilde{P}(\DD) $，我们定义：
     \begin{equation}
-        \frac{1}{P(D)} := \frac{1}{D^k} \frac{1}{\tilde{P}(D)} .
+        \frac{1}{P(\DD)} := \frac{1}{\DD^k} \frac{1}{\tilde{P}(\DD)} .
     \end{equation}
 \end{definition}
 
@@ -1263,16 +1262,16 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
     \textbf{解}：
     复化：
     \begin{equation*}
-        (D^2 + 4) \tilde{y} = x e^{ix} .
+        (\DD^2 + 4) \tilde{y} = x \ee^{\ii x} .
     \end{equation*}
     故：
     \begin{equation*}
         \begin{aligned}
-            \tilde{y} = & \frac{1}{D^2 + 4} x e^{ix}                                                            \\
-            =           & e^{ix} \frac{1}{(D + i)^2 + 4} x \quad \text{（由指数-多项式输入定理）}                           \\
-            =           & e^{ix} \frac{1}{D^2 + 2i D + 3} x                                                     \\
-            =           & e^{ix} \left( \frac{1}{3} - \frac{2i}{9} D + \ldots \right) x \quad \text{（由多项式输入定理）} \\
-            =           & (\cos x + i \sin x) \left( \frac{x}{3} - \frac{2i}{9} \right) .
+            \tilde{y} = & \frac{1}{\DD^2 + 4} x \ee^{\ii x}                                                              \\
+            =           & \ee^{\ii x} \frac{1}{(\DD + \ii)^2 + 4} x \quad \text{（由指数-多项式输入定理）}                           \\
+            =           & \ee^{\ii x} \frac{1}{\DD^2 + 2\ii \DD + 3} x                                                   \\
+            =           & \ee^{\ii x} \left( \frac{1}{3} - \frac{2\ii}{9} \DD + \ldots \right) x \quad \text{（由多项式输入定理）} \\
+            =           & (\cos x + \ii \sin x) \left( \frac{x}{3} - \frac{2\ii}{9} \right) .
         \end{aligned}
     \end{equation*}
     故：
@@ -1299,12 +1298,12 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
                 row{2} = {abovesep = 4pt},
                 columns = {colsep = 1pt},
             }
-                          &          &   &   &   &                 &   & \dfrac{1}{3}     & - & \dfrac{2}{9}iD    &  &  &   &     \\
-            3 + 2iD + D^2 & \longdiv &   & 1 &   &                 &   &                  &   &                   &  &  &   &   & \\
-                          &          & - & 1 & - & \dfrac{2}{3} iD & - & \dfrac{1}{3} D^2 &   &                   &  &  &   &     \\
-                          &          &   &   & - & \dfrac{2}{3} iD & - & \dfrac{1}{3} D^2 &   &                   &  &  &   &     \\
-                          &          &   &   &   & \dfrac{2}{3} iD & - & \dfrac{4}{9} D^2 & + & \dfrac{2}{9} iD^3 &  &  &         \\
-                          &          &   &   &   &                 & - & \dfrac{7}{9} D^2 & + & \dfrac{2}{9} iD^3 &  &  &         \\
+                             &          &   &   &   &                    &   & \dfrac{1}{3}     & - & \dfrac{2}{9}\ii D    &  &  &   &     \\
+            3 + 2\ii D + D^2 & \longdiv &   & 1 &   &                    &   &                  &   &                      &  &  &   &   & \\
+                             &          & - & 1 & - & \dfrac{2}{3} \ii D & - & \dfrac{1}{3} D^2 &   &                      &  &  &   &     \\
+                             &          &   &   & - & \dfrac{2}{3} \ii D & - & \dfrac{1}{3} D^2 &   &                      &  &  &   &     \\
+                             &          &   &   &   & \dfrac{2}{3} \ii D & - & \dfrac{4}{9} D^2 & + & \dfrac{2}{9} \ii D^3 &  &  &         \\
+                             &          &   &   &   &                    & - & \dfrac{7}{9} D^2 & + & \dfrac{2}{9} \ii D^3 &  &  &         \\
         \end{tblr}
     \end{equation*}
     }
@@ -1385,7 +1384,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \subsection{重积分}\label{subsec:multiple-integral}
 
 重积分是对多元函数在某个区域上的积分运算，是一元积分的推广。
-设 $ f(x_1 , x_2 , \ldots , x_k) $ 为定义在区域 $ D \subseteq \mathbb{R}^k $ 上的多元函数，则其在区域 $ D $ 上的重积分定义为
+设 $ f(x_1 , x_2 , \ldots , x_k) $ 为定义在区域 $ D \subseteq \symbb{R}^k $ 上的多元函数，则其在区域 $ D $ 上的重积分定义为
 \begin{definition}{重积分的定义}{definition-of-multiple-integral}
     \begin{equation}
         \int \ldots \int_D f(x_1 , x_2 , \ldots , x_k) \d x_1 \d x_2 \ldots \d x_k = \lim_{\max \Delta V_i \to 0} \sum_{i} f(\xi_i) \Delta V_i ,
@@ -1410,27 +1409,27 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 \subsection{线积分、面积分与体积分}\label{subsec:line-surface-and-volume-integrals}
 
-物理学中有些标量是空间位置 $ \symbf{r} $ 的函数，例如非均匀物质场中的密度分布 $ \rho (\symbf{r}) $，电势分布 $ V (\symbf{r}) $ 等。
+物理学中有些标量是空间位置 $ \symbfit{r} $ 的函数，例如非均匀物质场中的密度分布 $ \rho (\symbfit{r}) $，电势分布 $ V (\symbfit{r}) $ 等。
 这类标量与位置之间的函数可一般地记作
 \begin{equation}
-    \phi (\symbf{r}) \text{ 或 } \phi (x, y, z) .
+    \phi (\symbfit{r})\, \text{或}\, \phi (x, y, z) .
 \end{equation}
 它是一个由空间中的三个独立坐标 $ x , y , z $ 决定的三元函数。
 
-类似地，物理学中有些矢量是空间位置 $ \symbf{r} $ 的函数，例如速度场 $ \symbf{v} (\symbf{r}) $，电场强度分布 $ \symbf{E} (\symbf{r}) $ 等。
+类似地，物理学中有些矢量是空间位置 $ \symbfit{r} $ 的函数，例如速度场 $ \symbfit{v} (\symbfit{r}) $，电场强度分布 $ \symbfit{E} (\symbfit{r}) $ 等。
 这类矢量与位置之间的函数可一般地记作
 \begin{equation}
-    \symbf{A} (\symbf{r}) \text{ 或 } \symbf{A} (x, y, z) .
+    \symbfit{A} (\symbfit{r})\, \text{或}\, \symbfit{A} (x, y, z) .
 \end{equation}
 他可分解成
 \begin{equation}
-    \symbf{A} (\symbf{r}) = A_x (\symbf{r}) \symbf{e}_x + A_y (\symbf{r}) \symbf{e}_y + A_z (\symbf{r}) \symbf{e}_z ,
+    \symbfit{A} (\symbfit{r}) = A_x (\symbfit{r}) \symbfit{e}_x + A_y (\symbfit{r}) \symbfit{e}_y + A_z (\symbfit{r}) \symbfit{e}_z ,
 \end{equation}
-其中，$ A_x (\symbf{r}) $，$ A_y (\symbf{r}) $，$ A_z (\symbf{r}) $ 均为标量性三元函数。
+其中，$ A_x (\symbfit{r}) $，$ A_y (\symbfit{r}) $，$ A_z (\symbfit{r}) $ 均为标量性三元函数。
 
 \begin{note}{关于单位矢量表示法的说明}{note-on-unit-vector-notation}
-    关于 $ Oxyz $ 中单位矢量的表达，有一部分教材使用的是 $ \symbf{i} , \symbf{j} , \symbf{k} $，
-    但是笔者偏爱使用 $ \symbf{e}_x , \symbf{e}_y , \symbf{e}_z $，特在此说明。
+    关于 $ Oxyz $ 中单位矢量的表达，有一部分教材使用的是 $ \symbfit{i} , \symbfit{j} , \symbfit{k} $，
+    但是笔者偏爱使用 $ \symbfit{e}_x , \symbfit{e}_y , \symbfit{e}_z $，特在此说明。
 \end{note}
 
 \subinputfrom{../figures/00_math-basics/}{fig_curve-element.tex}
