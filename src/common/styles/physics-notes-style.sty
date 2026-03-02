@@ -40,19 +40,27 @@
 \RequirePackage{amsthm}              % AMS 定理环境
 
 \RequirePackage{unicode-math}        % Unicode 数学字体支持
-\setmathfont{Latin Modern Math}      % 设置数学字体为 Latin Modern Math
+% 设置数学字体为 Latin Modern Math
+% \setmathfont{latinmodern-math.otf}
+% 设置数学字体为 New Computer Modern Math（更现代的设计）
+\setmathfont{NewCMMath-Book.otf}
+% 设置数学字体为 STIX Two Math（科学出版物常用的字体，清晰且专业）
+% \setmathfont{STIXTwoMath-Regular.otf}
+% \setmathfont{texgyretermes-math.otf}
 
 % 常用正体符号定义
 \newcommand{\ee}{\symup{e}}          % 自然对数底
 \newcommand{\uppi}{\symup{\pi}}      % 圆周率
 \newcommand{\ii}{\symup{i}}          % 虚数单位
 \newcommand{\jj}{\symup{j}}          % 备用的虚数单位
+\newcommand{\trans}{\symup{T}}       % 转置符号
 
 \newcommand{\DD}{\operatorname{\symup{D}}}              % 微分算子
 
 \AtBeginDocument{
-    \renewcommand{\Re}{\operatorname{\symup{Re}}}        % 实部
-    \renewcommand{\Im}{\operatorname{\symup{Im}}}        % 虚部
+    % 【修复】：重新定义 \Re 和 \Im 以适应物理学习惯
+    \let\Re\undefined \DeclareMathOperator{\Re}{Re}
+    \let\Im\undefined \DeclareMathOperator{\Im}{Im}
 }
 
 % \renewcommand{\Re}{\operatorname{\mathrm{Re}}}
@@ -70,6 +78,7 @@
 
 \RequirePackage{physics2}            % 现代物理符号包
 % 【优化说明】：physics2 本身不提供命令，必须加载模块才有效！
+
 
 % ============================================================================
 % 5. 图形与表格

@@ -1435,7 +1435,7 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \subinputfrom{../figures/00_math-basics/}{fig_curve-element.tex}
 
 将 \cref{fig:curve-element} 中 $ a $ 到 $ b $ 的曲线段 $ L $ 上的任意一段曲线元记为 $ \d l $ ，并忽略曲线元上各点的位置变化，
-则曲线元上各点的函数值可视为常数，记为 $ \phi (\symbf{r}) $ 或 $ \phi (x, y, z) $。
+则曲线元上各点的函数值可视为常数，记为 $ \phi (\symbfit{r}) $ 或 $ \phi (x, y, z) $。
 将该位置处的函数值与曲线元长度的乘积 $ \phi (x, y, z) \d l $，从曲线段 $ L $ 的起点 $ a $ 积分到终点 $ b $，即得到沿曲线段 $ L $ 的线积分：
 \begin{definition}{线积分的定义}{definition-of-line-integral}
     \begin{equation}
@@ -1453,18 +1453,18 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 \subinputfrom{../figures/00_math-basics/}{fig_curve-integral.tex}
 
-\cref{fig:curve-integral} 中从线元始端到终端的矢量 $ \d \symbf{l} $ 称为线元矢量。
-各 $ \d \symbf{l} $ 所在位置 $ (x, y, z) $ 均有函数值 $ \symbf{A} (x, y, z) $，将该位置处的矢量函数值与线元矢量的标量积 $ \symbf{A} (x, y, z) \cdot \d \symbf{l} $，从曲线段 $ L $ 的起点 $ a $ 积分到终点 $ b $，即得到沿曲线段 $ L $ 的矢量线积分：
+\cref{fig:curve-integral} 中从线元始端到终端的矢量 $ \d \symbfit{l} $ 称为线元矢量。
+各 $ \d \symbfit{l} $ 所在位置 $ (x, y, z) $ 均有函数值 $ \symbfit{A} (x, y, z) $，将该位置处的矢量函数值与线元矢量的标量积 $ \symbfit{A} (x, y, z) \cdot \d \symbfit{l} $，从曲线段 $ L $ 的起点 $ a $ 积分到终点 $ b $，即得到沿曲线段 $ L $ 的矢量线积分：
 \begin{definition}{矢量线积分的定义}{definition-of-vector-line-integral}
     \begin{equation}
-        \int_L \symbf{A} (x, y, z) \cdot \d \symbf{l} = \lim_{\max \Delta l_i \to 0} \sum_{i} \symbf{A} (\xi_i) \cdot \Delta \symbf{l}_i ,
+        \int_L \symbfit{A} (x, y, z) \cdot \d \symbfit{l} = \lim_{\max \Delta l_i \to 0} \sum_{i} \symbfit{A} (\xi_i) \cdot \Delta \symbfit{l}_i ,
     \end{equation}
-    其中，曲线段 $ L $ 被划分为若干小曲线元矢量 $ \Delta \symbf{l}_i $，$ \xi_i $ 为 $ \Delta \symbf{l}_i $ 上的某点，$ \max \Delta l_i $ 表示所有小曲线元长度的最大值。
+    其中，曲线段 $ L $ 被划分为若干小曲线元矢量 $ \Delta \symbfit{l}_i $，$ \xi_i $ 为 $ \Delta \symbfit{l}_i $ 上的某点，$ \max \Delta l_i $ 表示所有小曲线元长度的最大值。
 \end{definition}
 
 如果 $ L $ 为闭合曲线，则称该矢量线积分为闭合矢量线积分，记为
 \begin{equation}
-    \oint_L \symbf{A} (x, y, z) \cdot \d \symbf{l} .
+    \oint_L \symbfit{A} (x, y, z) \cdot \d \symbfit{l} .
 \end{equation}
 
 \bigskip
@@ -1472,9 +1472,9 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 \subinputfrom{../figures/00_math-basics/}{fig_surface-element.tex}
 
 讲一个曲面（包括平面）$ S $，如 \cref{fig:surface-element} 所示，分割成一系列无穷小的小片，称为面元，面积一般地记为 $ \d S $。
-在面元处引一个与面元法线方向相同的单位矢量 $ \symbf{n} $，并规定曲面的一侧为内侧，另一侧为外侧，$ \symbf{n} $ 指向外侧，称
+在面元处引一个与面元法线方向相同的单位矢量 $ \symbfit{n} $，并规定曲面的一侧为内侧，另一侧为外侧，$ \symbfit{n} $ 指向外侧，称
 \begin{equation*}
-    \d \symbf{S} = \d S \symbf{n}
+    \d \symbfit{S} = \d S \symbfit{n}
 \end{equation*}
 为面元矢量。
 若面元处有函数值 $ \phi (x, y, z) $，则将该位置处的函数值与面元面积的乘积 $ \phi (x, y, z) \d S $，从曲面 $ S $ 的各个面元上积分，即得到曲面 $ S $ 上的面积分：
@@ -1493,17 +1493,17 @@ $ x_0 = 0 $ 时，称为麦克劳林（Maclaurin）级数，即
 
 \bigskip
 
-类似地，若面元处有矢量函数值 $ \symbf{A} (x, y, z) $，则将该位置处的矢量函数值与面元矢量的标量积 $ \symbf{A} (x, y, z) \cdot \d \symbf{S} $，从曲面 $ S $ 的各个面元上积分，即得到曲面 $ S $ 上的矢量面积分：
+类似地，若面元处有矢量函数值 $ \symbfit{A} (x, y, z) $，则将该位置处的矢量函数值与面元矢量的标量积 $ \symbfit{A} (x, y, z) \cdot \d \symbfit{S} $，从曲面 $ S $ 的各个面元上积分，即得到曲面 $ S $ 上的矢量面积分：
 \begin{definition}{矢量面积分的定义}{definition-of-vector-surface-integral}
     \begin{equation}
-        \iint_S \symbf{A} (x, y, z) \cdot \d \symbf{S} = \lim_{\max \Delta S_i \to 0} \sum_{i} \symbf{A} (\xi_i) \cdot \Delta \symbf{S}_i ,
+        \iint_S \symbfit{A} (x, y, z) \cdot \d \symbfit{S} = \lim_{\max \Delta S_i \to 0} \sum_{i} \symbfit{A} (\xi_i) \cdot \Delta \symbfit{S}_i ,
     \end{equation}
-    其中，曲面 $ S $ 被划分为若干小面元矢量 $ \Delta \symbf{S}_i $，$ \xi_i $ 为 $ \Delta \symbf{S}_i $ 上的某点，$ \max \Delta S_i $ 表示所有小面元的最大面积。
+    其中，曲面 $ S $ 被划分为若干小面元矢量 $ \Delta \symbfit{S}_i $，$ \xi_i $ 为 $ \Delta \symbfit{S}_i $ 上的某点，$ \max \Delta S_i $ 表示所有小面元的最大面积。
 \end{definition}
 
 如果 $ S $ 为闭合曲面，则称该矢量面积分为闭合矢量面积分，记为
 \begin{equation}
-    \oiint_S \symbf{A} (x, y, z) \cdot \d \symbf{S} .
+    \oiint_S \symbfit{A} (x, y, z) \cdot \d \symbfit{S} .
 \end{equation}
 
 \bigskip
@@ -1587,7 +1587,7 @@ $ 3 $ 阶行列式的计算可以使用「对角线法则」。
     其中，$ A_{ij} = (-1)^{i+j} M_{ij} $，$ M_{ij} $ 为由去掉行列式 $ D_n $ 的第 $ i $ 行与第 $ j $ 列所构成的 $ (n-1) $ 阶行列式，称为 $ a_{ij} $ 的余子式，余子式就是去掉某行某列后剩下的行列式。
 \end{theorem}
 
-此外，笔者认为行列式的如下 $ 4 $ 个性质在普物力学中也较为常用，特此列出：
+此外，笔者认为行列式的如下6个性质在普物力学中也较为常用，特此列出：
 \begin{theorem}{行列式的常用性质}{common-properties-of-determinant}
     设 $ D $ 为行列式，则有如下性质：
     \begin{enumerate}
@@ -1632,7 +1632,7 @@ $ 3 $ 阶行列式的计算可以使用「对角线法则」。
     \begin{equation}
         x_j = \frac{D_j}{D} \quad (j = 1, 2, \ldots , n) ,
     \end{equation}
-    其中，$ D_j $ 为将系数行列式 $ D $ 的第 $ j $ 列替换为常数列 $ (b_1 , b_2 , \ldots , b_n)^T $ 后所得到的行列式，即
+    其中，$ D_j $ 为将系数行列式 $ D $ 的第 $ j $ 列替换为常数列 $ (b_1 , b_2 , \ldots , b_n)^{\trans} $ 后所得到的行列式，即
     \begin{equation}
         D_j = \left| \begin{array}{ccccccc}
             a_{11} & \cdots & a_{1,j-1} & b_1    & a_{1,j+1} & \cdots & a_{1n} \\
@@ -1682,53 +1682,53 @@ $ 3 $ 阶行列式的计算可以使用「对角线法则」。
 \subsection{矢量的叠加与分解}\label{subsec:addition-and-decomposition-of-vectors}
 
 直观地说，没有方向的量称为标量，标量带有正负号，有大小，但没有方向，例如温度、质量、时间等。
-而有方向的量称为矢量，矢量既有大小，又有方向，例如位移、速度、力等，此处我们将其记为粗体字母形式，如 $ \symbf{A} $，$ \symbf{B} $ 等。
+而有方向的量称为矢量，矢量既有大小，又有方向，例如位移、速度、力等，此处我们将其记为粗体字母形式，如 $ \symbfit{A} $，$ \symbfit{B} $ 等。
 
 \begin{note}{关于矢量表示法的说明}{note-on-vector-notation}
     关于矢量的表示法，印刷时常用粗体字母形式表示矢量，而手写时常用带箭头的字母形式表示矢量，例如 $ \vec{A} $，$ \vec{B} $ 等。
 \end{note}
 
-矢量 $ \symbf{A} $ 的大小称为 $ \symbf{A} $ 的模，记为 $ |\symbf{A}| $ 或 $ A $，是一个非负的标量。
-标量 $ \alpha $ 与矢量 $ \symbf{A} $ 的乘积仍是一个矢量，记为
+矢量 $ \symbfit{A} $ 的大小称为 $ \symbfit{A} $ 的模，记为 $ |\symbfit{A}| $ 或 $ A $，是一个非负的标量。
+标量 $ \alpha $ 与矢量 $ \symbfit{A} $ 的乘积仍是一个矢量，记为
 \begin{equation}
-    \alpha \symbf{A} = \symbf{B} .
+    \alpha \symbfit{A} = \symbfit{B} .
 \end{equation}
-$ \symbf{B} $ 的模为
+$ \symbfit{B} $ 的模为
 \begin{equation}
-    |\symbf{B}| = |\alpha| |\symbf{A}| = |\alpha| A .
+    |\symbfit{B}| = |\alpha| |\symbfit{A}| = |\alpha| A .
 \end{equation}
 此处 $ | \alpha| $ 表示标量 $ \alpha $ 的绝对值。
-若 $ \alpha > 0 $，则矢量 $ \symbf{B} $ 与矢量 $ \symbf{A} $ 方向相同；
-若 $ \alpha < 0 $，则矢量 $ \symbf{B} $ 与矢量 $ \symbf{A} $ 方向相反；
-若 $ \alpha = 0 $，则矢量 $ \symbf{B} $ 为零矢量，记为 $ \symbf{0} $，其模为零，且没有确定的方向。
+若 $ \alpha > 0 $，则矢量 $ \symbfit{B} $ 与矢量 $ \symbfit{A} $ 方向相同；
+若 $ \alpha < 0 $，则矢量 $ \symbfit{B} $ 与矢量 $ \symbfit{A} $ 方向相反；
+若 $ \alpha = 0 $，则矢量 $ \symbfit{B} $ 为零矢量，记为 $ \symbfit{0} $，其模为零，且没有确定的方向。
 
-沿着 $ \symbf{A} $ 的方向取一单位矢量，记为 $ a $ 或 $ \symbf{e}_A $，则有
+沿着 $ \symbfit{A} $ 的方向取一单位矢量，记为 $ a $ 或 $ \symbfit{e}_A $，则有
 \begin{equation}
-    \symbf{A} = A \symbf{e}_A .
+    \symbfit{A} = A \symbfit{e}_A .
 \end{equation}
-矢量 $ \symbf{A} $ 的单位矢量 $ \symbf{e}_A $ 的模为 $ 1 $。
+矢量 $ \symbfit{A} $ 的单位矢量 $ \symbfit{e}_A $ 的模为 $ 1 $。
 
 \bigskip
 
 \subinputfrom{../figures/00_math-basics/}{fig_vector-addition.tex}
 
-如 \cref{fig:vector-addition} 所示，设有两个矢量 $ \symbf{A} $ 与 $ \symbf{B} $，它们的和称为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 的叠加，记为
+如 \cref{fig:vector-addition} 所示，设有两个矢量 $ \symbfit{A} $ 与 $ \symbfit{B} $，它们的和称为矢量 $ \symbfit{A} $ 与矢量 $ \symbfit{B} $ 的叠加，记为
 \begin{equation}
-    \symbf{C} = \symbf{A} + \symbf{B} .
+    \symbfit{C} = \symbfit{A} + \symbfit{B} .
 \end{equation}
-矢量叠加的几何意义可通过「平行四边形法则」来理解，即以矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 为邻边作平行四边形，则从平行四边形的一个顶点到对角顶点的矢量即为矢量 $ \symbf{C} $；
-也可通过「首尾相接法则」来理解，即将矢量 $ \symbf{B} $ 的起点与矢量 $ \symbf{A} $ 的终点相接，则从矢量 $ \symbf{A} $ 的起点到矢量 $ \symbf{B} $ 的终点的矢量即为矢量 $ \symbf{C} $。
+矢量叠加的几何意义可通过「平行四边形法则」来理解，即以矢量 $ \symbfit{A} $ 与矢量 $ \symbfit{B} $ 为邻边作平行四边形，则从平行四边形的一个顶点到对角顶点的矢量即为矢量 $ \symbfit{C} $；
+也可通过「首尾相接法则」来理解，即将矢量 $ \symbfit{B} $ 的起点与矢量 $ \symbfit{A} $ 的终点相接，则从矢量 $ \symbfit{A} $ 的起点到矢量 $ \symbfit{B} $ 的终点的矢量即为矢量 $ \symbfit{C} $。
 矢量叠加满足交换律与结合律，即
 \begin{equation}
-    \symbf{A} + \symbf{B} = \symbf{B} + \symbf{A} ,
+    \symbfit{A} + \symbfit{B} = \symbfit{B} + \symbfit{A} ,
 \end{equation}
 \begin{equation}
-    (\symbf{A} + \symbf{B}) + \symbf{C} = \symbf{A} + (\symbf{B} + \symbf{C}) .
+    (\symbfit{A} + \symbfit{B}) + \symbfit{C} = \symbfit{A} + (\symbfit{B} + \symbfit{C}) .
 \end{equation}
 
 矢量的减法可视为加上一个方向相反的矢量，即
 \begin{equation}
-    \symbf{A} - \symbf{B} = \symbf{A} + (-\symbf{B}) .
+    \symbfit{A} - \symbfit{B} = \symbfit{A} + (-\symbfit{B}) .
 \end{equation}
 
 \bigskip
@@ -1737,46 +1737,46 @@ $ \symbf{B} $ 的模为
 
 \subinputfrom{../figures/00_math-basics/}{fig_vector-decomposition.tex}
 
-如 \cref{fig:vector-decomposition} 所示，对于三维空间中正交的 $ Oxyz $ 坐标系，任何矢量 $ \symbf{A} $ 都可以分解为沿 $ x $ 轴、$ y $ 轴与 $ z $ 轴方向的三个分量矢量之和，即
+如 \cref{fig:vector-decomposition} 所示，对于三维空间中正交的 $ Oxyz $ 坐标系，任何矢量 $ \symbfit{A} $ 都可以分解为沿 $ x $ 轴、$ y $ 轴与 $ z $ 轴方向的三个分量矢量之和，即
 \begin{equation}
-    \symbf{A} = \symbf{A}_x + \symbf{A}_y + \symbf{A}_z ,
+    \symbfit{A} = \symbfit{A}_x + \symbfit{A}_y + \symbfit{A}_z ,
 \end{equation}
 其中，
 \begin{equation}
-    \symbf{A}_x = A_x \symbf{e}_x , \quad \symbf{A}_y = A_y \symbf{e}_y , \quad \symbf{A}_z = A_z \symbf{e}_z .
+    \symbfit{A}_x = A_x \symbfit{e}_x , \quad \symbfit{A}_y = A_y \symbfit{e}_y , \quad \symbfit{A}_z = A_z \symbfit{e}_z .
 \end{equation}
-这里，$ A_x $，$ A_y $，$ A_z $ 分别为矢量 $ \symbf{A} $ 在 $ x $ 轴、$ y $ 轴与 $ z $ 轴方向的投影「长度」（这里的「长度是有向长度」），称为矢量 $ \symbf{A} $ 在各坐标轴方向的分量。
-$ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ z $ 轴的单位矢量。
-则矢量 $ \symbf{A} $ 可表示为
+这里，$ A_x $，$ A_y $，$ A_z $ 分别为矢量 $ \symbfit{A} $ 在 $ x $ 轴、$ y $ 轴与 $ z $ 轴方向的投影「长度」（这里的「长度是有向长度」），称为矢量 $ \symbfit{A} $ 在各坐标轴方向的分量。
+$ \symbfit{e}_x $，$ \symbfit{e}_y $，$ \symbfit{e}_z $ 分别为 $ x $ 轴、$ y $ 轴与 $ z $ 轴的单位矢量。
+则矢量 $ \symbfit{A} $ 可表示为
 \begin{equation}
-    (A_x , A_y , A_z) = A_x \symbf{e}_x + A_y \symbf{e}_y + A_z \symbf{e}_z .
+    (A_x , A_y , A_z) = A_x \symbfit{e}_x + A_y \symbfit{e}_y + A_z \symbfit{e}_z .
 \end{equation}
 
-矢量 $ \symbf{A} $ 的模与各分量之间的关系为
+矢量 $ \symbfit{A} $ 的模与各分量之间的关系为
 \begin{equation}
     A = \sqrt{A_x^2 + A_y^2 + A_z^2} .
 \end{equation}
 
 两个三维矢量相加时，可将它们分别在各坐标轴方向的分量相加，得到新矢量在各坐标轴方向的分量。
-例如，设有两个三维矢量 $ \symbf{A} = (A_x , A_y , A_z) $ 与 $ \symbf{B} = (B_x , B_y , B_z) $，则它们的和为
+例如，设有两个三维矢量 $ \symbfit{A} = (A_x , A_y , A_z) $ 与 $ \symbfit{B} = (B_x , B_y , B_z) $，则它们的和为
 \begin{equation}
-    \symbf{C} = \symbf{A} + \symbf{B} = (A_x + B_x , A_y + B_y , A_z + B_z) .
+    \symbfit{C} = \symbfit{A} + \symbfit{B} = (A_x + B_x , A_y + B_y , A_z + B_z) .
 \end{equation}
 
 \bigskip
 
-类似地，对于 $ k $ 维空间中的正交坐标系，任何矢量 $ \symbf{A} $ 都可以分解为沿各坐标轴方向的 $ k $ 个分量矢量之和，即
+类似地，对于 $ k $ 维空间中的正交坐标系，任何矢量 $ \symbfit{A} $ 都可以分解为沿各坐标轴方向的 $ k $ 个分量矢量之和，即
 \begin{equation}
-    \symbf{A} = \symbf{A}_1 + \symbf{A}_2 + \ldots + \symbf{A}_k = A_1 \symbf{e}_1 + A_2 \symbf{e}_2 + \ldots + A_k \symbf{e}_k = \sum_{i=1}^{k} A_i \symbf{e}_i ,
+    \symbfit{A} = \symbfit{A}_1 + \symbfit{A}_2 + \ldots + \symbfit{A}_k = A_1 \symbfit{e}_1 + A_2 \symbfit{e}_2 + \ldots + A_k \symbfit{e}_k = \sum_{i=1}^{k} A_i \symbfit{e}_i ,
 \end{equation}
-且矢量 $ \symbf{A} $ 的模与各分量之间的关系为
+且矢量 $ \symbfit{A} $ 的模与各分量之间的关系为
 \begin{equation}
     A = \sqrt{A_1^2 + A_2^2 + \ldots + A_k^2} = \sqrt{\sum_{i=1}^{k} A_i^2} .
 \end{equation}
 两个维数相同的矢量相加时，可将它们分别在各坐标轴方向的分量相加，得到新矢量在各坐标轴方向的分量。
-例如，设有两个 $ k $ 维矢量 $ \symbf{A} = (A_1 , A_2 , \ldots , A_k) $ 与 $ \symbf{B} = (B_1 , B_2 , \ldots , B_k) $，则它们的和为
+例如，设有两个 $ k $ 维矢量 $ \symbfit{A} = (A_1 , A_2 , \ldots , A_k) $ 与 $ \symbfit{B} = (B_1 , B_2 , \ldots , B_k) $，则它们的和为
 \begin{equation}
-    \symbf{C} = \symbf{A} + \symbf{B} = (A_1 + B_1 , A_2 + B_2 , \ldots , A_k + B_k) = \sum_{i=1}^{k} (A_i + B_i) \symbf{e}_i .
+    \symbfit{C} = \symbfit{A} + \symbfit{B} = (A_1 + B_1 , A_2 + B_2 , \ldots , A_k + B_k) = \sum_{i=1}^{k} (A_i + B_i) \symbfit{e}_i .
 \end{equation}
 
 \subsection{矢量的点积}\label{subsec:dot-product-of-vectors}
@@ -1788,57 +1788,57 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
 
 矢量的点积定义如下：
 \begin{definition}{矢量的点积}{definition-of-dot-product-of-vectors}
-    设有两个矢量 $ \symbf{A} $ 与 $ \symbf{B} $，它们的点积记为 $ \symbf{A} \cdot \symbf{B} $，定义为
+    设有两个矢量 $ \symbfit{A} $ 与 $ \symbfit{B} $，它们的点积记为 $ \symbfit{A} \cdot \symbfit{B} $，定义为
     \begin{equation}
-        \symbf{A} \cdot \symbf{B} = AB \cos \theta ,
+        \symbfit{A} \cdot \symbfit{B} = AB \cos \theta ,
     \end{equation}
-    其中，$ A $ 与 $ B $ 分别为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 的模，$ \theta $ 为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 之间的夹角。
+    其中，$ A $ 与 $ B $ 分别为矢量 $ \symbfit{A} $ 与矢量 $ \symbfit{B} $ 的模，$ \theta $ 为矢量 $ \symbfit{A} $ 与矢量 $ \symbfit{B} $ 之间的夹角。
 \end{definition}
 矢量的点积是一个标量。
 
-通过点积, 可将 $ \symbf{A} $ 的模和分量各自表示成
+通过点积, 可将 $ \symbfit{A} $ 的模和分量各自表示成
 \begin{equation}
-    A = \sqrt{\symbf{A} \cdot \symbf{A}} ,
+    A = \sqrt{\symbfit{A} \cdot \symbfit{A}} ,
 \end{equation}
 \begin{equation}
-    A_x = \symbf{A} \cdot \symbf{e}_x , \quad A_y = \symbf{A} \cdot \symbf{e}_y , \quad A_z = \symbf{A} \cdot \symbf{e}_z .
+    A_x = \symbfit{A} \cdot \symbfit{e}_x , \quad A_y = \symbfit{A} \cdot \symbfit{e}_y , \quad A_z = \symbfit{A} \cdot \symbfit{e}_z .
 \end{equation}
 
 由点积的定义，不难得到如下性质：
 \begin{theorem}{矢量点积的性质}{properties-of-dot-product-of-vectors}
-    设有三个矢量 $ \symbf{A} $，$ \symbf{B} $ 与 $ \symbf{C} $，以及一个标量 $ k $，则有如下性质：
+    设有三个矢量 $ \symbfit{A} $，$ \symbfit{B} $ 与 $ \symbfit{C} $，以及一个标量 $ k $，则有如下性质：
     \begin{enumerate}
-        \item 交换律：$ \symbf{A} \cdot \symbf{B} = \symbf{B} \cdot \symbf{A} $；
-        \item 分配律：$ \symbf{A} \cdot (\symbf{B} + \symbf{C}) = \symbf{A} \cdot \symbf{B} + \symbf{A} \cdot \symbf{C} $；
-        \item 结合律：$ (k \symbf{A}) \cdot \symbf{B} = k (\symbf{A} \cdot \symbf{B}) $。
-        \item 正定性：$ \symbf{A} \cdot \symbf{A} \geq 0 $，且当且仅当 $ \symbf{A} = \symbf{0} $ 时取等号。
+        \item 交换律：$ \symbfit{A} \cdot \symbfit{B} = \symbfit{B} \cdot \symbfit{A} $；
+        \item 分配律：$ \symbfit{A} \cdot (\symbfit{B} + \symbfit{C}) = \symbfit{A} \cdot \symbfit{B} + \symbfit{A} \cdot \symbfit{C} $；
+        \item 结合律：$ (k \symbfit{A}) \cdot \symbfit{B} = k (\symbfit{A} \cdot \symbfit{B}) $。
+        \item 正定性：$ \symbfit{A} \cdot \symbfit{A} \geq 0 $，且当且仅当 $ \symbfit{A} = \symbfit{0} $ 时取等号。
     \end{enumerate}
 \end{theorem}
 
 在三维空间中有
 \begin{equation}
-    \symbf{e}_x \cdot \symbf{e}_y = \symbf{e}_y \cdot \symbf{e}_z = \symbf{e}_z \cdot \symbf{e}_x = 0 ,
+    \symbfit{e}_x \cdot \symbfit{e}_y = \symbfit{e}_y \cdot \symbfit{e}_z = \symbfit{e}_z \cdot \symbfit{e}_x = 0 ,
 \end{equation}
 \begin{equation}
-    \symbf{e}_x \cdot \symbf{e}_x = \symbf{e}_y \cdot \symbf{e}_y = \symbf{e}_z \cdot \symbf{e}_z = 1 .
+    \symbfit{e}_x \cdot \symbfit{e}_x = \symbfit{e}_y \cdot \symbfit{e}_y = \symbfit{e}_z \cdot \symbfit{e}_z = 1 .
 \end{equation}
-借此可以将两个三维矢量 $ \symbf{A} = (A_x , A_y , A_z) $ 与 $ \symbf{B} = (B_x , B_y , B_z) $ 的点积表示为
+借此可以将两个三维矢量 $ \symbfit{A} = (A_x , A_y , A_z) $ 与 $ \symbfit{B} = (B_x , B_y , B_z) $ 的点积表示为
 \begin{equation}
-    \symbf{A} \cdot \symbf{B} = A_x B_x + A_y B_y + A_z B_z .
+    \symbfit{A} \cdot \symbfit{B} = A_x B_x + A_y B_y + A_z B_z .
 \end{equation}
 
 类似地，在 $ k $ 维空间中有
 \begin{equation}
-    \symbf{e}_i \cdot \symbf{e}_j = \delta_{ij} = \begin{cases}
+    \symbfit{e}_i \cdot \symbfit{e}_j = \delta_{ij} = \begin{cases}
         1 , & i = j ,    \\
         0 , & i \neq j ,
     \end{cases}
 \end{equation}
 
 其中，$ \delta_{ij} $ 称为克罗内克（Kronecker）符号。
-借此可以将两个 $ k $ 维矢量 $ \symbf{A} = (A_1 , A_2 , \ldots , A_k) $ 与 $ \symbf{B} = (B_1 , B_2 , \ldots , B_k) $ 的点积表示为
+借此可以将两个 $ k $ 维矢量 $ \symbfit{A} = (A_1 , A_2 , \ldots , A_k) $ 与 $ \symbfit{B} = (B_1 , B_2 , \ldots , B_k) $ 的点积表示为
 \begin{equation}
-    \symbf{A} \cdot \symbf{B} = \sum_{i=1}^{k} A_i B_i .
+    \symbfit{A} \cdot \symbfit{B} = \sum_{i=1}^{k} A_i B_i .
 \end{equation}
 
 \subsection{矢量的叉积}\label{subsec:cross-product-of-vectors}
@@ -1848,12 +1848,12 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
 \end{note}
 矢量的叉积定义如下：
 \begin{definition}{矢量的叉积}{definition-of-cross-product-of-vectors}
-    设有两个三维矢量 $ \symbf{A} $ 与 $ \symbf{B} $，它们的叉积记为 $ \symbf{A} \times \symbf{B} $，定义为一个新矢量，其模为
+    设有两个三维矢量 $ \symbfit{A} $ 与 $ \symbfit{B} $，它们的叉积记为 $ \symbfit{A} \times \symbfit{B} $，定义为一个新矢量，其模为
     \begin{equation}
-        |\symbf{A} \times \symbf{B}| = AB \sin \theta ,
+        |\symbfit{A} \times \symbfit{B}| = AB \sin \theta ,
     \end{equation}
-    其中，$ A $ 与 $ B $ 分别为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 的模，$ \theta $ 为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 之间的夹角；
-    该新矢量的方向由右手定则确定，即将右手的四指从矢量 $ \symbf{A} $ 的方向弯向矢量 $ \symbf{B} $ 的方向，则大拇指所指的方向即为新矢量的方向。
+    其中，$ A $ 与 $ B $ 分别为矢量 $ \symbfit{A} $ 与矢量 $ \symbfit{B} $ 的模，$ \theta $ 为矢量 $ \symbfit{A} $ 与矢量 $ \symbfit{B} $ 之间的夹角；
+    该新矢量的方向由右手定则确定，即将右手的四指从矢量 $ \symbfit{A} $ 的方向弯向矢量 $ \symbfit{B} $ 的方向，则大拇指所指的方向即为新矢量的方向。
 \end{definition}
 矢量的叉积是一个矢量。
 
@@ -1865,40 +1865,41 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
 
 叉积也有一些性质：
 \begin{theorem}{矢量叉积的性质}{properties-of-cross-product-of-vectors}
-    设有三个矢量 $ \symbf{A} $，$ \symbf{B} $ 与 $ \symbf{C} $，以及一个标量 $ k $，则有如下性质：
+    设有三个矢量 $ \symbfit{A} $，$ \symbfit{B} $ 与 $ \symbfit{C} $，以及一个标量 $ k $，则有如下性质：
     \begin{enumerate}
-        \item 反交换律：$ \symbf{A} \times \symbf{B} = - (\symbf{B} \times \symbf{A}) $；
-        \item 分配律：$ \symbf{A} \times (\symbf{B} + \symbf{C}) = \symbf{A} \times \symbf{B} + \symbf{A} \times \symbf{C} $；
-        \item 结合律：$ (k \symbf{A}) \times \symbf{B} = k (\symbf{A} \times \symbf{B}) $；
-        \item 向量共线性：若矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} $ 共线，则 $ \symbf{A} \times \symbf{B} = \symbf{0} $。
+        \item 反交换律：$ \symbfit{A} \times \symbfit{B} = - (\symbfit{B} \times \symbfit{A}) $；
+        \item 分配律：$ \symbfit{A} \times (\symbfit{B} + \symbfit{C}) = \symbfit{A} \times \symbfit{B} + \symbfit{A} \times \symbfit{C} $；
+        \item 结合律：$ (k \symbfit{A}) \times \symbfit{B} = k (\symbfit{A} \times \symbfit{B}) $；
+        \item 向量共线性：若矢量 $ \symbfit{A} $ 与矢量 $ \symbfit{B} $ 共线，则 $ \symbfit{A} \times \symbfit{B} = \symbfit{0} $。
     \end{enumerate}
 \end{theorem}
 
 在三维空间中有
 \begin{equation}
-    \symbf{e}_x \times \symbf{e}_y = \symbf{e}_z , \quad \symbf{e}_y \times \symbf{e}_z = \symbf{e}_x , \quad \symbf{e}_z \times \symbf{e}_x = \symbf{e}_y ,
+    \symbfit{e}_x \times \symbfit{e}_y = \symbfit{e}_z , \quad \symbfit{e}_y \times \symbfit{e}_z = \symbfit{e}_x , \quad \symbfit{e}_z \times \symbfit{e}_x = \symbfit{e}_y ,
 \end{equation}
 \begin{equation}
-    \symbf{e}_y \times \symbf{e}_x = -\symbf{e}_z , \quad \symbf{e}_z \times \symbf{e}_y = -\symbf{e}_x , \quad \symbf{e}_x \times \symbf{e}_z = -\symbf{e}_y ,
+    \symbfit{e}_y \times \symbfit{e}_x = -\symbfit{e}_z , \quad \symbfit{e}_z \times \symbfit{e}_y = -\symbfit{e}_x , \quad \symbfit{e}_x \times \symbfit{e}_z = -\symbfit{e}_y ,
 \end{equation}
 \begin{equation}
-    \symbf{e}_x \times \symbf{e}_x = \symbf{e}_y \times \symbf{e}_y = \symbf{e}_z \times \symbf{e}_z = \symbf{0} .
+    \symbfit{e}_x \times \symbfit{e}_x = \symbfit{e}_y \times \symbfit{e}_y = \symbfit{e}_z \times \symbfit{e}_z = \symbfit{0} .
 \end{equation}
 
-借此可以将两个三维矢量 $ \symbf{A} = (A_x , A_y , A_z) $ 与 $ \symbf{B} = (B_x , B_y , B_z) $ 的叉积表示为
+借此可以将两个三维矢量 $ \symbfit{A} = (A_x , A_y , A_z) $ 与 $ \symbfit{B} = (B_x , B_y , B_z) $ 的叉积表示为
 \begin{equation}
-    \symbf{A} \times \symbf{B} = \left| \begin{array}{ccc}
-        \symbf{e}_x & \symbf{e}_y & \symbf{e}_z \\
-        A_x         & A_y         & A_z         \\
-        B_x         & B_y         & B_z
-    \end{array} \right| = (A_y B_z - A_z B_y) \symbf{e}_x + (A_z B_x - A_x B_z) \symbf{e}_y + (A_x B_y - A_y B_x) \symbf{e}_z .
+    \symbfit{A} \times \symbfit{B} = \left| \begin{array}{ccc}
+        \symbfit{e}_x & \symbfit{e}_y & \symbfit{e}_z \\
+        A_x           & A_y           & A_z           \\
+        B_x           & B_y           & B_z
+    \end{array} \right| = (A_y B_z - A_z B_y) \symbfit{e}_x + (A_z B_x - A_x B_z) \symbfit{e}_y + (A_x B_y - A_y B_x) \symbfit{e}_z .
 \end{equation}
 这里的行列式见前面 \cref{sec:determinant}。
 
 \begin{note}{关于叉积定义维数的说明}{note-on-dimensions-of-definition-of-cross-product-of-vectors}
     关于叉积的定义，肯定会有读者提出疑问：为什么叉积只能定义在三维空间中，而不能定义在二维空间或更高维空间中呢？
+
     实际上，叉积还可以定义在七维空间中，至于为什么是三维与七维空间，为什么要这样定义，这里便不做展开了。
-    但是我可以说的是这与四元数及李群和李代数有关，感兴趣的读者可以自行查阅相关资料。
+    感兴趣的读者可以自行查阅相关资料（李群与李代数）。
 \end{note}
 
 \begin{note}{关于极矢量和轴矢量的说明}{note-on-axial-and-polar-vectors}
@@ -1915,22 +1916,22 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
 
 混合积定义如下：
 \begin{definition}{矢量的混合积}{definition-of-scalar-triple-product-of-vectors}
-    设有三个三维矢量 $ \symbf{A} $，$ \symbf{B} $ 与 $ \symbf{C} $，它们的混合积记为 $ \symbf{A} \cdot (\symbf{B} \times \symbf{C}) $，定义为
+    设有三个三维矢量 $ \symbfit{A} $，$ \symbfit{B} $ 与 $ \symbfit{C} $，它们的混合积记为 $ \symbfit{A} \cdot (\symbfit{B} \times \symbfit{C}) $，定义为
     \begin{equation}
-        \symbf{A} \cdot (\symbf{B} \times \symbf{C}) = ABC \sin \theta \cos \phi ,
+        \symbfit{A} \cdot (\symbfit{B} \times \symbfit{C}) = ABC \sin \theta \cos \phi ,
     \end{equation}
-    其中，$ A $，$ B $ 与 $ C $ 分别为矢量 $ \symbf{A} $，$ \symbf{B} $ 与 $ \symbf{C} $ 的模，$ \theta $ 为矢量 $ \symbf{B} $ 与矢量 $ \symbf{C} $ 之间的夹角，$ \phi $ 为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} \times \symbf{C} $ 之间的夹角。
+    其中，$ A $，$ B $ 与 $ C $ 分别为矢量 $ \symbfit{A} $，$ \symbfit{B} $ 与 $ \symbfit{C} $ 的模，$ \theta $ 为矢量 $ \symbfit{B} $ 与矢量 $ \symbfit{C} $ 之间的夹角，$ \phi $ 为矢量 $ \symbfit{A} $ 与矢量 $ \symbfit{B} \times \symbfit{C} $ 之间的夹角。
 \end{definition}
 混合积是一个标量，并且满足循环对称性与反对称性，即
 \begin{equation}
-    \symbf{A} \cdot (\symbf{B} \times \symbf{C}) = \symbf{B} \cdot (\symbf{C} \times \symbf{A}) = \symbf{C} \cdot (\symbf{A} \times \symbf{B}) ,
+    \symbfit{A} \cdot (\symbfit{B} \times \symbfit{C}) = \symbfit{B} \cdot (\symbfit{C} \times \symbfit{A}) = \symbfit{C} \cdot (\symbfit{A} \times \symbfit{B}) ,
 \end{equation}
 \begin{equation}
-    \symbf{A} \cdot (\symbf{B} \times \symbf{C}) = - \symbf{A} \cdot (\symbf{C} \times \symbf{B}) .
+    \symbfit{A} \cdot (\symbfit{B} \times \symbfit{C}) = - \symbfit{A} \cdot (\symbfit{C} \times \symbfit{B}) .
 \end{equation}
-运用行列式可以将三个三维矢量 $ \symbf{A} = (A_x , A_y , A_z) $，$ \symbf{B} = (B_x , B_y , B_z) $ 与 $ \symbf{C} = (C_x , C_y , C_z) $ 的混合积表示为
+运用行列式可以将三个三维矢量 $ \symbfit{A} = (A_x , A_y , A_z) $，$ \symbfit{B} = (B_x , B_y , B_z) $ 与 $ \symbfit{C} = (C_x , C_y , C_z) $ 的混合积表示为
 \begin{equation}
-    \symbf{A} \cdot (\symbf{B} \times \symbf{C}) = \left| \begin{array}{ccc}
+    \symbfit{A} \cdot (\symbfit{B} \times \symbfit{C}) = \left| \begin{array}{ccc}
         A_x & A_y & A_z \\
         B_x & B_y & B_z \\
         C_x & C_y & C_z
@@ -1939,25 +1940,25 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
 
 三重叉积定义如下：
 \begin{definition}{矢量的三重叉积}{definition-of-vector-triple-product-of-vectors}
-    设有三个三维矢量 $ \symbf{A} $，$ \symbf{B} $ 与 $ \symbf{C} $，它们的三重叉积记为 $ \symbf{A} \times (\symbf{B} \times \symbf{C}) $，定义为一个新矢量，其方向与矢量 $ \symbf{B} $ 与矢量 $ \symbf{C} $ 所在平面内的某个方向相同，其模为
+    设有三个三维矢量 $ \symbfit{A} $，$ \symbfit{B} $ 与 $ \symbfit{C} $，它们的三重叉积记为 $ \symbfit{A} \times (\symbfit{B} \times \symbfit{C}) $，定义为一个新矢量，其方向与矢量 $ \symbfit{B} $ 与矢量 $ \symbfit{C} $ 所在平面内的某个方向相同，其模为
     \begin{equation}
-        |\symbf{A} \times (\symbf{B} \times \symbf{C})| = AB C \sin \theta \sin \phi ,
+        |\symbfit{A} \times (\symbfit{B} \times \symbfit{C})| = AB C \sin \theta \sin \phi ,
     \end{equation}
-    其中，$ A $，$ B $ 与 $ C $ 分别为矢量 $ \symbf{A} $，$ \symbf{B} $ 与 $ \symbf{C} $ 的模，$ \theta $ 为矢量 $ \symbf{B} $ 与矢量 $ \symbf{C} $ 之间的夹角，$ \phi $ 为矢量 $ \symbf{A} $ 与矢量 $ \symbf{B} \times \symbf{C} $ 之间的夹角。
+    其中，$ A $，$ B $ 与 $ C $ 分别为矢量 $ \symbfit{A} $，$ \symbfit{B} $ 与 $ \symbfit{C} $ 的模，$ \theta $ 为矢量 $ \symbfit{B} $ 与矢量 $ \symbfit{C} $ 之间的夹角，$ \phi $ 为矢量 $ \symbfit{A} $ 与矢量 $ \symbfit{B} \times \symbfit{C} $ 之间的夹角，并且此处的 $ \phi $ 和 $ \theta $ 的范围均为 $ [0 , \uppi] $。
 \end{definition}
 三重叉积是一个矢量，并且满足如下恒等式：
 \begin{equation}
-    \symbf{A} \times (\symbf{B} \times \symbf{C}) = \symbf{B} (\symbf{A} \cdot \symbf{C}) - \symbf{C} (\symbf{A} \cdot \symbf{B}) .
+    \symbfit{A} \times (\symbfit{B} \times \symbfit{C}) = \symbfit{B} (\symbfit{A} \cdot \symbfit{C}) - \symbfit{C} (\symbfit{A} \cdot \symbfit{B}) .
 \end{equation}
 
 在 $ Oxyz $ 坐标系中可以轻易的证明这个恒等式，即
 \begin{equation}
     \begin{aligned}
-        \symbf{A} \times (\symbf{B} \times \symbf{C}) = & (A_y B_z C_x - A_z B_y C_x) \symbf{e}_x + (A_z B_x C_y - A_x B_z C_y) \symbf{e}_y + (A_x B_y C_z - A_y B_x C_z) \symbf{e}_z \\
-        =                                               & [B_x (A_x C_x + A_y C_y + A_z C_z) - C_x (A_x B_x + A_y B_y + A_z B_z)] \symbf{e}_x                                         \\
-                                                        & + [B_y (A_x C_x + A_y C_y + A_z C_z) - C_y (A_x B_x + A_y B_y + A_z B_z)] \symbf{e}_y                                       \\
-                                                        & + [B_z (A_x C_x + A_y C_y + A_z C_z) - C_z (A_x B_x + A_y B_y + A_z B_z)] \symbf{e}_z                                       \\
-        =                                               & \symbf{B} (\symbf{A} \cdot \symbf{C}) - \symbf{C} (\symbf{A} \cdot \symbf{B}) .
+        \symbfit{A} \times (\symbfit{B} \times \symbfit{C}) = & (A_y B_z C_x - A_z B_y C_x) \symbfit{e}_x + (A_z B_x C_y - A_x B_z C_y) \symbfit{e}_y + (A_x B_y C_z - A_y B_x C_z) \symbfit{e}_z \\
+        =                                                     & [B_x (A_x C_x + A_y C_y + A_z C_z) - C_x (A_x B_x + A_y B_y + A_z B_z)] \symbfit{e}_x                                             \\
+                                                              & + [B_y (A_x C_x + A_y C_y + A_z C_z) - C_y (A_x B_x + A_y B_y + A_z B_z)] \symbfit{e}_y                                           \\
+                                                              & + [B_z (A_x C_x + A_y C_y + A_z C_z) - C_z (A_x B_x + A_y B_y + A_z B_z)] \symbfit{e}_z                                           \\
+        =                                                     & \symbfit{B} (\symbfit{A} \cdot \symbfit{C}) - \symbfit{C} (\symbfit{A} \cdot \symbfit{B}) .
     \end{aligned}
 \end{equation}
 
@@ -1965,60 +1966,60 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
 
 下面给出几个例子，帮助理解矢量的代数运算。
 \begin{example}{点积的逆运算}{example-of-inverse-operation-of-dot-product}
-    设有两个矢量 $ \symbf{A} $ 与 $ \symbf{B} $，已知 $ \symbf{B} $，以及它们的点积 $ \alpha = \symbf{A} \cdot \symbf{B} $，求矢量 $ \symbf{A} $。
+    设有两个矢量 $ \symbfit{A} $ 与 $ \symbfit{B} $，已知 $ \symbfit{B} $，以及它们的点积 $ \alpha = \symbfit{A} \cdot \symbfit{B} $，求矢量 $ \symbfit{A} $。
 
     \textbf{解}：
 
-    将 $ \symbf{A} $ 分解为沿 $ \symbf{B} $ 方向的分量 $ \symbf{A}_{\parallel} $ 与垂直于 $ \symbf{B} $ 方向的分量 $ \symbf{A}_{\perp} $，即
+    将 $ \symbfit{A} $ 分解为沿 $ \symbfit{B} $ 方向的分量 $ \symbfit{A}_{\parallel} $ 与垂直于 $ \symbfit{B} $ 方向的分量 $ \symbfit{A}_{\perp} $，即
     \begin{equation}
-        \symbf{A} = \symbf{A}_{\parallel} + \symbf{A}_{\perp} .
+        \symbfit{A} = \symbfit{A}_{\parallel} + \symbfit{A}_{\perp} .
     \end{equation}
     则有
     \begin{equation}
-        \alpha = \symbf{A} \cdot \symbf{B} = \symbf{A}_{\parallel} \cdot \symbf{B} + \symbf{A}_{\perp} \cdot \symbf{B} = \symbf{A}_{\parallel} \cdot \symbf{B} ,
+        \alpha = \symbfit{A} \cdot \symbfit{B} = \symbfit{A}_{\parallel} \cdot \symbfit{B} + \symbfit{A}_{\perp} \cdot \symbfit{B} = \symbfit{A}_{\parallel} \cdot \symbfit{B} ,
     \end{equation}
-    因为 $ \symbf{A}_{\perp} $ 与 $ \symbf{B} $ 垂直，所以 $ \symbf{A}_{\perp} \cdot \symbf{B} = 0 $。
-    设 $ |\symbf{B}| = B $，则有
+    因为 $ \symbfit{A}_{\perp} $ 与 $ \symbfit{B} $ 垂直，所以 $ \symbfit{A}_{\perp} \cdot \symbfit{B} = 0 $。
+    设 $ |\symbfit{B}| = B $，则有
     \begin{equation}
-        \symbf{A}_{\parallel} = \frac{\alpha}{B^2} \symbf{B} .
+        \symbfit{A}_{\parallel} = \frac{\alpha}{B^2} \symbfit{B} .
     \end{equation}
-    因为 $ \symbf{A}_{\perp} $ 与 $ \symbf{B} $ 垂直，但具有不确定性，可表达成
+    因为 $ \symbfit{A}_{\perp} $ 与 $ \symbfit{B} $ 垂直，但具有不确定性，可表达成
     \begin{equation}
-        \symbf{A}_{\perp} = \symbf{C} \times \symbf{B} ,
+        \symbfit{A}_{\perp} = \symbfit{C} \times \symbfit{B} ,
     \end{equation}
-    其中，$ \symbf{C} $ 为任意矢量。
-    因此，矢量 $ \symbf{A} $ 可表示为
+    其中，$ \symbfit{C} $ 为任意矢量。
+    因此，矢量 $ \symbfit{A} $ 可表示为
     \begin{equation}
-        \symbf{A} = \frac{\alpha}{B^2} \symbf{B} + \symbf{C} \times \symbf{B} .
+        \symbfit{A} = \frac{\alpha}{B^2} \symbfit{B} + \symbfit{C} \times \symbfit{B} .
     \end{equation}
 \end{example}
 
 \begin{example}{叉积的逆运算}{example-of-inverse-operation-of-cross-product}
-    设有两个矢量 $ \symbf{A} $ 与 $ \symbf{B} $，已知 $ \symbf{B} $，以及它们的叉积 $ \symbf{D} = \symbf{A} \times \symbf{B} $，求矢量 $ \symbf{A} $。
+    设有两个矢量 $ \symbfit{A} $ 与 $ \symbfit{B} $，已知 $ \symbfit{B} $，以及它们的叉积 $ \symbfit{D} = \symbfit{A} \times \symbfit{B} $，求矢量 $ \symbfit{A} $。
 
     \textbf{解}：
 
-    将 $ \symbf{A} $ 分解为沿 $ \symbf{B} $ 方向的分量 $ \symbf{A}_{\parallel} $ 与垂直于 $ \symbf{B} $ 方向的分量 $ \symbf{A}_{\perp} $，即
+    将 $ \symbfit{A} $ 分解为沿 $ \symbfit{B} $ 方向的分量 $ \symbfit{A}_{\parallel} $ 与垂直于 $ \symbfit{B} $ 方向的分量 $ \symbfit{A}_{\perp} $，即
     \begin{equation}
-        \symbf{A} = \symbf{A}_{\parallel} + \symbf{A}_{\perp} .
+        \symbfit{A} = \symbfit{A}_{\parallel} + \symbfit{A}_{\perp} .
     \end{equation}
     则有
     \begin{equation}
-        \symbf{D} = \symbf{A} \times \symbf{B} = \symbf{A}_{\parallel} \times \symbf{B} + \symbf{A}_{\perp} \times \symbf{B} = \symbf{A}_{\perp} \times \symbf{B} ,
+        \symbfit{D} = \symbfit{A} \times \symbfit{B} = \symbfit{A}_{\parallel} \times \symbfit{B} + \symbfit{A}_{\perp} \times \symbfit{B} = \symbfit{A}_{\perp} \times \symbfit{B} ,
     \end{equation}
-    因为 $ \symbf{A}_{\parallel} $ 与 $ \symbf{B} $ 共线，所以 $ \symbf{A}_{\parallel} \times \symbf{B} = \symbf{0} $。
-    设 $ |\symbf{B}| = B $，则有
+    因为 $ \symbfit{A}_{\parallel} $ 与 $ \symbfit{B} $ 共线，所以 $ \symbfit{A}_{\parallel} \times \symbfit{B} = \symbfit{0} $。
+    设 $ |\symbfit{B}| = B $，则有
     \begin{equation}
-        \symbf{A}_{\perp} = \frac{1}{B^2} (\symbf{B} \times \symbf{D}) .
+        \symbfit{A}_{\perp} = \frac{1}{B^2} (\symbfit{B} \times \symbfit{D}) .
     \end{equation}
-    因为 $ \symbf{A}_{\parallel} $ 与 $ \symbf{B} $ 共线，但具有不确定性，可表达成
+    因为 $ \symbfit{A}_{\parallel} $ 与 $ \symbfit{B} $ 共线，但具有不确定性，可表达成
     \begin{equation}
-        \symbf{A}_{\parallel} = \lambda \symbf{B} ,
+        \symbfit{A}_{\parallel} = \lambda \symbfit{B} ,
     \end{equation}
     其中，$ \lambda $ 为任意标量。
-    因此，矢量 $ \symbf{A} $ 可表示为
+    因此，矢量 $ \symbfit{A} $ 可表示为
     \begin{equation}
-        \symbf{A} = \lambda \symbf{B} + \frac{1}{B^2} (\symbf{B} \times \symbf{D}) .
+        \symbfit{A} = \lambda \symbfit{B} + \frac{1}{B^2} (\symbfit{B} \times \symbfit{D}) .
     \end{equation}
 \end{example}
 
@@ -2050,12 +2051,12 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
 
 \subsection{复数}\label{subsec:complex-numbers}
 复数在物理中有着广泛的应用，尤其是在处理振动与波动现象时。
-设有一个复数 $ z = x + i y $，其中，$ x $ 与 $ y $ 分别为复数 $ z $ 的实部与虚部，它们均为实数，$ i $ 为虚数单位，满足 $ i^2 = -1 $。
+设有一个复数 $ z = x + \ii y $，其中，$ x $ 与 $ y $ 分别为复数 $ z $ 的实部与虚部，它们均为实数，$ \ii $ 为虚数单位，满足 $ \ii^2 = -1 $。
 取实部与虚部分别作为横轴与纵轴，则复数 $ z $ 可表示为平面上的一个点，此平面称为复平面。
-复数 $ z $ 的共轭复数记为 $ z^* = x - i y $。
+复数 $ z $ 的共轭复数记为 $ z^* = x - \ii y $。
 且有
 \begin{equation}
-    z z^* = (x + i y)(x - i y) = x^2 + y^2 .
+    z z^* = (x + \ii y)(x - \ii y) = x^2 + y^2 .
 \end{equation}
 
 取实部和取虚部的运算可表示为
@@ -2063,39 +2064,39 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
     \Re (z) = \frac{z + z^*}{2} = x ,
 \end{equation}
 \begin{equation}
-    \Im (z) = \frac{z - z^*}{2i} = y .
+    \Im (z) = \frac{z - z^*}{2 \ii} = y .
 \end{equation}
 
 复数 $ z $ 也可以表示成极坐标形式，即
 \begin{equation}
-    z = r (\cos \theta + i \sin \theta) ,
+    z = r (\cos \theta + \ii \sin \theta) ,
 \end{equation}
 其中，$ r = \sqrt{x^2 + y^2} $ 为复数 $ z $ 的模，$ \theta = \arctan \frac{y}{x} $ 为复数 $ z $ 的辐角。
 复数的乘法与除法在极坐标形式下有着简单的表示：
 \begin{equation}
-    z_1 z_2 = r_1 r_2 [\cos (\theta_1 + \theta_2) + i \sin (\theta_1 + \theta_2)] ,
+    z_1 z_2 = r_1 r_2 [\cos (\theta_1 + \theta_2) + \ii \sin (\theta_1 + \theta_2)] ,
 \end{equation}
 \begin{equation}
-    \frac{z_1}{z_2} = \frac{r_1}{r_2} [\cos (\theta_1 - \theta_2) + i \sin (\theta_1 - \theta_2)] ,
+    \frac{z_1}{z_2} = \frac{r_1}{r_2} [\cos (\theta_1 - \theta_2) + \ii \sin (\theta_1 - \theta_2)] ,
 \end{equation}
-其中，复数 $ z_1 = r_1 (\cos \theta_1 + i \sin \theta_1) $ 与复数 $ z_2 = r_2 (\cos \theta_2 + i \sin \theta_2) $。
+其中，复数 $ z_1 = r_1 (\cos \theta_1 + \ii \sin \theta_1) $ 与复数 $ z_2 = r_2 (\cos \theta_2 + \ii \sin \theta_2) $。
 
 欧拉公式是复数的一个重要公式，内容为
 \begin{equation}
-    e^{i \theta} = \cos \theta + i \sin \theta .
+    \ee^{\ii \theta} = \cos \theta + \ii \sin \theta .
 \end{equation}
-利用欧拉公式，可以将复数 $ z = r (\cos \theta + i \sin \theta) $ 表示成指数形式，即
+利用欧拉公式，可以将复数 $ z = r (\cos \theta + \ii \sin \theta) $ 表示成指数形式，即
 \begin{equation}
-    z = r e^{i \theta} .
+    z = r \ee^{\ii \theta} .
 \end{equation}
 复数的乘法与除法在指数形式下也有着简单的表示：
 \begin{equation}
-    z_1 z_2 = r_1 r_2 e^{i (\theta_1 + \theta_2)} ,
+    z_1 z_2 = r_1 r_2 \ee^{\ii (\theta_1 + \theta_2)} ,
 \end{equation}
 \begin{equation}
-    \frac{z_1}{z_2} = \frac{r_1}{r_2} e^{i (\theta_1 - \theta_2)} ,
+    \frac{z_1}{z_2} = \frac{r_1}{r_2} \ee^{\ii (\theta_1 - \theta_2)} ,
 \end{equation}
-其中，复数 $ z_1 = r_1 e^{i \theta_1} $ 与复数 $ z_2 = r_2 e^{i \theta_2} $。
+其中，复数 $ z_1 = r_1 \ee^{\ii \theta_1} $ 与复数 $ z_2 = r_2 \ee^{\ii\theta_2} $。
 
 
 
@@ -2111,9 +2112,9 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
 它们可以用复数法轻易的证明
 \begin{equation}
     \begin{aligned}
-        \sin 3\theta + i \cos 3\theta & = (\cos \theta + i \sin \theta)^3                                                               \\
-                                      & = \cos^3 \theta + 3 i \cos^2 \theta \sin \theta - 3 \cos \theta \sin^2 \theta - i \sin^3 \theta \\
-                                      & = (4 \cos^3 \theta - 3 \cos \theta) + i (3 \sin \theta - 4 \sin^3 \theta) .
+        \sin 3\theta + \ii \cos 3\theta & = (\cos \theta + \ii \sin \theta)^3                                                                 \\
+                                        & = \cos^3 \theta + 3 \ii \cos^2 \theta \sin \theta - 3 \cos \theta \sin^2 \theta - \ii \sin^3 \theta \\
+                                        & = (4 \cos^3 \theta - 3 \cos \theta) + \ii (3 \sin \theta - 4 \sin^3 \theta) .
     \end{aligned}
 \end{equation}
 
@@ -2161,15 +2162,15 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
 三角函数的求和公式可以用复数法证明：
 \begin{equation}
     \sum_{k=0}^{n} \sin (k \theta)
-    = \Im \left( \sum_{k=0}^{n} e^{i k \theta} \right) = \Im \left( \frac{1 - e^{i (n+1) \theta}}{1 - e^{i \theta}} \right)
-    = \Im \left( \frac{e^{i \frac{(n+1) \theta}{2}} \left( e^{-i \frac{(n+1) \theta}{2}} - e^{i \frac{(n+1) \theta}{2}} \right)}{e^{i \frac{\theta}{2}} \left( e^{-i \frac{\theta}{2}} - e^{i \frac{\theta}{2}} \right)}\right)
+    = \Im \left( \sum_{k=0}^{n} \ee^{\ii k \theta} \right) = \Im \left( \frac{1 - \ee^{\ii (n+1) \theta}}{1 - \ee^{\ii \theta}} \right)
+    = \Im \left( \frac{\ee^{\ii \frac{(n+1) \theta}{2}} \left( \ee^{-\ii \frac{(n+1) \theta}{2}} - \ee^{\ii \frac{(n+1) \theta}{2}} \right)}{\ee^{\ii \frac{\theta}{2}} \left( \ee^{-\ii \frac{\theta}{2}} - \ee^{\ii \frac{\theta}{2}} \right)}\right)
     = \frac{\sin \frac{(n+1) \theta}{2} \sin \frac{n \theta}{2}}{\sin \frac{\theta}{2}} ,
 \end{equation}
 
 \begin{equation}
     \sum_{k=0}^{n} \cos (k \theta)
-    = \Re \left( \sum_{k=0}^{n} e^{i k \theta} \right) = \Re \left( \frac{1 - e^{i (n+1) \theta}}{1 - e^{i \theta}} \right)
-    = \Re \left( \frac{e^{i \frac{(n+1) \theta}{2}} \left( e^{-i \frac{(n+1) \theta}{2}} - e^{i \frac{(n+1) \theta}{2}} \right)}{e^{i \frac{\theta}{2}} \left( e^{-i \frac{\theta}{2}} - e^{i \frac{\theta}{2}} \right)}\right)
+    = \Re \left( \sum_{k=0}^{n} \ee^{\ii k \theta} \right) = \Re \left( \frac{1 - \ee^{\ii (n+1) \theta}}{1 - \ee^{\ii \theta}} \right)
+    = \Re \left( \frac{\ee^{\ii \frac{(n+1) \theta}{2}} \left( \ee^{-\ii \frac{(n+1) \theta}{2}} - \ee^{\ii \frac{(n+1) \theta}{2}} \right)}{\ee^{\ii \frac{\theta}{2}} \left( \ee^{-\ii \frac{\theta}{2}} - \ee^{\ii \frac{\theta}{2}} \right)}\right)
     = \frac{\sin \frac{(n+1) \theta}{2} \cos \frac{n \theta}{2}}{\sin \frac{\theta}{2}} .
 \end{equation}
 
@@ -2179,15 +2180,15 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
 \begin{definition}{双曲函数}{definition-of-hyperbolic-functions}
     双曲正弦函数与双曲余弦函数分别定义为
     \begin{equation}
-        \sinh x = \frac{e^x - e^{-x}}{2} ,
+        \sinh x = \frac{\ee^x - \ee^{-x}}{2} ,
     \end{equation}
     \begin{equation}
-        \cosh x = \frac{e^x + e^{-x}}{2} .
+        \cosh x = \frac{\ee^x + \ee^{-x}}{2} .
     \end{equation}
 
     此外，还有双曲正切函数，定义为
     \begin{equation}
-        \tanh x = \frac{\sinh x}{\cosh x} = \frac{e^x - e^{-x}}{e^x + e^{-x}} .
+        \tanh x = \frac{\sinh x}{\cosh x} = \frac{\ee^x - \ee^{-x}}{\ee^x + \ee^{-x}} .
     \end{equation}
 
 \end{definition}
@@ -2201,13 +2202,13 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
 \begin{physlist}{双曲函数的导数}{derivatives-of-hyperbolic-functions}
     设 $ x $ 为自变量，则有
     \begin{equation}
-        \frac{d}{dx} \sinh x = \cosh x ,
+        \frac{\d}{\d x} \sinh x = \cosh x ,
     \end{equation}
     \begin{equation}
-        \frac{d}{dx} \cosh x = \sinh x ,
+        \frac{\d}{\d x} \cosh x = \sinh x ,
     \end{equation}
     \begin{equation}
-        \frac{d}{dx} \tanh x = \frac{1}{\cosh^2 x} .
+        \frac{\d}{\d x} \tanh x = \frac{1}{\cosh^2 x} .
     \end{equation}
 
 \end{physlist}
@@ -2216,13 +2217,13 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
 \begin{physlist}{双曲函数的积分}{integrals-of-hyperbolic-functions}
     设 $ x $ 为自变量，则有
     \begin{equation}
-        \int \sinh x \, dx = \cosh x + C ,
+        \int \sinh x \, \d x = \cosh x + C ,
     \end{equation}
     \begin{equation}
-        \int \cosh x \, dx = \sinh x + C ,
+        \int \cosh x \, \d x = \sinh x + C ,
     \end{equation}
     \begin{equation}
-        \int \tanh x \, dx = \ln |\cosh x| + C .
+        \int \tanh x \, \d x = \ln |\cosh x| + C .
     \end{equation}
 
 \end{physlist}
@@ -2240,9 +2241,9 @@ $ \symbf{e}_x $，$ \symbf{e}_y $，$ \symbf{e}_z $ 分别为 $ x $ 轴、$ y $ 
 
     再考虑由欧拉公式得到三角函数的表达式
     \begin{equation}
-        \sin \theta = \frac{e^{i \theta} - e^{-i \theta}}{2i} , \quad \cos \theta = \frac{e^{i \theta} + e^{-i \theta}}{2} .
+        \sin \theta = \frac{\ee^{\ii \theta} - \ee^{-\ii \theta}}{2 \ii} , \quad \cos \theta = \frac{\ee^{\ii \theta} + \ee^{-\ii \theta}}{2} .
     \end{equation}
-    将其中的虚数单位 $ i $ 替换为实数单位 $ 1 $，即可得到双曲函数的表达式。
+    将其中的虚数单位 $ \ii $ 替换为实数单位 $ 1 $，即可得到双曲函数的表达式。
 
     双曲三角函数的名称也是由此而来。
 \end{note}
